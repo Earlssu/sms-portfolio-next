@@ -12,15 +12,22 @@ const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100 }) => {
 
   useEffect(() => {
     let index = 0;
-    const intervalId = setInterval(() => {
-      setDisplayedText((prev) => prev + text[index]);
-      index++;
-      if (index === text.length) {
-        clearInterval(intervalId);
-      }
-    }, speed);
 
-    return () => clearInterval(intervalId);
+    const typeCharacter = () => {
+      if (index < text.length - 1) {
+        setDisplayedText((prev) => prev + text[index]);
+        index++;
+        const nextSpeed = speed + Math.random() * speed; // 랜덤한 속도 변화
+        setTimeout(typeCharacter, nextSpeed);
+      }
+    };
+
+    typeCharacter();
+
+    return () => {
+      // Clean-up 함수로 모든 타임아웃을 제거합니다.
+      index = text.length;
+    };
   }, [text, speed]);
 
   return <p>{displayedText}</p>;
