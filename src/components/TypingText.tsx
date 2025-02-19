@@ -25,12 +25,20 @@ const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100 }) => {
     typeCharacter();
 
     return () => {
-      // Clean-up 함수로 모든 타임아웃을 제거합니다.
-      index = text.length;
+      index = text.length; // 컴포넌트 언마운트 시 타이핑 중지
     };
   }, [text, speed]);
 
-  return <p>{displayedText}</p>;
+  return (
+    <p>
+      {displayedText.split("\n").map((line, i) => (
+        <React.Fragment key={i}>
+          {line}
+          <br />
+        </React.Fragment>
+      ))}
+    </p>
+  );
 };
 
 export default TypingText;
