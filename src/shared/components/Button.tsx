@@ -1,12 +1,16 @@
 interface ButtonProps {
   content: string;
+  onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ content }) => {
+const Button: React.FC<ButtonProps> = ({ content, onClick }) => {
   return (
-    <div className="cursor-pointer border-2 border-white px-8 py-4 w-1/6 flex justify-center items-center flex-1">
-      {content}
-    </div>
+    <button
+      className=" hover:bg-red-300 border-2 border-white p-4 flex-1"
+      onClick={onClick}
+    >
+      <span className="text-center">{content}</span>
+    </button>
   );
 };
 
