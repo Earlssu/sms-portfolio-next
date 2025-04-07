@@ -4,9 +4,24 @@ import TypingText from "@/shared/components/TypingText";
 import Button from "@/shared/components/Button";
 import { useTranslation } from "react-i18next";
 import "@/i18n/i18n";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const { t } = useTranslation();
+  const router = useRouter();
+
+  const navigateTo = (page: string) => {
+    switch (page) {
+      case "aboutMe":
+        return router.push("aboutMe");
+      case "career":
+        return router.push("career");
+      case "skills":
+        return router.push("skills");
+      case "contact":
+        return router.push("contact");
+    }
+  };
 
   const typeText = t("typeText");
   const aboutMe = t("about");
@@ -21,10 +36,10 @@ export default function Home() {
           <TypingText text={typeText} speed={50} />
         </div>
         <div className={"w-full flex gap-4 py-4"}>
-          <Button content={aboutMe} />
-          <Button content={career} />
-          <Button content={skills} />
-          <Button content={contact} />
+          <Button content={aboutMe} onClick={() => navigateTo("aboutMe")} />
+          <Button content={career} onClick={() => navigateTo("career")} />
+          <Button content={skills} onClick={() => navigateTo("skills")} />
+          <Button content={contact} onClick={() => navigateTo("contact")} />
         </div>
       </div>
     </main>
