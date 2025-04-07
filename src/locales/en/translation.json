@@ -4,5 +4,22 @@
   "career": "Career",
   "skills": "Skills",
   "contact": "Contact",
-  "typeText": "Hello!\nI'm Minseob Shim, a frontend developer.\nI graduated high school and university in the US, currently located in Seoul, South Korea.\n"
+  "typeText": "Hello!\nI'm Minseob Shim, a frontend developer.\nI graduated high school and university in the US, currently located in Seoul, South Korea.\n",
+  "html5": "Understands the importance of accessibility and can properly use semantic HTML elements.",
+  "css3": "Capable of mobile-first development and scalable styling using root-level variables.",
+  "javascript": "Proficient in ES6 and understands how JavaScript works under the hood.",
+  "typescript": "Confident with TypeScript basics like Tuple, Enum, Interface and can handle type errors during development.",
+  "react": "Understands how Virtual DOM works, writes reusable components, and uses third-party libraries like react-router, redux, and typescript effectively for scalable development.",
+  "redux": "Can differentiate when to use global state and writes appropriate actions and action creators when needed.",
+  "styledComponent": "Implements dark mode using conditional styling via props while avoiding excessive component nesting.",
+  "bootstrap": "Familiar with Bootstrap utility classes and knows how to override styles and functionalities.",
+  "jquery": "Understands the lightweight nature of jQuery and can differentiate it from vanilla JS syntax.",
+  "git": "Well-versed in git commands and version control workflow, especially at the local development level.",
+  "githubActions": "Able to write YAML files to automate deployment and troubleshoot errors during the CI/CD process.",
+  "amazonS3": "Understands static hosting, and can create and configure S3 buckets for deployment.",
+  "vercel": "Can link GitHub repositories for auto-deployment and configure custom domains and redirects via Vercel.",
+  "github": "Uses GitHub Projects to manage issues on a Kanban board and understands effective code review and collaboration practices.",
+  "figma": "Capable of creating user flows and wireframes, building interactive prototypes, and using plugins to enhance design quality.",
+  "notion": "Writes structured project documentation, uses bookmarks, database links, and logical page separation to improve readability.",
+  "jira": "Uses Jira to track tasks, assign issues, estimate effort, and collaborate via task discussions after meetings."
 }
