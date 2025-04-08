@@ -8,12 +8,16 @@ const Skills = () => {
         <SkillDescription skill={"html5"} />
         <SkillDescription skill={"css3"} />
         <SkillDescription skill={"javascript"} />
-        <SkillDescription skill={"typescript"} />
         <SkillDescription skill={"react"} />
+        <SkillDescription skill={"reactNative"} />
+        <SkillDescription skill={"typescript"} />
+        <SkillDescription skill={"nextJS"} />
+        <SkillDescription skill={"zustand"} />
+        <SkillDescription skill={"mobx"} />
         <SkillDescription skill={"redux"} />
         <SkillDescription skill={"styledComponent"} />
-        <SkillDescription skill={"bootstrap"} />
-        <SkillDescription skill={"jquery"} />
+        <SkillDescription skill={"tailwind"} />
+        <SkillDescription skill={"reactQuery"} />
       </div>
       <div>
         <h2 className={"text-2xl font-bold mb-4"}>Communication</h2>
@@ -22,7 +26,9 @@ const Skills = () => {
         <SkillDescription skill={"githubActions"} />
         <SkillDescription skill={"vercel"} />
         <SkillDescription skill={"figma"} />
+        <SkillDescription skill={"notion"} />
         <SkillDescription skill={"jira"} />
+        <SkillDescription skill={"slack"} />
       </div>
     </div>
   );
