@@ -9,13 +9,19 @@ interface TypingTextProps {
 
 const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100 }) => {
   const [displayedText, setDisplayedText] = useState("");
+  const [typingKey, setTypingKey] = useState(0);
+
+  useEffect(() => {
+    setDisplayedText("");
+    setTypingKey((prev) => prev + 1);
+  }, [text]);
 
   useEffect(() => {
     let index = 0;
 
     const typeCharacter = () => {
-      if (index < text.length - 1) {
-        setDisplayedText((prev) => prev + text[index]);
+      if (index < text.length) {
+        setDisplayedText((prev) => prev + text[index == 0 ? index : index - 1]);
         index++;
         const nextSpeed = speed + Math.random() * speed; // 랜덤한 속도 변화
         setTimeout(typeCharacter, nextSpeed);

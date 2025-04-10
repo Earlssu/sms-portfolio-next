@@ -33,7 +33,7 @@ export default function Home() {
     <main className="mx-auto border-2 border-white w-full max-w-screen-xl mt-8 px-12 pt-6 min-h-[90dvh] flex flex-col">
       <div className={"w-full flex flex-col flex-1 min-h-0 justify-between"}>
         <div className={"border-2 border-gray-500 w-full p-4 min-h-40"}>
-          <TypingText text={typeText} speed={50} />
+          <TypingText text={typeText} speed={25} />
         </div>
         <div className={"w-full flex gap-4 py-4"}>
           <Button content={aboutMe} onClick={() => navigateTo("aboutMe")} />
