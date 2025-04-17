@@ -42,7 +42,6 @@ export default function Home() {
             {heroDesc02}
           </p>
           <div className={"w-full flex gap-4 py-4"}>
-            <Button content={aboutMe} onClick={() => navigateTo("aboutMe")} />
             <Button content={career} onClick={() => navigateTo("career")} />
             <Button content={skills} onClick={() => navigateTo("skills")} />
             <Button content={contact} onClick={() => navigateTo("contact")} />
