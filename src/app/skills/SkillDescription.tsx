@@ -13,7 +13,7 @@ const SkillDescription: React.FC<SkillDescriptionProps> = ({ skill }) => {
       <h3 className={"text-lg font-bold text-amber-400"}>
         {skill.toUpperCase()}
       </h3>
-      <p>{t(skill)}</p>
+      <p> {t(skill)}</p>
     </div>
   );
 };

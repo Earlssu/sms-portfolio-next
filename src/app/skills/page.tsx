@@ -2,7 +2,7 @@ import SkillDescription from "@/app/skills/SkillDescription";
 
 const Skills = () => {
   return (
-    <div className={"flex flex-col gap-8"}>
+    <div className={"flex flex-col gap-8 p-4"}>
       <div className={"flex flex-1 flex-col gap-4"}>
         <h2 className={"text-2xl font-bold mt-4"}>Frontend</h2>
         <SkillDescription skill={"html5"} />
