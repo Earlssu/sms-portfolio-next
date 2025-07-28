@@ -4,12 +4,10 @@ import TypingText from "@/shared/components/TypingText";
 import "@/i18n/i18n";
 import { useCommonTranslations } from "@/shared/hooks/useCommonTranslations";
 import NavButtons from "@/shared/components/NavButtons";
-import { NAV_ITEMS } from "@/shared/const/navButtonUrls";
 
 export default function Home() {
   const { hero, heroDesc01, heroDesc02, typeText, career, skills, contact } =
     useCommonTranslations();
-  const labels = { career, skills, contact };
 
   return (
     <main className="mx-auto border-2 border-white w-full max-w-screen-xl mt-8 px-10 py-6 min-h-[90dvh] flex flex-col">
@@ -21,7 +19,7 @@ export default function Home() {
             {heroDesc02}
           </p>
         </div>
-        <NavButtons navItems={NAV_ITEMS} labels={labels} />
+        <NavButtons />
         <div className={"border-2 border-gray-500 w-full p-4 min-h-40 flex-1"}>
           <TypingText text={typeText} speed={25} />
         </div>
