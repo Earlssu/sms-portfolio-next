@@ -1,3 +1,5 @@
+"use client";
+
 import LanguageToggle from "@/shared/components/LanguageToggle";
 
 const CommonHeader = () => {

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import CommonHeader from "@/shared/components/CommonHeader";
+import NavButtons from "@/shared/components/NavButtons";
+import I18nProvider from "@/shared/components/I18nProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,16 +14,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="ko">
       <body className={inter.className}>
-        <header>
-          <CommonHeader />
-        </header>
-        {children}
+        <I18nProvider>
+          <header>
+            <CommonHeader />
+          </header>
+          <main className="mx-auto border-2 border-white w-full max-w-screen-xl mt-8 px-10 py-6 min-h-[90dvh] flex flex-col">
+            <div className="flex-1 flex flex-col gap-6 min-h-0">
+              <NavButtons />
+              {children}
+            </div>
+          </main>
+        </I18nProvider>
       </body>
     </html>
   );
