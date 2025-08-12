@@ -1,7 +1,13 @@
-import { Fragment } from "react";
+import CustomCarousel from "@/app/career/components/CustomCarousel";
 
 const Career = () => {
-  return <Fragment> Career </Fragment>;
+  return (
+    <div>
+      <h1>Career</h1>
+
+      <CustomCarousel />
+    </div>
+  );
 };
 
 export default Career;
