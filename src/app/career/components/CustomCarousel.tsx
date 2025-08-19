@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CarouselCard from '@/app/career/components/CarouselCard';
 import './CustomCarousel.css';
 import './CarouselCard.css';
@@ -8,6 +8,11 @@ import carouselItems from '@/app/career/constants/carouselItems';
 
 const CustomCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handlePrevious = () => {
     setActiveIndex(
@@ -18,6 +23,17 @@ const CustomCarousel = () => {
   const handleNext = () => {
     setActiveIndex((prev) => (prev + 1) % carouselItems.length);
   };
+
+  if (!isMounted) {
+    return (
+      <div className="carousel">
+        <div className="carousel-container">
+          {/* 서버 렌더링 시 기본 상태만 표시 */}
+          <div className="loading-placeholder">Loading...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="carousel">
