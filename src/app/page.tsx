@@ -1,14 +1,13 @@
-"use client";
+'use client';
 
-import TypingText from "@/shared/components/TypingText";
-import { useCommonTranslations } from "@/shared/hooks/useCommonTranslations";
-import { Fragment } from "react";
+import TypingText from '@/shared/components/TypingText';
+import { useCommonTranslations } from '@/shared/hooks/useCommonTranslations';
 
 export default function Home() {
   const { hero, heroDesc01, heroDesc02, typeText } = useCommonTranslations();
 
   return (
-    <Fragment>
+    <div className="mx-auto border-2 border-white w-full max-w-screen-xl mt-8 px-10 py-6 min-h-[90dvh] flex flex-col">
       <div>
         <h1 className="text-3xl font-bold">{hero}</h1>
         <p className="mt-2 text-xl text-amber-400">
@@ -19,6 +18,6 @@ export default function Home() {
       <div className="border-2 border-gray-500 w-full p-4 min-h-40 flex-1">
         <TypingText text={typeText} speed={25} />
       </div>
-    </Fragment>
+    </div>
   );
 }
