@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import LanguageToggle from "@/shared/components/LanguageToggle";
+import LanguageToggle from '@/shared/components/LanguageToggle';
 
 const CommonHeader = () => {
   return (
-    <div className={"w-full flex flex-end"}>
+    <div className="w-full flex justify-end">
       <LanguageToggle />
     </div>
   );
