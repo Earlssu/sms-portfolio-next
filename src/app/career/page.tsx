@@ -49,10 +49,7 @@ const Career = () => {
 
   return (
     <div style={{ cursor: 'none' }}>
-      <h1>Career</h1>
-
       <CustomCarousel />
-
       <div ref={cursorRef} className="cursor" />
       <div ref={cursor2Ref} className="cursor cursor2" />
     </div>

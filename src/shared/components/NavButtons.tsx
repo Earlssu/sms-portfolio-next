@@ -8,8 +8,8 @@ import { useCommonTranslations } from '@/shared/hooks/useCommonTranslations';
 
 const NavButtons: React.FC = () => {
   const router = useRouter();
-  const { career, skills, contact } = useCommonTranslations();
-  const labels = { career, skills, contact };
+  const { career, skills, contact, home } = useCommonTranslations();
+  const labels = { career, skills, contact, home };
 
   return (
     <div className="w-full flex gap-4 py-4">

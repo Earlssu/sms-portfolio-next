@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={inter.className}>
         <I18nProvider>
-          <header className={'flex flex-col gap-4 px-4 pt-2'}>
+          <header className={'flex flex-col px-4 pt-2'}>
             <CommonHeader />
             <NavButtons />
           </header>
