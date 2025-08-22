@@ -4,7 +4,7 @@ import { CarouselItem } from '@/app/career/types/carouselItem';
 
 export const carouselItems: CarouselItem[] = [
   {
-    title: 'Frontend Developer',
+    title: '엑스코어시스템 (XCoreSystem)',
     num: '01',
     imageSrc:
       'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=600&fit=crop',
