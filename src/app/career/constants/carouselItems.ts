@@ -6,32 +6,27 @@ export const carouselItems: CarouselItem[] = [
   {
     title: '엑스코어시스템 (XCoreSystem)',
     num: '01',
-    imageSrc:
-      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=600&fit=crop',
+    imageSrc: '/XCore.png',
   },
   {
-    title: 'Full Stack Developer',
+    title: '핀터 (Finter)',
     num: '02',
-    imageSrc:
-      'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=600&fit=crop',
+    imageSrc: '/Finter.png',
   },
   {
-    title: 'React Specialist',
+    title: '픽블 (Pikble)',
     num: '03',
-    imageSrc:
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=600&fit=crop',
+    imageSrc: '/Pikble.png',
   },
   {
-    title: 'Next.js Expert',
+    title: '공카 (Gongcar)',
     num: '04',
-    imageSrc:
-      'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=400&h=600&fit=crop',
+    imageSrc: '/Gongcar.png',
   },
   {
-    title: 'TypeScript Developer',
+    title: '캔디페이 (CandyPay)',
     num: '05',
-    imageSrc:
-      'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=600&fit=crop',
+    imageSrc: '/CandyPay.png',
   },
 ];
 
