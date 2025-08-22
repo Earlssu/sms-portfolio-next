@@ -19,6 +19,32 @@ const GlobalCursor = ({ enabled = true }: GlobalCursorProps) => {
   useEffect(() => {
     if (!isMounted || !enabled) return;
 
+    // 페이지 로드 시 즉시 커서를 표시하고 현재 마우스 위치로 이동
+    const initializeCursor = () => {
+      const showCursors = () => {
+        if (cursorRef.current && cursor2Ref.current) {
+          cursorRef.current.style.opacity = '1';
+          cursor2Ref.current.style.opacity = '1';
+        }
+      };
+
+      // 즉시 표시
+      showCursors();
+
+      // 마우스 위치 감지를 위한 일회성 이벤트
+      const handleInitialMove = (e: MouseEvent) => {
+        if (cursorRef.current) {
+          cursorRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        }
+        if (cursor2Ref.current) {
+          cursor2Ref.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        }
+        document.removeEventListener('mousemove', handleInitialMove);
+      };
+
+      document.addEventListener('mousemove', handleInitialMove, { once: true });
+    };
+
     const handleMouseMove = (e: MouseEvent) => {
       if (cursorRef.current) {
         cursorRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
@@ -45,6 +71,9 @@ const GlobalCursor = ({ enabled = true }: GlobalCursorProps) => {
         cursor2Ref.current.style.opacity = '0';
       }
     };
+
+    // 커서 초기화
+    initializeCursor();
 
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseenter', handleMouseEnter);
