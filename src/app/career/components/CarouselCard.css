@@ -1,47 +1,55 @@
 .carousel-item {
+  /* JavaScript에서 동적으로 설정되는 변수들의 기본값 */
+  --index: 0;
+  --active: 0;
+  --offset: 0;
+  --abs-offset: 0;
+  --total: 5;
+  
   /* 카드 기본 크기 */
   --width: clamp(200px, 25vw, 350px);
   --height: clamp(280px, 35vw, 500px);
-  
+
   /* 위치 계산 - 모든 카드를 중앙에 겹쳐서 배치 */
   --x: calc(var(--offset) * 60px); /* 좌우 간격 */
   --y: calc(var(--abs-offset) * 20px); /* 세로 간격 (겹쳐보이게) */
   --scale: calc(1 - var(--abs-offset) * 0.1); /* 크기 축소 */
   --rotation: calc(var(--offset) * 5deg); /* 살짝 회전 */
-  
+
   /* z-index로 쌓임 순서 결정 */
   --z-index: calc(var(--total) - var(--abs-offset));
   --opacity: calc(1 - var(--abs-offset) * 0.3);
-  
+
   /* 기본 스타일 */
   position: absolute;
   top: 50%;
   left: 50%;
   width: var(--width);
   height: var(--height);
-  
+
   /* 중앙 정렬을 위한 margin */
   margin-top: calc(var(--height) * -0.5);
   margin-left: calc(var(--width) * -0.5);
-  
+
   /* transform으로 위치와 효과 적용 */
-  transform: translate(var(--x), var(--y)) scale(var(--scale)) rotate(var(--rotation));
+  transform: translate(var(--x), var(--y)) scale(var(--scale))
+    rotate(var(--rotation));
   z-index: var(--z-index);
-  
+
   /* 스타일링 */
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   background: #1a1a1a;
   overflow: hidden;
-  cursor: pointer;
   user-select: none;
-  
+
   /* 부드러운 애니메이션 */
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .carousel-item:hover {
-  transform: translate(var(--x), var(--y)) scale(calc(var(--scale) + 0.05)) rotate(var(--rotation));
+  transform: translate(var(--x), var(--y)) scale(calc(var(--scale) + 0.05))
+    rotate(var(--rotation));
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
@@ -54,7 +62,7 @@
 }
 
 .carousel-box::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
