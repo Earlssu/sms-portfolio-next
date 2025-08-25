@@ -7,10 +7,10 @@ export default function Home() {
   const { hero, heroDesc01, heroDesc02, typeText } = useCommonTranslations();
 
   return (
-    <div className="mx-auto border-2 border-white w-full max-w-screen-xl mt-8 px-10 py-6 min-h-[90dvh] flex flex-col">
-      <div>
+    <div className="mx-auto border-2 border-white w-full max-w-screen-xl mt-8 px-10 py-6 min-h-[90dvh] flex flex-col gap-4">
+      <div className={'flex flex-col gap-2'}>
         <h1 className="text-3xl font-bold">{hero}</h1>
-        <p className="mt-2 text-xl text-amber-400">
+        <p className="text-xl text-amber-400">
           {heroDesc01} <br />
           {heroDesc02}
         </p>
