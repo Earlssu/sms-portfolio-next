@@ -6,9 +6,10 @@ interface TypingTextProps {
   text: string;
   speed?: number;
   delay?: number; // 초 단위로 지연 시간 설정
+  className?: string;
 }
 
-const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100, delay = 0 }) => {
+const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100, delay = 0, className }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [isStarted, setIsStarted] = useState(false);
 
@@ -54,7 +55,7 @@ const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100, delay = 0 })
   }, [isStarted, text, speed]);
 
   return (
-    <p>
+    <p className={className}>
       {displayedText.split("\n").map((line, i) => (
         <React.Fragment key={i}>
           {line}
