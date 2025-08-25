@@ -5,7 +5,7 @@ import GlobalCursor from '@/shared/components/GlobalCursor';
 
 const Career = () => {
   return (
-    <div style={{ cursor: 'none' }}>
+    <div>
       <CustomCarousel />
       <GlobalCursor />
     </div>
