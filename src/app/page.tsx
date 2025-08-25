@@ -13,9 +13,12 @@ export default function Home() {
         <h1 className="text-7xl font-bold">
           <TypingText text={hero} speed={50} />
         </h1>
-        <p className="text-xl text-amber-400 animate__animated animate__flipInX animate__delay-2s">
-          {heroDesc01} <br />
-          {heroDesc02}
+        <p className="text-xl text-amber-400">
+          <TypingText
+            text={heroDesc01 + '\n' + heroDesc02}
+            delay={1.5}
+            speed={50}
+          />
         </p>
       </div>
       <div className="border-2 border-gray-500 w-full p-4 min-h-40 flex-1">
