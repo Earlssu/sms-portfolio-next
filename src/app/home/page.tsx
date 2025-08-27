@@ -10,7 +10,7 @@ import { TRAIT_KEYS, getTraitTranslationKey, type TraitKey } from '@/app/home/co
 
 export default function Home() {
   const { hero, heroDesc01, heroDesc02 } = useCommonTranslations();
-  const { t } = useTranslation();
+  const { t, i18n, ready } = useTranslation();
   const [scrollY, setScrollY] = useState(0);
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -45,16 +45,30 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // i18n이 준비되지 않았으면 로딩 표시
+  if (!ready) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <div className="text-2xl text-primary">Loading...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative">
       {/* 히어로 섹션 - 100vh */}
       <section className="h-screen flex flex-col justify-center items-center px-10 relative">
         <div className="max-w-screen-xl mx-auto flex flex-col gap-4">
           <h1 className="text-7xl font-bold text-primary text-center">
-            <TypingText text={hero} speed={75} />
+            <TypingText 
+              key={`hero-${i18n.language}`}
+              text={hero || ""} 
+              speed={75} 
+            />
           </h1>
           <TypingText
-            text={heroDesc01 + '\n' + heroDesc02}
+            key={`heroDesc-${i18n.language}`}
+            text={`${heroDesc01 || ""}\n${heroDesc02 || ""}`}
             delay={2}
             speed={50}
             className="text-xl text-secondary leading-10 text-center"
