@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import CommonHeader from '@/shared/components/CommonHeader';
-import NavButtons from '@/shared/components/NavButtons';
 import I18nProvider from '@/shared/components/I18nProvider';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -21,9 +20,8 @@ export default function RootLayout({
     <html lang="ko">
       <body className={inter.className}>
         <I18nProvider>
-          <header className={'flex flex-col px-4 pt-2'}>
+          <header className={'flex flex-col px-4 pt-1'}>
             <CommonHeader />
-            <NavButtons />
           </header>
           <main>
             <div className="flex-1 flex flex-col gap-6 min-h-0">{children}</div>

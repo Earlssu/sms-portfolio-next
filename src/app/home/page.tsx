@@ -9,7 +9,7 @@ export default function Home() {
   const { hero, heroDesc01, heroDesc02, typeText } = useCommonTranslations();
 
   return (
-    <div className="mx-auto w-full max-w-screen-xl mt-8 px-10 py-6 min-h-[90dvh] flex flex-col gap-4">
+    <div className="mx-auto w-full max-w-screen-xl mt-2 px-10 py-6 min-h-[90dvh] flex flex-col gap-4">
       <div className={'flex flex-col gap-4'}>
         <h1 className="text-7xl font-bold">
           <TypingText text={hero} speed={50} />
@@ -21,7 +21,10 @@ export default function Home() {
           className="text-xl text-amber-400 leading-10"
         />
       </div>
-      <div className="border-2 border-gray-500 w-full p-4 min-h-40 flex-1 flex flex-col gap-4">
+
+      {/*<NavButtons />*/}
+
+      <div className="w-full pt-4 min-h-40 flex-1 flex flex-col gap-4">
         <TraitCard title={'유학생'} className={'animate__delay-5s'} />
 
         <TraitCard
