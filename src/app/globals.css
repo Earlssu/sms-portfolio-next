@@ -15,8 +15,13 @@
   --card-ring: rgba(255, 255, 255, 0.3);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /*color: rgb(var(--foreground-rgb));*/
+  overflow-x: hidden;
 }
 
 @layer utilities {
