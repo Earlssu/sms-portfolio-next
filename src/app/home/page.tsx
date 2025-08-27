@@ -11,14 +11,14 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-screen-xl mt-2 px-10 py-6 min-h-[90dvh] flex flex-col gap-4">
       <div className={'flex flex-col gap-4'}>
-        <h1 className="text-7xl font-bold">
+        <h1 className="text-7xl font-bold text-primary">
           <TypingText text={hero} speed={50} />
         </h1>
         <TypingText
           text={heroDesc01 + '\n' + heroDesc02}
           delay={1.5}
           speed={30}
-          className="text-xl text-amber-400 leading-10"
+          className="text-xl text-secondary leading-10"
         />
       </div>
 
