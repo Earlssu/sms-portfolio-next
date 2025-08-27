@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
 interface TypingTextProps {
   text: string;
@@ -9,27 +9,27 @@ interface TypingTextProps {
   className?: string;
 }
 
-const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100, delay = 0, className }) => {
-  const [displayedText, setDisplayedText] = useState("");
+const TypingText: React.FC<TypingTextProps> = ({
+  text,
+  speed = 100,
+  delay = 0,
+  className,
+}) => {
+  const [displayedText, setDisplayedText] = useState('');
   const [isStarted, setIsStarted] = useState(false);
   const [isErasing, setIsErasing] = useState(false);
-  const previousTextRef = useRef<string>("");
+  const previousTextRef = useRef<string>('');
   const typingTimerRef = useRef<NodeJS.Timeout | null>(null);
   const delayTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // 텍스트 유효성 검증
-  const validText = text || "";
-  
-  // 디버깅용 로그 (개발 중에만)
-  if (process.env.NODE_ENV === 'development') {
-    console.log('TypingText received:', { text, validText });
-  }
+  const validText = text || '';
 
   // 텍스트 변경 감지 및 리셋 처리
   useEffect(() => {
     // 유효하지 않은 텍스트인 경우 조기 반환
     if (!validText) {
-      setDisplayedText("");
+      setDisplayedText('');
       setIsStarted(false);
       setIsErasing(false);
       return;
@@ -39,7 +39,7 @@ const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100, delay = 0, c
     if (validText !== previousTextRef.current && displayedText.length > 0) {
       setIsErasing(true);
       setIsStarted(false);
-      
+
       // 기존 타이머들 정리
       if (typingTimerRef.current) {
         clearTimeout(typingTimerRef.current);
@@ -51,11 +51,11 @@ const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100, delay = 0, c
       }
     } else if (validText !== previousTextRef.current) {
       // 처음 로드이거나 빈 상태에서 변경된 경우
-      setDisplayedText("");
+      setDisplayedText('');
       setIsStarted(false);
       setIsErasing(false);
     }
-    
+
     previousTextRef.current = validText;
   }, [validText, displayedText.length]);
 
@@ -65,7 +65,7 @@ const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100, delay = 0, c
 
     const eraseCharacter = () => {
       setDisplayedText((prev) => {
-        const currentText = prev || "";
+        const currentText = prev || '';
         if (currentText.length > 0) {
           const newText = currentText.slice(0, -1);
           typingTimerRef.current = setTimeout(eraseCharacter, 30); // 빠르게 지우기
@@ -73,7 +73,7 @@ const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100, delay = 0, c
         } else {
           // 지우기 완료
           setIsErasing(false);
-          return "";
+          return '';
         }
       });
     };
@@ -110,14 +110,14 @@ const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100, delay = 0, c
     if (!isStarted || isErasing || !validText) return;
 
     let index = 0;
-    setDisplayedText(""); // 타이핑 시작 전 완전히 초기화
+    setDisplayedText(''); // 타이핑 시작 전 완전히 초기화
 
     const typeCharacter = () => {
       if (index < validText.length) {
         const char = validText[index];
         // 문자가 유효한지 확인
         if (char !== undefined && char !== null) {
-          setDisplayedText((prev) => (prev || "") + char);
+          setDisplayedText((prev) => (prev || '') + char);
         }
         index++;
         const nextSpeed = speed + Math.random() * (speed * 0.5); // 랜덤한 속도 변화 (50% 범위)
@@ -137,7 +137,7 @@ const TypingText: React.FC<TypingTextProps> = ({ text, speed = 100, delay = 0, c
 
   return (
     <p className={className}>
-      {displayedText.split("\n").map((line, i) => (
+      {displayedText.split('\n').map((line, i) => (
         <React.Fragment key={i}>
           {line}
           <br />
