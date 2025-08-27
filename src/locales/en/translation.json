@@ -28,5 +28,31 @@
   "figma": "Skilled in collaborating with designers to understand and implement component-based design systems. I analyze responsive designs and translate them into code. I’ve suggested improvements after identifying UX inconsistencies in Figma flows, and I use plugins and prototypes to maintain clear communication with designers.",
   "notion": "Experienced in using Notion for documenting daily scrums, meeting notes, and Git commit/review conventions. I’ve built database-driven project pages and split structures for better readability. I even manage my personal schedule with Notion due to my high level of familiarity with the tool.",
   "jira": "I’ve used Jira’s Kanban boards in ticket-based QA processes, managing client feedback and updates efficiently. I clearly understand the distinctions between Epics, Tasks, and Sub-tasks, and can prioritize issues while customizing workflows.",
-  "slack": "Fluent in using Slack as a primary team communication tool, including mentions, thread-based conversations, file sharing, and notifications. I’ve also used Slack bots (e.g., Daily GeekNews, CI/CD alerts) to reduce repetitive tasks and foster efficient communication in a real-world setting."
+  "slack": "Fluent in using Slack as a primary team communication tool, including mentions, thread-based conversations, file sharing, and notifications. I've also used Slack bots (e.g., Daily GeekNews, CI/CD alerts) to reduce repetitive tasks and foster efficient communication in a real-world setting.",
+  "traits": {
+    "student": {
+      "title": "International Student",
+      "detail": "Developed a global mindset and English proficiency through 3 years of studying in Australia.",
+      "skills": ["Cross-cultural Communication", "English Fluency", "Adaptability"]
+    },
+    "collaborator": {
+      "title": "Most Collaborative Developer",
+      "detail": "Values teamwork and leads projects to success through effective communication.",
+      "skills": ["Team Leadership", "Communication", "Project Management"]
+    },
+    "positive": {
+      "title": "Stay Positive in Tough Times",
+      "detail": "Solves problems with a positive mindset even in challenging situations.",
+      "skills": ["Positive Mindset", "Problem Solving", "Resilience"]
+    },
+    "learner": {
+      "title": "Fast Learner",
+      "detail": "Excels at quickly acquiring and applying new technologies and trends.",
+      "skills": ["Quick Learning", "Technology Adaptation", "Continuous Growth"]
+    }
+  },
+  "home": {
+    "thankYou": "Thank you for scrolling!",
+    "moreInfo": "Find more information on other pages."
+  }
 }

@@ -28,5 +28,31 @@
   "figma": "디자이너와의 협업을 통해 컴포넌트 기반 디자인 시스템을 이해하고 구현할 수 있으며, 반응형 웹 디자인의 구조를 분석해 UI에 반영하는 데 익숙합니다. Figma 상에서 어색한 사용자 플로우를 인지하고 개선 제안을 한 경험이 있으며, 플러그인 활용과 프로토타이핑 기능을 포함해 디자이너와의 원활한 커뮤니케이션이 가능합니다.",
   "notion": "Notion을 실무에서 적극적으로 활용해 Daily Scrum, 회의록, Git 커밋/코드리뷰 컨벤션 등을 문서화한 경험이 있습니다. 데이터베이스를 활용한 프로젝트 관리와 페이지 분할 구조 설계를 통해 팀원 간 협업을 원활하게 이끌었으며, 개인 일정 관리까지도 Notion으로 처리할 만큼 높은 숙련도를 보유하고 있습니다.",
   "jira": "Jira의 칸반 보드를 활용한 티켓 기반 QA 프로세스를 경험했으며, 클라이언트와의 이슈 관리와 피드백 반영을 빠르게 진행할 수 있었습니다. Epic, Task, Sub-task의 구분을 명확히 이해하고 있으며, 이슈 우선순위 지정과 워크플로우 커스터마이징에도 익숙합니다.",
-  "slack": "Slack을 주요 커뮤니케이션 툴로 사용해 사용자 멘션, 스레드 중심 대화, 파일 공유 및 알림 관리를 능숙하게 할 수 있습니다. 실무에서는 슬랙 자동화 봇(예: Daily GeekNews 공유, CI/CD 알림 연동 등)을 활용해 반복적인 작업을 줄이고 효율적인 팀 커뮤니케이션 환경을 조성한 경험이 있습니다."
+  "slack": "Slack을 주요 커뮤니케이션 툴로 사용해 사용자 멘션, 스레드 중심 대화, 파일 공유 및 알림 관리를 능숙하게 할 수 있습니다. 실무에서는 슬랙 자동화 봇(예: Daily GeekNews 공유, CI/CD 알림 연동 등)을 활용해 반복적인 작업을 줄이고 효율적인 팀 커뮤니케이션 환경을 조성한 경험이 있습니다.",
+  "traits": {
+    "student": {
+      "title": "유학생",
+      "detail": "호주에서 3년간 유학하며 글로벌 마인드셋과 영어 실력을 키웠습니다.",
+      "skills": ["Cross-cultural Communication", "English Fluency", "Adaptability"]
+    },
+    "collaborator": {
+      "title": "협업이 가장 편했던 개발자",
+      "detail": "팀워크를 중시하며 원활한 소통으로 프로젝트를 성공적으로 이끌어갑니다.",
+      "skills": ["Team Leadership", "Communication", "Project Management"]
+    },
+    "positive": {
+      "title": "힘들 때 웃어야 일류다",
+      "detail": "어려운 상황에서도 긍정적인 마인드로 문제를 해결해나갑니다.",
+      "skills": ["Positive Mindset", "Problem Solving", "Resilience"]
+    },
+    "learner": {
+      "title": "Fast Learner",
+      "detail": "새로운 기술과 트렌드를 빠르게 습득하고 적용하는 능력이 뛰어납니다.",
+      "skills": ["Quick Learning", "Technology Adaptation", "Continuous Growth"]
+    }
+  },
+  "home": {
+    "thankYou": "스크롤해주셔서 감사합니다!",
+    "moreInfo": "더 많은 정보는 다른 페이지에서 확인하세요."
+  }
 }

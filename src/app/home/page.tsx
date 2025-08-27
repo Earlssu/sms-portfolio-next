@@ -1,14 +1,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import TypingText from '@/shared/components/TypingText';
 import { useCommonTranslations } from '@/shared/hooks/useCommonTranslations';
 import 'animate.css';
 import TraitCard from '@/app/home/components/TraitCard';
-import { traitData } from '@/app/home/constants/traitData';
+import { TRAIT_KEYS, getTraitTranslationKey, type TraitKey } from '@/app/home/constants/traitData';
 
 export default function Home() {
   const { hero, heroDesc01, heroDesc02 } = useCommonTranslations();
+  const { t } = useTranslation();
   const [scrollY, setScrollY] = useState(0);
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -31,9 +33,9 @@ export default function Home() {
       const scrollAfterHero = Math.max(0, currentScrollY - heroSectionHeight);
       const currentCardIndex = Math.floor(scrollAfterHero / cardSectionHeight);
 
-      if (currentScrollY > heroSectionHeight * 0.8) {
+              if (currentScrollY > heroSectionHeight * 0.8) {
         // 히어로 섹션을 80% 지나면 카드 활성화 시작
-        setExpandedCard(Math.min(currentCardIndex, traitData.length - 1));
+        setExpandedCard(Math.min(currentCardIndex, TRAIT_KEYS.length - 1));
       } else {
         setExpandedCard(null);
       }
@@ -74,52 +76,58 @@ export default function Home() {
       </div>
 
       {/* 카드 섹션들 - 각각 100vh */}
-      {traitData.map((trait, index) => (
-        <section
-          key={index}
-          className="h-screen flex items-center justify-center px-10 relative"
-        >
-          {/* 고정된 카드 컨테이너 */}
-          <div className="max-w-screen-xl mx-auto w-full flex items-center justify-center">
-            <TraitCard
-              title={trait.title}
-              className={`transition-all duration-1000 ease-out ${
-                expandedCard === index
-                  ? 'scale-100 opacity-100'
-                  : 'scale-90 opacity-60'
-              }`}
-              isExpanded={expandedCard === index}
-            >
-              {expandedCard === index && (
-                <div className="mt-4 space-y-3 animate__animated animate__fadeIn">
-                  <p className="text-quaternary text-sm leading-relaxed">
-                    {trait.detail}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {trait.skills.map((skill, skillIndex) => (
-                      <span
-                        key={skillIndex}
-                        className="px-3 py-1 bg-primary text-quaternary text-xs rounded-full"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+      {TRAIT_KEYS.map((traitKey, index) => {
+        const title = t(getTraitTranslationKey(traitKey, 'title'));
+        const detail = t(getTraitTranslationKey(traitKey, 'detail'));
+        const skills = t(getTraitTranslationKey(traitKey, 'skills'), { returnObjects: true }) as string[];
+        
+        return (
+          <section
+            key={traitKey}
+            className="h-screen flex items-center justify-center px-10 relative"
+          >
+            {/* 고정된 카드 컨테이너 */}
+            <div className="max-w-screen-xl mx-auto w-full flex items-center justify-center">
+              <TraitCard
+                title={title}
+                className={`transition-all duration-1000 ease-out ${
+                  expandedCard === index
+                    ? 'scale-100 opacity-100'
+                    : 'scale-90 opacity-60'
+                }`}
+                isExpanded={expandedCard === index}
+              >
+                {expandedCard === index && (
+                  <div className="mt-4 space-y-3 animate__animated animate__fadeIn">
+                    <p className="text-quaternary text-sm leading-relaxed">
+                      {detail}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="px-3 py-1 bg-primary text-quaternary text-xs rounded-full"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </TraitCard>
-          </div>
-        </section>
-      ))}
+                )}
+              </TraitCard>
+            </div>
+          </section>
+        );
+      })}
 
       {/* 마지막 여백 섹션 */}
       <section className="h-screen flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-primary mb-4">
-            Thank you for scrolling!
+            {t('home.thankYou')}
           </h2>
           <p className="text-secondary">
-            더 많은 정보는 다른 페이지에서 확인하세요.
+            {t('home.moreInfo')}
           </p>
         </div>
       </section>
