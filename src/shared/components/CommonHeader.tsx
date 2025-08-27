@@ -4,7 +4,7 @@ import LanguageToggle from '@/shared/components/LanguageToggle';
 
 const CommonHeader = () => {
   return (
-    <div className="w-full flex justify-end">
+    <div className="fixed right-0 z-20">
       <LanguageToggle />
     </div>
   );
