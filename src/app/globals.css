@@ -3,11 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* Primary Color Palette */
+  --primary: #44444e;
+  --secondary: #37353e;
+  --tertiary: #715a5a;
+  --quaternary: #d3dad9;
+
+  /* TraitCard specific colors */
+  --card-bg: #1f2937;
+  --card-border: #e5e7eb;
+  --card-ring: rgba(255, 255, 255, 0.3);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /*color: rgb(var(--foreground-rgb));*/
 }
 
 @layer utilities {
@@ -26,20 +35,6 @@ body {
 
 .animate__delay-8s {
   animation-delay: 8s;
-}
-
-/* CSS Variables - Color System */
-:root {
-  /* Primary Color Palette */
-  --primary: #44444e;
-  --secondary: #37353e;
-  --tertiary: #715a5a;
-  --quaternary: #d3dad9;
-  
-  /* TraitCard specific colors */
-  --card-bg: #1f2937;
-  --card-border: #e5e7eb;
-  --card-ring: rgba(255, 255, 255, 0.3);
 }
 
 /* Text Colors */
