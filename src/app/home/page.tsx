@@ -6,7 +6,10 @@ import TypingText from '@/shared/components/TypingText';
 import { useCommonTranslations } from '@/shared/hooks/useCommonTranslations';
 import 'animate.css';
 import TraitCard from '@/app/home/components/TraitCard';
-import { TRAIT_KEYS, getTraitTranslationKey, type TraitKey } from '@/app/home/constants/traitData';
+import {
+  getTraitTranslationKey,
+  TRAIT_KEYS,
+} from '@/app/home/constants/traitData';
 
 export default function Home() {
   const { hero, heroDesc01, heroDesc02 } = useCommonTranslations();
@@ -15,32 +18,46 @@ export default function Home() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    const maxScroll =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (currentScrollY / maxScroll) * 100;
+
+    setScrollY(currentScrollY);
+    setScrollProgress(progress);
+
+    // 각 카드별 섹션 높이 (100vh씩)
+    const heroSectionHeight = window.innerHeight; // 첫 번째 섹션
+    const cardSectionHeight = window.innerHeight; // 각 카드마다 100vh
+
+    // 현재 어떤 카드 섹션에 있는지 계산
+    const scrollAfterHero = Math.max(0, currentScrollY - heroSectionHeight);
+    const currentCardIndex = Math.floor(scrollAfterHero / cardSectionHeight);
+
+    // 🔍 디버깅 로그 (개발 중에만)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('📊 Scroll Debug:', {
+        currentScrollY: Math.round(currentScrollY),
+        progress: Math.round(progress),
+        heroSectionHeight,
+        scrollAfterHero: Math.round(scrollAfterHero),
+        currentCardIndex,
+        expandedCard: currentCardIndex >= 0 && currentScrollY > heroSectionHeight * 0.8 
+          ? Math.min(currentCardIndex, TRAIT_KEYS.length - 1) 
+          : null
+      });
+    }
+
+    if (currentScrollY > heroSectionHeight * 0.8) {
+      // 히어로 섹션을 80% 지나면 카드 활성화 시작
+      setExpandedCard(Math.min(currentCardIndex, TRAIT_KEYS.length - 1));
+    } else {
+      setExpandedCard(null);
+    }
+  };
+
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const maxScroll =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (currentScrollY / maxScroll) * 100;
-
-      setScrollY(currentScrollY);
-      setScrollProgress(progress);
-
-      // 각 카드별 섹션 높이 (100vh씩)
-      const heroSectionHeight = window.innerHeight; // 첫 번째 섹션
-      const cardSectionHeight = window.innerHeight; // 각 카드마다 100vh
-
-      // 현재 어떤 카드 섹션에 있는지 계산
-      const scrollAfterHero = Math.max(0, currentScrollY - heroSectionHeight);
-      const currentCardIndex = Math.floor(scrollAfterHero / cardSectionHeight);
-
-              if (currentScrollY > heroSectionHeight * 0.8) {
-        // 히어로 섹션을 80% 지나면 카드 활성화 시작
-        setExpandedCard(Math.min(currentCardIndex, TRAIT_KEYS.length - 1));
-      } else {
-        setExpandedCard(null);
-      }
-    };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -60,15 +77,15 @@ export default function Home() {
       <section className="h-screen flex flex-col justify-center items-center px-10 relative">
         <div className="max-w-screen-xl mx-auto flex flex-col gap-4">
           <h1 className="text-7xl font-bold text-primary text-center">
-            <TypingText 
+            <TypingText
               key={`hero-${i18n.language}`}
-              text={hero || ""} 
-              speed={75} 
+              text={hero || ''}
+              speed={75}
             />
           </h1>
           <TypingText
             key={`heroDesc-${i18n.language}`}
-            text={`${heroDesc01 || ""}\n${heroDesc02 || ""}`}
+            text={`${heroDesc01 || ''}\n${heroDesc02 || ''}`}
             delay={2}
             speed={50}
             className="text-xl text-secondary leading-10 text-center"
@@ -87,21 +104,32 @@ export default function Home() {
         <div className="mt-4 text-sm text-quaternary font-mono">
           {Math.round(scrollProgress)}%
         </div>
+        
+        {/* 🔍 개발 모드에서만 보이는 스크롤 디버그 정보 */}
+        {process.env.NODE_ENV === 'development' && (
+          <div className="mt-4 p-2 bg-black bg-opacity-75 text-white text-xs rounded">
+            <div>ScrollY: {Math.round(scrollY)}</div>
+            <div>Card: {expandedCard ?? 'none'}</div>
+            <div>VH: {window.innerHeight}px</div>
+          </div>
+        )}
       </div>
 
       {/* 카드 섹션들 - 각각 100vh */}
       {TRAIT_KEYS.map((traitKey, index) => {
         const title = t(getTraitTranslationKey(traitKey, 'title'));
         const detail = t(getTraitTranslationKey(traitKey, 'detail'));
-        const skills = t(getTraitTranslationKey(traitKey, 'skills'), { returnObjects: true }) as string[];
-        
+        const skills = t(getTraitTranslationKey(traitKey, 'skills'), {
+          returnObjects: true,
+        }) as string[];
+
         return (
           <section
             key={traitKey}
             className="h-screen flex items-center justify-center px-10 relative"
           >
             {/* 고정된 카드 컨테이너 */}
-            <div className="max-w-screen-xl mx-auto w-full flex items-center justify-center">
+            <div className="max-w-screen-xl mx-auto w-full h-screen flex items-center justify-center">
               <TraitCard
                 title={title}
                 className={`transition-all duration-1000 ease-out ${
@@ -140,9 +168,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-primary mb-4">
             {t('home.thankYou')}
           </h2>
-          <p className="text-secondary">
-            {t('home.moreInfo')}
-          </p>
+          <p className="text-secondary">{t('home.moreInfo')}</p>
         </div>
       </section>
     </div>
