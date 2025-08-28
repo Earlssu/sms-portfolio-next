@@ -1,4 +1,3 @@
-// 특성 카드 섹션 컴포넌트
 import { getTraitTranslationKey } from '@/app/home/constants/traitData';
 import React from 'react';
 import TraitCard from '@/app/home/components/TraitCard';
