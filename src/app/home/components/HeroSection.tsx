@@ -31,6 +31,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <TypingText
             key={`hero-${language}`}
             text={hero || ''}
+            delay={SCROLL_CONFIG.DELAYS.HERO}
             speed={SCROLL_CONFIG.TYPING_SPEEDS.HERO}
           />
         </h1>

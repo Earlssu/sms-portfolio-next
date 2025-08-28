@@ -5,6 +5,7 @@ export const SCROLL_CONFIG = {
     DESCRIPTION: 50,
   },
   DELAYS: {
-    DESCRIPTION: 2, // 2초 후 설명 타이핑 시작
+    HERO: 0.5,
+    DESCRIPTION: 2.5,
   },
 } as const;
