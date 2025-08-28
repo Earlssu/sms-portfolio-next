@@ -3,6 +3,8 @@ import 'animate.css';
 
 interface TraitCardProps {
   title: string;
+  detail: string;
+  skills: string[];
   className?: string;
   children?: React.ReactNode;
   isExpanded?: boolean;
@@ -10,7 +12,9 @@ interface TraitCardProps {
 
 const TraitCard: React.FC<TraitCardProps> = ({
   title,
+  detail,
   className,
+  skills,
   children,
   isExpanded = false,
 }) => {
@@ -46,12 +50,26 @@ const TraitCard: React.FC<TraitCardProps> = ({
         ${isExpanded ? 'opacity-100 max-h-96' : 'opacity-50 max-h-8'}
       `}
       >
-        {!isExpanded && (
+        {isExpanded ? (
+          <div className="mt-4 space-y-3 animate__animated animate__fadeIn">
+            <p className="text-secondary text-sm leading-relaxed">{detail}</p>
+            <div className="flex flex-wrap gap-2">
+              {skills &&
+                skills.map((skill, skillIndex) => (
+                  <span
+                    key={skillIndex}
+                    className="px-3 py-1 bg-primary text-quaternary text-xs rounded-full"
+                  >
+                    {skill}
+                  </span>
+                ))}
+            </div>
+          </div>
+        ) : (
           <p className="text-sm text-gray-500 truncate">
             스크롤하여 자세히 보기...
           </p>
         )}
-        {children}
       </div>
     </div>
   );
