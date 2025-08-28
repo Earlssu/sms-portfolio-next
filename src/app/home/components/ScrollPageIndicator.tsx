@@ -7,6 +7,14 @@ interface ScrollProgressIndicatorProps {
   isClient: boolean;
 }
 
+/**
+ * 스크롤 표시기 (Fixed0
+ * @param scrollProgress 스크롤 진척도 (%)
+ * @param scrollY Y 스크롤
+ * @param expandedCard 현재 확장된 카드의 인덱스 (디버깅용)
+ * @param isClient (디버깅용) window 객체 조회 시 isClient 여부
+ * @constructor
+ */
 export const ScrollProgressIndicator: React.FC<
   ScrollProgressIndicatorProps
 > = ({ scrollProgress, scrollY, expandedCard, isClient }) => (

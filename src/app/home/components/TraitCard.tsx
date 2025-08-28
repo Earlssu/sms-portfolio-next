@@ -10,6 +10,16 @@ interface TraitCardProps {
   isExpanded?: boolean;
 }
 
+/**
+ * 홈 화면에서 사용하는 TraitCard
+ * @param title 제목
+ * @param detail 부연 설명
+ * @param className 추가적인 스타일링을 위한 className (tailwind 기반)
+ * @param skills 스킬셋
+ * @param children 스킬셋 아래 추가 요소
+ * @param isExpanded 확장 여부
+ * @constructor
+ */
 const TraitCard: React.FC<TraitCardProps> = ({
   title,
   detail,
@@ -64,6 +74,7 @@ const TraitCard: React.FC<TraitCardProps> = ({
                   </span>
                 ))}
             </div>
+            {children}
           </div>
         ) : (
           <p className="text-sm text-gray-500 truncate">
