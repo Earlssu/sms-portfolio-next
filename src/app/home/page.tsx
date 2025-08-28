@@ -17,6 +17,7 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
@@ -43,9 +44,10 @@ export default function Home() {
         heroSectionHeight,
         scrollAfterHero: Math.round(scrollAfterHero),
         currentCardIndex,
-        expandedCard: currentCardIndex >= 0 && currentScrollY > heroSectionHeight * 0.8 
-          ? Math.min(currentCardIndex, TRAIT_KEYS.length - 1) 
-          : null
+        expandedCard:
+          currentCardIndex >= 0 && currentScrollY > heroSectionHeight * 0.8
+            ? Math.min(currentCardIndex, TRAIT_KEYS.length - 1)
+            : null,
       });
     }
 
@@ -58,6 +60,9 @@ export default function Home() {
   };
 
   useEffect(() => {
+    // 클라이언트 사이드 마운트 확인
+    setIsClient(true);
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -104,9 +109,9 @@ export default function Home() {
         <div className="mt-4 text-sm text-quaternary font-mono">
           {Math.round(scrollProgress)}%
         </div>
-        
+
         {/* 🔍 개발 모드에서만 보이는 스크롤 디버그 정보 */}
-        {process.env.NODE_ENV === 'development' && (
+        {process.env.NODE_ENV === 'development' && isClient && (
           <div className="mt-4 p-2 bg-black bg-opacity-75 text-white text-xs rounded">
             <div>ScrollY: {Math.round(scrollY)}</div>
             <div>Card: {expandedCard ?? 'none'}</div>
