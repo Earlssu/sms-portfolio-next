@@ -2,7 +2,7 @@
   "hero": "벽에 막히면 벽을 오릅니다.",
   "heroDesc01": "디버깅에 지치면 손가락 대신 발가락을 씁니다. (암벽에서요)",
   "heroDesc02": "끈기와 탐색으로 더 나은 사용자 경험을 만드는 개발자 심민섭입니다.",
-  "home": "처음으로",
+  "toHome": "처음으로",
   "about": "소개",
   "career": "주요 프로젝트",
   "skills": "기술 스택",
@@ -32,23 +32,39 @@
   "traits": {
     "student": {
       "title": "유학생",
-      "detail": "호주에서 3년간 유학하며 글로벌 마인드셋과 영어 실력을 키웠습니다.",
-      "skills": ["Cross-cultural Communication", "English Fluency", "Adaptability"]
+      "detail": "미국 Austin College에서 컴퓨터공학을 전공하여, 기술 문서를 번역 없이 읽고 이해할 수 있습니다.",
+      "skills": [
+        "Cross-cultural Communication",
+        "English Fluency",
+        "Adaptability"
+      ]
     },
     "collaborator": {
       "title": "협업이 가장 편했던 개발자",
-      "detail": "팀워크를 중시하며 원활한 소통으로 프로젝트를 성공적으로 이끌어갑니다.",
-      "skills": ["Team Leadership", "Communication", "Project Management"]
+      "detail": "긍정적인 에너지와 능동적인 커뮤니케이션을 바탕으로 한 협업 능력을 갖춰, 동료들로부터 ‘가장 협업하고 싶은 개발자’라는 평가를 받았습니다.",
+      "skills": [
+        "Team Leadership",
+        "Communication",
+        "Project Management"
+      ]
     },
     "positive": {
-      "title": "힘들 때 웃어야 일류다",
-      "detail": "어려운 상황에서도 긍정적인 마인드로 문제를 해결해나갑니다.",
-      "skills": ["Positive Mindset", "Problem Solving", "Resilience"]
+      "title": "기록하고 개발자",
+      "detail": "새롭게 배운 지식을 글로 정리하며 소화하고, 누군가에게 공유하는 것을 즐기는 성격으로 블로그에 꾸준히 기록하고 있습니다.",
+      "skills": [
+        "Positive Mindset",
+        "Problem Solving",
+        "Resilience"
+      ]
     },
     "learner": {
       "title": "Fast Learner",
       "detail": "새로운 기술과 트렌드를 빠르게 습득하고 적용하는 능력이 뛰어납니다.",
-      "skills": ["Quick Learning", "Technology Adaptation", "Continuous Growth"]
+      "skills": [
+        "Quick Learning",
+        "Technology Adaptation",
+        "Continuous Growth"
+      ]
     }
   },
   "home": {

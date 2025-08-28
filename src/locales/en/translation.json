@@ -2,7 +2,7 @@
   "hero": "When I hit a wall, I get over it.",
   "heroDesc01": "When debugging wears me out, I switch from fingers to toes. (On real walls!)",
   "heroDesc02": "I'm MinSeob Shim, a frontend developer who climbs one step at a time toward better user experiences.",
-  "home": "Home",
+  "toHome": "Home",
   "about": "About",
   "career": "Major Projects",
   "skills": "Tech Stack",
@@ -33,22 +33,38 @@
     "student": {
       "title": "International Student",
       "detail": "Developed a global mindset and English proficiency through 3 years of studying in Australia.",
-      "skills": ["Cross-cultural Communication", "English Fluency", "Adaptability"]
+      "skills": [
+        "Cross-cultural Communication",
+        "English Fluency",
+        "Adaptability"
+      ]
     },
     "collaborator": {
       "title": "Most Collaborative Developer",
       "detail": "Values teamwork and leads projects to success through effective communication.",
-      "skills": ["Team Leadership", "Communication", "Project Management"]
+      "skills": [
+        "Team Leadership",
+        "Communication",
+        "Project Management"
+      ]
     },
     "positive": {
       "title": "Stay Positive in Tough Times",
       "detail": "Solves problems with a positive mindset even in challenging situations.",
-      "skills": ["Positive Mindset", "Problem Solving", "Resilience"]
+      "skills": [
+        "Positive Mindset",
+        "Problem Solving",
+        "Resilience"
+      ]
     },
     "learner": {
       "title": "Fast Learner",
       "detail": "Excels at quickly acquiring and applying new technologies and trends.",
-      "skills": ["Quick Learning", "Technology Adaptation", "Continuous Growth"]
+      "skills": [
+        "Quick Learning",
+        "Technology Adaptation",
+        "Continuous Growth"
+      ]
     }
   },
   "home": {

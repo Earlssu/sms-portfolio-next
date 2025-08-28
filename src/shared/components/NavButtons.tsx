@@ -12,7 +12,7 @@ const NavButtons: React.FC = () => {
   const labels = { career, skills, contact, home };
 
   return (
-    <div className="w-full flex gap-4 py-4">
+    <div className="fixed right-4 top-14 flex flex-col gap-4 z-50">
       {NAV_ITEMS.map((item, idx) => (
         <Button
           key={`btn_${idx}`}

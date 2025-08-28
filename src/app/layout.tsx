@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import CommonHeader from '@/shared/components/CommonHeader';
 import I18nProvider from '@/shared/components/I18nProvider';
+import NavButtons from '@/shared/components/NavButtons';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,7 +25,10 @@ export default function RootLayout({
             <CommonHeader />
           </header>
           <main>
-            <div className="flex-1 flex flex-col gap-6 min-h-0">{children}</div>
+            <div className="relative flex-1 flex flex-col gap-6 min-h-0">
+              {children}
+            </div>
+            <NavButtons />
           </main>
         </I18nProvider>
       </body>
