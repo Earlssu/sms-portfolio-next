@@ -49,128 +49,12 @@ body {
   animation-delay: 8s;
 }
 
-/* Text Colors */
-.text-primary {
-  color: var(--primary);
-}
-
-.text-secondary {
-  color: var(--secondary);
-}
-
-.text-tertiary {
-  color: var(--tertiary);
-}
-
-.text-quaternary {
-  color: var(--quaternary);
-}
-
-/* Background Colors */
-.bg-primary {
-  background-color: var(--primary);
-}
-
-.bg-secondary {
-  background-color: var(--secondary);
-}
-
-.bg-tertiary {
-  background-color: var(--tertiary);
-}
-
-.bg-quaternary {
-  background-color: var(--quaternary);
-}
-
-/* Border Colors */
-.border-primary {
-  border-color: var(--primary);
-}
-
-.border-secondary {
-  border-color: var(--secondary);
-}
-
-.border-tertiary {
-  border-color: var(--tertiary);
-}
-
-.border-quaternary {
-  border-color: var(--quaternary);
-}
-
-/* TraitCard specific colors */
-.bg-card {
-  background-color: var(--card-bg);
-}
-
-.border-card {
-  border-color: var(--card-border);
-}
-
-.ring-card {
-  --tw-ring-color: var(--card-ring);
-}
-
-/* Hover Text Colors */
-.hover\\:text-primary-hover:hover {
-  color: var(--primary-hover);
-}
-
-.hover\\:text-secondary-hover:hover {
-  color: var(--secondary-hover);
-}
-
-.hover\\:text-tertiary-hover:hover {
-  color: var(--tertiary-hover);
-}
-
-.hover\\:text-quaternary-hover:hover {
-  color: var(--quaternary-hover);
-}
-
-/* Hover Background Colors */
-.hover\\:bg-primary-hover:hover {
-  background-color: var(--primary-hover);
-}
-
-.hover\\:bg-secondary-hover:hover {
-  background-color: var(--secondary-hover);
-}
-
-.hover\\:bg-tertiary-hover:hover {
-  background-color: var(--tertiary-hover);
-}
-
-.hover\\:bg-quaternary-hover:hover {
-  background-color: var(--quaternary-hover);
-}
-
-.hover\\:bg-card-hover:hover {
-  background-color: var(--card-hover);
-}
-
-/* Hover Border Colors */
-.hover\\:border-primary-hover:hover {
-  border-color: var(--primary-hover);
-}
-
-.hover\\:border-secondary-hover:hover {
-  border-color: var(--secondary-hover);
-}
-
-.hover\\:border-tertiary-hover:hover {
-  border-color: var(--tertiary-hover);
-}
-
-.hover\\:border-quaternary-hover:hover {
-  border-color: var(--quaternary-hover);
-}
-
 /* Transition utilities for smooth hover effects */
 .transition-colors-smooth {
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
 }
 
 /* Tab Animation Styles */
@@ -192,13 +76,18 @@ body {
 }
 
 .tab-active::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+  background: linear-gradient(
+    45deg,
+    var(--primary),
+    var(--secondary),
+    var(--tertiary)
+  );
   border-radius: inherit;
   z-index: -1;
   opacity: 0.3;
