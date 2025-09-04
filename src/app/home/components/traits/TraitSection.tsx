@@ -33,7 +33,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
     return t(getTraitTabContentKey(traitKey as any, tabIndex), {
       returnObjects: true,
     }) as unknown as {
-      sections: Array<{ title: string; content: string }>;
+      sections: Array<{ title: string; position?: string; content: string }>;
       contact?: { email: string; github: string; blog: string };
     };
   };

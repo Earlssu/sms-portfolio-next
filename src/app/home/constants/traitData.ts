@@ -1,8 +1,4 @@
-export const TRAIT_KEYS = [
-  'aboutMe',
-  'projects',
-  'techStack',
-] as const;
+export const TRAIT_KEYS = ['aboutMe', 'projects', 'techStack'] as const;
 
 export type TraitKey = (typeof TRAIT_KEYS)[number];
 
@@ -13,6 +9,7 @@ export interface TraitTranslationKeys {
     [key: string]: {
       sections: Array<{
         title: string;
+        position?: string;
         content: string;
       }>;
       contact?: {
@@ -40,10 +37,7 @@ export const TRAIT_TAB_KEYS = {
 } as const;
 
 // 탭 콘텐츠 전용 키 생성 함수 (의미있는 키 이름 사용)
-export const getTraitTabContentKey = (
-  traitKey: TraitKey,
-  tabIndex: number
-) => {
+export const getTraitTabContentKey = (traitKey: TraitKey, tabIndex: number) => {
   const tabKeys = TRAIT_TAB_KEYS[traitKey];
   const tabKey = tabKeys[tabIndex];
   return `traits.${traitKey}.tabContents.${tabKey}`;

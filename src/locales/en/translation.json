@@ -33,7 +33,7 @@
     "aboutMe": {
       "title": "About Me",
       "tabs": [
-        "Introduction",
+        "Brief Introduction",
         "Recent Activities",
         "Career"
       ],
@@ -79,15 +79,18 @@
           "sections": [
             {
               "title": "Blast Inc. (2023.08 ~ 2024.10)",
-              "content": "As a frontend developer in the development team, successfully launched projects across diverse domains including HACCP certification apps, stock community platforms, 3D modeling apps, and split-payment financial applications."
+              "position": "Development Team | Frontend Developer",
+              "content": "Successfully launched projects across diverse domains including HACCP certification apps, stock community platforms, 3D modeling apps, and split-payment financial applications."
             },
             {
               "title": "Digital Daily Newspaper (2022.02 ~ 2022.04)",
-              "content": "As a reporter in the Editorial Digital Life Team, developed abilities to understand the latest technology trends and approach them from a business perspective through IT industry trend analysis and article writing experience."
+              "position": "Editorial Digital Life Team | Reporter",
+              "content": "Developed abilities to understand the latest technology trends and approach them from a business perspective through IT industry trend analysis and article writing experience."
             },
             {
               "title": "Austin College IT Department (2019.06 ~ 2020.05)",
-              "content": "As an IT department intern, built user-oriented problem-solving abilities and communication skills by resolving IT issues for campus community members."
+              "position": "IT Department | Intern",
+              "content": "Built user-oriented problem-solving abilities and communication skills by resolving IT issues for campus community members."
             }
           ]
         }
