@@ -1,8 +1,7 @@
 export const TRAIT_KEYS = [
-  'student',
-  'collaborator',
-  'positive',
-  'learner',
+  'aboutMe',
+  'projects',
+  'techStack',
 ] as const;
 
 export type TraitKey = (typeof TRAIT_KEYS)[number];
