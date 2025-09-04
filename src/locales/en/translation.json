@@ -91,14 +91,7 @@
             }
           ]
         }
-      },
-      "detail": "Fast-growing frontend developer with diverse project experience.",
-      "skills": [
-        "React",
-        "Next.js",
-        "React Native",
-        "TypeScript"
-      ]
+      }
     },
     "projects": {
       "title": "Major Projects",
@@ -156,14 +149,7 @@
             }
           ]
         }
-      },
-      "detail": "Experienced in successful project launches across diverse domains.",
-      "skills": [
-        "Project Management",
-        "User Experience",
-        "Performance Optimization",
-        "Cross-platform Development"
-      ]
+      }
     },
     "techStack": {
       "title": "Tech Stack",
@@ -233,16 +219,7 @@
             }
           ]
         }
-      },
-      "detail": "Provides optimal solutions utilizing diverse technology stacks.",
-      "skills": [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "React Native",
-        "TailwindCSS"
-      ]
+      }
     }
   },
   "home": {

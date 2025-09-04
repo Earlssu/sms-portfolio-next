@@ -20,12 +20,8 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
   isExpanded,
 }) => {
   const { t } = useTranslation();
-  
+
   const title = t(getTraitTranslationKey(traitKey as any, 'title'));
-  const detail = t(getTraitTranslationKey(traitKey as any, 'detail'));
-  const skills = t(getTraitTranslationKey(traitKey as any, 'skills'), {
-    returnObjects: true,
-  }) as unknown as string[];
   const tabs = t(getTraitTranslationKey(traitKey as any, 'tabs'), {
     returnObjects: true,
   }) as unknown as string[];
@@ -88,18 +84,8 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
             </div>
           ) : (
             <div className="mt-4 space-y-3 animate__animated animate__fadeIn">
-              <p className="text-secondary text-sm leading-relaxed">{detail}</p>
-              <div className="flex flex-wrap gap-2">
-                {skills &&
-                  skills.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="px-3 py-1 bg-primary text-quaternary text-xs rounded-full"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-              </div>
+              <p className="text-secondary text-sm leading-relaxed"></p>
+              <div className="flex flex-wrap gap-2"></div>
             </div>
           )}
         </TraitCard>

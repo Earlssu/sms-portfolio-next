@@ -91,14 +91,7 @@
             }
           ]
         }
-      },
-      "detail": "빠르게 성장하는 프론트엔드 개발자로서 다양한 프로젝트 경험을 보유하고 있습니다.",
-      "skills": [
-        "React",
-        "Next.js",
-        "React Native",
-        "TypeScript"
-      ]
+      }
     },
     "projects": {
       "title": "주요 프로젝트",
@@ -156,14 +149,7 @@
             }
           ]
         }
-      },
-      "detail": "다양한 도메인에서 성공적인 프로젝트 출시 경험을 보유하고 있습니다.",
-      "skills": [
-        "Project Management",
-        "User Experience",
-        "Performance Optimization",
-        "Cross-platform Development"
-      ]
+      }
     },
     "techStack": {
       "title": "기술 스택",
@@ -233,16 +219,7 @@
             }
           ]
         }
-      },
-      "detail": "다양한 기술 스택을 활용하여 최적의 솔루션을 제공합니다.",
-      "skills": [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "React Native",
-        "TailwindCSS"
-      ]
+      }
     }
   },
   "home": {

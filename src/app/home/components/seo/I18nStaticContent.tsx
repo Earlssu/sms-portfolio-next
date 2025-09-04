@@ -41,12 +41,6 @@ export const I18nStaticContent: React.FC<I18nStaticContentProps> = ({
         {Object.entries(traits).map(([key, trait]) => (
           <article key={key}>
             <h3>{trait.title}</h3>
-            <p>{trait.detail}</p>
-            <ul>
-              {trait.skills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul>
           </article>
         ))}
 

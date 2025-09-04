@@ -8,9 +8,7 @@ export type TraitKey = (typeof TRAIT_KEYS)[number];
 
 export interface TraitTranslationKeys {
   title: string;
-  detail: string;
   tabs?: string[];
-  skills?: string[];
   tabContents?: {
     [key: string]: {
       sections: Array<{
