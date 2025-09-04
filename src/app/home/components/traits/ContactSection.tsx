@@ -1,42 +1,34 @@
 import React from 'react';
+import { ContactItem } from './';
+import { CONTACT_CONFIG, ContactInfo } from './contactConfig';
 
 interface ContactSectionProps {
-  contact: {
-    email: string;
-    github: string;
-    blog: string;
-  };
+  contact: ContactInfo;
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
   return (
     <div className={'flex gap-6 mt-8'}>
-      <div className={'flex-1 flex gap-4 justify-center'}>
-        <h3 className={'text-lg text-tertiary'}>email:</h3>
-        <a href={`mailto:${contact.email}`}>{contact.email}</a>
-      </div>
-
-      <div className={'flex-1 flex gap-4 justify-center'}>
-        <a
-          className={'text-lg text-tertiary'}
-          href={contact.github}
-          target={'_blank'}
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </div>
-
-      <div className={'flex-1 flex gap-4 justify-center'}>
-        <a
-          className={'text-lg text-tertiary'}
-          href={contact.blog}
-          target={'_blank'}
-          rel="noopener noreferrer"
-        >
-          Blog
-        </a>
-      </div>
+      <ContactItem
+        type="email"
+        value={contact.email}
+        label={CONTACT_CONFIG.email.label}
+        icon={CONTACT_CONFIG.email.icon}
+      />
+      
+      <ContactItem
+        type="github"
+        value={contact.github}
+        label={CONTACT_CONFIG.github.label}
+        icon={CONTACT_CONFIG.github.icon}
+      />
+      
+      <ContactItem
+        type="blog"
+        value={contact.blog}
+        label={CONTACT_CONFIG.blog.label}
+        icon={CONTACT_CONFIG.blog.icon}
+      />
     </div>
   );
 };

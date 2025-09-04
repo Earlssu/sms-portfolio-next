@@ -51,7 +51,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
           isExpanded={isExpanded}
         >
           {index === 0 ? (
-            <div className={'flex flex-col h-fit gap-4'}>
+            <div className={'flex flex-col h-fit gap-8'}>
               <div className={'flex flex-wrap gap-3 py-2 justify-center'}>
                 {tabs.map((tab, tabIndex) => (
                   <TabButton
