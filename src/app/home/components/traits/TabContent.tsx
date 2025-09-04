@@ -1,5 +1,6 @@
 import React from 'react';
 import { ContactSection } from './ContactSection';
+import { formatContent } from '@/shared/utils/contentFormatter';
 
 interface TabContentProps {
   tabIndex: number;
@@ -20,12 +21,22 @@ export const TabContent: React.FC<TabContentProps> = ({
       }
     >
       <div className={'flex flex-col gap-6'}>
-        {sections?.map((section, sectionIndex) => (
-          <div key={sectionIndex} className={'flex flex-col gap-4'}>
-            <h3 className={'text-lg text-tertiary'}>{section.title}</h3>
-            <p>{section.content}</p>
-          </div>
-        ))}
+        {sections?.map((section, sectionIndex) => {
+          const formattedContent = formatContent(section.content);
+          
+          return (
+            <div key={sectionIndex} className={'flex flex-col gap-4'}>
+              <h3 className={'text-lg text-tertiary'}>{section.title}</h3>
+              <div className={'flex flex-col gap-3'}>
+                {formattedContent.map((sentence, sentenceIndex) => (
+                  <p key={sentenceIndex} className={'leading-relaxed'}>
+                    {sentence}
+                  </p>
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       {contact && <ContactSection contact={contact} />}
