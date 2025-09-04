@@ -1,10 +1,13 @@
 {
-  "greeting": "Welcome!",
+  "hero": "When I hit a wall, I get over it.",
+  "heroDesc01": "When debugging wears me out, I switch from fingers to toes. (On real walls!)",
+  "heroDesc02": "I'm MinSeob Shim, a frontend developer who climbs one step at a time toward better user experiences.",
+  "toHome": "Home",
   "about": "About",
   "career": "Major Projects",
   "skills": "Tech Stack",
   "contact": "Contact",
-  "typeText": "Hello!\nI'm Minseob Shim, a frontend developer.\nI graduated from high school and university in the US, and I'm currently based in Seoul.\nI mostly worked on React-TypeScript or React Native based projects.\nWorking on 10 projects in a year gave me a good understanding on various skills and third-party libraries.",
+  "typeText": "Hello!\nI'm Minseob Shim, a frontend developer.\n\nAfter graduating from high school and university in the U.S., I'm now based in Korea, building various web and mobile applications.\nI primarily work with React, TypeScript, and React Native, with a strong focus on creating better user experiences.\n\nOver the past year, I've taken part in more than 10 projects,\nworking in teams of various sizes and across different domains.\nI'm well-adapted to fast feedback loops in Agile environments,\nexperienced with a wide range of third-party libraries,\nand comfortable collaborating with designers, PMs, and backend developers.\n\nWhat I enjoy most about development is solving tricky problems\nand seeing real feedback from users.\nI'm someone who genuinely enjoys the process of exploring and overcoming challenges.\n\nOh, and yes—I also climb real walls. 🧗‍♂️",
   "html5": "I understand the importance of web accessibility and semantic markup, and have experience structuring markup with semantic tags and alt attributes to enhance user experience and accessibility.",
   "css3": "Skilled in mobile-first responsive design using media queries and implementing CSS animations to create smooth user interactions, all without relying on external frameworks.",
   "javascript": "Built a portfolio website using only vanilla JavaScript, applying ES6 features effectively and demonstrating deep understanding of core concepts like DOM manipulation, event handling, and Flexbox layout.",
@@ -25,5 +28,205 @@
   "figma": "Skilled in collaborating with designers to understand and implement component-based design systems. I analyze responsive designs and translate them into code. I’ve suggested improvements after identifying UX inconsistencies in Figma flows, and I use plugins and prototypes to maintain clear communication with designers.",
   "notion": "Experienced in using Notion for documenting daily scrums, meeting notes, and Git commit/review conventions. I’ve built database-driven project pages and split structures for better readability. I even manage my personal schedule with Notion due to my high level of familiarity with the tool.",
   "jira": "I’ve used Jira’s Kanban boards in ticket-based QA processes, managing client feedback and updates efficiently. I clearly understand the distinctions between Epics, Tasks, and Sub-tasks, and can prioritize issues while customizing workflows.",
-  "slack": "Fluent in using Slack as a primary team communication tool, including mentions, thread-based conversations, file sharing, and notifications. I’ve also used Slack bots (e.g., Daily GeekNews, CI/CD alerts) to reduce repetitive tasks and foster efficient communication in a real-world setting."
+  "slack": "Fluent in using Slack as a primary team communication tool, including mentions, thread-based conversations, file sharing, and notifications. I've also used Slack bots (e.g., Daily GeekNews, CI/CD alerts) to reduce repetitive tasks and foster efficient communication in a real-world setting.",
+  "traits": {
+    "aboutMe": {
+      "title": "About Me",
+      "tabs": [
+        "Brief Introduction",
+        "Recent Activities",
+        "Career"
+      ],
+      "tabContents": {
+        "introduction": {
+          "sections": [
+            {
+              "title": "Hello! I'm MinSeob Shim, Frontend Developer",
+              "content": "A rapidly growing frontend developer with over 1 year of hands-on experience. I have successfully launched various web and mobile services using React, Next.js, and React Native across diverse environments."
+            },
+            {
+              "title": "My Strengths",
+              "content": "I can quickly adapt to projects across various domains and am confident in learning and implementing new technologies. I particularly excel at documenting development processes for smooth team communication and rapidly acquiring English technical documentation to enhance team development efficiency."
+            }
+          ],
+          "contact": {
+            "email": "shim5505@gmail.com",
+            "github": "https://github.com/earlssu",
+            "blog": "https://code-in-law.tistory.com/"
+          }
+        },
+        "recentActivities": {
+          "sections": [
+            {
+              "title": "🙌 Gachi Crew 1st Generation (2025.05 ~ Present)",
+              "content": "Enhancing CSS animation and user experience design skills through the side project 'Watery'."
+            },
+            {
+              "title": "🏆 Sparta Coding Club Challenge Completed (2025.07 ~ 2025.08)",
+              "content": "Developed algorithmic problem-solving abilities and metacognitive skills by documenting daily blog reflections on problem-solving processes."
+            },
+            {
+              "title": "🇯🇵 JLPT N3 Certification (2025.08.12)",
+              "content": "Expanded multilingual communication capabilities by obtaining Japanese Language Proficiency Test N3 level."
+            },
+            {
+              "title": "🎓 Naver BoostCamp Basic Course (2025.06)",
+              "content": "Enhanced understanding of fundamental code operation principles by studying CS basics including compilers and hashing."
+            }
+          ]
+        },
+        "career": {
+          "sections": [
+            {
+              "title": "Blast Inc. (2023.08 ~ 2024.10)",
+              "position": "Development Team | Frontend Developer",
+              "content": "Successfully launched projects across diverse domains including HACCP certification apps, stock community platforms, 3D modeling apps, and split-payment financial applications."
+            },
+            {
+              "title": "Digital Daily Newspaper (2022.02 ~ 2022.04)",
+              "position": "Editorial Digital Life Team | Reporter",
+              "content": "Developed abilities to understand the latest technology trends and approach them from a business perspective through IT industry trend analysis and article writing experience."
+            },
+            {
+              "title": "Austin College IT Department (2019.06 ~ 2020.05)",
+              "position": "IT Department | Intern",
+              "content": "Built user-oriented problem-solving abilities and communication skills by resolving IT issues for campus community members."
+            }
+          ]
+        }
+      }
+    },
+    "projects": {
+      "title": "Major Projects",
+      "tabs": [
+        "Overview",
+        "Key Projects",
+        "Achievements"
+      ],
+      "tabContents": {
+        "overview": {
+          "sections": [
+            {
+              "title": "Diverse Domain Project Experience",
+              "content": "Led frontend development across various business domains including HACCP certification, finance, community platforms, and 3D modeling. Selected and implemented optimal technology stacks and architectures tailored to each project's domain characteristics."
+            },
+            {
+              "title": "Fast Development with High Quality",
+              "content": "Implemented over 40 core screens within 2 months while providing intuitive UI/UX considering user experience. Contributed to quality improvement by optimizing performance and reducing loading time by 1.2 seconds."
+            }
+          ]
+        },
+        "keyProjects": {
+          "sections": [
+            {
+              "title": "XCoreSystem - HACCP Certification App (2024.08~10)",
+              "content": "Developed an internal business app based on RN and Expo to streamline HACCP certification procedures. Intuitively improved complex data input flow through nested modal structures."
+            },
+            {
+              "title": "Finter - Stock Community (2024.06~08)",
+              "content": "Developed a Next.js-based stock community web page. Improved initial loading speed by applying parallel routing and Suspense, and optimized data management by introducing GraphQL and Relay."
+            },
+            {
+              "title": "Pikble - 3D Modeling App (2024.02~05)",
+              "content": "Developed a 3D modeling application utilizing AI technology based on RN and Expo. Implemented React-Three-Fiber based 3D viewer and enhanced user convenience through 4 major social login integrations."
+            },
+            {
+              "title": "CandyPay - Split Payment App (2023.08~2024.02)",
+              "content": "Developed a financial application enabling multiple users to split payments within a single app. Implemented core financial features including QR scanning, payment limits, and year-end tax optimization."
+            }
+          ]
+        },
+        "achievements": {
+          "sections": [
+            {
+              "title": "Development Achievements",
+              "content": "• Proved development speed by implementing 40 screens within 2 months\n• Improved user experience by reducing loading time by 1.2 seconds\n• Enhanced work efficiency by reducing data input time by 50%"
+            },
+            {
+              "title": "Technical Achievements",
+              "content": "• Implemented React-Three-Fiber 3D viewer\n• Minimized server requests through GraphQL + Relay\n• Optimized performance with parallel routing\n• Completed 4 major social logins and App Store release"
+            },
+            {
+              "title": "Team Contributions",
+              "content": "• Resolved 100+ merge conflicts by introducing Git branch strategy\n• Documented App Store review guide\n• Established stable data integration foundation through API pre-testing"
+            }
+          ]
+        }
+      }
+    },
+    "techStack": {
+      "title": "Tech Stack",
+      "tabs": [
+        "Core Technologies",
+        "Experienced Technologies",
+        "Collaboration Tools"
+      ],
+      "tabContents": {
+        "coreTech": {
+          "sections": [
+            {
+              "title": "Frontend Core",
+              "content": "JavaScript (ES6+) • TypeScript • React • Next.js • React Native • Expo"
+            },
+            {
+              "title": "Styling & UI",
+              "content": "TailwindCSS • Styled-Components • CSS3 • HTML5 • Responsive Design"
+            },
+            {
+              "title": "State Management",
+              "content": "Tanstack-Query(React Query) • Zustand • Context API"
+            },
+            {
+              "title": "3D & Graphics",
+              "content": "Three.js • React-Three-Fiber • WebGL • Canvas API"
+            }
+          ]
+        },
+        "experiencedTech": {
+          "sections": [
+            {
+              "title": "State Management",
+              "content": "Redux • MobX • Recoil • Deep understanding of state management patterns"
+            },
+            {
+              "title": "Database & Backend",
+              "content": "GraphQL • Relay • REST API • Firebase • Backend integration experience"
+            },
+            {
+              "title": "Analytics & Monitoring",
+              "content": "Amplitude • Google Analytics • User behavior analysis and performance monitoring"
+            },
+            {
+              "title": "Testing & Quality",
+              "content": "Jest • Testing Library • E2E Testing • Code quality management"
+            }
+          ]
+        },
+        "collaborationTools": {
+          "sections": [
+            {
+              "title": "Version Control",
+              "content": "Git • GitHub • Git-flow branch strategy • PR and code review processes"
+            },
+            {
+              "title": "Deployment & CI/CD",
+              "content": "Vercel • GitHub Actions • Automated deployment pipeline construction"
+            },
+            {
+              "title": "Design & Communication",
+              "content": "Figma • Jira • Slack • Notion • Collaboration with designers and planners"
+            },
+            {
+              "title": "Project Management",
+              "content": "Agile • Scrum • Ticket-based task management • Documentation and process improvement"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "home": {
+    "thankYou": "Thank you for scrolling!",
+    "moreInfo": "Find more information on other pages."
+  }
 }
