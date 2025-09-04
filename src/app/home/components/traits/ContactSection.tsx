@@ -13,7 +13,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
     <div className={'flex gap-6 mt-8'}>
       <div className={'flex-1 flex gap-4 justify-center'}>
         <h3 className={'text-lg text-tertiary'}>email:</h3>
-        <a>{contact.email}</a>
+        <a href={`mailto:${contact.email}`}>{contact.email}</a>
       </div>
 
       <div className={'flex-1 flex gap-4 justify-center'}>
