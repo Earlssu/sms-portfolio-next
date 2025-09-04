@@ -40,7 +40,7 @@ export const ClientAnimations: React.FC = () => {
       />
 
       {/* 특성 카드 섹션들 (스크롤 애니메이션) */}
-      <TraitCardList expandedCard={expandedCard} t={t} />
+      <TraitCardList expandedCard={expandedCard} />
 
       {/* 감사 섹션 (클라이언트 렌더링, SEO는 I18nStaticContent에서 처리) */}
       <ThankYouSection mode="client" t={t} />

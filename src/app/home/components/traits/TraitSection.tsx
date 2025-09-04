@@ -1,25 +1,26 @@
+'use client';
+
 import {
   getTraitTabContentKey,
   getTraitTranslationKey,
 } from '@/app/home/constants/traitData';
 import React, { useState } from 'react';
-import TraitCard from './TraitCard';
-import { TabButton } from './TabButton';
-import { TabContent } from './TabContent';
+import { useTranslation } from 'react-i18next';
+import { TabButton, TabContent, TraitCard } from '@/app/home/components';
 
 interface TraitSectionProps {
   traitKey: string;
   index: number;
   isExpanded: boolean;
-  t: (key: string, options?: any) => string;
 }
 
 export const TraitSection: React.FC<TraitSectionProps> = ({
   traitKey,
   index,
   isExpanded,
-  t,
 }) => {
+  const { t } = useTranslation();
+  
   const title = t(getTraitTranslationKey(traitKey as any, 'title'));
   const detail = t(getTraitTranslationKey(traitKey as any, 'detail'));
   const skills = t(getTraitTranslationKey(traitKey as any, 'skills'), {
@@ -33,13 +34,12 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
 
   // 탭 콘텐츠 가져오기
   const getTabContent = (tabIndex: number) => {
-    const tabContent = t(getTraitTabContentKey(traitKey as any, tabIndex), {
+    return t(getTraitTabContentKey(traitKey as any, tabIndex), {
       returnObjects: true,
     }) as unknown as {
       sections: Array<{ title: string; content: string }>;
       contact?: { email: string; github: string; blog: string };
     };
-    return tabContent;
   };
 
   const cardClassName = `transition-all duration-1000 ease-out ${
@@ -72,15 +72,15 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
                 {tabs.map((_, tabIndex) => {
                   if (currentTab !== tabIndex) return null;
 
-                  const tabContent = getTabContent(tabIndex);
-                  if (!tabContent) return null;
+                  const content = getTabContent(tabIndex);
+                  if (!content) return null;
 
                   return (
                     <TabContent
                       key={tabIndex}
                       tabIndex={tabIndex}
-                      sections={tabContent.sections}
-                      contact={tabContent.contact}
+                      sections={content.sections}
+                      contact={content.contact}
                     />
                   );
                 })}
