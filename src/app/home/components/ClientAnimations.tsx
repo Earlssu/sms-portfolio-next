@@ -3,10 +3,12 @@
 import React, {Fragment} from 'react';
 import {useTranslation} from 'react-i18next';
 import {useCommonTranslations} from '@/shared/hooks/useCommonTranslations';
-import {HeroSection} from './HeroSection';
-import {ScrollProgressIndicator} from './ScrollPageIndicator';
-import {TraitCardList} from './TraitCardList';
-import {ThankYouSection} from './ThankYouSection';
+import {
+  HeroSection,
+  ScrollProgressIndicator,
+  ThankYouSection
+} from './layout';
+import { TraitCardList } from './traits';
 import {useScrollAnimation} from '../hooks/useScrollAnimation';
 
 /**

@@ -3,7 +3,7 @@ import {
   getTraitTranslationKey,
 } from '@/app/home/constants/traitData';
 import React, { useState } from 'react';
-import TraitCard from '@/app/home/components/TraitCard';
+import TraitCard from './TraitCard';
 import { TabButton } from './TabButton';
 import { TabContent } from './TabContent';
 
