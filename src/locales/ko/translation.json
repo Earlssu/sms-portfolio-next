@@ -31,7 +31,12 @@
   "slack": "Slack을 주요 커뮤니케이션 툴로 사용해 사용자 멘션, 스레드 중심 대화, 파일 공유 및 알림 관리를 능숙하게 할 수 있습니다. 실무에서는 슬랙 자동화 봇(예: Daily GeekNews 공유, CI/CD 알림 연동 등)을 활용해 반복적인 작업을 줄이고 효율적인 팀 커뮤니케이션 환경을 조성한 경험이 있습니다.",
   "traits": {
     "student": {
-      "title": "유학생",
+      "title": "About Me",
+      "tabs": [
+        "소개",
+        "학력",
+        "경력"
+      ],
       "detail": "미국 Austin College에서 컴퓨터공학을 전공하여, 기술 문서를 번역 없이 읽고 이해할 수 있습니다.",
       "skills": [
         "Cross-cultural Communication",
