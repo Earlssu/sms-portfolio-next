@@ -1,0 +1,42 @@
+import React from 'react';
+
+interface ContactSectionProps {
+  contact: {
+    email: string;
+    github: string;
+    blog: string;
+  };
+}
+
+export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
+  return (
+    <div className={'flex gap-6'}>
+      <div className={'flex gap-4'}>
+        <h3 className={'text-lg text-tertiary'}>email:</h3>
+        <a>{contact.email}</a>
+      </div>
+
+      <div className={'flex gap-4'}>
+        <a
+          className={'text-lg text-tertiary'}
+          href={contact.github}
+          target={'_blank'}
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
+
+      <div className={'flex gap-4'}>
+        <a
+          className={'text-lg text-tertiary'}
+          href={contact.blog}
+          target={'_blank'}
+          rel="noopener noreferrer"
+        >
+          Blog
+        </a>
+      </div>
+    </div>
+  );
+};

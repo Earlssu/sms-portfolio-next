@@ -1,6 +1,11 @@
-import { getTraitTranslationKey, getTraitTabContentKey } from '@/app/home/constants/traitData';
+import {
+  getTraitTabContentKey,
+  getTraitTranslationKey,
+} from '@/app/home/constants/traitData';
 import React, { useState } from 'react';
 import TraitCard from '@/app/home/components/TraitCard';
+import { TabButton } from './TabButton';
+import { TabContent } from './TabContent';
 
 interface TraitSectionProps {
   traitKey: string;
@@ -53,77 +58,30 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
             <div className={'flex flex-col h-fit gap-4'}>
               <div className={'flex flex-wrap gap-3 py-2 justify-center'}>
                 {tabs.map((tab, tabIndex) => (
-                  <span
+                  <TabButton
                     key={tabIndex}
-                    className={`
-                    px-6 py-2 flex items-center justify-center 
-                    border rounded-lg cursor-pointer
-                    tab-transition
-                    ${
-                      currentTab === tabIndex
-                        ? 'tab-active bg-primary text-quaternary border-primary font-medium'
-                        : 'border-tertiary text-tertiary hover:border-secondary-hover hover:text-secondary-hover hover:bg-card-hover'
-                    }
-                  `}
-                    onClick={() => setCurrentTab(tabIndex)}
-                  >
-                    {tab}
-                  </span>
+                    tab={tab}
+                    tabIndex={tabIndex}
+                    currentTab={currentTab}
+                    onClick={setCurrentTab}
+                  />
                 ))}
               </div>
 
               <div className="transition-all duration-300 ease-in-out">
                 {tabs.map((_, tabIndex) => {
                   if (currentTab !== tabIndex) return null;
-                  
+
                   const tabContent = getTabContent(tabIndex);
                   if (!tabContent) return null;
 
                   return (
-                    <div
+                    <TabContent
                       key={tabIndex}
-                      className={
-                        'flex flex-col gap-8 animate__animated animate__fadeIn animate__faster'
-                      }
-                    >
-                      <div className={'flex flex-col gap-6'}>
-                        {tabContent.sections?.map((section, sectionIndex) => (
-                          <div key={sectionIndex} className={'flex flex-col gap-4'}>
-                            <h3 className={'text-lg text-tertiary'}>{section.title}</h3>
-                            <p>{section.content}</p>
-                          </div>
-                        ))}
-                      </div>
-
-                      {tabContent.contact && (
-                        <div className={'flex gap-6'}>
-                          <div className={'flex gap-4'}>
-                            <h3 className={'text-lg text-tertiary'}>email:</h3>
-                            <a>{tabContent.contact.email}</a>
-                          </div>
-
-                          <div className={'flex gap-4'}>
-                            <a
-                              className={'text-lg text-tertiary'}
-                              href={tabContent.contact.github}
-                              target={'_blank'}
-                            >
-                              GitHub
-                            </a>
-                          </div>
-
-                          <div className={'flex gap-4'}>
-                            <a
-                              className={'text-lg text-tertiary'}
-                              href={tabContent.contact.blog}
-                              target={'_blank'}
-                            >
-                              Blog
-                            </a>
-                          </div>
-                        </div>
-                      )}
-                    </div>
+                      tabIndex={tabIndex}
+                      sections={tabContent.sections}
+                      contact={tabContent.contact}
+                    />
                   );
                 })}
               </div>
