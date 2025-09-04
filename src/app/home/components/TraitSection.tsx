@@ -1,4 +1,4 @@
-import { getTraitTranslationKey } from '@/app/home/constants/traitData';
+import { getTraitTranslationKey, getTraitTabContentKey } from '@/app/home/constants/traitData';
 import React, { useState } from 'react';
 import TraitCard from '@/app/home/components/TraitCard';
 
@@ -25,6 +25,17 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
   }) as unknown as string[];
 
   const [currentTab, setCurrentTab] = useState(0);
+
+  // 탭 콘텐츠 가져오기
+  const getTabContent = (tabIndex: number) => {
+    const tabContent = t(getTraitTabContentKey(traitKey as any, tabIndex), {
+      returnObjects: true,
+    }) as unknown as {
+      sections: Array<{ title: string; content: string }>;
+      contact?: { email: string; github: string; blog: string };
+    };
+    return tabContent;
+  };
 
   const cardClassName = `transition-all duration-1000 ease-out ${
     isExpanded ? 'scale-100 opacity-100' : 'scale-90 opacity-60'
@@ -62,79 +73,59 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
               </div>
 
               <div className="transition-all duration-300 ease-in-out">
-                {currentTab === 0 && (
-                  <div
-                    className={
-                      'flex flex-col gap-8 animate__animated animate__fadeIn animate__faster'
-                    }
-                  >
-                    <div className={'flex flex-col gap-6'}>
-                      <div className={'flex flex-col gap-4'}>
-                        <h3 className={'text-lg text-tertiary'}>유학생</h3>
-                        <p>
-                          미국 Austin College에서 컴퓨터공학을 전공하여, 기술
-                          문서를 번역 없이 읽고 이해할 수 있는 역량을 갖추고
-                          있습니다
-                        </p>
+                {tabs.map((_, tabIndex) => {
+                  if (currentTab !== tabIndex) return null;
+                  
+                  const tabContent = getTabContent(tabIndex);
+                  if (!tabContent) return null;
+
+                  return (
+                    <div
+                      key={tabIndex}
+                      className={
+                        'flex flex-col gap-8 animate__animated animate__fadeIn animate__faster'
+                      }
+                    >
+                      <div className={'flex flex-col gap-6'}>
+                        {tabContent.sections?.map((section, sectionIndex) => (
+                          <div key={sectionIndex} className={'flex flex-col gap-4'}>
+                            <h3 className={'text-lg text-tertiary'}>{section.title}</h3>
+                            <p>{section.content}</p>
+                          </div>
+                        ))}
                       </div>
 
-                      <div className={'flex flex-col gap-4'}>
-                        <h3 className={'text-lg text-tertiary'}>
-                          글 쓰는 개발자
-                        </h3>
-                        <p>
-                          새롭게 배운 지식을 글로 정리하며 소화하고, 누군가에게
-                          공유하는 것을 즐기는 성격으로 블로그에 꾸준히 기록하고
-                          있습니다.
-                        </p>
-                      </div>
+                      {tabContent.contact && (
+                        <div className={'flex gap-6'}>
+                          <div className={'flex gap-4'}>
+                            <h3 className={'text-lg text-tertiary'}>email:</h3>
+                            <a>{tabContent.contact.email}</a>
+                          </div>
 
-                      <div className={'flex flex-col gap-4'}>
-                        <h3 className={'text-lg text-tertiary'}>협업 전문가</h3>
-                        <p>
-                          {`긍정적인 에너지와 능동적인 커뮤니케이션을 바탕으로 한
-                          협업 능력을 갖춰, 동료들로부터 '가장 협업하고 싶은
-                          개발자'라는 평가를 받았습니다.`}
-                        </p>
-                      </div>
+                          <div className={'flex gap-4'}>
+                            <a
+                              className={'text-lg text-tertiary'}
+                              href={tabContent.contact.github}
+                              target={'_blank'}
+                            >
+                              GitHub
+                            </a>
+                          </div>
+
+                          <div className={'flex gap-4'}>
+                            <a
+                              className={'text-lg text-tertiary'}
+                              href={tabContent.contact.blog}
+                              target={'_blank'}
+                            >
+                              Blog
+                            </a>
+                          </div>
+                        </div>
+                      )}
                     </div>
-
-                    <div className={'flex gap-6'}>
-                      <div className={'flex gap-4'}>
-                        <h3 className={'text-lg text-tertiary'}>email:</h3>
-                        <a>shim5505@gmail.com</a>
-                      </div>
-
-                      <div className={'flex gap-4'}>
-                        <a
-                          className={'text-lg text-tertiary'}
-                          href={'https://github.com/earlssu'}
-                          target={'_blank'}
-                        >
-                          GitHub
-                        </a>
-                      </div>
-
-                      <div className={'flex gap-4'}>
-                        <a
-                          className={'text-lg text-tertiary'}
-                          href={'https://code-in-law.tistory.com/'}
-                          target={'_blank'}
-                        >
-                          Blog
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {currentTab === 1 && (
-                  <div
-                    className={
-                      'flex flex-col gap-4 animate__animated animate__fadeIn animate__faster'
-                    }
-                  ></div>
-                )}
+                  );
+                })}
               </div>
             </div>
           ) : (

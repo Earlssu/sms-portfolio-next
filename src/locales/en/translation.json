@@ -31,8 +31,60 @@
   "slack": "Fluent in using Slack as a primary team communication tool, including mentions, thread-based conversations, file sharing, and notifications. I've also used Slack bots (e.g., Daily GeekNews, CI/CD alerts) to reduce repetitive tasks and foster efficient communication in a real-world setting.",
   "traits": {
     "student": {
-      "title": "International Student",
-      "detail": "Developed a global mindset and English proficiency through 3 years of studying in Australia.",
+      "title": "About Me",
+      "tabs": [
+        "About",
+        "Education",
+        "Career"
+      ],
+      "tabContents": {
+        "0": {
+          "sections": [
+            {
+              "title": "International Student",
+              "content": "Graduated from Austin College in the U.S. with a Computer Science degree, enabling me to read and understand technical documentation without translation."
+            },
+            {
+              "title": "Developer Who Writes",
+              "content": "I enjoy organizing and sharing newly learned knowledge through writing, consistently documenting my learning journey on my blog."
+            },
+            {
+              "title": "Collaboration Expert",
+              "content": "With positive energy and proactive communication skills, I've been recognized by colleagues as 'the developer they most want to collaborate with.'"
+            }
+          ],
+          "contact": {
+            "email": "shim5505@gmail.com",
+            "github": "https://github.com/earlssu",
+            "blog": "https://code-in-law.tistory.com/"
+          }
+        },
+        "1": {
+          "sections": [
+            {
+              "title": "Education",
+              "content": "Austin College (USA) - Computer Science Major, 2018-2022"
+            },
+            {
+              "title": "Language Skills",
+              "content": "Native-level English proficiency (TOEIC 990, TOEFL iBT 115)"
+            }
+          ]
+        },
+        "2": {
+          "sections": [
+            {
+              "title": "Frontend Developer",
+              "content": "Since 2022, I've been gaining experience in various projects using React and React Native as my primary stack."
+            },
+            {
+              "title": "Key Achievements",
+              "content": "Participated in over 10 projects in one year, received excellent teamwork evaluations, and contributed to user experience improvements."
+            }
+          ]
+        }
+      },
+      "detail": "Developed a global mindset and English proficiency through studying in the U.S.",
       "skills": [
         "Cross-cultural Communication",
         "English Fluency",
