@@ -38,7 +38,7 @@
         "Career"
       ],
       "tabContents": {
-        "0": {
+        "introduction": {
           "sections": [
             {
               "title": "Hello! I'm MinSeob Shim, Frontend Developer",
@@ -55,7 +55,7 @@
             "blog": "https://code-in-law.tistory.com/"
           }
         },
-        "1": {
+        "recentActivities": {
           "sections": [
             {
               "title": "🙌 Gachi Crew 1st Generation (2025.05 ~ Present)",
@@ -75,7 +75,7 @@
             }
           ]
         },
-        "2": {
+        "career": {
           "sections": [
             {
               "title": "Blast Inc. (2023.08 ~ 2024.10)",
@@ -108,7 +108,7 @@
         "Achievements"
       ],
       "tabContents": {
-        "0": {
+        "overview": {
           "sections": [
             {
               "title": "Diverse Domain Project Experience",
@@ -120,7 +120,7 @@
             }
           ]
         },
-        "1": {
+        "keyProjects": {
           "sections": [
             {
               "title": "XCoreSystem - HACCP Certification App (2024.08~10)",
@@ -140,7 +140,7 @@
             }
           ]
         },
-        "2": {
+        "achievements": {
           "sections": [
             {
               "title": "Development Achievements",
@@ -173,7 +173,7 @@
         "Collaboration Tools"
       ],
       "tabContents": {
-        "0": {
+        "coreTech": {
           "sections": [
             {
               "title": "Frontend Core",
@@ -193,7 +193,7 @@
             }
           ]
         },
-        "1": {
+        "experiencedTech": {
           "sections": [
             {
               "title": "State Management",
@@ -213,7 +213,7 @@
             }
           ]
         },
-        "2": {
+        "collaborationTools": {
           "sections": [
             {
               "title": "Version Control",

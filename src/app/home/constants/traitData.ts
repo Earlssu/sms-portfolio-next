@@ -34,10 +34,19 @@ export const getTraitTranslationKey = (
   return `traits.${traitKey}.${field}`;
 };
 
-// 탭 콘텐츠 전용 키 생성 함수
+// 각 trait별 탭 키 매핑
+export const TRAIT_TAB_KEYS = {
+  aboutMe: ['introduction', 'recentActivities', 'career'],
+  projects: ['overview', 'keyProjects', 'achievements'],
+  techStack: ['coreTech', 'experiencedTech', 'collaborationTools'],
+} as const;
+
+// 탭 콘텐츠 전용 키 생성 함수 (의미있는 키 이름 사용)
 export const getTraitTabContentKey = (
   traitKey: TraitKey,
   tabIndex: number
 ) => {
-  return `traits.${traitKey}.tabContents.${tabIndex}`;
+  const tabKeys = TRAIT_TAB_KEYS[traitKey];
+  const tabKey = tabKeys[tabIndex];
+  return `traits.${traitKey}.tabContents.${tabKey}`;
 };
