@@ -33,8 +33,13 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
     return t(getTraitTabContentKey(traitKey as any, tabIndex), {
       returnObjects: true,
     }) as unknown as {
-      sections: Array<{ title: string; position?: string; content: string }>;
-      contact?: { email: string; github: string; blog: string };
+      sections: Array<{
+        title: string;
+        position?: string;
+        content: string;
+        detail?: Array<{ title: string; content: string }>;
+      }>;
+      contact?: { email: string; github: string; blog: string; resume: string };
     };
   };
 
@@ -50,8 +55,13 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
           className={cardClassName}
           isExpanded={isExpanded}
         >
-          <div className={'flex flex-col h-fit gap-8'}>
-            <div className={'flex flex-wrap gap-3 py-2 justify-center'}>
+          <div className={'flex flex-col h-full'}>
+            {/* 탭 버튼 영역 - 고정 */}
+            <div
+              className={
+                'flex flex-wrap gap-3 py-2 justify-center flex-shrink-0 mb-4'
+              }
+            >
               {tabs.map((tab, tabIndex) => (
                 <TabButton
                   key={tabIndex}
@@ -63,7 +73,8 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
               ))}
             </div>
 
-            <div className="transition-all duration-300 ease-in-out">
+            {/* 콘텐츠 영역 - 스크롤 가능 */}
+            <div className="flex-1 max-h-[65vh] overflow-y-auto transition-all duration-300 ease-in-out custom-scrollbar pr-2 pb-12">
               {tabs.map((_, tabIndex) => {
                 if (currentTab !== tabIndex) return null;
 

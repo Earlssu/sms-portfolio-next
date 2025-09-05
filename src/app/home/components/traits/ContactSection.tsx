@@ -8,7 +8,7 @@ interface ContactSectionProps {
 
 export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
   return (
-    <div className={'flex gap-6 mt-8'}>
+    <div className={'flex gap-6'}>
       <ContactItem
         type="email"
         value={contact.email}

@@ -10,7 +10,7 @@ interface TabContentProps {
     content: string;
     detail?: Array<{ title: string; content: string }>;
   }>;
-  contact?: { email: string; github: string; blog: string };
+  contact?: { email: string; github: string; blog: string; resume: string };
 }
 
 export const TabContent: React.FC<TabContentProps> = ({
@@ -25,7 +25,7 @@ export const TabContent: React.FC<TabContentProps> = ({
         'flex flex-col gap-8 animate__animated animate__fadeIn animate__faster'
       }
     >
-      <div className={'flex flex-col gap-10'}>
+      <div className={'flex flex-col gap-8'}>
         {sections?.map((section, sectionIndex) => {
           const formattedContent = formatContent(section.content);
 
