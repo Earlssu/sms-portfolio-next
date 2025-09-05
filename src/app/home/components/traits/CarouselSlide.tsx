@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { ContactSection } from './ContactSection';
 
 interface CarouselSlideProps {
   slide: {
@@ -25,12 +24,6 @@ interface CarouselSlideProps {
       description: string;
       achievements: string[];
     }>;
-    contact?: {
-      email: string;
-      github: string;
-      blog: string;
-      resume: string;
-    };
   };
   isActive: boolean;
   slideIndex: number;
@@ -58,7 +51,7 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
       className={`
         h-full flex flex-col justify-start items-center text-center
         transition-all duration-700 ease-in-out overflow-y-auto custom-scrollbar
-        pt-8 pb-8 
+        pb-8 max-w-screen-xl mx-auto
         ${isActive ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}
       `}
     >
@@ -72,7 +65,7 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
       />
 
       {/* 상단 고정 영역: 아이콘, 제목, 부제목 */}
-      <div className="relative z-10 flex-shrink-0 text-center px-4 pt-4 pb-2">
+      <div className="relative z-10 flex-shrink-0 text-center px-4 pt-4 pb-2 flex flex-col gap-4">
         {/* 아이콘 */}
         <div className="text-5xl md:text-6xl mb-4 animate-pulse">
           {getSlideIcon(slide.id)}
@@ -85,14 +78,14 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
 
         {/* 부제목 */}
         {slide.subtitle && (
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 font-light">
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-quaternary mb-4 font-light">
             {slide.subtitle}
           </h2>
         )}
       </div>
 
       {/* 스크롤 가능한 콘텐츠 영역 */}
-      <div className="relative z-10 flex-1 overflow-y-auto custom-scrollbar px-4 pb-4">
+      <div className="relative z-10 flex-1 overflow-y-auto custom-scrollbar px-4 pb-4 w-3/4">
         <div className="max-w-4xl mx-auto">
           {/* 메인 콘텐츠 */}
           <div className="space-y-6">
@@ -200,38 +193,14 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
                 ))}
               </div>
             )}
-
-            {/* 연락처 섹션 */}
-            {slide.contact && (
-              <div className="mt-8">
-                <ContactSection contact={slide.contact} isDarkMode={true} />
-              </div>
-            )}
           </div>
-
-          {/* 슬라이드 번호 표시 */}
-          <div className="absolute top-4 right-4 text-sm text-gray-400">
-            {slideIndex + 1}
-          </div>
-
-          {/* 진행 표시 (선택적) */}
-          {isActive && (
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-white/20">
-              <div
-                className="h-full bg-white/60 transition-all duration-[6000ms] ease-linear"
-                style={{
-                  width: isActive ? '100%' : '0%',
-                }}
-              />
-            </div>
-          )}
         </div>
       </div>
 
       {/* 이미지 플레이스홀더 영역 (향후 추가 예정) */}
-      <div className="absolute bottom-8 right-8 w-24 h-24 bg-white/10 rounded-full flex items-center justify-center opacity-50">
-        <span className="text-2xl">{getSlideIcon(slide.id)}</span>
-      </div>
+      {/*<div className="absolute bottom-8 right-8 w-24 h-24 bg-white/10 rounded-full flex items-center justify-center opacity-50">*/}
+      {/*  <span className="text-2xl">{getSlideIcon(slide.id)}</span>*/}
+      {/*</div>*/}
     </div>
   );
 };

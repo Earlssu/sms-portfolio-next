@@ -6,8 +6,14 @@ import {
 } from '@/app/home/constants/traitData';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { TabButton, TabContent, TraitCard } from '@/app/home/components';
+import {
+  ContactSection,
+  TabButton,
+  TabContent,
+  TraitCard,
+} from '@/app/home/components';
 import { AboutMeCarousel } from './AboutMeCarousel';
+import { useBackgroundStore } from '@/app/home/stores';
 
 interface TraitSectionProps {
   traitKey: string;
@@ -21,6 +27,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
   isExpanded,
 }) => {
   const { t } = useTranslation();
+  const { isDarkMode } = useBackgroundStore();
 
   const title = t(getTraitTranslationKey(traitKey as any, 'title'));
 
@@ -64,8 +71,20 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
             </h1>
           </div>
 
-          <div className="w-full h-full pt-16">
-            <AboutMeCarousel isExpanded={isExpanded} />
+          <div className="w-full h-full pt-16 flex flex-col">
+            <div className="flex-1">
+              <AboutMeCarousel isExpanded={isExpanded} />
+            </div>
+            <div className="flex-shrink-0 flex justify-center items-center py-8">
+              <ContactSection
+                contact={
+                  t('traits.aboutMe.contact', {
+                    returnObjects: true,
+                  }) as any
+                }
+                isDarkMode={isDarkMode}
+              />
+            </div>
           </div>
         </div>
       ) : (

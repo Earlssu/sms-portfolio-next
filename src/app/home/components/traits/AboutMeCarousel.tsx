@@ -112,14 +112,14 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
   return (
     <div
       ref={carouselRef}
-      className="relative w-full h-full flex flex-col pt-8"
+      className="relative w-full h-full flex flex-col"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
       {/* 상단 컨트롤 */}
       <div className="flex justify-between items-center mb-6 px-2">
         {/* 프로그레스 바 */}
-        <div className="flex-1 mx-4">
+        <div className="flex-1 mx-4 pt-8">
           <div className="w-full bg-white/20 rounded-full h-2">
             <div
               className="bg-white h-2 rounded-full transition-all duration-300 ease-out shadow-lg"
@@ -153,7 +153,10 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
       </div>
 
       {/* 슬라이드 콘텐츠 */}
-      <div className="flex-1 relative overflow-hidden">
+      <div
+        className="flex-1 relative overflow-hidden rounded-lg"
+        style={{ backgroundColor: 'rgba(var(--primary-rgb), 0.4)' }}
+      >
         <div
           className="flex transition-transform duration-500 ease-in-out h-full"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}

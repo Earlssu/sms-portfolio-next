@@ -5,9 +5,13 @@
 :root {
   /* Primary Color Palette */
   --primary: #44444e;
+  --primary-rgb: 68, 68, 78;
   --secondary: #37353e;
+  --secondary-rgb: 55, 53, 62;
   --tertiary: #715a5a;
+  --tertiary-rgb: 113, 90, 90;
   --quaternary: #d3dad9;
+  --quaternary-rgb: 211, 218, 217;
 
   /* Hover Colors (slightly lighter/darker variants) */
   --primary-hover: #5a5a64;

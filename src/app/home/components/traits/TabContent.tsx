@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { ContactSection } from './ContactSection';
 import { formatContent } from '@/shared/utils/contentFormatter';
+import { useBackgroundStore } from '@/app/home/stores';
 
 interface TabContentProps {
   tabIndex: number;
@@ -18,6 +19,7 @@ export const TabContent: React.FC<TabContentProps> = ({
   sections,
   contact,
 }) => {
+  const { isDarkMode } = useBackgroundStore();
   return (
     <div
       key={tabIndex}
@@ -87,7 +89,7 @@ export const TabContent: React.FC<TabContentProps> = ({
         })}
       </div>
 
-      {contact && <ContactSection contact={contact} />}
+      {contact && <ContactSection contact={contact} isDarkMode={isDarkMode} />}
     </div>
   );
 };

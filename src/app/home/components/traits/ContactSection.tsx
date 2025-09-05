@@ -7,12 +7,14 @@ interface ContactSectionProps {
   isDarkMode?: boolean;
 }
 
-export const ContactSection: React.FC<ContactSectionProps> = ({ 
-  contact, 
-  isDarkMode = false 
+export const ContactSection: React.FC<ContactSectionProps> = ({
+  contact,
+  isDarkMode = false,
 }) => {
   return (
-    <div className={`flex gap-6 ${isDarkMode ? 'text-white' : ''}`}>
+    <div
+      className={`w-full max-w-screen-xl flex gap-6 ${isDarkMode ? 'text-white' : ''}`}
+    >
       <ContactItem
         type="email"
         value={contact.email}
