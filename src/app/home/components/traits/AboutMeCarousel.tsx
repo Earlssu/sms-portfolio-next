@@ -189,7 +189,7 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
       {/* 좌우 네비게이션 버튼 */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-4 rounded-full bg-white/15 hover:bg-white/25 transition-all duration-200 text-white text-xl backdrop-blur-sm"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-4 rounded-full  hover:bg-white/25 transition-all duration-200 text-white text-xl backdrop-blur-sm z-20"
         style={{ display: currentSlide === 0 ? 'none' : 'block' }}
       >
         ←
@@ -197,7 +197,7 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-4 rounded-full bg-white/15 hover:bg-white/25 transition-all duration-200 text-white text-xl backdrop-blur-sm"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-4 rounded-full hover:bg-white/25 transition-all duration-200 text-white text-xl backdrop-blur-sm z-20"
         style={{ display: currentSlide === totalSlides - 1 ? 'none' : 'block' }}
       >
         →
