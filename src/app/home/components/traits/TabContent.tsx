@@ -25,7 +25,7 @@ export const TabContent: React.FC<TabContentProps> = ({
         'flex flex-col gap-8 animate__animated animate__fadeIn animate__faster'
       }
     >
-      <div className={'flex flex-col gap-12'}>
+      <div className={'flex flex-col gap-10'}>
         {sections?.map((section, sectionIndex) => {
           const formattedContent = formatContent(section.content);
 
@@ -49,14 +49,14 @@ export const TabContent: React.FC<TabContentProps> = ({
 
                 {/* detail 필드가 있는 경우 불렛 포인트로 렌더링 */}
                 {section.detail && (
-                  <ul className={'mt-4 space-y-4 pl-0'}>
+                  <ul className={'space-y-4 pl-0'}>
                     {section.detail.map((detailItem, detailIndex) => (
-                      <li key={detailIndex} className={'flex flex-col gap-2'}>
+                      <li key={detailIndex} className={'flex flex-col'}>
                         <div className={'flex items-start gap-3'}>
                           <span className={'text-tertiary mt-1 text-lg'}>
                             •
                           </span>
-                          <div className={'flex-1'}>
+                          <div className={'flex-1 pt-2'}>
                             <h4 className={'font-medium text-tertiary mb-2'}>
                               {detailItem.title}
                             </h4>
