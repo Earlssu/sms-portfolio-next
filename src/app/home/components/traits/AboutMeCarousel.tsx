@@ -3,9 +3,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CarouselSlide } from './CarouselSlide';
+import { ContactSection } from './ContactSection';
+import { useBackgroundStore } from '@/shared/stores';
 
 interface AboutMeCarouselProps {
   isExpanded: boolean;
+  contact?: {
+    email: string;
+    github: string;
+    blog: string;
+    resume: string;
+  };
 }
 
 interface CarouselSlideData {
@@ -39,8 +47,10 @@ interface CarouselSlideData {
 
 export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
   isExpanded,
+  contact,
 }) => {
   const { t } = useTranslation();
+  const { isDarkMode } = useBackgroundStore();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -188,6 +198,13 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
           />
         ))}
       </div>
+
+      {/* 연락처 섹션 */}
+      {contact && (
+        <div className="flex justify-center items-center py-4">
+          <ContactSection contact={contact} isDarkMode={isDarkMode} />
+        </div>
+      )}
 
       {/* 좌우 네비게이션 버튼 */}
       <button

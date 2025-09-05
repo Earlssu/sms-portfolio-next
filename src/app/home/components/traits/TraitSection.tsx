@@ -71,20 +71,15 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
             </h1>
           </div>
 
-          <div className="w-full h-full pt-16 flex flex-col">
-            <div className="flex-1">
-              <AboutMeCarousel isExpanded={isExpanded} />
-            </div>
-            <div className="flex-shrink-0 flex justify-center items-center py-8">
-              <ContactSection
-                contact={
-                  t('traits.aboutMe.contact', {
-                    returnObjects: true,
-                  }) as any
-                }
-                isDarkMode={isDarkMode}
-              />
-            </div>
+          <div className="w-full h-full pt-16">
+            <AboutMeCarousel 
+              isExpanded={isExpanded}
+              contact={
+                t('traits.aboutMe.contact', {
+                  returnObjects: true,
+                }) as any
+              }
+            />
           </div>
         </div>
       ) : (
