@@ -4,16 +4,21 @@ import { CONTACT_CONFIG, ContactInfo } from './contactConfig';
 
 interface ContactSectionProps {
   contact: ContactInfo;
+  isDarkMode?: boolean;
 }
 
-export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
+export const ContactSection: React.FC<ContactSectionProps> = ({ 
+  contact, 
+  isDarkMode = false 
+}) => {
   return (
-    <div className={'flex gap-6'}>
+    <div className={`flex gap-6 ${isDarkMode ? 'text-white' : ''}`}>
       <ContactItem
         type="email"
         value={contact.email}
         label={CONTACT_CONFIG.email.label}
         icon={CONTACT_CONFIG.email.icon}
+        isDarkMode={isDarkMode}
       />
 
       <ContactItem
@@ -21,6 +26,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
         value={contact.github}
         label={CONTACT_CONFIG.github.label}
         icon={CONTACT_CONFIG.github.icon}
+        isDarkMode={isDarkMode}
       />
 
       <ContactItem
@@ -28,6 +34,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
         value={contact.blog}
         label={CONTACT_CONFIG.blog.label}
         icon={CONTACT_CONFIG.blog.icon}
+        isDarkMode={isDarkMode}
       />
 
       <ContactItem
@@ -35,6 +42,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
         value={contact.resume}
         label={CONTACT_CONFIG.resume.label}
         icon={CONTACT_CONFIG.resume.icon}
+        isDarkMode={isDarkMode}
       />
     </div>
   );

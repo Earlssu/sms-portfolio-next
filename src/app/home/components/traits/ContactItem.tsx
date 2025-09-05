@@ -5,6 +5,7 @@ interface ContactItemProps {
   value: string;
   label?: string;
   icon?: React.ComponentType<{ className?: string; size?: number }>;
+  isDarkMode?: boolean;
 }
 
 export const ContactItem: React.FC<ContactItemProps> = ({
@@ -12,6 +13,7 @@ export const ContactItem: React.FC<ContactItemProps> = ({
   value,
   label,
   icon,
+  isDarkMode = false,
 }) => {
   const getLinkProps = () => {
     switch (type) {
@@ -38,9 +40,13 @@ export const ContactItem: React.FC<ContactItemProps> = ({
     <div className={'flex-1 flex gap-4 justify-center'}>
       <a
         {...linkProps}
-        className={
-          'flex gap-2 text-lg text-tertiary hover:text-primary transition-colors'
-        }
+        className={`
+          flex gap-2 text-lg transition-colors
+          ${isDarkMode 
+            ? 'text-white hover:text-blue-300' 
+            : 'text-tertiary hover:text-primary'
+          }
+        `}
         title={
           type === 'email' ? `${label}로 이메일 보내기` : `${label} 링크로 이동`
         }

@@ -36,7 +36,7 @@ export const getTraitTranslationKey = (
 // 각 trait별 탭 키 매핑
 export const TRAIT_TAB_KEYS = {
   aboutMe: ['introduction', 'recentActivities', 'career'],
-  projects: ['overview', 'keyProjects', 'achievements'],
+  projects: ['blast', 'toyProjects'],
   techStack: ['coreTech', 'experiencedTech', 'collaborationTools'],
 } as const;
 

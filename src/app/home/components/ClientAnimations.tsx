@@ -3,13 +3,9 @@
 import React, {Fragment} from 'react';
 import {useTranslation} from 'react-i18next';
 import {useCommonTranslations} from '@/shared/hooks/useCommonTranslations';
-import {
-  HeroSection,
-  ScrollProgressIndicator,
-  ThankYouSection
-} from './layout';
-import { TraitCardList } from './traits';
-import {useScrollAnimation} from '../hooks/useScrollAnimation';
+import {HeroSection, ScrollProgressIndicator, ThankYouSection,} from './layout';
+import {GlobalBackgroundTransition, TraitCardList} from './traits';
+import {useScrollAnimation} from '@/app/home/hooks/useScrollAnimation';
 
 /**
  * 클라이언트 사이드 애니메이션이 필요한 컴포넌트들
@@ -23,6 +19,9 @@ export const ClientAnimations: React.FC = () => {
 
   return (
     <Fragment>
+      {/* 전역 배경 전환 */}
+      <GlobalBackgroundTransition />
+
       {/* 히어로 섹션 (타이핑 애니메이션) */}
       <HeroSection
         hero={hero}

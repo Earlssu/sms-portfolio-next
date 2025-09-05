@@ -32,138 +32,194 @@
   "traits": {
     "aboutMe": {
       "title": "About Me",
-      "tabs": [
-        "Brief Introduction",
-        "Recent Activities",
-        "Career"
-      ],
-      "tabContents": {
-        "introduction": {
-          "sections": [
+      "carouselSlides": [
+        {
+          "id": "intro",
+          "title": "🧗‍♂️ Wall-Climbing Frontend Developer",
+          "subtitle": "MinSeob Shim",
+          "content": "I live by the motto \"You have to smile when times are tough to be first-class.\" Challenging situations like difficult bugs and complex architecture design don't frustrate me—they draw me into the deep joy of immersion.",
+          "highlight": "During my 1+ years of professional experience, I've built various web and mobile services using tools like React, Next.js, and React Native, finding my greatest sense of achievement in solving business problems through technology."
+        },
+        {
+          "id": "strength",
+          "title": "My Greatest Strength is",
+          "subtitle": "'Connection'",
+          "content": "I excel at connecting technology, people, and different languages to create synergy.",
+          "features": [
             {
-              "title": "🧗‍♂️ Wall-Climbing Frontend Developer, MinSeob Shim",
-              "content": "I live by the motto \"You have to smile when times are tough to be first-class.\" Challenging situations like difficult bugs and complex architecture design don't frustrate me—they draw me into the deep joy of immersion. During my 1+ years of professional experience, I've built various web and mobile services using tools like React, Next.js, and React Native, finding my greatest sense of achievement in solving business problems through technology."
+              "title": "I connect people to people",
+              "content": "I believe in the power of positive communication. I meticulously document and share information so colleagues can clearly understand project progress and adapt easily."
             },
             {
-              "title": "My Greatest Strength is 'Connection'",
-              "content": "I excel at connecting technology, people, and different languages to create synergy.\n\n",
-              "detail": [
-                {
-                  "title": "I connect people to people.",
-                  "content": "I believe in the power of positive communication. I meticulously document and share information so colleagues can clearly understand project progress and adapt easily. Beyond technical discussions, I lead active communication that boosts team morale."
-                },
-                {
-                  "title": "I connect languages and technology.",
-                  "content": "My ability to speak both Korean and English at a native level is one of my greatest assets. I quickly acquire the latest tech trends and official documentation without translation, sharing them with my team to lower technical barriers and contribute to improving overall team development efficiency."
-                }
+              "title": "I connect languages and technology",
+              "content": "My ability to speak both Korean and English at a native level allows me to quickly acquire the latest tech trends and official documentation without translation, lowering technical barriers for my team."
+            }
+          ]
+        },
+        {
+          "id": "life",
+          "title": "Beyond Code",
+          "subtitle": "I Solve Real-World Problems",
+          "content": "I gain inspiration and energy for development through activities that provide a sense of achievement in daily life.",
+          "highlight": "Unlike software development which requires long-term focus, climbing and escape rooms allow me to concentrate fully in a short time to solve immediate problems and taste the immediate joy of success.",
+          "closing": "And sometimes, I set aside all logic and take the most simple and comfortable rest with my two adorable cats."
+        },
+        {
+          "id": "recentActivities",
+          "title": "Recent Activities",
+          "subtitle": "Continuous Growth and Challenges",
+          "content": "I'm steadily growing as a developer by learning new technologies and capabilities.",
+          "activities": [
+            {
+              "icon": "🙌",
+              "title": "Gachi Crew 1st Generation Member",
+              "period": "2025.05 ~ Present",
+              "description": "Enhancing CSS animation and user experience design skills through the side project 'Watery'"
+            },
+            {
+              "icon": "🏆",
+              "title": "Sparta Coding Club Challenge Completed",
+              "period": "2025.08",
+              "description": "Developed algorithmic problem-solving abilities and metacognitive skills through daily blog reflections"
+            },
+            {
+              "icon": "🇯🇵",
+              "title": "JLPT N3 Certification",
+              "period": "2025.08.12",
+              "description": "Expanded multilingual communication capabilities by obtaining Japanese Language Proficiency Test N3 level"
+            },
+            {
+              "icon": "🎓",
+              "title": "Naver BoostCamp Basic Course",
+              "period": "2025.06",
+              "description": "Enhanced understanding of fundamental code operation principles through CS basics including compilers and hashing"
+            }
+          ]
+        },
+        {
+          "id": "career",
+          "title": "Career",
+          "subtitle": "Real-world Experience Across Diverse Domains",
+          "content": "Through experiences in different fields, I've developed a broad perspective and problem-solving abilities.",
+          "experiences": [
+            {
+              "company": "Blast Inc.",
+              "position": "Development Team | Frontend Developer",
+              "period": "2023.08 ~ 2024.10",
+              "description": "Successfully launched projects across diverse domains including HACCP certification apps, stock community platforms, 3D modeling apps, and split-payment financial applications",
+              "achievements": [
+                "Developed 4+ production apps using React Native and Next.js",
+                "Achieved 50% reduction in user data input time",
+                "Improved team productivity by introducing Git-flow branch strategy"
               ]
             },
             {
-              "title": "Beyond Code, I Solve Real-World Problems",
-              "content": "I gain inspiration and energy for development through activities that provide a sense of achievement in daily life.\n\nUnlike software development which requires long-term focus, climbing and escape rooms allow me to concentrate fully in a short time to solve immediate problems and taste the immediate joy of success. This experience provides excellent recharging to dive back into complex projects.\n\nAnd sometimes, I set aside all logic and take the most simple and comfortable rest with my two adorable cats."
+              "company": "Digital Daily Newspaper",
+              "position": "Editorial Digital Life Team | Reporter",
+              "period": "2022.02 ~ 2022.04",
+              "description": "Developed abilities to understand technology from a business perspective through IT industry trend analysis and article writing",
+              "achievements": [
+                "Wrote 20+ IT trend analysis articles",
+                "Developed capability to identify connections between technology and business"
+              ]
             }
           ],
           "contact": {
             "email": "shim5505@gmail.com",
-            "github": "https://github.com/earlssu",
+            "github": "https://github.com/earlssu", 
             "blog": "https://code-in-law.tistory.com/",
             "resume": "https://fire-warrior-ca2.notion.site/MinSeob-Shim-6004fbc72ef74bc994cea07bf1e11f7e"
           }
-        },
-        "recentActivities": {
-          "sections": [
-            {
-              "title": "🙌 Gachi Crew 1st Generation (2025.05 ~ Present)",
-              "content": "Enhancing CSS animation and user experience design skills through the side project 'Watery'."
-            },
-            {
-              "title": "🏆 Sparta Coding Club Challenge Completed (2025.07 ~ 2025.08)",
-              "content": "Developed algorithmic problem-solving abilities and metacognitive skills by documenting daily blog reflections on problem-solving processes."
-            },
-            {
-              "title": "🇯🇵 JLPT N3 Certification (2025.08.12)",
-              "content": "Expanded multilingual communication capabilities by obtaining Japanese Language Proficiency Test N3 level."
-            },
-            {
-              "title": "🎓 Naver BoostCamp Basic Course (2025.06)",
-              "content": "Enhanced understanding of fundamental code operation principles by studying CS basics including compilers and hashing."
-            }
-          ]
-        },
-        "career": {
-          "sections": [
-            {
-              "title": "Blast Inc. (2023.08 ~ 2024.10)",
-              "position": "Development Team | Frontend Developer",
-              "content": "Successfully launched projects across diverse domains including HACCP certification apps, stock community platforms, 3D modeling apps, and split-payment financial applications."
-            },
-            {
-              "title": "Digital Daily Newspaper (2022.02 ~ 2022.04)",
-              "position": "Editorial Digital Life Team | Reporter",
-              "content": "Developed abilities to understand the latest technology trends and approach them from a business perspective through IT industry trend analysis and article writing experience."
-            },
-            {
-              "title": "Austin College IT Department (2019.06 ~ 2020.05)",
-              "position": "IT Department | Intern",
-              "content": "Built user-oriented problem-solving abilities and communication skills by resolving IT issues for campus community members."
-            }
-          ]
         }
-      }
+      ]
     },
     "projects": {
       "title": "Major Projects",
       "tabs": [
-        "Overview",
-        "Key Projects",
-        "Achievements"
+        "Blast"
       ],
       "tabContents": {
-        "overview": {
-          "sections": [
-            {
-              "title": "Diverse Domain Project Experience",
-              "content": "Led frontend development across various business domains including HACCP certification, finance, community platforms, and 3D modeling. Selected and implemented optimal technology stacks and architectures tailored to each project's domain characteristics."
-            },
-            {
-              "title": "Fast Development with High Quality",
-              "content": "Implemented over 40 core screens within 2 months while providing intuitive UI/UX considering user experience. Contributed to quality improvement by optimizing performance and reducing loading time by 1.2 seconds."
-            }
-          ]
-        },
         "keyProjects": {
           "sections": [
             {
               "title": "XCoreSystem - HACCP Certification App (2024.08~10)",
-              "content": "Developed an internal business app based on RN and Expo to streamline HACCP certification procedures. Intuitively improved complex data input flow through nested modal structures."
+              "content": "Developed an internal business app based on RN and Expo to streamline HACCP certification procedures. Intuitively improved complex data input flow through nested modal structures.",
+              "detail": [
+                {
+                  "title": "Development Efficiency Improvement",
+                  "content": "Implemented over 40 core screens within 2 months, contributing to a 50% reduction in data input time compared to the existing manual process."
+                },
+                {
+                  "title": "User Experience Enhancement",
+                  "content": "Designed hierarchical nested modal structures to reduce user input errors and prevent task abandonment, intuitively improving complex data input workflows."
+                },
+                {
+                  "title": "Stable Data Integration",
+                  "content": "Prevented unnecessary bugs and rework in early development stages by pre-testing responses from 60+ APIs using Postman and sharing results with colleagues to establish a foundation for stable data integration."
+                }
+              ]
             },
             {
               "title": "Finter - Stock Community (2024.06~08)",
-              "content": "Developed a Next.js-based stock community web page. Improved initial loading speed by applying parallel routing and Suspense, and optimized data management by introducing GraphQL and Relay."
+              "content": "Developed a Next.js-based stock community web page. Improved initial loading speed by applying parallel routing and Suspense, and optimized data management by introducing GraphQL and Relay.",
+              "detail": [
+                {
+                  "title": "Performance Optimization",
+                  "content": "Reduced initial loading time by 1.2 seconds by applying parallel routing and Suspense."
+                },
+                {
+                  "title": "Git Branch Strategy Implementation",
+                  "content": "Resolved frequent merge conflicts (100+ per month) that were reducing development productivity by introducing and propagating Git-flow branch strategy to ensure code management stability."
+                },
+                {
+                  "title": "Data Management Optimization",
+                  "content": "Introduced GraphQL and Relay to separate client and server states, applying caching strategies to minimize unnecessary server requests and ensure data consistency."
+                }
+              ]
             },
             {
               "title": "Pikble - 3D Modeling App (2024.02~05)",
-              "content": "Developed a 3D modeling application utilizing AI technology based on RN and Expo. Implemented React-Three-Fiber based 3D viewer and enhanced user convenience through 4 major social login integrations."
+              "content": "Developed a 3D modeling application utilizing AI technology based on RN and Expo. Implemented React-Three-Fiber based 3D viewer and enhanced user convenience through 4 major social login integrations.",
+              "detail": [
+                {
+                  "title": "User Accessibility Enhancement",
+                  "content": "Implemented 4 major social login features to lower barriers for new user registration and successfully launched the app by handling the app review process."
+                },
+                {
+                  "title": "3D Visualization Implementation",
+                  "content": "Implemented React-Three-Fiber based viewer for the core service feature of 3D model visualization, enabling users to view models in various formats."
+                },
+                {
+                  "title": "App Store Review Management",
+                  "content": "Documented 'App Store Review Response Guide' based on insights gained from 10 app review and re-review processes, establishing a foundation to shorten review periods for similar future projects."
+                },
+                {
+                  "title": "User Experience Improvement",
+                  "content": "Improved core issues that hindered user experience by preventing unintended app termination (BackHandler) and reducing abandonment rates during data loading (LoadingIndicator)."
+                }
+              ]
             },
             {
               "title": "CandyPay - Split Payment App (2023.08~2024.02)",
-              "content": "Developed a financial application enabling multiple users to split payments within a single app. Implemented core financial features including QR scanning, payment limits, and year-end tax optimization."
-            }
-          ]
-        },
-        "achievements": {
-          "sections": [
-            {
-              "title": "Development Achievements",
-              "content": "• Proved development speed by implementing 40 screens within 2 months\n• Improved user experience by reducing loading time by 1.2 seconds\n• Enhanced work efficiency by reducing data input time by 50%"
-            },
-            {
-              "title": "Technical Achievements",
-              "content": "• Implemented React-Three-Fiber 3D viewer\n• Minimized server requests through GraphQL + Relay\n• Optimized performance with parallel routing\n• Completed 4 major social logins and App Store release"
-            },
-            {
-              "title": "Team Contributions",
-              "content": "• Resolved 100+ merge conflicts by introducing Git branch strategy\n• Documented App Store review guide\n• Established stable data integration foundation through API pre-testing"
+              "content": "Developed a financial application enabling multiple users to split payments within a single app. Implemented core financial features including QR scanning, payment limits, and year-end tax optimization.",
+              "detail": [
+                {
+                  "title": "Core Payment Feature Development",
+                  "content": "Led UI/UX development of core payment features including QR scanning and split payments to enhance user payment convenience."
+                },
+                {
+                  "title": "Tiered Permission System Implementation",
+                  "content": "Implemented core service logic including user tier-based differential permission granting and payment limit settings based on personal income information, establishing a foundation for stable and systematic service operation."
+                },
+                {
+                  "title": "Financial Logic Implementation",
+                  "content": "Integrated Cookun API to implement core financial logic that calculates and recommends optimal year-end tax card spending amounts based on individual user income."
+                },
+                {
+                  "title": "Security Review Compliance",
+                  "content": "Aimed for Financial Security Institute security review approval by refactoring data encryption and user information processing logic according to security guidelines and creating related documentation, contributing to review approval."
+                }
+              ]
             }
           ]
         }

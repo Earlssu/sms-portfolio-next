@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { ContactSection } from './ContactSection';
 import { formatContent } from '@/shared/utils/contentFormatter';
 
@@ -50,30 +50,35 @@ export const TabContent: React.FC<TabContentProps> = ({
                 {/* detail 필드가 있는 경우 불렛 포인트로 렌더링 */}
                 {section.detail && (
                   <ul className={'space-y-4 pl-0'}>
-                    {section.detail.map((detailItem, detailIndex) => (
-                      <li key={detailIndex} className={'flex flex-col'}>
-                        <div className={'flex items-start gap-3'}>
-                          <span className={'text-tertiary mt-1 text-lg'}>
-                            •
-                          </span>
-                          <div className={'flex-1 pt-2'}>
-                            <h4 className={'font-medium text-tertiary mb-2'}>
-                              {detailItem.title}
-                            </h4>
-                            {formatContent(detailItem.content).map(
-                              (sentence, sentenceIndex) => (
-                                <p
-                                  key={sentenceIndex}
-                                  className={'leading-relaxed text-secondary'}
-                                >
-                                  {sentence}
-                                </p>
-                              )
-                            )}
-                          </div>
-                        </div>
-                      </li>
-                    ))}
+                    {section.detail
+                      .filter((detailItem) => detailItem.content?.trim())
+                      .map((detailItem, detailIndex) => {
+                        const hasTitle = detailItem.title?.trim();
+                        const contentSentences = formatContent(detailItem.content);
+
+                        return (
+                          <li key={detailIndex} className={'flex flex-col'}>
+                            <div className={'flex items-start gap-3'}>
+                              <span className={'text-tertiary mt-1 text-lg'}>•</span>
+                              <div className={'flex-1 pt-2'}>
+                                {hasTitle && (
+                                  <h4 className={'font-medium text-tertiary mb-2'}>
+                                    {detailItem.title}
+                                  </h4>
+                                )}
+                                {contentSentences.map((sentence, sentenceIndex) => (
+                                  <p
+                                    key={sentenceIndex}
+                                    className={'leading-relaxed text-secondary'}
+                                  >
+                                    {sentence}
+                                  </p>
+                                ))}
+                              </div>
+                            </div>
+                          </li>
+                        );
+                      })}
                   </ul>
                 )}
               </div>
