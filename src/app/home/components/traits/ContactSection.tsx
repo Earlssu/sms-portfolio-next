@@ -15,19 +15,26 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
         label={CONTACT_CONFIG.email.label}
         icon={CONTACT_CONFIG.email.icon}
       />
-      
+
       <ContactItem
         type="github"
         value={contact.github}
         label={CONTACT_CONFIG.github.label}
         icon={CONTACT_CONFIG.github.icon}
       />
-      
+
       <ContactItem
         type="blog"
         value={contact.blog}
         label={CONTACT_CONFIG.blog.label}
         icon={CONTACT_CONFIG.blog.icon}
+      />
+
+      <ContactItem
+        type="resume"
+        value={contact.resume}
+        label={CONTACT_CONFIG.resume.label}
+        icon={CONTACT_CONFIG.resume.icon}
       />
     </div>
   );

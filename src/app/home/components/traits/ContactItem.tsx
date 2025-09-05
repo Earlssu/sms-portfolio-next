@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ContactItemProps {
-  type: 'email' | 'github' | 'blog';
+  type: 'email' | 'github' | 'blog' | 'resume';
   value: string;
   label?: string;
   icon?: React.ComponentType<{ className?: string; size?: number }>;
@@ -23,6 +23,7 @@ export const ContactItem: React.FC<ContactItemProps> = ({
         };
       case 'github':
       case 'blog':
+      case 'resume':
         return {
           href: value,
           target: '_blank',
