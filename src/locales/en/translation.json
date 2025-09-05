@@ -41,12 +41,26 @@
         "introduction": {
           "sections": [
             {
-              "title": "Hello! I'm MinSeob Shim, Frontend Developer",
-              "content": "A rapidly growing frontend developer with over 1 year of hands-on experience. I have successfully launched various web and mobile services using React, Next.js, and React Native across diverse environments."
+              "title": "🧗‍♂️ Wall-Climbing Frontend Developer, MinSeob Shim",
+              "content": "I live by the motto \"You have to smile when times are tough to be first-class.\" Challenging situations like difficult bugs and complex architecture design don't frustrate me—they draw me into the deep joy of immersion. During my 1+ years of professional experience, I've built various web and mobile services using tools like React, Next.js, and React Native, finding my greatest sense of achievement in solving business problems through technology."
             },
             {
-              "title": "My Strengths",
-              "content": "I can quickly adapt to projects across various domains and am confident in learning and implementing new technologies. I particularly excel at documenting development processes for smooth team communication and rapidly acquiring English technical documentation to enhance team development efficiency."
+              "title": "My Greatest Strength is 'Connection'",
+              "content": "I excel at connecting technology, people, and different languages to create synergy.\n\n",
+              "detail": [
+                {
+                  "title": "I connect people to people.",
+                  "content": "I believe in the power of positive communication. I meticulously document and share information so colleagues can clearly understand project progress and adapt easily. Beyond technical discussions, I lead active communication that boosts team morale."
+                },
+                {
+                  "title": "I connect languages and technology.",
+                  "content": "My ability to speak both Korean and English at a native level is one of my greatest assets. I quickly acquire the latest tech trends and official documentation without translation, sharing them with my team to lower technical barriers and contribute to improving overall team development efficiency."
+                }
+              ]
+            },
+            {
+              "title": "Beyond Code, I Solve Real-World Problems",
+              "content": "I gain inspiration and energy for development through activities that provide a sense of achievement in daily life.\n\nUnlike software development which requires long-term focus, climbing and escape rooms allow me to concentrate fully in a short time to solve immediate problems and taste the immediate joy of success. This experience provides excellent recharging to dive back into complex projects.\n\nAnd sometimes, I set aside all logic and take the most simple and comfortable rest with my two adorable cats."
             }
           ],
           "contact": {
@@ -174,31 +188,31 @@
             },
             {
               "title": "State Management",
-              "content": "Tanstack-Query(React Query) • Zustand • Context API"
+              "content": "Zustand • Tanstack-Query(React Query)"
             },
             {
-              "title": "3D & Graphics",
-              "content": "Three.js • React-Three-Fiber • WebGL • Canvas API"
+              "title": "Network Communication",
+              "content": "Axios • GraphQL • Relay"
             }
           ]
         },
         "experiencedTech": {
           "sections": [
             {
-              "title": "State Management",
-              "content": "Redux • MobX • Recoil • Deep understanding of state management patterns"
+              "title": "Advanced State Management",
+              "content": "Redux • MobX • Recoil"
             },
             {
-              "title": "Database & Backend",
-              "content": "GraphQL • Relay • REST API • Firebase • Backend integration experience"
+              "title": "Backend & Data",
+              "content": "Firebase • Contentful"
             },
             {
               "title": "Analytics & Monitoring",
-              "content": "Amplitude • Google Analytics • User behavior analysis and performance monitoring"
+              "content": "Amplitude • Google Analytics"
             },
             {
-              "title": "Testing & Quality",
-              "content": "Jest • Testing Library • E2E Testing • Code quality management"
+              "title": "3D & Graphics",
+              "content": "Three.js • React-Three-Fiber"
             }
           ]
         },
@@ -206,19 +220,15 @@
           "sections": [
             {
               "title": "Version Control",
-              "content": "Git • GitHub • Git-flow branch strategy • PR and code review processes"
+              "content": "Git • GitHub"
             },
             {
               "title": "Deployment & CI/CD",
-              "content": "Vercel • GitHub Actions • Automated deployment pipeline construction"
+              "content": "Vercel • GitHub Actions"
             },
             {
               "title": "Design & Communication",
-              "content": "Figma • Jira • Slack • Notion • Collaboration with designers and planners"
-            },
-            {
-              "title": "Project Management",
-              "content": "Agile • Scrum • Ticket-based task management • Documentation and process improvement"
+              "content": "Figma • Jira • Slack • Notion • Discord"
             }
           ]
         }

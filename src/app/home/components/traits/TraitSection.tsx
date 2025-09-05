@@ -50,44 +50,37 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
           className={cardClassName}
           isExpanded={isExpanded}
         >
-          {index === 0 ? (
-            <div className={'flex flex-col h-fit gap-8'}>
-              <div className={'flex flex-wrap gap-3 py-2 justify-center'}>
-                {tabs.map((tab, tabIndex) => (
-                  <TabButton
+          <div className={'flex flex-col h-fit gap-8'}>
+            <div className={'flex flex-wrap gap-3 py-2 justify-center'}>
+              {tabs.map((tab, tabIndex) => (
+                <TabButton
+                  key={tabIndex}
+                  tab={tab}
+                  tabIndex={tabIndex}
+                  currentTab={currentTab}
+                  onClick={setCurrentTab}
+                />
+              ))}
+            </div>
+
+            <div className="transition-all duration-300 ease-in-out">
+              {tabs.map((_, tabIndex) => {
+                if (currentTab !== tabIndex) return null;
+
+                const content = getTabContent(tabIndex);
+                if (!content) return null;
+
+                return (
+                  <TabContent
                     key={tabIndex}
-                    tab={tab}
                     tabIndex={tabIndex}
-                    currentTab={currentTab}
-                    onClick={setCurrentTab}
+                    sections={content.sections}
+                    contact={content.contact}
                   />
-                ))}
-              </div>
-
-              <div className="transition-all duration-300 ease-in-out">
-                {tabs.map((_, tabIndex) => {
-                  if (currentTab !== tabIndex) return null;
-
-                  const content = getTabContent(tabIndex);
-                  if (!content) return null;
-
-                  return (
-                    <TabContent
-                      key={tabIndex}
-                      tabIndex={tabIndex}
-                      sections={content.sections}
-                      contact={content.contact}
-                    />
-                  );
-                })}
-              </div>
+                );
+              })}
             </div>
-          ) : (
-            <div className="mt-4 space-y-3 animate__animated animate__fadeIn">
-              <p className="text-secondary text-sm leading-relaxed"></p>
-              <div className="flex flex-wrap gap-2"></div>
-            </div>
-          )}
+          </div>
         </TraitCard>
       </div>
     </section>

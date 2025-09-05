@@ -41,12 +41,26 @@
         "introduction": {
           "sections": [
             {
-              "title": "안녕하세요! 프론트엔드 개발자 심민섭입니다",
-              "content": "1년 이상의 실무 경험을 바탕으로 빠르게 성장하는 프론트엔드 개발자입니다. React, Next.js, React Native 등을 활용하여 다양한 환경에서 웹과 앱 서비스를 성공적으로 출시한 경험이 있습니다."
+              "title": "\uD83E\uDDD7\u200D♂\uFE0F 벽을 오르는 프론트엔드 개발자, 심민섭입니다.",
+              "content": "저는 \"힘들 때 웃어야 일류다\"라는 모토를 가슴에 품고 살아갑니다. 해결하기 어려운 버그, 복잡한 아키텍처 설계처럼 도전적인 상황은 저를 좌절시키기보다 오히려 깊은 몰입의 즐거움으로 이끕니다. 1년 이상의 실무 경험 동안 React, Next.js, React Native와 같은 도구를 활용해 다양한 웹과 앱 서비스를 만들며, 기술로 비즈니스의 문제를 해결하는 과정에서 가장 큰 성취감을 느꼈습니다."
             },
             {
-              "title": "저의 강점",
-              "content": "다양한 도메인의 프로젝트에 빠르게 적응할 수 있고, 새로운 기술을 배우고 구현하는 것에 자신이 있습니다. 특히, 동료들과의 원활한 소통을 위해 개발 프로세스를 문서화하고, 영문 기술 문서를 빠르게 습득하여 팀의 개발 효율을 높이는 데 강점이 있습니다."
+              "title": "저의 가장 큰 강점은 '연결'입니다.",
+              "content": "저는 기술과 사람, 그리고 서로 다른 언어를 연결하여 시너지를 만드는 것에 강점이 있습니다.\n\n",
+              "detail": [
+                {
+                  "title": "사람과 사람을 연결합니다.",
+                  "content": "저는 긍정적인 커뮤니케이션의 힘을 믿습니다. 동료들이 프로젝트의 진행 상황을 명확히 이해하고 쉽게 적응할 수 있도록 꼼꼼하게 문서를 작성하고 공유합니다. 기술적인 논의뿐만 아니라, 팀의 사기를 북돋우는 활발한 소통을 주도합니다."
+                },
+                {
+                  "title": "언어와 기술을 연결합니다.",
+                  "content": "한국어와 영어 모두 원어민 수준으로 구사할 수 있는 능력은 저의 가장 큰 자산 중 하나입니다. 최신 기술 트렌드나 공식 문서를 번역 없이 빠르게 습득하여 팀에 공유하고, 이를 통해 기술적 장벽을 낮추고 팀 전체의 개발 효율을 높이는 데 기여합니다."
+                }
+              ]
+            },
+            {
+              "title": "코드를 떠나, 세상의 문제들을 해결합니다.\n",
+              "content": "저는 일상에서도 성취감을 주는 활동들을 통해 개발에 대한 영감과 에너지를 얻습니다.\n\n긴 호흡이 필요한 소프트웨어 개발과 달리, 클라이밍과 방탈출은 짧은 시간 안에 온전히 집중하여 눈앞의 문제를 해결하고 즉각적인 성공의 기쁨을 맛보게 해줍니다. 이 경험은 복잡한 프로젝트에 다시 뛰어들 수 있는 훌륭한 재충전이 됩니다.\n\n그리고 때로는 모든 논리를 내려놓고, 그저 귀여운 두 마리의 고양이와 함께하며 가장 단순하고 편안한 휴식을 취합니다."
             }
           ],
           "contact": {
@@ -140,15 +154,15 @@
           "sections": [
             {
               "title": "개발 성과",
-              "content": "• 2개월 내 40개 화면 구현으로 개발 속도 입증\n• 로딩 속도 1.2초 단축으로 사용자 경험 개선\n• 데이터 입력 시간 50% 단축으로 업무 효율 향상"
+              "content": "2개월 내 40개 화면 구현으로 개발 속도 입증\n• 로딩 속도 1.2초 단축으로 사용자 경험 개선\n• 데이터 입력 시간 50% 단축으로 업무 효율 향상"
             },
             {
               "title": "기술적 성과",
-              "content": "• React-Three-Fiber 3D 뷰어 구현\n• GraphQL + Relay로 서버 요청 최소화\n• 병렬 라우팅으로 성능 최적화\n• 4대 소셜 로그인 및 앱스토어 출시 완료"
+              "content": "React-Three-Fiber 3D 뷰어 구현\n• GraphQL + Relay로 서버 요청 최소화\n• 병렬 라우팅으로 성능 최적화\n• 4대 소셜 로그인 및 앱스토어 출시 완료"
             },
             {
               "title": "팀 기여",
-              "content": "• Git 브랜치 전략 도입으로 머지 충돌 100건 이상 해결\n• 앱스토어 심사 가이드 문서화\n• API 사전 테스트로 안정적인 데이터 연동 기반 마련"
+              "content": "Git 브랜치 전략 도입으로 머지 충돌 100건 이상 해결\n• 앱스토어 심사 가이드 문서화\n• API 사전 테스트로 안정적인 데이터 연동 기반 마련"
             }
           ]
         }
@@ -165,60 +179,56 @@
         "coreTech": {
           "sections": [
             {
-              "title": "Frontend Core",
+              "title": "프론트엔드 핵심",
               "content": "JavaScript (ES6+) • TypeScript • React • Next.js • React Native • Expo"
             },
             {
-              "title": "Styling & UI",
-              "content": "TailwindCSS • Styled-Components • CSS3 • HTML5 • Responsive Design"
+              "title": "스타일링 & UI",
+              "content": "TailwindCSS • Styled-Components • CSS3 • HTML5 • 반응형 웹 디자인"
             },
             {
-              "title": "State Management",
-              "content": "Tanstack-Query(React Query) • Zustand • Context API"
+              "title": "상태 관리",
+              "content": "Zustand • Tanstack-Query(React Query)"
             },
             {
-              "title": "3D & Graphics",
-              "content": "Three.js • React-Three-Fiber • WebGL • Canvas API"
+              "title": "네트워크 통신",
+              "content": "Axios • GraphQL • Relay"
             }
           ]
         },
         "experiencedTech": {
           "sections": [
             {
-              "title": "State Management",
-              "content": "Redux • MobX • Recoil • 상태 관리 패턴에 대한 깊은 이해"
+              "title": "고급 상태 관리",
+              "content": "Redux • MobX • Recoil"
             },
             {
-              "title": "Database & Backend",
-              "content": "GraphQL • Relay • REST API • Firebase • 백엔드 연동 경험"
+              "title": "백엔드 & 데이터",
+              "content": "Firebase • Contentful"
             },
             {
-              "title": "Analytics & Monitoring",
-              "content": "Amplitude • Google Analytics • 사용자 행동 분석 및 성능 모니터링"
+              "title": "분석 & 모니터링",
+              "content": "Amplitude • Google Analytics"
             },
             {
-              "title": "Testing & Quality",
-              "content": "Jest • Testing Library • E2E Testing • 코드 품질 관리"
+              "title": "3D & 그래픽스",
+              "content": "Three.js • React-Three-Fiber"
             }
           ]
         },
         "collaborationTools": {
           "sections": [
             {
-              "title": "Version Control",
-              "content": "Git • GitHub • Git-flow 브랜치 전략 • PR 및 코드 리뷰 프로세스"
+              "title": "버전 관리",
+              "content": "Git • GitHub"
             },
             {
-              "title": "Deployment & CI/CD",
-              "content": "Vercel • GitHub Actions • 자동화된 배포 파이프라인 구축"
+              "title": "배포 & CI/CD",
+              "content": "Vercel • GitHub Actions"
             },
             {
-              "title": "Design & Communication",
-              "content": "Figma • Jira • Slack • Notion • 디자이너 및 기획자와의 협업"
-            },
-            {
-              "title": "Project Management",
-              "content": "Agile • Scrum • 티켓 기반 업무 관리 • 문서화 및 프로세스 개선"
+              "title": "디자인 & 커뮤니케이션",
+              "content": "Figma • Jira • Slack • Notion • Discord"
             }
           ]
         }

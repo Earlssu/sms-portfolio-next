@@ -11,6 +11,10 @@ export interface TraitTranslationKeys {
         title: string;
         position?: string;
         content: string;
+        detail?: Array<{
+          title: string;
+          content: string;
+        }>;
       }>;
       contact?: {
         email: string;
