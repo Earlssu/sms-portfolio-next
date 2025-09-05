@@ -77,7 +77,8 @@ export const useScrollAnimation = () => {
         setHasAutoFocused(true);
         setTimeout(() => {
           const heroHeight = window.innerHeight;
-          const targetPosition = heroHeight + window.innerHeight * 0.1; // 오프셋 줄임
+          // AboutMe 섹션의 실제 중앙으로 포커싱 (거의 heroHeight와 동일)
+          const targetPosition = heroHeight;
 
           // 현재 위치와 목표 위치가 충분히 다를 때만 스크롤
           if (Math.abs(window.scrollY - targetPosition) > 100) {
