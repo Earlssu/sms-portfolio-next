@@ -15,7 +15,7 @@ export const GithubIcon: React.FC<GithubIconProps> = ({
       aria-label="GitHub icon"
       title="GitHub icon from SVG Repo"
       data-source="https://www.svgrepo.com/"
-      className={`text-tertiary ${className}`}
+      className={`${className}`}
       style={{
         display: 'inline-block',
         verticalAlign: 'middle',

@@ -15,7 +15,7 @@ export const NotionIcon: React.FC<NotionIconProps> = ({
       aria-label="Notion icon"
       title="Notion icon from SVG Repo"
       data-source="https://www.svgrepo.com/"
-      className={`text-primary ${className}`}
+      className={`${className}`}
       style={{
         display: 'inline-block',
         verticalAlign: 'middle',

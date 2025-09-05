@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useBackgroundStore } from '@/app/home/stores';
+import { useBackgroundStore } from '@/shared/stores';
 
 export const GlobalBackgroundTransition: React.FC = () => {
   const isDarkMode = useBackgroundStore(state => state.isDarkMode);

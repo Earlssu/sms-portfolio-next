@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { ContactSection } from './ContactSection';
 import { formatContent } from '@/shared/utils/contentFormatter';
-import { useBackgroundStore } from '@/app/home/stores';
+import { useBackgroundStore } from '@/shared/stores';
 
 interface TabContentProps {
   tabIndex: number;

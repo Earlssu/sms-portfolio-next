@@ -13,7 +13,7 @@ import {
   TraitCard,
 } from '@/app/home/components';
 import { AboutMeCarousel } from './AboutMeCarousel';
-import { useBackgroundStore } from '@/app/home/stores';
+import { useBackgroundStore } from '@/shared/stores';
 
 interface TraitSectionProps {
   traitKey: string;
