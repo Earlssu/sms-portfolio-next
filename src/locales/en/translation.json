@@ -318,5 +318,121 @@
   "home": {
     "thankYou": "Thanks for the epic scroll journey! 🎢",
     "moreInfo": "Meet our adorable cats! 🐈 The green-eyed one is Seolgi, and the orange-eyed one is Milk. Aren't they precious? Check out more information on other pages. (Hidden cat photos await! 🫢)"
+  },
+  "career": {
+    "projects": [
+      {
+        "id": "xcore-system",
+        "title": "XCoreSystem",
+        "subtitle": "엑스코어시스템",
+        "period": "2024.08 ~ 2024.10",
+        "type": "HACCP Certification App",
+        "description": "Developed an internal business app based on RN and Expo to streamline HACCP certification procedures",
+        "role": "Frontend Developer",
+        "team": "Blast Development Team",
+        "technologies": ["React Native", "Expo", "TypeScript", "REST API"],
+        "achievements": [
+          "Implemented over 40 core screens within 2 months",
+          "Reduced data entry time by 50% compared to manual methods",
+          "Designed hierarchical nested modal structure for intuitive UX improvement",
+          "Pre-tested 60+ APIs with Postman for stable data integration"
+        ],
+        "details": {
+          "problem": "Existing HACCP certification procedures were inefficient and error-prone due to manual processes",
+          "solution": "Built systematic data input and management system through mobile app",
+          "impact": "Significantly improved work efficiency and user satisfaction"
+        }
+      },
+      {
+        "id": "finter",
+        "title": "Finter",
+        "subtitle": "핀터",
+        "period": "2024.06 ~ 2024.08",
+        "type": "Stock Community Web",
+        "description": "Developed a Next.js-based stock market community web page",
+        "role": "Frontend Developer",
+        "team": "Blast Development Team",
+        "technologies": ["Next.js", "GraphQL", "Relay", "TypeScript", "Suspense"],
+        "achievements": [
+          "Reduced initial loading time by 1.2 seconds using parallel routing and Suspense",
+          "Resolved 100+ monthly merge conflicts by introducing Git-flow branch strategy",
+          "Minimized server requests and ensured data consistency with GraphQL and Relay",
+          "Secured code management stability for the entire team"
+        ],
+        "details": {
+          "problem": "Development productivity decline due to frequent merge conflicts and slow loading speeds",
+          "solution": "Introduced Git-flow strategy and optimized routing system",
+          "impact": "Improved development team productivity and user experience"
+        }
+      },
+      {
+        "id": "pikble",
+        "title": "Pikble",
+        "subtitle": "픽블",
+        "period": "2024.02 ~ 2024.05",
+        "type": "3D Modeling App",
+        "description": "Developed RN and Expo-based application providing 3D models using AI technology based on user's shooting data",
+        "role": "Frontend Developer",
+        "team": "Blast Development Team",
+        "technologies": ["React Native", "Expo", "React-Three-Fiber", "Social Login", "3D Graphics"],
+        "achievements": [
+          "Reduced new user registration barriers by implementing 4 major social login features",
+          "Implemented React-Three-Fiber based 3D model viewer",
+          "Successfully launched after 10 app review processes",
+          "Documented 'App Store Review Response Guide' for future project foundation",
+          "Reduced user dropout rates through BackHandler and LoadingIndicator optimization"
+        ],
+        "details": {
+          "problem": "Technical challenge of effectively visualizing complex 3D models on mobile devices",
+          "solution": "Built optimized 3D rendering system using React-Three-Fiber",
+          "impact": "Successfully launched innovative 3D modeling service"
+        }
+      },
+      {
+        "id": "candypay",
+        "title": "CandyPay",
+        "subtitle": "캔디페이",
+        "period": "2023.08 ~ 2024.02",
+        "type": "Split Payment Financial App",
+        "description": "Developed a financial application enabling multiple users to split payments within a single app",
+        "role": "Frontend Developer",
+        "team": "Blast Development Team",
+        "technologies": ["React Native", "QR Code", "Financial API", "Encryption", "Coucon API"],
+        "achievements": [
+          "Led development of core payment features including QR scan and split payment UI/UX",
+          "Implemented user-tier differential authorization system",
+          "Developed payment limit setting based on personal income information",
+          "Implemented optimal year-end tax settlement card consumption calculation logic via Coucon API integration",
+          "Achieved Financial Security Institute security review compliance through data encryption and security guidelines"
+        ],
+        "details": {
+          "problem": "Complex split payment system and strict financial security requirements",
+          "solution": "Secure payment system with systematic permission management and security guideline compliance",
+          "impact": "Launched innovative split payment service and passed Financial Security Institute review"
+        }
+      },
+      {
+        "id": "watery",
+        "title": "Watery",
+        "subtitle": "워터리",
+        "period": "2025.06 ~ 2025.09",
+        "type": "Personal Project",
+        "description": "Developed RN and Expo-based app for recording personal water intake",
+        "role": "Full-stack Developer",
+        "team": "Gachi Crew 1st Generation",
+        "technologies": ["React Native", "Expo", "CSS Animation", "UX Design"],
+        "achievements": [
+          "Implemented interactive UI using CSS animations",
+          "Enhanced user experience design capabilities",
+          "Designed intuitive user interface for personal health management app",
+          "Applied gamification elements to encourage continuous usage"
+        ],
+        "details": {
+          "problem": "Sustainability issues with monotonous water intake recording",
+          "solution": "Encouraged user engagement through gamification and beautiful animations",
+          "impact": "Presented new approach to personal health management"
+        }
+      }
+    ]
   }
 }
