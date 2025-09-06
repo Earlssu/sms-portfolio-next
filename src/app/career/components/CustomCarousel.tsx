@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import CarouselCard from '@/app/career/components/CarouselCard';
 import carouselItems from '@/app/career/constants/carouselItems';
+import './CustomCarousel.css';
 
 const CustomCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);

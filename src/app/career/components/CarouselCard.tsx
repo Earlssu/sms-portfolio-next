@@ -1,3 +1,5 @@
+import './CarouselCard.css';
+
 interface CarouselCardProps {
   index: number;
   active: number;
@@ -22,13 +24,19 @@ const CarouselCard = ({
   const absOffset = Math.abs(offset);
 
   // CSS 변수로 전달할 값들
-  const style = {
+  const style: React.CSSProperties & {
+    '--index': number;
+    '--active': number;
+    '--offset': number;
+    '--abs-offset': number;
+    '--total': number;
+  } = {
     '--index': index,
     '--active': active,
     '--offset': offset,
     '--abs-offset': absOffset,
     '--total': total,
-  } as React.CSSProperties;
+  };
 
   return (
     <div className="carousel-item" style={style} onClick={onClick}>
