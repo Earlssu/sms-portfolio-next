@@ -52,7 +52,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
   if (!isOpen || !projectData) return null;
 
   return (
-    <div 
+    <div
       className="fixed inset-0 bg-black/85 flex items-center justify-center z-[100] backdrop-blur-md animate-in fade-in duration-400"
       onClick={onClose}
     >
@@ -71,7 +71,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         </div>
 
         {/* 닫기 버튼 */}
-        <button 
+        <button
           className="absolute top-5 right-5 w-10 h-10 rounded-full bg-black/60 text-white text-lg backdrop-blur-lg transition-all duration-200 hover:bg-black/80 hover:scale-110 z-10"
           onClick={onClose}
         >
@@ -95,7 +95,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               </p>
             )}
             {projectData.type && (
-              <div className="inline-block px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-xl text-xs text-blue-200 mb-1">
+              <div className="inline-block px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-xl text-xs text-blue-200 mb-1 -ml-2">
                 {projectData.type}
               </div>
             )}
@@ -127,9 +127,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
             {projectData.team && (
               <div>
-                <h3 className="text-lg font-semibold text-white mb-3">
-                  👥 팀
-                </h3>
+                <h3 className="text-lg font-semibold text-white mb-3">👥 팀</h3>
                 <p className="text-sm leading-relaxed text-white/80">
                   {projectData.team}
                 </p>
@@ -144,8 +142,8 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               </h3>
               <div className="flex flex-wrap gap-2">
                 {projectData.technologies.map((tech, index) => (
-                  <span 
-                    key={index} 
+                  <span
+                    key={index}
                     className="px-3 py-1.5 bg-white/10 border border-white/20 rounded-2xl text-xs text-white/90 backdrop-blur-lg"
                   >
                     {tech}
@@ -163,7 +161,9 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               <ul className="space-y-3">
                 {projectData.achievements.map((achievement, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <span className="text-white/60 font-bold mt-1.5 text-sm">•</span>
+                    <span className="text-white/60 font-bold mt-1.5 text-sm">
+                      •
+                    </span>
                     <span className="text-sm leading-relaxed text-white/80 flex-1 pt-1">
                       {achievement}
                     </span>
