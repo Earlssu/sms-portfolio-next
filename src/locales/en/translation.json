@@ -136,32 +136,33 @@
     "projects": {
       "title": "Major Projects",
       "tabs": [
-        "Blast"
+        "Blast Inc.",
+        "Personal Projects"
       ],
       "tabContents": {
-        "keyProjects": {
+        "blast": {
           "sections": [
             {
-              "title": "XCoreSystem - HACCP Certification App (2024.08~10)",
-              "content": "Developed an internal business app based on RN and Expo to streamline HACCP certification procedures. Intuitively improved complex data input flow through nested modal structures.",
+              "title": "XCoreSystem - HACCP Certification App (2024.08 ~ 2024.10)",
+              "content": "Developed an internal business app based on RN and Expo to streamline HACCP certification procedures.",
               "detail": [
                 {
-                  "title": "Development Efficiency Improvement",
+                  "title": "",
                   "content": "Implemented over 40 core screens within 2 months, contributing to a 50% reduction in data input time compared to the existing manual process."
                 },
                 {
-                  "title": "User Experience Enhancement",
+                  "title": "",
                   "content": "Designed hierarchical nested modal structures to reduce user input errors and prevent task abandonment, intuitively improving complex data input workflows."
                 },
                 {
-                  "title": "Stable Data Integration",
+                  "title": "",
                   "content": "Prevented unnecessary bugs and rework in early development stages by pre-testing responses from 60+ APIs using Postman and sharing results with colleagues to establish a foundation for stable data integration."
                 }
               ]
             },
             {
-              "title": "Finter - Stock Community (2024.06~08)",
-              "content": "Developed a Next.js-based stock community web page. Improved initial loading speed by applying parallel routing and Suspense, and optimized data management by introducing GraphQL and Relay.",
+              "title": "Finter - Stock Community (2024.06 ~ 2024.08)",
+              "content": "Developed a Next.js-based stock community web page.",
               "detail": [
                 {
                   "title": "Performance Optimization",
@@ -178,8 +179,8 @@
               ]
             },
             {
-              "title": "Pikble - 3D Modeling App (2024.02~05)",
-              "content": "Developed a 3D modeling application utilizing AI technology based on RN and Expo. Implemented React-Three-Fiber based 3D viewer and enhanced user convenience through 4 major social login integrations.",
+              "title": "Pikble - 3D Modeling App (2024.02 ~ 2024.05)",
+              "content": "Developed an application that provides 3D models using AI technology based on user's shooting data, built with RN and Expo.",
               "detail": [
                 {
                   "title": "User Accessibility Enhancement",
@@ -200,8 +201,8 @@
               ]
             },
             {
-              "title": "CandyPay - Split Payment App (2023.08~2024.02)",
-              "content": "Developed a financial application enabling multiple users to split payments within a single app. Implemented core financial features including QR scanning, payment limits, and year-end tax optimization.",
+              "title": "CandyPay - Split Payment App (2023.08 ~ 2024.02)",
+              "content": "Developed a financial application that enables multiple users to split payments within a single app.",
               "detail": [
                 {
                   "title": "Core Payment Feature Development",
@@ -218,6 +219,28 @@
                 {
                   "title": "Security Review Compliance",
                   "content": "Aimed for Financial Security Institute security review approval by refactoring data encryption and user information processing logic according to security guidelines and creating related documentation, contributing to review approval."
+                }
+              ]
+            }
+          ]
+        },
+        "toyProjects": {
+          "sections": [
+            {
+              "title": "Watery - Personal Hydration Tracking App (2025.06 ~ Present)",
+              "content": "Developed a personal hydration tracking app based on RN and Expo. Users can record their intake of water, coffee, cola, etc., and the app tracks their hydration levels based on input values, showing whether they've reached their personal daily hydration goals.",
+              "detail": [
+                {
+                  "title": "Development Efficiency Improvement",
+                  "content": "Implemented over 40 core screens within 2 months, contributing to a 50% reduction in data input time compared to the existing manual process."
+                },
+                {
+                  "title": "User Experience Enhancement",
+                  "content": "Designed hierarchical nested modal structures to reduce user input errors and prevent task abandonment, intuitively improving complex data input workflows."
+                },
+                {
+                  "title": "Stable Data Integration",
+                  "content": "Prevented unnecessary bugs and rework in early development stages by pre-testing responses from 60+ APIs using Postman and sharing results with colleagues to establish a foundation for stable data integration."
                 }
               ]
             }

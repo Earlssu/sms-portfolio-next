@@ -1,4 +1,9 @@
-import { TraitKey, TraitTranslationKeys, TRAIT_TAB_KEYS, TabKey } from '../types/trait';
+import {
+  TabKey,
+  TRAIT_TAB_KEYS,
+  TraitKey,
+  TraitTranslationKeys,
+} from '../types/trait';
 
 // useTranslation에서 사용할 키 패턴 생성 함수
 export const getTraitTranslationKey = (
@@ -10,7 +15,7 @@ export const getTraitTranslationKey = (
 
 // 탭 콘텐츠 전용 키 생성 함수 (의미있는 키 이름 사용)
 export const getTraitTabContentKey = <T extends TraitKey>(
-  traitKey: T, 
+  traitKey: T,
   tabIndex: number
 ): `traits.${T}.tabContents.${TabKey<T>}` => {
   const tabKeys = TRAIT_TAB_KEYS[traitKey];

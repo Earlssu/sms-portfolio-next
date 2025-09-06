@@ -1,11 +1,18 @@
 'use client';
 
-import { TraitKey, ContactInfo, TabContentData } from '@/app/home/types';
-import { getTraitTabContentKey, getTraitTranslationKey } from '@/app/home/utils';
-import React, { useEffect, useState } from 'react';
+import { ContactInfo, TabContentData, TraitKey } from '@/app/home/types';
+import {
+  getTraitTabContentKey,
+  getTraitTranslationKey,
+} from '@/app/home/utils';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { TabButton, TabContent, TraitCard } from '@/app/home/components';
-import { AboutMeCarousel } from './AboutMeCarousel';
+import {
+  AboutMeCarousel,
+  TabButton,
+  TabContent,
+  TraitCard,
+} from '@/app/home/components';
 
 interface TraitSectionProps {
   traitKey: TraitKey;
@@ -21,7 +28,9 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
   const { t } = useTranslation();
 
   const title = t(getTraitTranslationKey(traitKey, 'title')) as string;
-  const contact = t('traits.aboutMe.contact', { returnObjects: true }) as ContactInfo;
+  const contact = t('traits.aboutMe.contact', {
+    returnObjects: true,
+  }) as ContactInfo;
 
   // aboutMe인 경우 탭이 없으므로 조건부 처리
   const tabs =
@@ -44,11 +53,6 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
     isExpanded ? 'scale-100 opacity-100' : 'scale-90 opacity-60'
   }`;
 
-  useEffect(() => {
-    console.log(traitKey);
-    console.log(tabs);
-  }, [traitKey]);
-
   return (
     <section className="h-screen flex items-center justify-center px-10 relative">
       {/* aboutMe인 경우 전체 화면 */}
@@ -61,9 +65,11 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
           </div>
 
           <div className="w-full h-full pt-16">
-            <AboutMeCarousel 
-              isExpanded={isExpanded} 
-              contact={contact && typeof contact === 'object' ? contact : undefined} 
+            <AboutMeCarousel
+              isExpanded={isExpanded}
+              contact={
+                contact && typeof contact === 'object' ? contact : undefined
+              }
             />
           </div>
         </div>
@@ -99,6 +105,8 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
 
                   const content = getTabContent(tabIndex);
                   if (!content) return null;
+
+                  console.log('CONTENT:', content);
 
                   return (
                     <TabContent
