@@ -9,9 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 100;
   backdrop-filter: blur(8px);
-  
+
   /* 애니메이션 */
   animation: modalFadeIn 0.4s ease-out;
 }
@@ -31,14 +31,14 @@
 .modal-card {
   position: relative;
   width: 90vw;
-  max-width: 800px;
+  max-width: 1028px;
   height: 85vh;
-  max-height: 600px;
+  max-height: 800px;
   background: #1a1a1a;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-  
+
   /* 카드 확대 애니메이션 */
   animation: modalCardScale 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -130,7 +130,7 @@
   padding: 30px;
   color: white;
   overflow-y: auto;
-  
+
   /* 커스텀 스크롤바 */
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
@@ -312,15 +312,15 @@
     height: 90vh;
     border-radius: 15px;
   }
-  
+
   .modal-content {
     padding: 20px;
   }
-  
+
   .modal-title {
     font-size: 20px;
   }
-  
+
   .modal-num {
     font-size: 24px;
   }

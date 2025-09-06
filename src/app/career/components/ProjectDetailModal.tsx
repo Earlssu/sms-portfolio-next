@@ -54,14 +54,14 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div 
+      <div
         className="modal-card"
         onClick={(e) => e.stopPropagation()} // 카드 클릭 시 모달 닫힘 방지
       >
         {/* 배경 이미지 */}
         <div className="modal-image-container">
-          <img 
-            src={projectData.imageSrc} 
+          <img
+            src={projectData.imageSrc}
             alt={projectData.title}
             className="modal-image"
           />
@@ -87,7 +87,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               <div className="modal-type">{projectData.type}</div>
             )}
           </div>
-          
+
           {projectData.period && (
             <div className="modal-period">📅 {projectData.period}</div>
           )}
@@ -145,19 +145,25 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 {projectData.details.problem && (
                   <div className="modal-insight-item">
                     <h4 className="modal-insight-label">🚨 문제점</h4>
-                    <p className="modal-insight-content">{projectData.details.problem}</p>
+                    <p className="modal-insight-content">
+                      {projectData.details.problem}
+                    </p>
                   </div>
                 )}
                 {projectData.details.solution && (
                   <div className="modal-insight-item">
                     <h4 className="modal-insight-label">💡 해결방안</h4>
-                    <p className="modal-insight-content">{projectData.details.solution}</p>
+                    <p className="modal-insight-content">
+                      {projectData.details.solution}
+                    </p>
                   </div>
                 )}
                 {projectData.details.impact && (
                   <div className="modal-insight-item">
                     <h4 className="modal-insight-label">📈 임팩트</h4>
-                    <p className="modal-insight-content">{projectData.details.impact}</p>
+                    <p className="modal-insight-content">
+                      {projectData.details.impact}
+                    </p>
                   </div>
                 )}
               </div>
