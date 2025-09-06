@@ -38,11 +38,46 @@ export const I18nStaticContent: React.FC<I18nStaticContentProps> = ({
           {lang === 'en' ? 'Developer Characteristics' : '개발자로서의 특성'}
         </h2>
 
-        {Object.entries(traits).map(([key, trait]) => (
-          <article key={key}>
-            <h3>{trait.title}</h3>
-          </article>
-        ))}
+        {/* About Me */}
+        <article>
+          <h3>{traits.aboutMe?.title}</h3>
+          {traits.aboutMe?.carouselSlides?.map((slide: any, index: number) => (
+            <div key={index}>
+              <h4>{slide.title}</h4>
+              <p>{slide.content}</p>
+            </div>
+          ))}
+        </article>
+
+        {/* Projects */}
+        <article>
+          <h3>{traits.projects?.title}</h3>
+          {Object.values(traits.projects?.tabContents || {}).map((tabContent: any, tabIndex: number) => (
+            <div key={tabIndex}>
+              {tabContent.sections?.map((section: any, sectionIndex: number) => (
+                <div key={sectionIndex}>
+                  <h4>{section.title}</h4>
+                  <p>{section.content}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </article>
+
+        {/* Tech Stack */}
+        <article>
+          <h3>{traits.techStack?.title}</h3>
+          {Object.values(traits.techStack?.tabContents || {}).map((tabContent: any, tabIndex: number) => (
+            <div key={tabIndex}>
+              {tabContent.sections?.map((section: any, sectionIndex: number) => (
+                <div key={sectionIndex}>
+                  <h4>{section.title}</h4>
+                  <p>{section.content}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </article>
 
         <footer>
           <p>{home.thankYou}</p>

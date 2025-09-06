@@ -24,10 +24,18 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
   const t = getTranslationData(lang);
   const traits = getTraitsData(lang);
 
-  // techStack은 traits 내부에 있음
-  const allSkills = traits.techStack?.tabs?.flatMap((tab: any) => 
-    tab.sections?.flatMap((section: any) => section.title) || []
-  ) || [];
+  // techStack과 projects에서 기술 스택과 프로젝트 정보 추출
+  const techStackSkills = Object.values(traits.techStack?.tabContents || {}).flatMap((tabContent: any) =>
+    tabContent.sections?.flatMap((section: any) => 
+      section.content.split(' • ').map((skill: string) => skill.trim())
+    ) || []
+  );
+
+  const projectTitles = Object.values(traits.projects?.tabContents || {}).flatMap((tabContent: any) =>
+    tabContent.sections?.map((section: any) => section.title) || []
+  );
+
+  const allSkills = Array.from(new Set([...techStackSkills, 'React', 'TypeScript', 'Next.js', 'JavaScript']));
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -55,6 +63,11 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
       '@type': 'Place',
       name: lang === 'en' ? 'South Korea' : '대한민국',
     },
+    hasCredential: projectTitles.map((title: string) => ({
+      '@type': 'CreativeWork',
+      name: title,
+      creator: PERSON_NAME_MAP[lang],
+    })),
   };
 
   return (
