@@ -3,7 +3,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useBackgroundStore } from '@/shared/stores';
-import { CarouselSlide, ContactSection } from '@/app/home/components';
+import {
+  CarouselControls,
+  CarouselNavigation,
+  CarouselProgressBar,
+  CarouselSlide,
+  ContactSection,
+} from '@/app/home/components';
 
 interface AboutMeCarouselProps {
   isExpanded: boolean;
@@ -126,39 +132,16 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
       {/* 상단 컨트롤 */}
-      <div className="flex justify-between items-center mb-6 px-2">
-        {/* 프로그레스 바 */}
-        <div className="flex-1 mx-4 pt-8">
-          <div className="w-full bg-white/20 rounded-full h-2">
-            <div
-              className="bg-white h-2 rounded-full transition-all duration-300 ease-out shadow-lg"
-              style={{ width: `${((currentSlide + 1) / totalSlides) * 100}%` }}
-            />
-          </div>
-          <div className="flex justify-between mt-3 text-sm text-white/80">
-            <span>{currentSlide + 1}</span>
-            <span>{totalSlides}</span>
-          </div>
-        </div>
-
-        {/* 컨트롤 버튼 */}
-        <div className="flex gap-2">
-          <button
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="px-3 py-2 rounded-full bg-white/15 hover:bg-white/25 transition-all duration-200 text-white text-sm backdrop-blur-sm"
-            title={isAutoPlaying ? '일시정지' : '재생'}
-          >
-            {isAutoPlaying ? '⏸️' : '▶️'}
-          </button>
-
-          <button
-            onClick={() => goToSlide(totalSlides - 1)}
-            className="px-3 py-2 rounded-full bg-white/15 hover:bg-white/25 transition-all duration-200 text-white text-sm backdrop-blur-sm"
-            title="마지막으로 건너뛰기"
-          >
-            ⏭️
-          </button>
-        </div>
+      <div className="flex justify-between items-center mb-6 px-8">
+        <CarouselProgressBar
+          currentSlide={currentSlide}
+          totalSlides={totalSlides}
+        />
+        <CarouselControls
+          isAutoPlaying={isAutoPlaying}
+          onToggleAutoPlay={() => setIsAutoPlaying(!isAutoPlaying)}
+          onSkipToLast={() => goToSlide(totalSlides - 1)}
+        />
       </div>
 
       {/* 슬라이드 콘텐츠 */}
@@ -180,20 +163,14 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
         </div>
       </div>
 
-      {/* 하단 네비게이션 */}
-      <div className="flex justify-center gap-3 mt-8 pb-4">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-200 ${
-              index === currentSlide
-                ? 'bg-white scale-125 shadow-lg'
-                : 'bg-white/40 hover:bg-white/60'
-            }`}
-          />
-        ))}
-      </div>
+      {/* 네비게이션 */}
+      <CarouselNavigation
+        totalSlides={totalSlides}
+        currentSlide={currentSlide}
+        onSlideChange={goToSlide}
+        onPrevSlide={prevSlide}
+        onNextSlide={nextSlide}
+      />
 
       {/* 연락처 섹션 */}
       {contact && (
@@ -201,23 +178,6 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
           <ContactSection contact={contact} isDarkMode={isDarkMode} />
         </div>
       )}
-
-      {/* 좌우 네비게이션 버튼 */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-4 rounded-full  hover:bg-white/25 transition-all duration-200 text-white text-xl backdrop-blur-sm z-20"
-        style={{ display: currentSlide === 0 ? 'none' : 'block' }}
-      >
-        ←
-      </button>
-
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-4 rounded-full hover:bg-white/25 transition-all duration-200 text-white text-xl backdrop-blur-sm z-20"
-        style={{ display: currentSlide === totalSlides - 1 ? 'none' : 'block' }}
-      >
-        →
-      </button>
     </div>
   );
 };

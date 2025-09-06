@@ -10,6 +10,9 @@ export { ContactItem } from './ContactItem';
 // Carousel 관련 컴포넌트들
 export { AboutMeCarousel } from './AboutMeCarousel';
 export { CarouselSlide } from './CarouselSlide';
+export { CarouselProgressBar } from './CarouselProgressBar';
+export { CarouselControls } from './CarouselControls';
+export { CarouselNavigation } from './CarouselNavigation';
 export { GlobalBackgroundTransition } from './BackgroundTransition';
 export { StarlightBackground } from './StarlightBackground';
 
