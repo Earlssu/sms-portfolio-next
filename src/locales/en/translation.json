@@ -143,7 +143,7 @@
         "blast": {
           "sections": [
             {
-              "title": "XCoreSystem - HACCP Certification App (2024.08 ~ 2024.10)",
+              "title": "XCoreSystem (2024.08 ~ 2024.10)",
               "content": "Developed an internal business app based on RN and Expo to streamline HACCP certification procedures.",
               "detail": [
                 {
@@ -161,63 +161,63 @@
               ]
             },
             {
-              "title": "Finter - Stock Community (2024.06 ~ 2024.08)",
+              "title": "Finter (2024.06 ~ 2024.08)",
               "content": "Developed a Next.js-based stock community web page.",
               "detail": [
                 {
-                  "title": "Performance Optimization",
+                  "title": "",
                   "content": "Reduced initial loading time by 1.2 seconds by applying parallel routing and Suspense."
                 },
                 {
-                  "title": "Git Branch Strategy Implementation",
+                  "title": "",
                   "content": "Resolved frequent merge conflicts (100+ per month) that were reducing development productivity by introducing and propagating Git-flow branch strategy to ensure code management stability."
                 },
                 {
-                  "title": "Data Management Optimization",
+                  "title": "",
                   "content": "Introduced GraphQL and Relay to separate client and server states, applying caching strategies to minimize unnecessary server requests and ensure data consistency."
                 }
               ]
             },
             {
-              "title": "Pikble - 3D Modeling App (2024.02 ~ 2024.05)",
+              "title": "Pikble (2024.02 ~ 2024.05)",
               "content": "Developed an application that provides 3D models using AI technology based on user's shooting data, built with RN and Expo.",
               "detail": [
                 {
-                  "title": "User Accessibility Enhancement",
+                  "title": "",
                   "content": "Implemented 4 major social login features to lower barriers for new user registration and successfully launched the app by handling the app review process."
                 },
                 {
-                  "title": "3D Visualization Implementation",
+                  "title": "",
                   "content": "Implemented React-Three-Fiber based viewer for the core service feature of 3D model visualization, enabling users to view models in various formats."
                 },
                 {
-                  "title": "App Store Review Management",
+                  "title": "",
                   "content": "Documented 'App Store Review Response Guide' based on insights gained from 10 app review and re-review processes, establishing a foundation to shorten review periods for similar future projects."
                 },
                 {
-                  "title": "User Experience Improvement",
+                  "title": "",
                   "content": "Improved core issues that hindered user experience by preventing unintended app termination (BackHandler) and reducing abandonment rates during data loading (LoadingIndicator)."
                 }
               ]
             },
             {
-              "title": "CandyPay - Split Payment App (2023.08 ~ 2024.02)",
+              "title": "CandyPay (2023.08 ~ 2024.02)",
               "content": "Developed a financial application that enables multiple users to split payments within a single app.",
               "detail": [
                 {
-                  "title": "Core Payment Feature Development",
+                  "title": "",
                   "content": "Led UI/UX development of core payment features including QR scanning and split payments to enhance user payment convenience."
                 },
                 {
-                  "title": "Tiered Permission System Implementation",
+                  "title": "",
                   "content": "Implemented core service logic including user tier-based differential permission granting and payment limit settings based on personal income information, establishing a foundation for stable and systematic service operation."
                 },
                 {
-                  "title": "Financial Logic Implementation",
+                  "title": "",
                   "content": "Integrated Cookun API to implement core financial logic that calculates and recommends optimal year-end tax card spending amounts based on individual user income."
                 },
                 {
-                  "title": "Security Review Compliance",
+                  "title": "",
                   "content": "Aimed for Financial Security Institute security review approval by refactoring data encryption and user information processing logic according to security guidelines and creating related documentation, contributing to review approval."
                 }
               ]
@@ -231,15 +231,15 @@
               "content": "Developed a personal hydration tracking app based on RN and Expo. Users can record their intake of water, coffee, cola, etc., and the app tracks their hydration levels based on input values, showing whether they've reached their personal daily hydration goals.",
               "detail": [
                 {
-                  "title": "Development Efficiency Improvement",
+                  "title": "",
                   "content": "Implemented over 40 core screens within 2 months, contributing to a 50% reduction in data input time compared to the existing manual process."
                 },
                 {
-                  "title": "User Experience Enhancement",
+                  "title": "",
                   "content": "Designed hierarchical nested modal structures to reduce user input errors and prevent task abandonment, intuitively improving complex data input workflows."
                 },
                 {
-                  "title": "Stable Data Integration",
+                  "title": "",
                   "content": "Prevented unnecessary bugs and rework in early development stages by pre-testing responses from 60+ APIs using Postman and sharing results with colleagues to establish a foundation for stable data integration."
                 }
               ]
