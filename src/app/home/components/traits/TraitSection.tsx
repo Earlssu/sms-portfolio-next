@@ -74,13 +74,21 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
           </div>
         </div>
       ) : (
-        <div className="max-w-screen-2xl mx-auto w-full h-screen flex items-center justify-center">
+        <div className="max-w-screen-2xl mx-auto w-full h-screen flex items-center justify-center relative">
+          {/* projects와 techStack 섹션에서 확장될 때 배경 스타일 적용 */}
+          {isExpanded && (traitKey === 'projects' || traitKey === 'techStack') && (
+            <div 
+              className="absolute inset-0 rounded-lg opacity-60 transition-opacity duration-500 ease-in-out"
+              style={{ backgroundColor: 'rgba(var(--primary-rgb), 0.3)' }}
+            />
+          )}
+          
           <TraitCard
             title={title}
             className={cardClassName}
             isExpanded={isExpanded}
           >
-            <div className={'flex flex-col h-full'}>
+            <div className={'flex flex-col h-full relative z-10'}>
               {/* 탭 버튼 영역 - 고정 */}
               <div
                 className={

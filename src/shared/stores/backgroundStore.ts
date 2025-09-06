@@ -16,8 +16,9 @@ export const useBackgroundStore = create<BackgroundState>()((set, get) => ({
   setCurrentSection: (section: string | null) => {
     set({ currentSection: section });
     
-    // aboutMe 섹션일 때만 다크모드 활성화
-    const shouldBeDark = section === 'aboutMe';
+    // aboutMe, projects, techStack 섹션일 때 다크모드 활성화
+    // ThankYouSection(null) 진입 시 라이트모드로 복귀
+    const shouldBeDark = section === 'aboutMe' || section === 'projects' || section === 'techStack';
     if (get().isDarkMode !== shouldBeDark) {
       set({ isDarkMode: shouldBeDark });
     }

@@ -96,6 +96,15 @@ export const useScrollAnimation = () => {
     if (activeCardIndex !== null && activeCardIndex >= 0) {
       currentSectionName = TRAIT_KEYS[activeCardIndex];
     }
+    
+    // ThankYouSection 진입 감지 (모든 trait 섹션을 벗어났을 때)
+    const totalTraitSections = TRAIT_KEYS.length;
+    const isInThankYouSection = currentScrollY > (heroSectionHeight + totalTraitSections * viewportHeight);
+    
+    if (isInThankYouSection) {
+      currentSectionName = null; // ThankYouSection에서는 null로 설정하여 라이트모드로 전환
+    }
+    
     setCurrentSection(currentSectionName);
 
     // aboutMe 섹션을 벗어나면 자동포커싱 리셋 (위로 스크롤할 때)
