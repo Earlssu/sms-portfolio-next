@@ -16,13 +16,13 @@ export const TabButton: React.FC<TabButtonProps> = ({
   return (
     <span
       className={`
-        px-6 py-2 flex items-center justify-center 
-        border rounded-lg cursor-pointer
-        tab-transition
+        px-6 py-3 flex items-center justify-center 
+        border rounded-lg cursor-pointer backdrop-blur-sm
+        transition-all duration-300 ease-in-out
         ${
           currentTab === tabIndex
-            ? 'tab-active bg-primary text-quaternary border-primary font-medium'
-            : 'border-tertiary text-tertiary hover:border-secondary-hover hover:text-secondary-hover hover:bg-card-hover'
+            ? 'bg-white/15 text-white border-white/30 font-medium shadow-lg scale-105 ring-2 ring-white/20'
+            : 'border-white/10 text-gray-300 hover:border-white/25 hover:text-white hover:bg-white/10 hover:shadow-md'
         }
       `}
       onClick={() => onClick(tabIndex)}

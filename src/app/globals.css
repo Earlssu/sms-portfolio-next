@@ -20,10 +20,10 @@
   --quaternary-hover: #c8d5d4;
 
   /* TraitCard specific colors */
-  --card-bg: #f6f1e9;
-  --card-border: #e5e7eb;
-  --card-ring: rgba(255, 255, 255, 0.3);
-  --card-hover: #f0ebe3;
+  --card-bg: #2a2932;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-ring: rgba(255, 255, 255, 0.15);
+  --card-hover: #323139;
 }
 
 html {
