@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import CarouselCard from '@/app/career/components/CarouselCard';
 import ProjectDetailModal from '@/app/career/components/ProjectDetailModal';
 import carouselItems from '@/app/career/constants/carouselItems';
-import './CustomCarousel.css';
 
 const CustomCarousel = () => {
   const { t } = useTranslation();
@@ -47,7 +46,7 @@ const CustomCarousel = () => {
 
   return (
     <>
-      <div className="carousel">
+      <div className="relative w-full h-screen flex items-center justify-center overflow-hidden" style={{ perspective: '1000px' }}>
         {carouselItems.map((item, index) => (
           <CarouselCard
             key={`card_${index}`}
