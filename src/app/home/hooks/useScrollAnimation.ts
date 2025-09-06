@@ -93,38 +93,31 @@ export const useScrollAnimation = () => {
 
     // 현재 섹션 감지 및 배경 설정
     let currentSectionName = null;
-    if (activeCardIndex !== null && activeCardIndex >= 0) {
-      currentSectionName = TRAIT_KEYS[activeCardIndex];
+    
+    // Hero 섹션 감지 (최상단)
+    const isInHeroSection = currentScrollY < heroSectionHeight * 0.5; // Hero 섹션의 절반 지점
+    
+    if (isInHeroSection) {
+      currentSectionName = null; // Hero 섹션: 라이트모드
+    } else if (activeCardIndex !== null && activeCardIndex >= 0) {
+      currentSectionName = TRAIT_KEYS[activeCardIndex]; // Trait 섹션들: 다크모드
+    } else {
+      // ThankYouSection 진입 감지 (모든 trait 섹션을 벗어났을 때)
+      const totalTraitSections = TRAIT_KEYS.length;
+      const isInThankYouSection =
+        currentScrollY > heroSectionHeight + totalTraitSections * viewportHeight;
+
+      if (isInThankYouSection) {
+        currentSectionName = 'thankYou'; // ThankYouSection: 다크모드 유지
+      }
     }
-    
-    // ThankYouSection 진입 감지 (모든 trait 섹션을 벗어났을 때)
-    const totalTraitSections = TRAIT_KEYS.length;
-    const isInThankYouSection = currentScrollY > (heroSectionHeight + totalTraitSections * viewportHeight);
-    
-    if (isInThankYouSection) {
-      currentSectionName = null; // ThankYouSection에서는 null로 설정하여 라이트모드로 전환
-    }
-    
+
     setCurrentSection(currentSectionName);
 
     // aboutMe 섹션을 벗어나면 자동포커싱 리셋 (위로 스크롤할 때)
     if (activeCardIndex !== 0 && hasAutoFocused && !isScrollingDown) {
       setHasAutoFocused(false);
     }
-
-    // 🔍 개발 모드 디버깅
-    // if (process.env.NODE_ENV === 'development') {
-    //   console.log('📊 Scroll Debug:', {
-    //     currentScrollY: Math.round(currentScrollY),
-    //     scrollAfterHero: Math.round(scrollAfterHero),
-    //     adjustedScrollAfterHero: Math.round(adjustedScrollAfterHero),
-    //     currentCardIndex,
-    //     activeCardIndex,
-    //     currentSectionName,
-    //     scrollDirection,
-    //     hasAutoFocused,
-    //   });
-    // }
   };
 
   useEffect(() => {

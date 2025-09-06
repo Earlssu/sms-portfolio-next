@@ -2,8 +2,8 @@ import React from 'react';
 import { SupportedLanguage } from '@/shared/utils/languageUtils';
 import { getHomeData } from '@/shared/utils/translationUtils';
 import { useBackgroundStore } from '@/shared/stores';
-import { CatCarousel } from './CatCarousel';
 import { formatContent } from '@/shared/utils/contentFormatter';
+import { CatCarousel } from '@/app/home/components/layout/CatCarousel';
 
 // 서버 사이드 렌더링용 props
 interface ThankYouSectionServerProps {
@@ -52,22 +52,16 @@ export const ThankYouSection: React.FC<ThankYouSectionProps> = (props) => {
 
   return (
     <section className="h-screen flex items-center justify-center relative">
-      {/* 다크모드 상태에 따라 동적으로 제어되는 배경 */}
-      <div
-        className={`
-          absolute inset-0 transition-all duration-2000 ease-out
-          ${
-            isDarkMode
-              ? 'bg-transparent opacity-0'
-              : 'bg-gradient-to-br from-gray-50/90 via-white/95 to-gray-100/90 opacity-100'
-          }
-        `}
-        style={{
-          background: isDarkMode
-            ? 'transparent'
-            : 'linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(255, 255, 255, 0.98) 50%, rgba(241, 245, 249, 0.95) 100%)',
-        }}
-      />
+      {/* 다크모드는 투명 배경으로 글로벌 다크 배경 활용 */}
+      {!isDarkMode && (
+        <div
+          className="absolute inset-0 transition-all duration-2000 ease-out bg-gradient-to-br from-gray-50/90 via-white/95 to-gray-100/90 opacity-100"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(255, 255, 255, 0.98) 50%, rgba(241, 245, 249, 0.95) 100%)',
+          }}
+        />
+      )}
 
       <div className="text-center relative z-10 animate-in fade-in duration-1000 slide-in-from-bottom-8 flex flex-col gap-6">
         <h2

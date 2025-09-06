@@ -139,7 +139,7 @@ export const CatCarousel: React.FC<CatCarouselProps> = ({ isDarkMode }) => {
       </div>
 
       {/* 고양이 이모지 장식 */}
-      <div className="absolute -top-4 -left-4 text-2xl animate__animated animate__jello animate__infinite">
+      <div className="absolute -top-3 -left-3 text-2xl animate__animated animate__jello animate__infinite">
         🐾
       </div>
     </div>
