@@ -1,6 +1,6 @@
 import React from 'react';
-import { ContactItem } from './';
-import { CONTACT_CONFIG, ContactInfo } from './contactConfig';
+import { ContactInfo } from '@/app/home/types';
+import { CONTACT_CONFIG, ContactItem } from '@/app/home/components';
 
 interface ContactSectionProps {
   contact: ContactInfo;

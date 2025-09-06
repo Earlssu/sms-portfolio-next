@@ -4,8 +4,8 @@ import React, {Fragment} from 'react';
 import {useTranslation} from 'react-i18next';
 import {useCommonTranslations} from '@/shared/hooks/useCommonTranslations';
 import {HeroSection, ScrollProgressIndicator, ThankYouSection,} from './layout';
-import {GlobalBackgroundTransition, TraitCardList} from './traits';
 import {useScrollAnimation} from '@/app/home/hooks/useScrollAnimation';
+import {GlobalBackgroundTransition, TraitCardList} from "@/app/home/components/traits";
 
 /**
  * 클라이언트 사이드 애니메이션이 필요한 컴포넌트들

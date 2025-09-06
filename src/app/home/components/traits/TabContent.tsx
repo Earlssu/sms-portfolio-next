@@ -1,5 +1,4 @@
 import React from 'react';
-import { ContactSection } from './ContactSection';
 import { formatContent } from '@/shared/utils/contentFormatter';
 import { useBackgroundStore } from '@/shared/stores';
 
@@ -99,8 +98,6 @@ export const TabContent: React.FC<TabContentProps> = ({
           );
         })}
       </div>
-
-      {contact && <ContactSection contact={contact} isDarkMode={isDarkMode} />}
     </div>
   );
 };

@@ -2,9 +2,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { CarouselSlide } from './CarouselSlide';
-import { ContactSection } from './ContactSection';
 import { useBackgroundStore } from '@/shared/stores';
+import { CarouselSlide, ContactSection } from '@/app/home/components';
 
 interface AboutMeCarouselProps {
   isExpanded: boolean;

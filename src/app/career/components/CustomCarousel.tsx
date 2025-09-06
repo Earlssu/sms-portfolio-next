@@ -1,9 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import CarouselCard from '@/app/career/components/CarouselCard';
-import './CustomCarousel.css';
-import './CarouselCard.css';
 import carouselItems from '@/app/career/constants/carouselItems';
 
 const CustomCarousel = () => {
