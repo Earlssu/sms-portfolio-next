@@ -6,7 +6,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ content, onClick }) => {
   return (
     <button
-      className="transition-transform hover:scale-125 px-8 py-4"
+      className={'transition-transform hover:scale-125 px-8 py-4 text-white'}
       onClick={onClick}
     >
       <span className="text-center">{content}</span>
