@@ -8,20 +8,36 @@ export const GlobalBackgroundTransition: React.FC = () => {
 
   return (
     <>
-      {/* 메인 배경 오버레이 */}
+      {/* 메인 배경 오버레이 - 부드러운 전환을 위해 더 긴 duration */}
       <div
         className={`
-          fixed inset-0 z-[-1] transition-all duration-500 ease-in-out
+          fixed inset-0 z-[-1] transition-all duration-1000 ease-in-out
           ${isDarkMode 
             ? 'bg-gradient-to-br from-slate-900 via-gray-900 to-black opacity-95' 
             : 'bg-transparent opacity-0'
           }
         `}
       />
+      
+      {/* 중간 전환 레이어 - 점진적 밝기 조절 */}
+      <div
+        className={`
+          fixed inset-0 z-[-1] transition-all duration-1500 ease-out
+          ${isDarkMode 
+            ? 'bg-gradient-to-br from-gray-800/30 to-gray-900/30 opacity-0' 
+            : 'bg-gradient-to-br from-gray-100/20 to-white/40 opacity-100'
+          }
+        `}
+      />
 
-      {/* 파티클/별빛 효과 */}
-      {isDarkMode && (
-        <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+      {/* 파티클/별빛 효과 - 부드러운 fade out */}
+      <div 
+        className={`
+          fixed inset-0 z-[-1] overflow-hidden pointer-events-none
+          transition-opacity duration-1200 ease-out
+          ${isDarkMode ? 'opacity-100' : 'opacity-0'}
+        `}
+      >
           {/* 별빛 효과 */}
           {[...Array(50)].map((_, i) => (
             <div
@@ -64,20 +80,17 @@ export const GlobalBackgroundTransition: React.FC = () => {
               animate-pulse
             `}
           />
-        </div>
-      )}
+      </div>
 
-      {/* 가장자리 비네팅 효과 */}
-      {isDarkMode && (
-        <div
-          className={`
-            fixed inset-0 z-[-1] pointer-events-none
-            bg-gradient-radial from-transparent via-transparent to-black/30
-            transition-opacity duration-500 ease-in-out
-            ${isDarkMode ? 'opacity-100' : 'opacity-0'}
-          `}
-        />
-      )}
+      {/* 가장자리 비네팅 효과 - 부드러운 전환 */}
+      <div
+        className={`
+          fixed inset-0 z-[-1] pointer-events-none
+          bg-gradient-radial from-transparent via-transparent to-black/30
+          transition-opacity duration-1000 ease-in-out
+          ${isDarkMode ? 'opacity-100' : 'opacity-0'}
+        `}
+      />
 
     </>
   );
