@@ -3,6 +3,7 @@ import { SupportedLanguage } from '@/shared/utils/languageUtils';
 import { getHomeData } from '@/shared/utils/translationUtils';
 import { useBackgroundStore } from '@/shared/stores';
 import { CatCarousel } from './CatCarousel';
+import { formatContent } from '@/shared/utils/contentFormatter';
 
 // 서버 사이드 렌더링용 props
 interface ThankYouSectionServerProps {
@@ -47,6 +48,8 @@ export const ThankYouSection: React.FC<ThankYouSectionProps> = (props) => {
     moreInfo = props.t('home.moreInfo');
   }
 
+  const formattedMoreInfo = formatContent(moreInfo);
+
   return (
     <section className="h-screen flex items-center justify-center relative">
       {/* 다크모드 상태에 따라 동적으로 제어되는 배경 */}
@@ -79,14 +82,17 @@ export const ThankYouSection: React.FC<ThankYouSectionProps> = (props) => {
         {/* 고양이 캐러셀 */}
         <CatCarousel isDarkMode={isDarkMode} />
 
-        <p
-          className={`
+        {formattedMoreInfo.map((sentence, sentenceIndex) => (
+          <p
+            key={sentenceIndex}
+            className={`
           transition-colors duration-500
           ${isDarkMode ? 'text-gray-300' : 'text-secondary'}
         `}
-        >
-          {moreInfo}
-        </p>
+          >
+            {sentence}
+          </p>
+        ))}
       </div>
     </section>
   );

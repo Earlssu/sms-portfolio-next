@@ -1,6 +1,5 @@
 import React from 'react';
 import { formatContent } from '@/shared/utils/contentFormatter';
-import { useBackgroundStore } from '@/shared/stores';
 
 interface TabContentProps {
   tabIndex: number;
@@ -18,8 +17,6 @@ export const TabContent: React.FC<TabContentProps> = ({
   sections,
   contact,
 }) => {
-  const { isDarkMode } = useBackgroundStore();
-
   return (
     <div
       key={tabIndex}
