@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { TRAIT_KEYS } from '@/app/home/constants/traitData';
+import { TRAIT_KEYS } from '@/app/home/types';
 import { TraitSection } from './TraitSection';
 
 interface TraitCardListProps {

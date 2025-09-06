@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { ContactSection } from './ContactSection';
 import { formatContent } from '@/shared/utils/contentFormatter';
 import { useBackgroundStore } from '@/shared/stores';
@@ -20,6 +20,7 @@ export const TabContent: React.FC<TabContentProps> = ({
   contact,
 }) => {
   const { isDarkMode } = useBackgroundStore();
+
   return (
     <div
       key={tabIndex}
@@ -56,26 +57,36 @@ export const TabContent: React.FC<TabContentProps> = ({
                       .filter((detailItem) => detailItem.content?.trim())
                       .map((detailItem, detailIndex) => {
                         const hasTitle = detailItem.title?.trim();
-                        const contentSentences = formatContent(detailItem.content);
+                        const contentSentences = formatContent(
+                          detailItem.content
+                        );
 
                         return (
                           <li key={detailIndex} className={'flex flex-col'}>
                             <div className={'flex items-start gap-3'}>
-                              <span className={'text-tertiary mt-1 text-lg'}>•</span>
+                              <span className={'text-tertiary mt-1 text-lg'}>
+                                •
+                              </span>
                               <div className={'flex-1 pt-2'}>
                                 {hasTitle && (
-                                  <h4 className={'font-medium text-tertiary mb-2'}>
+                                  <h4
+                                    className={'font-medium text-tertiary mb-2'}
+                                  >
                                     {detailItem.title}
                                   </h4>
                                 )}
-                                {contentSentences.map((sentence, sentenceIndex) => (
-                                  <p
-                                    key={sentenceIndex}
-                                    className={'leading-relaxed text-secondary'}
-                                  >
-                                    {sentence}
-                                  </p>
-                                ))}
+                                {contentSentences.map(
+                                  (sentence, sentenceIndex) => (
+                                    <p
+                                      key={sentenceIndex}
+                                      className={
+                                        'leading-relaxed text-secondary'
+                                      }
+                                    >
+                                      {sentence}
+                                    </p>
+                                  )
+                                )}
                               </div>
                             </div>
                           </li>

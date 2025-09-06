@@ -1,22 +1,14 @@
 'use client';
 
-import {
-  getTraitTabContentKey,
-  getTraitTranslationKey,
-} from '@/app/home/constants/traitData';
-import React, { useState } from 'react';
+import { TraitKey, ContactInfo, TabContentData } from '@/app/home/types';
+import { getTraitTabContentKey, getTraitTranslationKey } from '@/app/home/utils';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  ContactSection,
-  TabButton,
-  TabContent,
-  TraitCard,
-} from '@/app/home/components';
+import { TabButton, TabContent, TraitCard } from '@/app/home/components';
 import { AboutMeCarousel } from './AboutMeCarousel';
-import { useBackgroundStore } from '@/shared/stores';
 
 interface TraitSectionProps {
-  traitKey: string;
+  traitKey: TraitKey;
   index: number;
   isExpanded: boolean;
 }
@@ -27,38 +19,35 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
   isExpanded,
 }) => {
   const { t } = useTranslation();
-  const { isDarkMode } = useBackgroundStore();
 
-  const title = t(getTraitTranslationKey(traitKey as any, 'title'));
+  const title = t(getTraitTranslationKey(traitKey, 'title')) as string;
+  const contact = t('traits.aboutMe.contact', { returnObjects: true }) as ContactInfo;
 
   // aboutMe인 경우 탭이 없으므로 조건부 처리
   const tabs =
     traitKey === 'aboutMe'
       ? []
-      : (t(getTraitTranslationKey(traitKey as any, 'tabs'), {
+      : (t(getTraitTranslationKey(traitKey, 'tabs'), {
           returnObjects: true,
-        }) as unknown as string[]);
+        }) as string[]);
 
   const [currentTab, setCurrentTab] = useState(0);
 
   // 탭 콘텐츠 가져오기
-  const getTabContent = (tabIndex: number) => {
-    return t(getTraitTabContentKey(traitKey as any, tabIndex), {
+  const getTabContent = (tabIndex: number): TabContentData => {
+    return t(getTraitTabContentKey(traitKey, tabIndex), {
       returnObjects: true,
-    }) as unknown as {
-      sections: Array<{
-        title: string;
-        position?: string;
-        content: string;
-        detail?: Array<{ title: string; content: string }>;
-      }>;
-      contact?: { email: string; github: string; blog: string; resume: string };
-    };
+    }) as TabContentData;
   };
 
   const cardClassName = `transition-all duration-1000 ease-out ${
     isExpanded ? 'scale-100 opacity-100' : 'scale-90 opacity-60'
   }`;
+
+  useEffect(() => {
+    console.log(traitKey);
+    console.log(tabs);
+  }, [traitKey]);
 
   return (
     <section className="h-screen flex items-center justify-center px-10 relative">
@@ -73,12 +62,8 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
 
           <div className="w-full h-full pt-16">
             <AboutMeCarousel 
-              isExpanded={isExpanded}
-              contact={
-                t('traits.aboutMe.contact', {
-                  returnObjects: true,
-                }) as any
-              }
+              isExpanded={isExpanded} 
+              contact={contact && typeof contact === 'object' ? contact : undefined} 
             />
           </div>
         </div>
@@ -96,7 +81,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
                   'flex flex-wrap gap-3 py-2 justify-center flex-shrink-0 mb-4'
                 }
               >
-                {tabs.map((tab, tabIndex) => (
+                {tabs?.map((tab: string, tabIndex: number) => (
                   <TabButton
                     key={tabIndex}
                     tab={tab}
@@ -109,7 +94,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
 
               {/* 콘텐츠 영역 - 스크롤 가능 */}
               <div className="flex-1 max-h-[65vh] overflow-y-auto transition-all duration-300 ease-in-out custom-scrollbar pr-2 pb-12">
-                {tabs.map((_, tabIndex) => {
+                {tabs?.map((_: string, tabIndex: number) => {
                   if (currentTab !== tabIndex) return null;
 
                   const content = getTabContent(tabIndex);

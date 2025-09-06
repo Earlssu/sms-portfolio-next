@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { SCROLL_CONFIG } from '@/app/home/constants/scrollConfig';
-import { TRAIT_KEYS } from '@/app/home/constants/traitData';
+import { TRAIT_KEYS } from '@/app/home/types';
 import { useBackgroundStore } from '@/shared/stores';
 
 export const useScrollAnimation = () => {
@@ -104,18 +104,18 @@ export const useScrollAnimation = () => {
     }
 
     // 🔍 개발 모드 디버깅
-    if (process.env.NODE_ENV === 'development') {
-      console.log('📊 Scroll Debug:', {
-        currentScrollY: Math.round(currentScrollY),
-        scrollAfterHero: Math.round(scrollAfterHero),
-        adjustedScrollAfterHero: Math.round(adjustedScrollAfterHero),
-        currentCardIndex,
-        activeCardIndex,
-        currentSectionName,
-        scrollDirection,
-        hasAutoFocused,
-      });
-    }
+    // if (process.env.NODE_ENV === 'development') {
+    //   console.log('📊 Scroll Debug:', {
+    //     currentScrollY: Math.round(currentScrollY),
+    //     scrollAfterHero: Math.round(scrollAfterHero),
+    //     adjustedScrollAfterHero: Math.round(adjustedScrollAfterHero),
+    //     currentCardIndex,
+    //     activeCardIndex,
+    //     currentSectionName,
+    //     scrollDirection,
+    //     hasAutoFocused,
+    //   });
+    // }
   };
 
   useEffect(() => {
