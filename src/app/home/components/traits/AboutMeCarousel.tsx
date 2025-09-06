@@ -162,10 +162,7 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
       </div>
 
       {/* 슬라이드 콘텐츠 */}
-      <div
-        className="flex-1 relative overflow-hidden rounded-lg"
-        style={{ backgroundColor: 'rgba(var(--primary-rgb), 0.4)' }}
-      >
+      <div className="flex-1 relative overflow-hidden rounded-lg">
         <div
           className="flex transition-transform duration-500 ease-in-out h-full"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}

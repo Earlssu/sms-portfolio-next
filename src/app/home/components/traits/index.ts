@@ -11,6 +11,7 @@ export { ContactItem } from './ContactItem';
 export { AboutMeCarousel } from './AboutMeCarousel';
 export { CarouselSlide } from './CarouselSlide';
 export { GlobalBackgroundTransition } from './BackgroundTransition';
+export { StarlightBackground } from './StarlightBackground';
 
 // Contact 관련 타입과 설정
 export type { ContactInfo } from './contactConfig';
