@@ -24,8 +24,10 @@ export const StructuredData: React.FC<StructuredDataProps> = ({
   const t = getTranslationData(lang);
   const traits = getTraitsData(lang);
 
-  // 모든 trait 스킬을 하나의 배열로 집계
-  const allSkills = Object.values(traits).flatMap((trait) => trait.skills);
+  // techStack은 traits 내부에 있음
+  const allSkills = traits.techStack?.tabs?.flatMap((tab: any) => 
+    tab.sections?.flatMap((section: any) => section.title) || []
+  ) || [];
 
   const structuredData = {
     '@context': 'https://schema.org',
