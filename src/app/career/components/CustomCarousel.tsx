@@ -5,15 +5,16 @@ import { useTranslation } from 'react-i18next';
 import CarouselCard from '@/app/career/components/CarouselCard';
 import ProjectDetailModal from '@/app/career/components/ProjectDetailModal';
 import carouselItems from '@/app/career/constants/carouselItems';
+import { ProjectData } from '@/app/career/types/projectData';
 
 const CustomCarousel = () => {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
 
   // translation.json에서 career 프로젝트 데이터 가져오기
-  const careerProjects = t('career.projects', { returnObjects: true }) as any[];
+  const careerProjects = t('career.projects', { returnObjects: true }) as ProjectData[];
 
   const changeIndex = (index: number) => {
     setActiveIndex(index);
@@ -26,7 +27,7 @@ const CustomCarousel = () => {
       const projectData = careerProjects.find(p => p.id === carouselItem.id);
       
       if (projectData) {
-        const modalData = {
+        const modalData: ProjectData = {
           ...carouselItem,
           ...projectData,
         };

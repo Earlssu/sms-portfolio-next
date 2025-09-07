@@ -1,28 +1,12 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { ProjectData } from '@/app/career/types/projectData';
 
 interface ProjectDetailModalProps {
   isOpen: boolean;
   onClose: () => void;
-  projectData: {
-    title: string;
-    subtitle?: string;
-    num: string;
-    imageSrc: string;
-    period?: string;
-    type?: string;
-    description?: string;
-    role?: string;
-    team?: string;
-    technologies?: string[];
-    achievements?: string[];
-    details?: {
-      problem?: string;
-      solution?: string;
-      impact?: string;
-    };
-  } | null;
+  projectData: ProjectData | null;
 }
 
 const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
