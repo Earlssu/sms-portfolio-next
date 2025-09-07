@@ -3,6 +3,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ProjectData } from '@/app/career/types/projectData';
 import 'animate.css';
+import ScrollIndicator from '@/app/career/components/ScrollIndicator';
+import ModalHeader from '@/app/career/components/ModalHeader';
+import ModalContent from '@/app/career/components/ModalContent';
+import TechStack from '@/app/career/components/TechStack';
+import Achievements from '@/app/career/components/Achievements';
+import ProjectInsights from '@/app/career/components/ProjectInsights';
 
 interface ProjectDetailModalProps {
   isOpen: boolean;
@@ -71,14 +77,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         </button>
 
         {/* 커스텀 스크롤 인디케이터 */}
-        <div className="absolute right-4 top-1/2 transform -translate-y-1/2 z-30">
-          <div className="w-1 h-32 bg-white/20 rounded-full overflow-hidden">
-            <div
-              className="w-full bg-gradient-to-b from-blue-400 to-blue-600 transition-all duration-300 ease-out rounded-full"
-              style={{ height: `${scrollProgress}%` }}
-            />
-          </div>
-        </div>
+        <ScrollIndicator scrollProgress={scrollProgress} />
 
         {/* 스크롤 가능한 전체 콘텐츠 */}
         <div
@@ -109,137 +108,11 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
           {/* 콘텐츠 영역 */}
           <div className="w-full bg-gray-900 p-5 md:p-8 text-white">
-            <div className="mb-5">
-              <h1 className="text-2xl md:text-3xl font-bold mb-2 leading-tight">
-                {projectData.title}
-              </h1>
-              {projectData.subtitle && (
-                <p className="text-base text-white/60 mb-2 italic">
-                  {projectData.subtitle}
-                </p>
-              )}
-              {projectData.type && (
-                <div className="inline-block px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-xl text-xs text-blue-200 mb-1 -ml-2">
-                  {projectData.type}
-                </div>
-              )}
-            </div>
-
-            {projectData.period && (
-              <div className="text-sm font-medium text-white/80 mb-5">
-                📅 {projectData.period}
-              </div>
-            )}
-
-            {projectData.description && (
-              <p className="text-base leading-relaxed text-white/90 mb-6">
-                {projectData.description}
-              </p>
-            )}
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
-              {projectData.role && (
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">
-                    👨‍💻 담당 역할
-                  </h3>
-                  <p className="text-sm leading-relaxed text-white/80">
-                    {projectData.role}
-                  </p>
-                </div>
-              )}
-
-              {projectData.team && (
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">
-                    👥 팀
-                  </h3>
-                  <p className="text-sm leading-relaxed text-white/80">
-                    {projectData.team}
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {projectData.technologies &&
-              projectData.technologies.length > 0 && (
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">
-                    🛠️ 사용 기술
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {projectData.technologies.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1.5 bg-white/10 border border-white/20 rounded-2xl text-xs text-white/90 backdrop-blur-lg transition-transform duration-200 hover:scale-105"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-            {projectData.achievements &&
-              projectData.achievements.length > 0 && (
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">
-                    🏆 주요 성과
-                  </h3>
-                  <ul className="space-y-3">
-                    {projectData.achievements.map((achievement, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <span className="text-white/60 font-bold mt-1.5 text-sm">
-                          •
-                        </span>
-                        <span className="text-sm leading-relaxed text-white/80 flex-1 pt-1">
-                          {achievement}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-            {projectData.details && (
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-white mb-3">
-                  💡 프로젝트 인사이트
-                </h3>
-                <div className="flex flex-col gap-4">
-                  {projectData.details.problem && (
-                    <div className="p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-transform duration-200 hover:scale-[1.02]">
-                      <h4 className="text-sm font-semibold text-white/90 mb-2 flex items-center gap-1.5">
-                        🚨 문제점
-                      </h4>
-                      <p className="text-sm leading-relaxed text-white/70">
-                        {projectData.details.problem}
-                      </p>
-                    </div>
-                  )}
-                  {projectData.details.solution && (
-                    <div className="p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-transform duration-200 hover:scale-[1.02]">
-                      <h4 className="text-sm font-semibold text-white/90 mb-2 flex items-center gap-1.5">
-                        💡 해결방안
-                      </h4>
-                      <p className="text-sm leading-relaxed text-white/70">
-                        {projectData.details.solution}
-                      </p>
-                    </div>
-                  )}
-                  {projectData.details.impact && (
-                    <div className="p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-transform duration-200 hover:scale-[1.02]">
-                      <h4 className="text-sm font-semibold text-white/90 mb-2 flex items-center gap-1.5">
-                        📈 임팩트
-                      </h4>
-                      <p className="text-sm leading-relaxed text-white/70">
-                        {projectData.details.impact}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            )}
+            <ModalHeader projectData={projectData} />
+            <ModalContent projectData={projectData} />
+            <TechStack technologies={projectData.technologies || []} />
+            <Achievements achievements={projectData.achievements || []} />
+            <ProjectInsights details={projectData.details} />
           </div>
         </div>
       </div>
