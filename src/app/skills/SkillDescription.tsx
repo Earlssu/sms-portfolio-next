@@ -9,11 +9,13 @@ const SkillDescription: React.FC<SkillDescriptionProps> = ({ skill }) => {
   const { t } = useTranslation();
 
   return (
-    <div>
-      <h3 className={"text-lg font-bold text-amber-400"}>
+    <div className="group p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02]">
+      <h3 className="text-lg font-bold text-blue-300 mb-2 group-hover:text-blue-200 transition-colors duration-200">
         {skill.toUpperCase()}
       </h3>
-      <p> {t(skill)}</p>
+      <p className="text-sm text-white/70 leading-relaxed group-hover:text-white/80 transition-colors duration-200">
+        {t(`skills.descriptions.${skill}`)}
+      </p>
     </div>
   );
 };

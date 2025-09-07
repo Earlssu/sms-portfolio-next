@@ -52,6 +52,76 @@ body {
   animation-delay: 6s;
 }
 
+/* 별빛 배경 효과 */
+.stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow:
+    70vw 10vh 1px 0 white,
+    20vw 20vh 1px 0 white,
+    90vw 30vh 1px 0 white,
+    30vw 40vh 1px 0 white,
+    80vw 50vh 1px 0 white,
+    10vw 60vh 1px 0 white,
+    60vw 70vh 1px 0 white,
+    40vw 80vh 1px 0 white,
+    50vw 90vh 1px 0 white,
+    75vw 15vh 1px 0 white,
+    25vw 25vh 1px 0 white,
+    85vw 35vh 1px 0 white,
+    35vw 45vh 1px 0 white,
+    95vw 55vh 1px 0 white,
+    15vw 65vh 1px 0 white,
+    65vw 75vh 1px 0 white,
+    45vw 85vh 1px 0 white,
+    55vw 95vh 1px 0 white;
+  animation: animStar 50s linear infinite;
+}
+
+.stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    80vw 15vh 1px 0 white,
+    30vw 25vh 1px 0 white,
+    70vw 35vh 1px 0 white,
+    20vw 45vh 1px 0 white,
+    90vw 55vh 1px 0 white,
+    40vw 65vh 1px 0 white,
+    60vw 75vh 1px 0 white,
+    10vw 85vh 1px 0 white,
+    50vw 95vh 1px 0 white,
+    85vw 20vh 1px 0 white;
+  animation: animStar 100s linear infinite;
+}
+
+.stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow:
+    75vw 25vh 1px 0 white,
+    25vw 35vh 1px 0 white,
+    95vw 45vh 1px 0 white,
+    45vw 55vh 1px 0 white,
+    65vw 65vh 1px 0 white,
+    15vw 75vh 1px 0 white,
+    55vw 85vh 1px 0 white,
+    35vw 95vh 1px 0 white;
+  animation: animStar 150s linear infinite;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
 .animate__delay-7s {
   animation-delay: 7s;
 }
