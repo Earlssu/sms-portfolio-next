@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { ProjectData } from '@/app/career/types/projectData';
+import 'animate.css';
 
 interface ProjectDetailModalProps {
   isOpen: boolean;
@@ -37,11 +38,13 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 bg-black/85 flex items-center justify-center z-[100] backdrop-blur-md animate-in fade-in duration-400"
+      className="fixed inset-0 bg-black/85 flex items-center justify-center z-[100] backdrop-blur-md animate__animated animate__fadeIn"
+      style={{ animationDuration: '0.3s' }}
       onClick={onClose}
     >
       <div
-        className="relative w-[95vw] md:w-[90vw] max-w-4xl h-[90vh] md:h-[85vh] max-h-[800px] bg-gray-900 rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.6)] animate-in zoom-in-95 slide-in-from-bottom-8 duration-500"
+        className="relative w-[95vw] md:w-[90vw] max-w-4xl h-[90vh] md:h-[85vh] max-h-[800px] bg-gray-900 rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.3)] animate__animated animate__zoomIn"
+        style={{ animationDuration: '0.4s', animationDelay: '0.1s' }}
         onClick={(e) => e.stopPropagation()} // 카드 클릭 시 모달 닫힘 방지
       >
         {/* 배경 이미지 */}
@@ -49,7 +52,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           <img
             src={projectData.imageSrc}
             alt={projectData.title}
-            className="w-full h-full object-cover transition-transform duration-300"
+            className="w-full h-full object-cover transition-transform duration-1000 ease-out hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/80" />
         </div>
@@ -63,12 +66,12 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         </button>
 
         {/* 프로젝트 번호 */}
-        <div className="absolute top-5 left-5 text-white text-2xl md:text-3xl font-bold drop-shadow-lg z-10 opacity-90">
+        <div className="absolute top-5 left-5 text-white text-2xl md:text-3xl font-bold drop-shadow-lg z-10">
           {projectData.num}
         </div>
 
         {/* 콘텐츠 영역 */}
-        <div className="absolute bottom-0 left-0 right-0 h-1/2 p-5 md:p-8 text-white overflow-y-auto scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 p-5 md:p-8 text-white overflow-y-auto scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent animate__animated animate__fadeIn" style={{ animationDuration: '0.5s', animationDelay: '0.3s' }}>
           <div className="mb-5">
             <h1 className="text-2xl md:text-3xl font-bold mb-2 leading-tight">
               {projectData.title}
@@ -128,7 +131,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 {projectData.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1.5 bg-white/10 border border-white/20 rounded-2xl text-xs text-white/90 backdrop-blur-lg"
+                    className="px-3 py-1.5 bg-white/10 border border-white/20 rounded-2xl text-xs text-white/90 backdrop-blur-lg transition-transform duration-200 hover:scale-105"
                   >
                     {tech}
                   </span>
@@ -164,7 +167,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               </h3>
               <div className="flex flex-col gap-4">
                 {projectData.details.problem && (
-                  <div className="p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg">
+                  <div className="p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-transform duration-200 hover:scale-[1.02]">
                     <h4 className="text-sm font-semibold text-white/90 mb-2 flex items-center gap-1.5">
                       🚨 문제점
                     </h4>
@@ -174,7 +177,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                   </div>
                 )}
                 {projectData.details.solution && (
-                  <div className="p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg">
+                  <div className="p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-transform duration-200 hover:scale-[1.02]">
                     <h4 className="text-sm font-semibold text-white/90 mb-2 flex items-center gap-1.5">
                       💡 해결방안
                     </h4>
@@ -184,7 +187,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                   </div>
                 )}
                 {projectData.details.impact && (
-                  <div className="p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg">
+                  <div className="p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-transform duration-200 hover:scale-[1.02]">
                     <h4 className="text-sm font-semibold text-white/90 mb-2 flex items-center gap-1.5">
                       📈 임팩트
                     </h4>
