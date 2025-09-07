@@ -15,6 +15,16 @@ export const TRAIT_TAB_KEYS = {
 export type TraitTabKeys = typeof TRAIT_TAB_KEYS;
 export type TabKey<T extends TraitKey> = TraitTabKeys[T][number];
 
+export interface ContactType {
+  email: string;
+  github: string;
+  blog: string;
+}
+
+export interface TabContentType extends ContactType {
+  resume: string;
+}
+
 // Translation 관련 인터페이스
 export interface TraitTranslationKeys {
   title: string;
@@ -30,21 +40,9 @@ export interface TraitTranslationKeys {
           content: string;
         }>;
       }>;
-      contact?: {
-        email: string;
-        github: string;
-        blog: string;
-      };
+      contact?: ContactType;
     };
   };
-}
-
-// Contact 정보 타입
-export interface ContactInfo {
-  email: string;
-  github: string;
-  blog: string;
-  resume: string;
 }
 
 // Tab Content 데이터 타입
@@ -55,6 +53,5 @@ export interface TabContentData {
     content: string;
     detail?: Array<{ title: string; content: string }>;
   }>;
-  contact?: ContactInfo;
+  contact?: TabContentType;
 }
-

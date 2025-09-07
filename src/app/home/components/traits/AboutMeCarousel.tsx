@@ -12,15 +12,11 @@ import {
   useCarouselData,
   useCarouselKeyboard,
 } from '@/app/home/components';
+import { TabContentType } from '@/app/home/types';
 
 interface AboutMeCarouselProps {
   isExpanded: boolean;
-  contact?: {
-    email: string;
-    github: string;
-    blog: string;
-    resume: string;
-  };
+  contact?: TabContentType;
 }
 
 export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({

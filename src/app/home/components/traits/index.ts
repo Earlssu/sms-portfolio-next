@@ -20,7 +20,6 @@ export { StarlightBackground } from './StarlightBackground';
 export { useCarousel } from './useCarousel';
 export { useCarouselData } from './useCarouselData';
 export { useCarouselKeyboard } from './useCarouselKeyboard';
-export type { CarouselSlideData } from './useCarouselData';
 
 // Contact 관련 타입과 설정
 export type { ContactInfo } from './contactConfig';

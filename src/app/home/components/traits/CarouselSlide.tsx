@@ -1,30 +1,10 @@
 'use client';
 
 import React from 'react';
+import { CarouselSlideData } from '@/app/home/types';
 
 interface CarouselSlideProps {
-  slide: {
-    id: string;
-    title: string;
-    subtitle: string;
-    content: string;
-    highlight?: string;
-    closing?: string;
-    features?: Array<{ title: string; content: string }>;
-    activities?: Array<{
-      icon: string;
-      title: string;
-      period: string;
-      description: string;
-    }>;
-    experiences?: Array<{
-      company: string;
-      position: string;
-      period: string;
-      description: string;
-      achievements: string[];
-    }>;
-  };
+  slide: CarouselSlideData;
   isActive: boolean;
   slideIndex: number;
   totalSlides: number;
@@ -46,7 +26,7 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
     return icons[id as keyof typeof icons] || '✨';
   };
 
-  return (
+  return (  
     <div
       className={`
         h-full flex flex-col justify-start items-center text-center
@@ -89,11 +69,6 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
         <div className="max-w-4xl mx-auto">
           {/* 메인 콘텐츠 */}
           <div className="space-y-6">
-            {/* 기본 콘텐츠 */}
-            <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-              {slide.content}
-            </p>
-
             {/* 하이라이트 텍스트 */}
             {slide.highlight && (
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 my-6">
@@ -102,6 +77,11 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
                 </p>
               </div>
             )}
+
+            {/* 기본 콘텐츠 */}
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+              {slide.content}
+            </p>
 
             {/* 특징 목록 (강점 슬라이드용) */}
             {slide.features && (
