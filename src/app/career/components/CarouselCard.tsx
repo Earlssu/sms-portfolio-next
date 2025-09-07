@@ -41,7 +41,10 @@ const CarouselCard = ({
   return (
     <div className="carousel-item" style={style} onClick={onClick}>
       <div className="carousel-box">
-        <div className="title">{title}</div>
+        <div className="title">
+          {title}
+          <p className={'text-white/80 text-sm mt-2'}>클릭하여 자세히 보기</p>
+        </div>
         <div className="num">{num}</div>
         <img src={imageSrc} alt={title} />
       </div>
