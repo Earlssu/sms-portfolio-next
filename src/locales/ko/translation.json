@@ -333,7 +333,14 @@
         "description": "RN, Expo 기반 HACCP 인증 절차 간소화를 위한 내부 업무용 앱 개발",
         "role": "프론트엔드 개발자",
         "team": "블라스트 개발팀",
-        "technologies": ["React Native", "Expo", "TypeScript", "REST API"],
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Styled-Components",
+          "React-Query",
+          "Zustand"
+        ],
         "achievements": [
           "2개월 내 40개 이상의 핵심 화면 구현",
           "기존 수기 방식 대비 데이터 입력 시간 50% 단축",
@@ -355,7 +362,14 @@
         "description": "Next.js 기반 증시 커뮤니티 웹 페이지 개발",
         "role": "프론트엔드 개발자",
         "team": "블라스트 개발팀",
-        "technologies": ["Next.js", "GraphQL", "Relay", "TypeScript", "Suspense"],
+        "technologies": [
+          "React",
+          "Next.js",
+          "Relay",
+          "TypeScript",
+          "React-Query",
+          "Recoil"
+        ],
         "achievements": [
           "병렬 라우팅과 Suspense 적용으로 초기 로딩 속도 1.2초 단축",
           "Git-flow 브랜치 전략 도입으로 월 100건 이상의 머지 충돌 해결",
@@ -377,7 +391,14 @@
         "description": "RN, Expo 기반 AI 기술을 활용한 3D 모델 제공 애플리케이션 개발",
         "role": "프론트엔드 개발자",
         "team": "블라스트 개발팀",
-        "technologies": ["React Native", "Expo", "React-Three-Fiber", "소셜 로그인", "3D Graphics"],
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "React-Three-Fiber(R3F)",
+          "Three.js",
+          "Code-push"
+        ],
         "achievements": [
           "4대 소셜 로그인 기능 구현으로 신규 사용자 가입 장벽 완화",
           "React-Three-Fiber 기반 3D 모델 뷰어 구현",
@@ -400,7 +421,13 @@
         "description": "하나의 앱에서 여러 명이 분할 결제가 가능한 금융 애플리케이션 개발",
         "role": "프론트엔드 개발자",
         "team": "블라스트 개발팀",
-        "technologies": ["React Native", "QR Code", "금융 API", "암호화", "쿠콘 API"],
+        "technologies": [
+          "React Native",
+          "TypeScript",
+          "React-Query",
+          "Mobx",
+          "Code-push"
+        ],
         "achievements": [
           "QR 스캔, 분할 결제 등 핵심 결제 기능 UI/UX 개발 주도",
           "사용자 계급별 차등 권한 부여 시스템 구현",
@@ -421,9 +448,13 @@
         "period": "2025.06 ~ 2025.09",
         "type": "개인 프로젝트",
         "description": "RN, Expo 기반 개인 수분 섭취 기록 앱 개발",
-        "role": "풀스택 개발자",
+        "role": "프론트엔드 개발자",
         "team": "가치(Gachi) 크루 1기",
-        "technologies": ["React Native", "Expo", "CSS Animation", "UX Design"],
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript"
+        ],
         "achievements": [
           "CSS 애니메이션을 활용한 인터랙티브 UI 구현",
           "사용자 경험 설계 역량 강화",

@@ -333,7 +333,14 @@
         "description": "Developed an internal business app based on RN and Expo to streamline HACCP certification procedures",
         "role": "Frontend Developer",
         "team": "Blast Development Team",
-        "technologies": ["React Native", "Expo", "TypeScript", "REST API"],
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Styled-Components",
+          "React-Query",
+          "Zustand"
+        ],
         "achievements": [
           "Implemented over 40 core screens within 2 months",
           "Reduced data entry time by 50% compared to manual methods",
@@ -355,7 +362,14 @@
         "description": "Developed a Next.js-based stock market community web page",
         "role": "Frontend Developer",
         "team": "Blast Development Team",
-        "technologies": ["Next.js", "GraphQL", "Relay", "TypeScript", "Suspense"],
+        "technologies": [
+          "React",
+          "Next.js",
+          "Relay",
+          "TypeScript",
+          "React-Query",
+          "Recoil"
+        ],
         "achievements": [
           "Reduced initial loading time by 1.2 seconds using parallel routing and Suspense",
           "Resolved 100+ monthly merge conflicts by introducing Git-flow branch strategy",
@@ -377,7 +391,14 @@
         "description": "Developed RN and Expo-based application providing 3D models using AI technology based on user's shooting data",
         "role": "Frontend Developer",
         "team": "Blast Development Team",
-        "technologies": ["React Native", "Expo", "React-Three-Fiber", "Social Login", "3D Graphics"],
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "React-Three-Fiber(R3F)",
+          "Three.js",
+          "Code-push"
+        ],
         "achievements": [
           "Reduced new user registration barriers by implementing 4 major social login features",
           "Implemented React-Three-Fiber based 3D model viewer",
@@ -400,7 +421,13 @@
         "description": "Developed a financial application enabling multiple users to split payments within a single app",
         "role": "Frontend Developer",
         "team": "Blast Development Team",
-        "technologies": ["React Native", "QR Code", "Financial API", "Encryption", "Coucon API"],
+        "technologies": [
+          "React Native",
+          "TypeScript",
+          "React-Query",
+          "Mobx",
+          "Code-push"
+        ],
         "achievements": [
           "Led development of core payment features including QR scan and split payment UI/UX",
           "Implemented user-tier differential authorization system",
@@ -423,7 +450,11 @@
         "description": "Developed RN and Expo-based app for recording personal water intake",
         "role": "Full-stack Developer",
         "team": "Gachi Crew 1st Generation",
-        "technologies": ["React Native", "Expo", "CSS Animation", "UX Design"],
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript"
+        ],
         "achievements": [
           "Implemented interactive UI using CSS animations",
           "Enhanced user experience design capabilities",
