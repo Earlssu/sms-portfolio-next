@@ -1,6 +1,4 @@
-'use client';
-
-import React from 'react';
+import React, { Fragment } from 'react';
 
 interface CarouselNavigationProps {
   totalSlides: number;
@@ -18,7 +16,7 @@ export const CarouselNavigation: React.FC<CarouselNavigationProps> = ({
   onNextSlide,
 }) => {
   return (
-    <>
+    <Fragment>
       {/* 하단 도트 네비게이션 */}
       <div className="flex justify-center gap-3 mt-8 pb-4">
         {Array.from({ length: totalSlides }).map((_, index) => (
@@ -50,6 +48,6 @@ export const CarouselNavigation: React.FC<CarouselNavigationProps> = ({
       >
         →
       </button>
-    </>
+    </Fragment>
   );
 };

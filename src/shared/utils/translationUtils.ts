@@ -88,16 +88,15 @@ export function getHomeData(lang: SupportedLanguage) {
 /**
  * 네비게이션 관련 번역 데이터 접근 함수
  * @param lang 언어 코드
- * @returns 네비게이션 번역 객체 { home, about, career, skills, contact }
+ * @returns 네비게이션 번역 객체 { home, career, skills, contact }
  */
 export function getNavTranslations(lang: SupportedLanguage) {
   const t = getTranslationData(lang);
   return {
-    home: t.home,
-    about: t.about,
-    career: t.career,
-    skills: t.skills,
-    contact: t.contact,
+    home: t.navigation.home,
+    career: t.navigation.career,
+    skills: t.navigation.skills,
+    contact: t.navigation.contact,
   };
 }
 

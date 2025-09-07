@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useRef } from 'react';
 import { useBackgroundStore } from '@/shared/stores';
 import {
   CarouselControls,
@@ -9,6 +8,9 @@ import {
   CarouselProgressBar,
   CarouselSlide,
   ContactSection,
+  useCarousel,
+  useCarouselData,
+  useCarouselKeyboard,
 } from '@/app/home/components';
 
 interface AboutMeCarouselProps {
@@ -21,104 +23,38 @@ interface AboutMeCarouselProps {
   };
 }
 
-interface CarouselSlideData {
-  id: string;
-  title: string;
-  subtitle: string;
-  content: string;
-  highlight?: string;
-  closing?: string;
-  features?: Array<{ title: string; content: string }>;
-  activities?: Array<{
-    icon: string;
-    title: string;
-    period: string;
-    description: string;
-  }>;
-  experiences?: Array<{
-    company: string;
-    position: string;
-    period: string;
-    description: string;
-    achievements: string[];
-  }>;
-  contact?: {
-    email: string;
-    github: string;
-    blog: string;
-    resume: string;
-  };
-}
-
 export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
   isExpanded,
   contact,
 }) => {
-  const { t } = useTranslation();
   const { isDarkMode } = useBackgroundStore();
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  // 캐러셀 데이터 가져오기
-  const slides = t('traits.aboutMe.carouselSlides', {
-    returnObjects: true,
-  }) as CarouselSlideData[];
+  // 캐러셀 데이터
+  const { slides, totalSlides } = useCarouselData();
 
-  const totalSlides = slides?.length || 0;
+  // 캐러셀 로직
+  const {
+    currentSlide,
+    isAutoPlaying,
+    setIsAutoPlaying,
+    goToSlide,
+    nextSlide,
+    prevSlide,
+    toggleAutoPlay,
+    skipToLast,
+  } = useCarousel({
+    totalSlides,
+    isExpanded,
+  });
 
-  // 자동 재생 로직
-  useEffect(() => {
-    if (!isAutoPlaying || !isExpanded) return;
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 6000); // 6초마다 자동 전환 (내용이 많아져서 조금 더 길게)
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, isExpanded, totalSlides]);
-
-  // 슬라이드 이동 함수
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
-
-    // 3초 후 자동재생 재개
-    setTimeout(() => setIsAutoPlaying(true), 3000);
-  };
-
-  // 다음 슬라이드
-  const nextSlide = () => {
-    goToSlide((currentSlide + 1) % totalSlides);
-  };
-
-  // 이전 슬라이드
-  const prevSlide = () => {
-    goToSlide(currentSlide === 0 ? totalSlides - 1 : currentSlide - 1);
-  };
-
-  // 키보드 이벤트 핸들러
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (!isExpanded) return;
-
-      switch (e.key) {
-        case 'ArrowLeft':
-          prevSlide();
-          break;
-        case 'ArrowRight':
-          nextSlide();
-          break;
-        case ' ':
-          e.preventDefault();
-          setIsAutoPlaying(!isAutoPlaying);
-          break;
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyPress);
-    return () => document.removeEventListener('keydown', handleKeyPress);
-  }, [isExpanded, currentSlide, isAutoPlaying]);
+  // 키보드 이벤트
+  useCarouselKeyboard({
+    isExpanded,
+    prevSlide,
+    nextSlide,
+    toggleAutoPlay,
+  });
 
   if (!slides || slides.length === 0) {
     return <div>Loading...</div>;
@@ -139,8 +75,8 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
         />
         <CarouselControls
           isAutoPlaying={isAutoPlaying}
-          onToggleAutoPlay={() => setIsAutoPlaying(!isAutoPlaying)}
-          onSkipToLast={() => goToSlide(totalSlides - 1)}
+          onToggleAutoPlay={toggleAutoPlay}
+          onSkipToLast={skipToLast}
         />
       </div>
 
