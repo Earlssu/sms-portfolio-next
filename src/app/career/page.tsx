@@ -1,10 +1,23 @@
 'use client';
 
+import { useEffect } from 'react';
 import CustomCarousel from '@/app/career/components/CustomCarousel';
 import GlobalCursor from '@/shared/components/GlobalCursor';
 import I18nProvider from '@/shared/components/I18nProvider';
+import { useBackgroundStore } from '@/shared/stores/backgroundStore';
 
 const Career = () => {
+  const { setCurrentPage } = useBackgroundStore();
+
+  useEffect(() => {
+    setCurrentPage('career');
+    
+    // 컴포넌트 언마운트 시 정리
+    return () => {
+      setCurrentPage(null);
+    };
+  }, [setCurrentPage]);
+
   return (
     <I18nProvider>
       <div

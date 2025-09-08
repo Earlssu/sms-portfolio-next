@@ -1,11 +1,12 @@
 'use client';
 
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect} from 'react';
 import {useTranslation} from 'react-i18next';
 import {useCommonTranslations} from '@/shared/hooks/useCommonTranslations';
 import {HeroSection, ScrollProgressIndicator, ThankYouSection,} from './layout';
 import {useScrollAnimation} from '@/app/home/hooks/useScrollAnimation';
 import {GlobalBackgroundTransition, TraitCardList} from "@/app/home/components/traits";
+import { useBackgroundStore } from '@/shared/stores/backgroundStore';
 
 /**
  * 클라이언트 사이드 애니메이션이 필요한 컴포넌트들
@@ -16,6 +17,16 @@ export const ClientAnimations: React.FC = () => {
   const { t, i18n } = useTranslation();
   const { scrollY, expandedCard, scrollProgress, isClient } =
     useScrollAnimation();
+  const { setCurrentPage } = useBackgroundStore();
+
+  useEffect(() => {
+    setCurrentPage('home');
+    
+    // 컴포넌트 언마운트 시 정리
+    return () => {
+      setCurrentPage(null);
+    };
+  }, [setCurrentPage]);
 
   return (
     <Fragment>

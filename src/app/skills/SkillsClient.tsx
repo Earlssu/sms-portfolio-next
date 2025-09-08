@@ -1,9 +1,11 @@
 'use client';
 
+import { useEffect } from 'react';
 import SkillDescription from "@/app/skills/SkillDescription";
 import I18nProvider from '@/shared/components/I18nProvider';
 import GlobalCursor from '@/shared/components/GlobalCursor';
 import { useTranslation } from 'react-i18next';
+import { useBackgroundStore } from '@/shared/stores/backgroundStore';
 import 'animate.css';
 
 interface SkillsClientProps {
@@ -20,6 +22,16 @@ const SkillsClient: React.FC<SkillsClientProps> = ({ lang }) => {
 
 const SkillsContent: React.FC = () => {
   const { t } = useTranslation();
+  const { setCurrentPage } = useBackgroundStore();
+
+  useEffect(() => {
+    setCurrentPage('skills');
+    
+    // 컴포넌트 언마운트 시 정리
+    return () => {
+      setCurrentPage(null);
+    };
+  }, [setCurrentPage]);
 
   return (
     <div
