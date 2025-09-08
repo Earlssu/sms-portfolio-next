@@ -12,6 +12,7 @@ export interface CarouselItem {
   subtitle?: string;
   num: string;
   imageSrc: string;
+  category: string;
   links?: {
     title: string;
     url: string;

@@ -8,6 +8,7 @@ export const carouselItems: CarouselItem[] = [
     title: '엑스코어시스템 (XCoreSystem)',
     num: '01',
     imageSrc: '/XCore.png',
+    category: 'Blast',
     teamSize: 'FE 2 / BE 1',
   },
   {
@@ -15,6 +16,7 @@ export const carouselItems: CarouselItem[] = [
     title: '핀터 (Finter)',
     num: '02',
     imageSrc: '/Finter.png',
+    category: 'Blast',
     teamSize: 'FE 3 / PM 1',
   },
   {
@@ -22,6 +24,7 @@ export const carouselItems: CarouselItem[] = [
     title: '픽블 (Pikble)',
     num: '03',
     imageSrc: '/Pikble.png',
+    category: 'Blast',
     teamSize: 'FE 1 / BE 1 / PM 1',
   },
   {
@@ -29,6 +32,7 @@ export const carouselItems: CarouselItem[] = [
     title: '캔디페이 (CandyPay)',
     num: '04',
     imageSrc: '/CandyPay.png',
+    category: 'Blast',
     teamSize: 'FE 2 / BE 1',
   },
   {
@@ -36,6 +40,7 @@ export const carouselItems: CarouselItem[] = [
     title: '포트폴리오 웹사이트',
     num: '05',
     imageSrc: '/Portfolio.png',
+    category: 'Side Project',
     links: [
       {
         title: 'GitHub',
@@ -49,6 +54,7 @@ export const carouselItems: CarouselItem[] = [
     title: '워터리 (Watery)',
     num: '06',
     imageSrc: '/Watery.png',
+    category: 'Side Project',
     links: [
       {
         title: 'GitHub',
@@ -62,6 +68,7 @@ export const carouselItems: CarouselItem[] = [
     title: '포트폴리오 웹사이트 (이전 버전)',
     num: '07',
     imageSrc: '/Portfolio-V1.png',
+    category: 'Side Project',
     links: [
       { title: 'GitHub', url: 'https://github.com/earlssu/portfolio-project' },
     ],
@@ -72,6 +79,7 @@ export const carouselItems: CarouselItem[] = [
     title: "L'acier 남성 화장품 쇼핑몰 (L'acier)",
     num: '08',
     imageSrc: '/Lacier.png',
+    category: 'Side Project',
     links: [
       {
         title: 'GitHub',

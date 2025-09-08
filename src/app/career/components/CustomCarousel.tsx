@@ -57,6 +57,8 @@ const CustomCarousel = () => {
             title={item.title}
             num={item.num}
             imageSrc={item.imageSrc}
+            teamSize={item.teamSize}
+            category={item.category}
             onClick={() => handleCardClick(index)}
           />
         ))}
