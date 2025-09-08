@@ -30,16 +30,7 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
   const { slides, totalSlides } = useCarouselData();
 
   // 캐러셀 로직
-  const {
-    currentSlide,
-    isAutoPlaying,
-    setIsAutoPlaying,
-    goToSlide,
-    nextSlide,
-    prevSlide,
-    toggleAutoPlay,
-    skipToLast,
-  } = useCarousel({
+  const carousel = useCarousel({
     totalSlides,
     isExpanded,
   });
@@ -47,9 +38,9 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
   // 키보드 이벤트
   useCarouselKeyboard({
     isExpanded,
-    prevSlide,
-    nextSlide,
-    toggleAutoPlay,
+    prevSlide: carousel.prevSlide,
+    nextSlide: carousel.nextSlide,
+    toggleAutoPlay: carousel.toggleAutoPlay,
   });
 
   if (!slides || slides.length === 0) {
@@ -60,19 +51,19 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
     <div
       ref={carouselRef}
       className="relative w-full h-full flex flex-col"
-      onMouseEnter={() => setIsAutoPlaying(false)}
-      onMouseLeave={() => setIsAutoPlaying(true)}
+      onMouseEnter={() => carousel.setIsAutoPlaying(false)}
+      onMouseLeave={() => carousel.setIsAutoPlaying(true)}
     >
       {/* 상단 컨트롤 */}
       <div className="flex justify-between items-center mb-6 px-8">
         <CarouselProgressBar
-          currentSlide={currentSlide}
+          currentSlide={carousel.currentSlide}
           totalSlides={totalSlides}
         />
         <CarouselControls
-          isAutoPlaying={isAutoPlaying}
-          onToggleAutoPlay={toggleAutoPlay}
-          onSkipToLast={skipToLast}
+          isAutoPlaying={carousel.isAutoPlaying}
+          onToggleAutoPlay={carousel.toggleAutoPlay}
+          onSkipToLast={carousel.skipToLast}
         />
       </div>
 
@@ -80,13 +71,13 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
       <div className="flex-1 relative overflow-hidden rounded-lg">
         <div
           className="flex transition-transform duration-500 ease-in-out h-full"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          style={{ transform: `translateX(-${carousel.currentSlide * 100}%)` }}
         >
           {slides.map((slide, index) => (
             <div key={slide.id} className="w-full flex-shrink-0">
               <CarouselSlide
                 slide={slide}
-                isActive={index === currentSlide}
+                isActive={index === carousel.currentSlide}
                 slideIndex={index}
                 totalSlides={totalSlides}
               />
@@ -98,10 +89,10 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
       {/* 네비게이션 */}
       <CarouselNavigation
         totalSlides={totalSlides}
-        currentSlide={currentSlide}
-        onSlideChange={goToSlide}
-        onPrevSlide={prevSlide}
-        onNextSlide={nextSlide}
+        currentSlide={carousel.currentSlide}
+        onSlideChange={carousel.goToSlide}
+        onPrevSlide={carousel.prevSlide}
+        onNextSlide={carousel.nextSlide}
       />
 
       {/* 연락처 섹션 */}

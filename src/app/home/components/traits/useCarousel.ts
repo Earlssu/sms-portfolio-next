@@ -13,7 +13,7 @@ export const useCarousel = ({
   totalSlides,
   isExpanded,
   autoPlayInterval = 6000,
-  pauseDuration = 3000,
+  pauseDuration = 6000,
 }: UseCarouselProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -30,13 +30,16 @@ export const useCarousel = ({
   }, [isAutoPlaying, isExpanded, totalSlides, autoPlayInterval]);
 
   // 슬라이드 이동 함수
-  const goToSlide = useCallback((index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
+  const goToSlide = useCallback(
+    (index: number) => {
+      setCurrentSlide(index);
+      setIsAutoPlaying(false);
 
-    // 일정 시간 후 자동재생 재개
-    setTimeout(() => setIsAutoPlaying(true), pauseDuration);
-  }, [pauseDuration]);
+      // 일정 시간 후 자동재생 재개
+      setTimeout(() => setIsAutoPlaying(true), pauseDuration);
+    },
+    [pauseDuration]
+  );
 
   // 다음 슬라이드
   const nextSlide = useCallback(() => {
