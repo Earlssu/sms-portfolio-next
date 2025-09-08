@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { CarouselSlideData } from '@/app/home/types';
+import { formatContent } from '@/shared/utils/contentFormatter';
 
 interface CarouselSlideProps {
   slide: CarouselSlideData;
@@ -26,7 +27,9 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
     return icons[id as keyof typeof icons] || '✨';
   };
 
-  return (  
+  const formattedContent = formatContent(slide.content);
+
+  return (
     <div
       className={`
         h-full flex flex-col justify-start items-center text-center
@@ -79,9 +82,16 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
             )}
 
             {/* 기본 콘텐츠 */}
-            <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-              {slide.content}
-            </p>
+            {formattedContent.map((content, index) => {
+              return (
+                <p
+                  key={`hc_content_${index}`}
+                  className="text-lg md:text-xl text-gray-200 leading-relaxed"
+                >
+                  {content}
+                </p>
+              );
+            })}
 
             {/* 특징 목록 (강점 슬라이드용) */}
             {slide.features && (

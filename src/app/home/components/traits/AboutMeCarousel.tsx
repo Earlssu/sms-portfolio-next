@@ -48,12 +48,7 @@ export const AboutMeCarousel: React.FC<AboutMeCarouselProps> = ({
   }
 
   return (
-    <div
-      ref={carouselRef}
-      className="relative w-full h-full flex flex-col"
-      onMouseEnter={() => carousel.setIsAutoPlaying(false)}
-      onMouseLeave={() => carousel.setIsAutoPlaying(true)}
-    >
+    <div ref={carouselRef} className="relative w-full h-full flex flex-col">
       {/* 상단 컨트롤 */}
       <div className="flex justify-between items-center mb-6 px-8">
         <CarouselProgressBar

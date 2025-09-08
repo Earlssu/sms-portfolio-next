@@ -12,7 +12,7 @@ export const CarouselProgressBar: React.FC<CarouselProgressBarProps> = ({
   totalSlides,
 }) => {
   return (
-    <div className="flex-1 mx-4 pt-8">
+    <div className="flex-1 mx-4">
       <div className="flex items-center gap-2 text-white/70 text-sm">
         <span>{currentSlide + 1}</span>
         <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">

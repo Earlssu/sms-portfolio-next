@@ -73,7 +73,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
         {traitKey === 'aboutMe' ? (
           <div className="w-full h-full relative py-16">
             <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-20">
-              <h1
+              <h2
                 className={`text-4xl font-bold text-white text-center drop-shadow-lg transition-all duration-700 ${
                   isExpanded
                     ? 'opacity-100 translate-y-0'
@@ -81,7 +81,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
                 }`}
               >
                 {title}
-              </h1>
+              </h2>
             </div>
 
             <div
