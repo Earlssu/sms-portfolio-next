@@ -9,6 +9,7 @@
     "skills": "Skills",
     "contact": "Contact"
   },
+  "viewMore": "View More",
   "typeText": "Hello!\nI'm Minseob Shim, a frontend developer.\n\nAfter graduating from high school and university in the U.S., I'm now based in Korea, building various web and mobile applications.\nI primarily work with React, TypeScript, and React Native, with a strong focus on creating better user experiences.\n\nOver the past year, I've taken part in more than 10 projects,\nworking in teams of various sizes and across different domains.\nI'm well-adapted to fast feedback loops in Agile environments,\nexperienced with a wide range of third-party libraries,\nand comfortable collaborating with designers, PMs, and backend developers.\n\nWhat I enjoy most about development is solving tricky problems\nand seeing real feedback from users.\nI'm someone who genuinely enjoys the process of exploring and overcoming challenges.\n\nOh, and yes—I also climb real walls. 🧗‍♂️",
   "traits": {
     "aboutMe": {

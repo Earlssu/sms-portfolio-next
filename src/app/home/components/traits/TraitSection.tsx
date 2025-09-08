@@ -105,6 +105,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
             title={title}
             className={cardClassName}
             isExpanded={isExpanded}
+            btnPath={traitKey === 'projects' ? '/career' : '/skills'}
           >
             <div className={'flex flex-col h-full relative z-10'}>
               {/* 탭 버튼 영역 */}
@@ -121,7 +122,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
               </div>
 
               {/* 콘텐츠 영역 - fade-in 애니메이션 적용 */}
-              <div className="flex-1 max-h-[65vh] overflow-y-auto transition-all duration-500 ease-in-out custom-scrollbar pr-2 pb-12">
+              <div className="flex-1 max-h-[55vh] overflow-y-auto transition-all duration-500 ease-in-out custom-scrollbar pr-2 pb-12">
                 {tabs?.map((_: string, tabIndex: number) => {
                   if (currentTab !== tabIndex) return null;
 
