@@ -8,10 +8,12 @@ import {
   CarouselProgressBar,
   CarouselSlide,
   ContactSection,
+} from '@/app/home/components';
+import {
   useCarousel,
   useCarouselData,
   useCarouselKeyboard,
-} from '@/app/home/components';
+} from '@/app/home/hooks';
 import { TabContentType } from '@/app/home/types';
 
 interface AboutMeCarouselProps {
