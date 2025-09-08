@@ -7,7 +7,7 @@ interface ModalHeaderProps {
 
 const ModalHeader: React.FC<ModalHeaderProps> = ({ projectData }) => {
   return (
-    <div className="mb-5">
+    <div className="">
       <h1 className="text-2xl md:text-3xl font-bold mb-2 leading-tight">
         {projectData.title}
       </h1>

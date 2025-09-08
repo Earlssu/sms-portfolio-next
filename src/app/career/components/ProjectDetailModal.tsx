@@ -107,7 +107,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           </div>
 
           {/* 콘텐츠 영역 */}
-          <div className="w-full bg-gray-900 p-5 md:p-8 text-white">
+          <div className="w-full bg-gray-900 p-5 md:p-8 text-white flex flex-col gap-4">
             <ModalHeader projectData={projectData} />
             <ModalContent projectData={projectData} />
             <TechStack technologies={projectData.technologies || []} />

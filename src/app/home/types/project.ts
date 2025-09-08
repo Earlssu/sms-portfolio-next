@@ -12,6 +12,11 @@ export interface CarouselItem {
   subtitle?: string;
   num: string;
   imageSrc: string;
+  links?: {
+    title: string;
+    url: string;
+  }[];
+  teamSize?: string;
 }
 
 // 프로젝트 전체 데이터 타입 (Career 페이지용)
