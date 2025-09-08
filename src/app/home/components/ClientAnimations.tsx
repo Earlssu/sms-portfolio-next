@@ -5,8 +5,9 @@ import {useTranslation} from 'react-i18next';
 import {useCommonTranslations} from '@/shared/hooks/useCommonTranslations';
 import {HeroSection, ScrollProgressIndicator, ThankYouSection,} from './layout';
 import {useScrollAnimation} from '@/app/home/hooks/useScrollAnimation';
-import {GlobalBackgroundTransition, TraitCardList} from "@/app/home/components/traits";
-import { useBackgroundStore } from '@/shared/stores/backgroundStore';
+import {GlobalBackgroundTransition, TraitCardList,} from '@/app/home/components/traits';
+import {useBackgroundStore} from '@/shared/stores/backgroundStore';
+import GlobalCursor from '@/shared/components/GlobalCursor';
 
 /**
  * 클라이언트 사이드 애니메이션이 필요한 컴포넌트들
@@ -21,7 +22,7 @@ export const ClientAnimations: React.FC = () => {
 
   useEffect(() => {
     setCurrentPage('home');
-    
+
     // 컴포넌트 언마운트 시 정리
     return () => {
       setCurrentPage(null);
@@ -54,6 +55,8 @@ export const ClientAnimations: React.FC = () => {
 
       {/* 감사 섹션 (클라이언트 렌더링, SEO는 I18nStaticContent에서 처리) */}
       <ThankYouSection mode="client" t={t} />
+
+      <GlobalCursor />
     </Fragment>
   );
 };

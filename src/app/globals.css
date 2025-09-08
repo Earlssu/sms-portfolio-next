@@ -43,6 +43,16 @@ body {
 
 /* animate.css를 사용하므로 커스텀 키프레임 제거 */
 
+/* 스크롤바 숨기기 유틸리티 클래스 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
 /* 모달 스크롤바 숨기기 */
 .modal-scroll-container::-webkit-scrollbar {
   display: none;
