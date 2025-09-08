@@ -41,11 +41,11 @@ export const ContactItem: React.FC<ContactItemProps> = ({
   const { t } = useTranslation();
 
   return (
-    <div className={'flex-1 flex gap-4 justify-center'}>
+    <div className={'w-full flex justify-center'}>
       <a
         {...linkProps}
         className={`
-          flex gap-2 text-lg transition-colors
+          flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg transition-colors
           ${
             isDarkMode
               ? 'text-white hover:text-blue-300'
@@ -56,10 +56,12 @@ export const ContactItem: React.FC<ContactItemProps> = ({
       >
         {icon && (
           <span className={'flex justify-center items-center'}>
-            {React.createElement(icon)}
+            {React.createElement(icon, { 
+              className: 'w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6' 
+            })}
           </span>
         )}
-        <span className={'flex justify-center items-center'}>
+        <span className={'flex justify-center items-center text-center leading-tight'}>
           {t(`contact.labels.${type}`)}
         </span>
       </a>

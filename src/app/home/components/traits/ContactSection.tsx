@@ -13,7 +13,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 }) => {
   return (
     <div
-      className={`w-full max-w-screen-xl flex gap-6 ${isDarkMode ? 'text-white' : ''}`}
+      className={`w-full max-w-screen-xl grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 ${isDarkMode ? 'text-white' : ''}`}
     >
       <ContactItem
         type="email"

@@ -53,8 +53,8 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
   }`;
 
   return (
-    <section className="h-screen flex items-center justify-center px-10 relative pb-80">
-      <div className="max-w-screen-2xl mx-auto w-full h-screen flex items-center justify-center relative">
+    <section className="min-h-screen flex items-center justify-center responsive-padding relative pb-20 sm:pb-40 md:pb-0">
+      <div className="max-w-screen-2xl mx-auto w-full min-h-screen flex items-center justify-center relative">
         {/* 모든 섹션에 별빛 테마 배경 적용 */}
         <StarlightBackground
           isExpanded={isExpanded}
@@ -70,9 +70,9 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
         {/* aboutMe인 경우 캐러셀 레이아웃 */}
         {traitKey === 'aboutMe' ? (
           <div className="w-full h-full relative py-16">
-            <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="absolute top-8 sm:top-12 md:top-16 left-1/2 transform -translate-x-1/2 z-20">
               <h2
-                className={`text-4xl font-bold text-white text-center drop-shadow-lg transition-all duration-700 ${
+                className={`text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center drop-shadow-lg transition-all duration-700 ${
                   isExpanded
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-4'
@@ -83,7 +83,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
             </div>
 
             <div
-              className={`w-full h-full pt-16 relative z-10 transition-all duration-700 ${
+              className={`w-full pt-16 relative z-10 transition-all duration-700 ${
                 isExpanded
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-8'
@@ -135,7 +135,6 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
                       <TabContent
                         tabIndex={tabIndex}
                         sections={content.sections}
-                        contact={content.contact}
                       />
                     </div>
                   );
