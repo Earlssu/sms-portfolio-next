@@ -3,7 +3,7 @@ import { SupportedLanguage } from '@/shared/utils/languageUtils';
 import { getHomeData } from '@/shared/utils/translationUtils';
 import { useBackgroundStore } from '@/shared/stores';
 import { formatContent } from '@/shared/utils/contentFormatter';
-import { CatCarousel } from '@/app/home/components/layout/CatCarousel';
+import { CatCarousel } from '@/shared/components/CatCarousel';
 
 // 서버 사이드 렌더링용 props
 interface ThankYouSectionServerProps {

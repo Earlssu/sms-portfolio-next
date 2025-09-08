@@ -11,10 +11,14 @@ const CustomCarousel = () => {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
+    null
+  );
 
   // translation.json에서 career 프로젝트 데이터 가져오기
-  const careerProjects = t('career.projects', { returnObjects: true }) as ProjectData[];
+  const careerProjects = t('career.projects', {
+    returnObjects: true,
+  }) as ProjectData[];
 
   const changeIndex = (index: number) => {
     setActiveIndex(index);
@@ -22,10 +26,30 @@ const CustomCarousel = () => {
 
   const handleCardClick = (index: number) => {
     if (index === activeIndex) {
-      // active 카드 클릭 시 모달 열기
+      // 고양이 카드 (숨겨진 카드) 클릭 처리
+      if (index === carouselItems.length) {
+        const catModalData: ProjectData = {
+          id: 'hidden-cats',
+          title: '🐈 숨겨진 고양이들',
+          subtitle: 'Hidden Cats',
+          num: '🐾',
+          imageSrc: '/carousel-hidden-00.jpg',
+          category: 'Secret Project',
+          period: '2024 ~ 현재',
+          type: '힐링 프로젝트',
+          description: '개발하다 지칠 때마다 위로가 되어주는 우리 집 고양이들입니다.',
+          role: '집사',
+          team: '설기 & 우유',
+        };
+        setSelectedProject(catModalData);
+        setIsModalOpen(true);
+        return;
+      }
+
+      // 일반 프로젝트 카드 클릭 시 모달 열기
       const carouselItem = carouselItems[index];
-      const projectData = careerProjects.find(p => p.id === carouselItem.id);
-      
+      const projectData = careerProjects.find((p) => p.id === carouselItem.id);
+
       if (projectData) {
         const modalData: ProjectData = {
           ...carouselItem,
@@ -47,13 +71,16 @@ const CustomCarousel = () => {
 
   return (
     <>
-      <div className="relative w-full h-screen flex items-center justify-center overflow-hidden" style={{ perspective: '1000px' }}>
+      <div
+        className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+        style={{ perspective: '1000px' }}
+      >
         {carouselItems.map((item, index) => (
           <CarouselCard
             key={`card_${index}`}
             index={index}
             active={activeIndex}
-            total={carouselItems.length}
+            total={carouselItems.length + 1}
             title={item.title}
             num={item.num}
             imageSrc={item.imageSrc}
@@ -62,6 +89,15 @@ const CustomCarousel = () => {
             onClick={() => handleCardClick(index)}
           />
         ))}
+        <CarouselCard
+          index={carouselItems.length}
+          active={activeIndex}
+          total={carouselItems.length + 1}
+          title={'🐈'}
+          num={''}
+          imageSrc={'/carousel-hidden-00.jpg'}
+          onClick={() => handleCardClick(carouselItems.length)}
+        />
       </div>
 
       {/* 프로젝트 상세 모달 */}

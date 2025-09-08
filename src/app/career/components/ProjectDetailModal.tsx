@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { ProjectData } from '@/app/career/types/projectData';
 import 'animate.css';
 import ScrollIndicator from '@/app/career/components/ScrollIndicator';
@@ -9,6 +9,7 @@ import ModalContent from '@/app/career/components/ModalContent';
 import TechStack from '@/app/career/components/TechStack';
 import Achievements from '@/app/career/components/Achievements';
 import ProjectInsights from '@/app/career/components/ProjectInsights';
+import CatModalContent from '@/app/career/components/CatModalContent';
 
 interface ProjectDetailModalProps {
   isOpen: boolean;
@@ -108,11 +109,17 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
           {/* 콘텐츠 영역 */}
           <div className="w-full bg-gray-900 p-5 md:p-8 text-white flex flex-col gap-4">
-            <ModalHeader projectData={projectData} />
-            <ModalContent projectData={projectData} />
-            <TechStack technologies={projectData.technologies || []} />
-            <Achievements achievements={projectData.achievements || []} />
-            <ProjectInsights details={projectData.details} />
+            {projectData.id === 'hidden-cats' ? (
+              <CatModalContent projectData={projectData} />
+            ) : (
+              <Fragment>
+                <ModalHeader projectData={projectData} />
+                <ModalContent projectData={projectData} />
+                <TechStack technologies={projectData.technologies || []} />
+                <Achievements achievements={projectData.achievements || []} />
+                <ProjectInsights details={projectData.details} />
+              </Fragment>
+            )}
           </div>
         </div>
       </div>

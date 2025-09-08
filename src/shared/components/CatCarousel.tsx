@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import 'animate.css';
 
 interface CatCarouselProps {
@@ -11,16 +12,33 @@ interface CatCarouselProps {
 export const CatCarousel: React.FC<CatCarouselProps> = ({ isDarkMode }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const pathname = usePathname();
 
-  // 고양이 이미지 경로 배열
-  const catImages = [
-    '/thank-you-01.jpg',
-    '/thank-you-02.jpg',
-    '/thank-you-03.jpg',
-    '/thank-you-04.jpg',
-    '/thank-you-05.jpg',
-  ];
+  // 현재 페이지에 따라 다른 이미지 배열 사용
+  const getCatImages = () => {
+    if (pathname === '/career' || pathname?.includes('career')) {
+      // Career 페이지 - 숨겨진 고양이 이미지들
+      return [
+        '/carousel-hidden-01.jpg',
+        '/carousel-hidden-02.jpg',
+        '/carousel-hidden-03.jpg',
+        '/carousel-hidden-04.jpg',
+        '/carousel-hidden-05.jpg',
+        '/carousel-hidden-06.jpg',
+      ];
+    } else {
+      // Home 페이지 - 기본 고양이 이미지들
+      return [
+        '/thank-you-01.jpg',
+        '/thank-you-02.jpg',
+        '/thank-you-03.jpg',
+        '/thank-you-04.jpg',
+        '/thank-you-05.jpg',
+      ];
+    }
+  };
 
+  const catImages = getCatImages();
   const totalSlides = catImages.length;
 
   // 자동 재생 로직
@@ -50,6 +68,15 @@ export const CatCarousel: React.FC<CatCarouselProps> = ({ isDarkMode }) => {
     goToSlide(currentSlide === 0 ? totalSlides - 1 : currentSlide - 1);
   };
 
+  // 페이지별 alt 텍스트 설정
+  const getAltText = (index: number) => {
+    if (pathname === '/career' || pathname?.includes('career')) {
+      return `숨겨진 고양이 ${index + 1}`;
+    } else {
+      return `귀여운 고양이 ${index + 1}`;
+    }
+  };
+
   return (
     <div className="relative w-full h-80 mx-auto mb-8">
       {/* 메인 캐러셀 컨테이너 */}
@@ -75,7 +102,7 @@ export const CatCarousel: React.FC<CatCarouselProps> = ({ isDarkMode }) => {
             <div key={index} className="w-full h-full flex-shrink-0 relative">
               <Image
                 src={imagePath}
-                alt={`귀여운 고양이 ${index + 1}`}
+                alt={getAltText(index)}
                 fill
                 className="object-cover"
                 priority={index === 0}
