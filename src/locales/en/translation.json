@@ -209,8 +209,8 @@
         "toyProjects": {
           "sections": [
             {
-              "title": "Portfolio Website (2024.12 ~ Present)",
-              "content": "The website you're currently viewing - a developer portfolio built with Next.js 14 App Router and TypeScript.",
+              "title": "Portfolio Website (2025.05 ~ Present)",
+              "content": "The website you're currently viewing - a developer portfolio built with Next.js 14 App Router and TypeScript. Beyond simple self-introduction, this project captures technical considerations and solutions for performance optimization, user experience, and development productivity.",
               "detail": [
                 {
                   "title": "",
@@ -235,20 +235,56 @@
               ]
             },
             {
-              "title": "Watery - Personal Hydration Tracking App (2025.06 ~ 2025.09)",
-              "content": "Developed a personal hydration tracking app based on RN and Expo. Users can record their intake of water, coffee, cola, etc., and the app tracks their hydration levels based on input values, showing whether they've reached their personal daily hydration goals.",
+              "title": "Watery (2025.06 ~ 2025.09)",
+              "content": "Developed a personal hydration tracking app based on RN and Expo for recording individual water intake.",
               "detail": [
                 {
                   "title": "",
-                  "content": "Implemented over 40 core screens within 2 months, contributing to a 50% reduction in data input time compared to the existing manual process."
+                  "content": "Identified core target user pain points through surveys of approximately 50 people and established the app's core direction of 'simple recording' and 'achievement' based on findings."
                 },
                 {
                   "title": "",
-                  "content": "Designed hierarchical nested modal structures to reduce user input errors and prevent task abandonment, intuitively improving complex data input workflows."
+                  "content": "Achieved near-native UI response speed by implementing JSI architecture and reduced initial development time by 30%+ through active utilization of Expo's built-in features."
                 },
                 {
                   "title": "",
-                  "content": "Prevented unnecessary bugs and rework in early development stages by pre-testing responses from 60+ APIs using Postman and sharing results with colleagues to establish a foundation for stable data integration."
+                  "content": "Enhanced UI/UX completeness through close collaboration with designers based on Figma, and transparently shared team progress and collaboratively shaped project direction through weekly scrum and WBS."
+                }
+              ]
+            },
+            {
+              "title": "Portfolio Website: Initial Version (2023.05 ~ 2023.06)",
+              "content": "First personal portfolio project implemented without external libraries to demonstrate deep understanding of HTML, CSS, and JavaScript(ES6+) fundamentals in web development.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "Implemented dynamic UI (carousel sliders, form validation, etc.) using only pure JavaScript(ES6+) without frameworks or libraries, building DOM manipulation and event handling skills."
+                },
+                {
+                  "title": "",
+                  "content": "Demonstrated the ability to implement rich visual effects (loading animations, etc.) using only CSS with @keyframes."
+                },
+                {
+                  "title": "",
+                  "content": "Built an automated deployment pipeline through Vercel, applying efficient development workflow from initial projects."
+                }
+              ]
+            },
+            {
+              "title": "L'acier Men's Cosmetics E-commerce (2023.01 ~ 2023.02)",
+              "content": "Bootcamp main project that established foundations of component-based development and team collaboration by applying React core concepts to real projects.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "Implemented carousel sliders without libraries for dynamic UI, gaining in-depth understanding of CSS transition and transform properties to create user interactions."
+                },
+                {
+                  "title": "",
+                  "content": "Realized the importance of thoroughly analyzing and utilizing official documentation when using external libraries through solving react-daum-postcode library option issues that behaved differently than intended."
+                },
+                {
+                  "title": "",
+                  "content": "Understood React's core principles of modularization and component-based architecture by separating and managing repeatedly used UI (product cards, buttons, etc.) into reusable components."
                 }
               ]
             }
@@ -539,7 +575,7 @@
       },
       {
         "id": "portfolio-v1",
-        "title": "Portfolio Website V1",
+        "title": "Portfolio Website: Initial Version",
         "subtitle": "First Portfolio Website",
         "period": "2023.05 ~ 2023.06",
         "type": "Personal Project",
