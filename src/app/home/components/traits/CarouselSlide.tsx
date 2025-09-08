@@ -169,9 +169,9 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
                         {exp.achievements.map((achievement, achIndex) => (
                           <div
                             key={achIndex}
-                            className="flex items-start gap-2"
+                            className="flex items-center gap-3 py-1"
                           >
-                            <span className="text-green-400 mt-1">✓</span>
+                            <span className="text-green-400">✓</span>
                             <p className="text-gray-300 text-sm leading-relaxed">
                               {achievement}
                             </p>

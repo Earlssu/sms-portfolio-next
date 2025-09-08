@@ -73,12 +73,10 @@ export const TabContent: React.FC<TabContentProps> = ({
                         return (
                           <li key={detailIndex} className={'flex flex-col'}>
                             <div className={'flex items-start gap-4'}>
-                              <span
-                                className={'text-blue-400 mt-1.5 text-base'}
-                              >
+                              <span className={'text-blue-400 text-base'}>
                                 ▸
                               </span>
-                              <div className={'flex-1 pt-1'}>
+                              <div className={'flex-1 pt-0.5'}>
                                 {hasTitle && (
                                   <h4
                                     className={
