@@ -1,10 +1,10 @@
 import React, { Fragment, Suspense } from 'react';
-import { detectLanguage } from "@/shared/utils/languageUtils";
-import { createGenerateMetadata } from "@/shared/utils/metadataUtils";
-import { generateSkillsMetadata } from "./metadata";
-import SkillsClient from "@/app/skills/SkillsClient";
-import SkillsStructuredData from './SkillsStructuredData';
-import SkillsStaticContent from './SkillsStaticContent';
+import { detectLanguage } from '@/shared/utils/languageUtils';
+import { createGenerateMetadata } from '@/shared/utils/metadataUtils';
+import SkillsClient from '@/app/skills/SkillsClient';
+import { generateSkillsMetadata } from '@/app/skills/metadata';
+import SkillsStructuredData from '@/app/skills/SkillsStructuredData';
+import SkillsStaticContent from '@/app/skills/SkillsStaticContent';
 
 // 모듈화된 generateMetadata 함수 사용
 export const generateMetadata = createGenerateMetadata(generateSkillsMetadata);
@@ -30,7 +30,9 @@ export default function Skills({ searchParams }: SkillsProps) {
         <SkillsStaticContent lang={lang} />
 
         {/* 클라이언트 인터랙션 */}
-        <Suspense fallback={<div className="min-h-screen bg-gray-900 animate-pulse" />}>
+        <Suspense
+          fallback={<div className="min-h-screen bg-gray-900 animate-pulse" />}
+        >
           <SkillsClient lang={lang} />
         </Suspense>
       </div>

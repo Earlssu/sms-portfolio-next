@@ -1,10 +1,10 @@
 import React, { Fragment, Suspense } from 'react';
 import { detectLanguage } from '@/shared/utils/languageUtils';
 import { createGenerateMetadata } from '@/shared/utils/metadataUtils';
-import { generateCareerMetadata } from './metadata';
-import CareerClient from './CareerClient';
-import CareerStructuredData from './components/CareerStructuredData';
-import CareerStaticContent from './components/CareerStaticContent';
+import CareerStructuredData from '@/app/career/components/CareerStructuredData';
+import CareerStaticContent from '@/app/career/components/CareerStaticContent';
+import CareerClient from '@/app/career/CareerClient';
+import { generateCareerMetadata } from '@/app/career/metadata';
 
 // 모듈화된 generateMetadata 함수 사용
 export const generateMetadata = createGenerateMetadata(generateCareerMetadata);
@@ -30,7 +30,9 @@ export default function Career({ searchParams }: CareerProps) {
         <CareerStaticContent lang={lang} />
 
         {/* 클라이언트 인터랙션 */}
-        <Suspense fallback={<div className="min-h-screen bg-gray-900 animate-pulse" />}>
+        <Suspense
+          fallback={<div className="min-h-screen bg-gray-900 animate-pulse" />}
+        >
           <CareerClient />
         </Suspense>
       </div>

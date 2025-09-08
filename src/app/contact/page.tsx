@@ -1,10 +1,10 @@
 import React, { Fragment, Suspense } from 'react';
 import { detectLanguage } from '@/shared/utils/languageUtils';
 import { createGenerateMetadata } from '@/shared/utils/metadataUtils';
-import { generateContactMetadata } from './metadata';
 import ContactContent from '@/app/contact/ContactContent';
-import ContactStructuredData from './ContactStructuredData';
-import ContactStaticContent from './ContactStaticContent';
+import { generateContactMetadata } from '@/app/contact/metadata';
+import ContactStructuredData from '@/app/contact/ContactStructuredData';
+import ContactStaticContent from '@/app/contact/ContactStaticContent';
 
 // 모듈화된 generateMetadata 함수 사용
 export const generateMetadata = createGenerateMetadata(generateContactMetadata);
@@ -30,7 +30,9 @@ export default function Contact({ searchParams }: ContactProps) {
         <ContactStaticContent lang={lang} />
 
         {/* 클라이언트 인터랙션 */}
-        <Suspense fallback={<div className="min-h-screen bg-gray-900 animate-pulse" />}>
+        <Suspense
+          fallback={<div className="min-h-screen bg-gray-900 animate-pulse" />}
+        >
           <ContactContent />
         </Suspense>
       </div>
