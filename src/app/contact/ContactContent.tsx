@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { useBackgroundStore } from '@/shared/stores/backgroundStore';
 import GlobalCursor from '@/shared/components/GlobalCursor';
-import I18nProvider from '@/shared/components/I18nProvider';
 import ContactBackground from '@/app/contact/components/ContactBackground';
 import ContactHeader from '@/app/contact/components/ContactHeader';
 import ContactInfo from '@/app/contact/components/ContactInfo';
@@ -49,9 +48,9 @@ const ContactContentInner = () => {
 
 const ContactContent = () => {
   return (
-    <I18nProvider>
+    <Fragment>
       <ContactContentInner />
-    </I18nProvider>
+    </Fragment>
   );
 };
 
