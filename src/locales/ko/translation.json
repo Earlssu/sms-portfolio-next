@@ -1,154 +1,291 @@
 {
   "hero": "벽에 막히면 벽을 오릅니다.",
-  "heroDesc01": "디버깅에 지치면 손가락 대신 발가락을 씁니다. (암벽에서요)",
-  "heroDesc02": "끈기와 탐색으로 더 나은 사용자 경험을 만드는 개발자 심민섭입니다.",
-  "toHome": "처음으로",
-  "about": "소개",
-  "career": "주요 프로젝트",
-  "skills": "기술 스택",
-  "contact": "Contact",
+  "heroDesc01": "클라이밍으로 단련한 끈기와 집중력으로 코드로 가로막힌 벽을 넘어섭니다.",
+  "heroDesc02": "더 나은 사용자 경험을 목표로 향해 매일 노력하는 개발자 심민섭입니다.",
+  "headerResume": "이력서 보기",
+  "navigation": {
+    "home": "처음으로",
+    "career": "주요 프로젝트",
+    "skills": "기술 스택",
+    "contact": "Contact"
+  },
   "typeText": "안녕하세요!\n프론트엔드 개발자 심민섭입니다.\n\n저는 미국에서 고등학교와 대학교를 졸업한 뒤, 현재는 한국에 거주하며 프론트엔드 개발자로 일하고 있습니다.\nReact, React Native를 주력 스택으로 활용하며, 더 나은 사용자 경험을 만드는 데 집중하고 있습니다.\n\n최근 1년간 약 10개 이상의 프로젝트에 참여하며,\n팀 규모와 도메인이 모두 다른 환경에서도 유연하게 대응하는 방법을 익혔습니다.\nAgile 기반의 빠른 피드백 루프, 다양한 서드파티 라이브러리, 그리고 디자이너, PM, 백엔드 개발자와의 협업도 자연스럽게 이어가고 있습니다.\n\n개발을 하며 가장 즐거운 순간은 막혔던 문제를 해결했을 때, 그리고 사용자로부터 직접 피드백이 돌아올 때입니다.\n그런 의미에서 저는 문제를 끝까지 탐색하고 해결하는 과정을 좋아하는 사람입니다.\n\n아, 물론 진짜 벽을 타는 것도요. 🧗‍♂️",
-  "html5": "웹 접근성과 시맨틱 마크업의 중요성을 인지하고 있으며, 실제 프로젝트에서 시맨틱 태그와 alt 속성 등을 활용해 사용자 경험과 접근성을 고려한 구조로 마크업을 구성한 경험이 있습니다.",
-  "css3": "미디어 쿼리를 활용한 반응형(mobile-first) 디자인과 CSS 애니메이션을 통해 사용자 인터랙션을 자연스럽게 표현할 수 있으며, 별도의 프레임워크 없이도 확장성 있는 스타일링이 가능합니다.",
-  "javascript": "바닐라 JavaScript만으로 포트폴리오 웹사이트를 구축한 경험이 있으며, ES6 문법을 적극적으로 활용하고 DOM 조작, 이벤트 처리, Flexbox 등 웹 개발의 핵심 개념을 깊이 있게 이해하고 있습니다.",
-  "react": "React의 핵심 렌더링 구조와 Fiber Architecture의 도입 배경 및 작동 원리에 대해 이해하고 있으며, 컴포넌트 기반 아키텍처의 진화 과정을 설명할 수 있습니다. Suspense, Error Boundary, Context API 등의 기능을 통해 사용자 경험을 향상시키는 UI 구성 경험이 있으며, useReducer와 useContext를 상황에 따라 적절히 구분해 코드의 가독성과 유지보수성을 높이려는 시도를 지속적으로 하고 있습니다. 최신 버전의 React 문법 변화에도 빠르게 적응하며 실무에 적용하고 있습니다.",
-  "reactNative": "React Native를 활용한 모바일 앱 개발 경험이 있으며, 플랫폼 특성에 따른 조건부 렌더링과 BottomSheet UI 구현에 익숙합니다. WebGL 기반의 three.js를 활용해 3D 렌더링을 모바일 앱에 적용해본 경험이 있으며, 네이티브 환경에서도 최적화된 사용자 경험을 제공하기 위해 FlatList, useCallback 등을 통해 성능 최적화에도 신경 쓰고 있습니다. 플랫폼별 스타일 처리와 StatusBar, SafeAreaView 등의 네이티브 요소도 고려한 UI 설계가 가능합니다.",
-  "typescript": "TypeScript 컴파일러(tsc)의 작동 원리를 이해하고 있으며, 타입 안정성과 확장성을 고려한 interface 기반의 설계에 익숙합니다. union, tuple, enum 등의 문법을 적절히 활용해 복잡한 데이터 구조도 안정적으로 관리할 수 있으며, 실무에서는 타입 에러를 사전에 예방하고 생산성을 높이기 위해 적극적으로 도입해왔습니다.",
-  "nextJS": "Next.js에 대한 지속적인 학습을 이어가고 있으며, 실제 프로젝트에서 SSR과 CSR의 차이를 이해하고 페이지 특성에 따라 적절한 렌더링 방식을 선택해 구현한 경험이 있습니다. App Router 기반의 병렬 라우팅(Parallel Routing)을 활용해 유연한 페이지 구성을 시도해보았고, GraphQL 환경에서는 Relay를 사용해 대규모 데이터를 효율적으로 처리한 경험이 있습니다. 아직 완전히 숙련된 단계는 아니지만, 실전 적용을 통해 점진적으로 역량을 넓혀가고 있습니다.",
-  "zustand": "Zustand의 경량 상태 관리 구조와 hook 기반 스토어 패턴을 이해하고 있으며, 복잡한 boilerplate 없이 간단하게 전역 상태를 구성해 빠른 프로토타이핑과 컴포넌트 간 데이터 공유를 구현할 수 있습니다. TypeScript와 함께 사용하며 store 타입 안전성을 유지한 개발 경험이 있습니다.",
-  "mobx": "MobX의 관찰자(Observer) 패턴 기반 상태 관리를 이해하고 있으며, @observable, @action, @computed 등의 데코레이터를 통해 반응형 UI를 구성해본 경험이 있습니다. 상태 변화에 따른 자동 렌더링 흐름을 설명할 수 있으며, 복잡한 컴포넌트 간 상태 의존성도 간결하게 표현할 수 있습니다.",
-  "redux": "Redux의 예측 가능한 상태 흐름과 명확한 구조를 이해하고 있으며, state → action → reducer → store 의 데이터 플로우를 정확히 설명할 수 있습니다. Redux Toolkit을 활용한 전역 상태 관리와 미들웨어(Redux Thunk)를 통한 비동기 처리 경험이 있습니다.",
-  "styledComponent": "styled-components의 Component-Based Design 관점에서의 장점을 이해하고 있으며, 컴포넌트 단위의 스타일 추상화 및 재사용 가능한 구조를 구성할 수 있습니다. Tailwind CSS와 같은 유틸리티 기반 프레임워크와 비교해 선언적이고 명확한 스타일 흐름이 필요한 상황에서 styled-components를 선택해 사용했으며, 선언 방식에 따른 가독성 이슈 또한 인지하고 있습니다. 최근 공식 유지보수 종료 이슈에 따라, 대안과 마이그레이션 방안에 대해서도 관심을 가지고 있습니다.",
-  "tailwind": "Tailwind CSS를 활용한 스타일링에 익숙하며, tailwind.config.ts를 통해 커스터마이징 및 전역 설정을 구성할 수 있습니다. Tailwind가 기본적으로 Override하는 스타일 속성을 인지하고 있으며, 이를 고려해 h1, button 등의 요소를 기반으로 공용 UI 컴포넌트를 재정의하고 재사용 가능한 구조로 구성한 경험이 있습니다. 실무에서도 전역 스타일 관리와 디자인 시스템 구현에 Tailwind를 적극적으로 활용하고 있습니다.",
-  "reactQuery": "React Query의 캐싱 메커니즘과 쿼리 흐름을 이해하고 있으며, queryKey를 통한 데이터 식별 및 상태 관리가 가능합니다. mutation과 fetchQuery의 차이를 구분해 상황에 맞게 사용할 수 있으며, invalidateQueries를 통해 쿼리 상태를 적절히 갱신하는 경험도 보유하고 있습니다. 로딩, 에러, 성공 상태에 따른 UI 분기를 통해 서버 상태 관리에 구조적으로 접근할 수 있습니다.",
-  "git": "Git CLI를 활용해 브랜치 생성, 커밋, 병합 등의 작업을 능숙하게 수행할 수 있으며, Git과 GitHub의 차이점을 명확히 인지하고 있습니다. 커밋 히스토리 관리를 위해 squash, reword, drop 등의 리베이스 옵션을 적절히 사용해본 경험이 있으며, 복잡한 병합 충돌 상황에서도 커밋 단위로 원인을 파악하고 해결할 수 있습니다. 또한 rebase의 작동 방식과 base 커밋의 개념을 정확히 이해하고 있어 팀 내 깔끔한 히스토리 유지를 위한 Git 전략을 설계할 수 있습니다.",
-  "github": "GitHub Projects를 활용해 이슈 관리와 작업 진행 상황을 시각화할 수 있으며, Fork, Sourcetree 등의 버전 관리 도구도 병행하여 사용한 경험이 있습니다. 코드 리뷰와 Pull Request 프로세스를 통해 코드 품질을 향상시키는 커뮤니케이션 방법에 익숙하며, GitHub 커뮤니티의 생태계와 협업 방식에 대한 이해를 기반으로 원활한 팀 협업을 진행할 수 있습니다.",
-  "githubActions": "GitHub Actions를 통해 CI/CD 자동화 파이프라인을 구축해본 경험이 있으며, YAML 문서를 작성해 프로젝트의 빌드 및 배포를 자동화한 바 있습니다. 자동화 과정에서 발생하는 오류의 로그를 분석하고 문제를 해결한 경험이 있으며, 현재는 반복적인 워크플로우를 줄이기 위해 지속적인 학습과 개선을 이어가고 있습니다.",
-  "vercel": "GitHub 리포지토리를 연동해 자동화 배포 파이프라인을 구성한 경험이 있으며, 커스텀 도메인 연결 및 Redirect 설정도 수행할 수 있습니다. Preview URL을 통해 배포 전 검수 과정을 진행해본 경험이 있고, 환경 변수 관리와 CI/CD 통합 등 실무 기능을 적극 활용해왔습니다.",
-  "figma": "디자이너와의 협업을 통해 컴포넌트 기반 디자인 시스템을 이해하고 구현할 수 있으며, 반응형 웹 디자인의 구조를 분석해 UI에 반영하는 데 익숙합니다. Figma 상에서 어색한 사용자 플로우를 인지하고 개선 제안을 한 경험이 있으며, 플러그인 활용과 프로토타이핑 기능을 포함해 디자이너와의 원활한 커뮤니케이션이 가능합니다.",
-  "notion": "Notion을 실무에서 적극적으로 활용해 Daily Scrum, 회의록, Git 커밋/코드리뷰 컨벤션 등을 문서화한 경험이 있습니다. 데이터베이스를 활용한 프로젝트 관리와 페이지 분할 구조 설계를 통해 팀원 간 협업을 원활하게 이끌었으며, 개인 일정 관리까지도 Notion으로 처리할 만큼 높은 숙련도를 보유하고 있습니다.",
-  "jira": "Jira의 칸반 보드를 활용한 티켓 기반 QA 프로세스를 경험했으며, 클라이언트와의 이슈 관리와 피드백 반영을 빠르게 진행할 수 있었습니다. Epic, Task, Sub-task의 구분을 명확히 이해하고 있으며, 이슈 우선순위 지정과 워크플로우 커스터마이징에도 익숙합니다.",
-  "slack": "Slack을 주요 커뮤니케이션 툴로 사용해 사용자 멘션, 스레드 중심 대화, 파일 공유 및 알림 관리를 능숙하게 할 수 있습니다. 실무에서는 슬랙 자동화 봇(예: Daily GeekNews 공유, CI/CD 알림 연동 등)을 활용해 반복적인 작업을 줄이고 효율적인 팀 커뮤니케이션 환경을 조성한 경험이 있습니다.",
   "traits": {
     "aboutMe": {
       "title": "About Me",
-      "tabs": [
-        "간단 소개",
-        "최근 활동",
-        "경력"
-      ],
-      "tabContents": {
-        "introduction": {
-          "sections": [
-            {
-              "title": "안녕하세요! 프론트엔드 개발자 심민섭입니다",
-              "content": "1년 이상의 실무 경험을 바탕으로 빠르게 성장하는 프론트엔드 개발자입니다. React, Next.js, React Native 등을 활용하여 다양한 환경에서 웹과 앱 서비스를 성공적으로 출시한 경험이 있습니다."
-            },
-            {
-              "title": "저의 강점",
-              "content": "다양한 도메인의 프로젝트에 빠르게 적응할 수 있고, 새로운 기술을 배우고 구현하는 것에 자신이 있습니다. 특히, 동료들과의 원활한 소통을 위해 개발 프로세스를 문서화하고, 영문 기술 문서를 빠르게 습득하여 팀의 개발 효율을 높이는 데 강점이 있습니다."
-            }
-          ],
-          "contact": {
-            "email": "shim5505@gmail.com",
-            "github": "https://github.com/earlssu",
-            "blog": "https://code-in-law.tistory.com/"
-          }
+      "carouselSlides": [
+        {
+          "id": "intro",
+          "title": "벽을 오르는 프론트엔드 개발자",
+          "subtitle": "심민섭 입니다.",
+          "content": "저는 \"힘들 때 웃어야 일류다\"라는 모토를 가슴에 품고 살아갑니다. 해결하기 어려운 버그, 복잡한 아키텍처 설계처럼 도전적인 상황은 저를 좌절시키기보다 오히려 깊은 몰입의 즐거움으로 이끕니다.",
+          "highlight": "1년 이상의 실무 경험 동안 React, Next.js, React Native와 같은 도구를 활용해 다양한 웹과 앱 서비스를 만들며, 기술로 비즈니스의 문제를 해결하는 과정에서 가장 큰 성취감을 느꼈습니다."
         },
-        "recentActivities": {
-          "sections": [
+        {
+          "id": "strength",
+          "title": "저의 가장 큰 강점은",
+          "subtitle": "'연결' 입니다.",
+          "content": "저는 기술과 사람, 그리고 서로 다른 언어를 연결하여 시너지를 만드는 것에 강점이 있습니다.",
+          "features": [
             {
-              "title": "🙌 가치(Gachi) 크루 1기 참여중 (2025.05 ~ 현재)",
-              "content": "사이드 프로젝트 'Watery'를 통해 CSS 애니메이션과 사용자 경험 설계 역량을 강화하고 있습니다."
+              "title": "사람과 사람을 연결합니다",
+              "content": "긍정적인 커뮤니케이션의 힘을 믿습니다. 동료들이 프로젝트의 진행 상황을 명확히 이해하고 쉽게 적응할 수 있도록 꼼꼼하게 문서를 작성하고 공유합니다."
             },
             {
-              "title": "🏆 스파르타 코딩클럽 작심큰일 챌린지 완주 (2025.08)",
-              "content": "매일 블로그 회고를 통해 문제 해결 과정을 기록하며 알고리즘 문제 해결 능력과 메타인지 능력을 길렀습니다."
-            },
-            {
-              "title": "🇯🇵 JLPT N3 자격증 취득 (2025.08.12)",
-              "content": "일본어 능력 시험 N3급을 취득하여 다국어 소통 역량을 확장했습니다."
-            },
-            {
-              "title": "🎓 네이버 부스트캠프 Basic 과정 수료 (2025.06)",
-              "content": "컴파일러, 해시 등 CS 기본기를 다지며 코드의 근본적인 동작 원리에 대한 이해를 높였습니다."
+              "title": "언어와 기술을 연결합니다",
+              "content": "한국어와 영어 모두 원어민 수준으로 구사할 수 있는 능력으로, 최신 기술 트렌드나 공식 문서를 번역 없이 빠르게 습득하여 팀에 공유하고 기술적 장벽을 낮춥니다."
             }
           ]
         },
-        "career": {
-          "sections": [
+        {
+          "id": "life",
+          "title": "코드를 떠나",
+          "subtitle": "세상의 문제들을 해결합니다.",
+          "content": "저는 일상에서도 성취감을 주는 활동들을 통해 개발에 대한 영감과 에너지를 얻습니다.",
+          "highlight": "긴 호흡이 필요한 소프트웨어 개발과 달리, 클라이밍과 방탈출은 짧은 시간 안에 온전히 집중하여 눈앞의 문제를 해결하고 즉각적인 성공의 기쁨을 맛보게 해줍니다.",
+          "closing": "그리고 때로는 모든 논리를 내려놓고, 그저 귀여운 두 마리의 고양이와 함께하며 가장 단순하고 편안한 휴식을 취합니다."
+        },
+        {
+          "id": "recentActivities",
+          "title": "최근 활동",
+          "subtitle": "지속적인 성장과 도전",
+          "content": "새로운 기술과 역량을 익히며 개발자로서 꾸준히 성장하고 있습니다.",
+          "activities": [
             {
-              "title": "주식회사 블라스트 (2023.08 ~ 2024.10)",
+              "icon": "🙌",
+              "title": "가치(Gachi) 크루 1기 참여중",
+              "period": "2025.05 ~ 현재",
+              "description": "사이드 프로젝트 'Watery'를 통해 CSS 애니메이션과 사용자 경험 설계 역량 강화"
+            },
+            {
+              "icon": "🏆",
+              "title": "스파르타 코딩클럽 작심큰일 챌린지 완주",
+              "period": "2025.08",
+              "description": "매일 블로그 회고를 통한 알고리즘 문제 해결 능력과 메타인지 능력 개발"
+            },
+            {
+              "icon": "🇯🇵",
+              "title": "JLPT N3 자격증 취득",
+              "period": "2025.08.12",
+              "description": "일본어 능력 시험 N3급 취득으로 다국어 소통 역량 확장"
+            },
+            {
+              "icon": "🎓",
+              "title": "네이버 부스트캠프 Basic 과정 수료",
+              "period": "2025.06",
+              "description": "컴파일러, 해시 등 CS 기본기를 통한 코드 동작 원리 이해 향상"
+            }
+          ]
+        },
+        {
+          "id": "career",
+          "title": "경력",
+          "subtitle": "다양한 도메인에서의 실무 경험",
+          "content": "서로 다른 분야에서 쌓은 경험을 통해 폭넓은 관점과 문제 해결 능력을 기를 수 있었습니다.",
+          "experiences": [
+            {
+              "company": "주식회사 블라스트",
               "position": "개발팀 | 프론트엔드 개발자",
-              "content": "HACCP 인증 앱, 증시 커뮤니티, 3D 모델링 앱, 분할결제 금융 앱 등 다양한 도메인의 프로젝트를 성공적으로 출시했습니다."
+              "period": "2023.08 ~ 2024.10",
+              "description": "HACCP 인증 앱, 증시 커뮤니티, 3D 모델링 앱, 분할결제 금융 앱 등 다양한 도메인의 프로젝트를 성공적으로 출시",
+              "achievements": [
+                "React Native, Next.js 기반 4개 이상의 프로덕션 앱 개발",
+                "사용자 데이터 입력 시간 50% 단축 달성",
+                "Git-flow 브랜치 전략 도입으로 팀 생산성 향상"
+              ]
             },
             {
-              "title": "디지털 데일리 신문사 (2022.02 ~ 2022.04)",
+              "company": "디지털 데일리 신문사",
               "position": "편집국 디지털라이프팀 | 기자",
-              "content": "IT 산업 트렌드 분석 및 기사 작성 경험을 통해 최신 기술 동향을 파악하고 비즈니스 관점에서 이해하는 능력을 길렀습니다."
-            },
-            {
-              "title": "Austin College IT 부서 (2019.06 ~ 2020.05)",
-              "position": "IT 부서 | 인턴",
-              "content": "교내 구성원의 IT 이슈를 해결하며 사용자 관점의 문제 해결 능력과 커뮤니케이션 역량을 쌓았습니다."
+              "period": "2022.02 ~ 2022.04",
+              "description": "IT 산업 트렌드 분석 및 기사 작성을 통해 기술을 비즈니스 관점에서 이해하는 능력을 기름",
+              "achievements": [
+                "IT 트렌드 분석 기사 20편 이상 작성",
+                "기술과 비즈니스의 연결고리 발견 역량 개발"
+              ]
             }
           ]
         }
+      ],
+      "contact": {
+        "email": "mshimdev@gmail.com",
+        "github": "https://github.com/earlssu",
+        "blog": "https://code-in-law.tistory.com/",
+        "resume": "https://fire-warrior-ca2.notion.site/MinSeob-Shim-6004fbc72ef74bc994cea07bf1e11f7e"
       }
     },
     "projects": {
       "title": "주요 프로젝트",
       "tabs": [
-        "개요",
-        "주요 프로젝트",
-        "성과"
+        "주식회사 블라스트",
+        "개인 프로젝트"
       ],
       "tabContents": {
-        "overview": {
+        "blast": {
           "sections": [
             {
-              "title": "다양한 도메인의 프로젝트 경험",
-              "content": "HACCP 인증, 금융, 커뮤니티, 3D 모델링 등 다양한 비즈니스 도메인에서 프론트엔드 개발을 담당했습니다. 각 프로젝트마다 도메인 특성에 맞는 최적의 기술 스택과 아키텍처를 선택하여 구현했습니다."
+              "title": "엑스코어시스템 XCoreSystem (2024.08 ~ 2024.10)",
+              "content": "RN, Expo 기반 HACCP 인증 절차 간소화를 위한 내부 업무용 앱을 개발했습니다.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "2개월 내 40개 이상의 핵심 화면을 구현하며, 기존 수기 방식 대비 데이터 입력 시간을 50% 단축하는 데 기여했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "사용자의 입력 오류 및 핵심 과업 이탈을 방지하기 위해, 중첩된 모달(Nested Modal) 구조를 계층적으로 설계하여 복잡한 데이터 입력 플로우를 직관적으로 개선했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "개발 초기 단계의 불필요한 버그와 재작업을 방지하기 위해 Postman으로 60여 개 API의 응답 값을 사전 테스트하고, 결과를 동료와 공유하여 안정적인 데이터 연동의 기반을 마련했습니다."
+                }
+              ]
             },
             {
-              "title": "빠른 개발과 높은 품질",
-              "content": "2개월 내 40개 이상의 핵심 화면을 구현하면서도 사용자 경험을 고려한 직관적인 UI/UX를 제공했습니다. 성능 최적화를 통해 로딩 속도를 1.2초 단축하는 등 품질 향상에도 기여했습니다."
+              "title": "핀터 Finter (2024.06 ~ 2024.08)",
+              "content": "Next.js 기반 증시 커뮤니티 웹 페이지를 개발했습니다.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "병렬 라우팅과 Suspense를 적용하여 초기 로딩 속도를 1.2초 단축했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "빈번한 머지 충돌(월 100건 이상)로 인한 개발 생산성 저하 문제를 해결하기 위해 Git-flow 브랜치 전략을 도입하고 팀에 전파하여 코드 관리 안정성을 확보했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "GraphQL과 Relay를 도입하여 클라이언트 상태와 서버 상태를 분리하고, 캐싱 전략을 적용함으로써 불필요한 서버 요청 횟수를 최소화하고 데이터 일관성을 확보했습니다."
+                }
+              ]
+            },
+            {
+              "title": "픽블 Pikble (2024.02 ~ 2024.05)",
+              "content": "RN, Expo 기반 사용자의 촬영 데이터를 기반으로 AI 기술을 활용해 3D 모델을 제공하는 애플리케이션을 개발했습니다.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "신규 사용자 가입 장벽을 낮추기 위해 4대 소셜 로그인 기능을 구현하고, 앱 심사 프로세스를 전담하여 성공적으로 출시했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "서비스의 핵심 기능인 3D 모델 시각화를 위해 React-Three-Fiber 기반의 뷰어를 구현하여, 사용자가 다양한 형식의 모델을 확인할 수 있도록 했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "10회에 걸친 앱 심사 및 재심사 과정을 경험하며 얻은 노하우를 바탕으로 '앱 스토어 심사 대응 가이드'를 문서화하여, 향후 유사 프로젝트의 심사 기간을 단축할 수 있는 기반을 마련했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "사용자의 의도치 않은 앱 종료를 방지하고(BackHandler) 데이터 로딩 중의 이탈률을 줄이기 위해(LoadingIndicator), 사용자 경험을 저해하는 핵심 문제점을 개선했습니다."
+                }
+              ]
+            },
+            {
+              "title": "캔디페이 CandyPay (2023.08 ~ 2024.02)",
+              "content": "하나의 앱에서 여러 명이 분할 결제가 가능한 금융 애플리케이션을 개발했습니다.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "사용자의 결제 편의성을 높이기 위해 QR 스캔, 분할 결제 등 핵심 결제 기능의 UI/UX 개발을 주도했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "서비스의 핵심 로직인 사용자 계급별 차등 권한 부여 및 개인 소득 정보 기반의 결제 한도 설정 기능을 구현하여, 안정적이고 체계적인 서비스 운영의 기반을 다졌습니다."
+                },
+                {
+                  "title": "",
+                  "content": "쿠콘 API를 연동하여, 사용자별 소득에 따른 최적의 연말정산 카드 소비액을 계산하고 추천하는 핵심 금융 로직을 구현했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "금융보안원 보안성 심사 통과를 목표로, 데이터 암호화 및 사용자 정보 처리 관련 로직을 보안 가이드라인에 맞춰 리팩토링하고 관련 문서를 작성하여 심사 통과에 기여했습니다."
+                }
+              ]
             }
           ]
         },
-        "keyProjects": {
+        "toyProjects": {
           "sections": [
             {
-              "title": "XCoreSystem - HACCP 인증 앱 (2024.08~10)",
-              "content": "RN, Expo 기반으로 HACCP 인증 절차 간소화를 위한 내부 업무용 앱을 개발했습니다. 중첩된 모달 구조로 복잡한 데이터 입력 플로우를 직관적으로 개선했습니다."
+              "title": "포트폴리오 웹 페이지 (2025.05 ~ 현재)",
+              "content": "지금 보고 계시는 웹 페이지로, Next.js 14 App Router와 TypeScript를 기반으로 한 개발자 포트폴리오입니다. 단순한 자기소개를 넘어, 성능 최적화, 사용자 경험, 개발 생산성에 대한 저의 기술적 고민과 해결 과정을 담아낸 프로젝트입니다.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "SEO 최적화를 위해 SSR/SSG 하이브리드 렌더링을 도입하고, JSON-LD 구조화 데이터와 다국어 메타태그를 구현하여 검색 엔진 최적화를 달성했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "커스텀 캐러셀, 스크롤 기반 배경 전환, CSS Keyframes 별빛 애니메이션 등을 바닐라 JavaScript로 직접 구현하여 외부 라이브러리 의존성을 최소화했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "Zustand 기반 전역 상태 관리와 React i18next를 활용한 완전한 다국어 지원(한/영)을 구현하여 국제적인 사용자 경험을 제공합니다."
+                },
+                {
+                  "title": "",
+                  "content": "TypeScript 100% 적용으로 개발 과정에서 타입 안전성을 확보하고, 모듈화된 컴포넌트 구조로 코드 재사용성과 유지보수성을 향상시켰습니다."
+                },
+                {
+                  "title": "",
+                  "content": "Vercel과 GitHub Actions를 통한 자동화된 CI/CD 파이프라인을 구축하여 코드 변경 시 즉시 배포되는 개발 워크플로우를 확립했습니다."
+                }
+              ]
             },
             {
-              "title": "Finter - 증시 커뮤니티 (2024.06~08)",
-              "content": "Next.js 기반 증시 커뮤니티 웹 페이지를 개발했습니다. 병렬 라우팅과 Suspense를 적용하여 초기 로딩 속도를 개선하고, GraphQL과 Relay를 도입하여 데이터 관리를 최적화했습니다."
+              "title": "워터리 Watery (2025.06 ~ 2025.09)",
+              "content": "RN, Expo 기반으로 사용자의 개인 수분 섭취 기록을 기록하는 앱을 개발했습니다.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "약 50명을 대상으로 한 설문조사를 통해 핵심 타겟 유저의 불편한 점(pain point)을 파악하고, 이를 바탕으로 '간편한 기록'과 '성취감'이라는 앱의 핵심 방향성을 직접 설정했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "JSI 아키텍처를 도입하여 네이티브 성능에 가까운 UI 반응 속도를 확보하고, Expo의 내장 기능들을 적극 활용하여 초기 개발 속도를 30% 이상 단축했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "디자이너와 피그마를 기반으로 긴밀히 소통하며 UI/UX의 완성도를 높였으며, 매주 스크럼과 WBS를 통해 팀의 진행 상황을 투명하게 공유하고 프로젝트의 방향성을 함께 만들어갔습니다."
+                }
+              ]
             },
             {
-              "title": "Pikble - 3D 모델링 앱 (2024.02~05)",
-              "content": "RN, Expo 기반으로 AI 기술을 활용한 3D 모델링 애플리케이션을 개발했습니다. React-Three-Fiber 기반 3D 뷰어를 구현하고 4대 소셜 로그인을 통한 사용자 편의성을 향상시켰습니다."
+              "title": "포트폴리오 웹 페이지: 초기 버전 (2023.05 ~ 2023.06)",
+              "content": "웹 개발의 근간이 되는 HTML, CSS, JavaScript(ES6+)에 대한 깊은 이해를 증명하기 위해 외부 라이브러리 없이 구현한 첫 개인 포트폴리오 프로젝트입니다.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "프레임워크나 라이브러리의 도움 없이, 순수 JavaScript(ES6+)만을 사용하여 동적인 UI(캐러셀 슬라이더, Form 유효성 검사 등)를 직접 구현하며 DOM 조작 및 이벤트 처리 능력을 다졌습니다."
+                },
+                {
+                  "title": "",
+                  "content": "@keyframes을 활용하여 CSS만으로도 풍부한 시각적 효과(로딩 애니메이션 등)를 구현할 수 있음을 증명했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "Vercel을 통해 자동화된 배포 파이프라인을 구축하여 초기 프로젝트부터 효율적인 개발 워크플로우를 적용했습니다."
+                }
+              ]
             },
             {
-              "title": "CandyPay - 분할결제 앱 (2023.08~2024.02)",
-              "content": "하나의 앱에서 여러 명이 분할 결제가 가능한 금융 애플리케이션을 개발했습니다. QR 스캔, 결제 한도 설정, 연말정산 최적화 등 핵심 금융 기능을 구현했습니다."
-            }
-          ]
-        },
-        "achievements": {
-          "sections": [
-            {
-              "title": "개발 성과",
-              "content": "• 2개월 내 40개 화면 구현으로 개발 속도 입증\n• 로딩 속도 1.2초 단축으로 사용자 경험 개선\n• 데이터 입력 시간 50% 단축으로 업무 효율 향상"
-            },
-            {
-              "title": "기술적 성과",
-              "content": "• React-Three-Fiber 3D 뷰어 구현\n• GraphQL + Relay로 서버 요청 최소화\n• 병렬 라우팅으로 성능 최적화\n• 4대 소셜 로그인 및 앱스토어 출시 완료"
-            },
-            {
-              "title": "팀 기여",
-              "content": "• Git 브랜치 전략 도입으로 머지 충돌 100건 이상 해결\n• 앱스토어 심사 가이드 문서화\n• API 사전 테스트로 안정적인 데이터 연동 기반 마련"
+              "title": "L'acier 남성 전용 화장품 쇼핑몰 (2023.01 ~ 2023.02)",
+              "content": "React의 핵심 개념을 실제 프로젝트에 적용하며 컴포넌트 기반 개발 방식과 팀 협업의 기초를 다진 부트캠프 메인 프로젝트입니다.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "동적인 UI 구현을 위해 캐러셀 슬라이더를 라이브러리 없이 직접 구현하며, CSS transition과 transform 속성을 깊이 있게 활용하여 사용자 인터랙션을 만들어내는 법을 체득했습니다."
+                },
+                {
+                  "title": "",
+                  "content": "react-daum-postcode 라이브러리의 옵션 값이 의도와 다르게 동작하는 문제를 해결하는 과정을 통해, 외부 라이브러리 사용 시 공식 문서를 깊이 있게 분석하고 활용하는 능력의 중요성을 깨달았습니다."
+                },
+                {
+                  "title": "",
+                  "content": "반복적으로 사용되는 UI(상품 카드, 버튼 등)를 재사용 가능한 컴포넌트로 분리하고 관리하며, React의 모듈화와 컴포넌트 기반 아키텍처의 핵심 원리를 이해했습니다."
+                }
+              ]
             }
           ]
         }
@@ -165,60 +302,56 @@
         "coreTech": {
           "sections": [
             {
-              "title": "Frontend Core",
+              "title": "프론트엔드 핵심",
               "content": "JavaScript (ES6+) • TypeScript • React • Next.js • React Native • Expo"
             },
             {
-              "title": "Styling & UI",
-              "content": "TailwindCSS • Styled-Components • CSS3 • HTML5 • Responsive Design"
+              "title": "스타일링 & UI",
+              "content": "TailwindCSS • Styled-Components • CSS3 • HTML5 • 반응형 웹 디자인"
             },
             {
-              "title": "State Management",
-              "content": "Tanstack-Query(React Query) • Zustand • Context API"
+              "title": "상태 관리",
+              "content": "Zustand • Tanstack-Query(React Query)"
             },
             {
-              "title": "3D & Graphics",
-              "content": "Three.js • React-Three-Fiber • WebGL • Canvas API"
+              "title": "네트워크 통신",
+              "content": "Axios • GraphQL • Relay"
             }
           ]
         },
         "experiencedTech": {
           "sections": [
             {
-              "title": "State Management",
-              "content": "Redux • MobX • Recoil • 상태 관리 패턴에 대한 깊은 이해"
+              "title": "고급 상태 관리",
+              "content": "Redux • MobX • Recoil"
             },
             {
-              "title": "Database & Backend",
-              "content": "GraphQL • Relay • REST API • Firebase • 백엔드 연동 경험"
+              "title": "백엔드 & 데이터",
+              "content": "Firebase • Contentful"
             },
             {
-              "title": "Analytics & Monitoring",
-              "content": "Amplitude • Google Analytics • 사용자 행동 분석 및 성능 모니터링"
+              "title": "분석 & 모니터링",
+              "content": "Amplitude • Google Analytics"
             },
             {
-              "title": "Testing & Quality",
-              "content": "Jest • Testing Library • E2E Testing • 코드 품질 관리"
+              "title": "3D & 그래픽스",
+              "content": "Three.js • React-Three-Fiber"
             }
           ]
         },
         "collaborationTools": {
           "sections": [
             {
-              "title": "Version Control",
-              "content": "Git • GitHub • Git-flow 브랜치 전략 • PR 및 코드 리뷰 프로세스"
+              "title": "버전 관리",
+              "content": "Git • GitHub"
             },
             {
-              "title": "Deployment & CI/CD",
-              "content": "Vercel • GitHub Actions • 자동화된 배포 파이프라인 구축"
+              "title": "배포 & CI/CD",
+              "content": "Vercel • GitHub Actions"
             },
             {
-              "title": "Design & Communication",
-              "content": "Figma • Jira • Slack • Notion • 디자이너 및 기획자와의 협업"
-            },
-            {
-              "title": "Project Management",
-              "content": "Agile • Scrum • 티켓 기반 업무 관리 • 문서화 및 프로세스 개선"
+              "title": "디자인 & 커뮤니케이션",
+              "content": "Figma • Jira • Slack • Notion • Discord"
             }
           ]
         }
@@ -227,6 +360,327 @@
   },
   "home": {
     "thankYou": "스크롤해주셔서 감사합니다!",
-    "moreInfo": "더 많은 정보는 다른 페이지에서 확인하세요."
+    "moreInfo": "저희 집 고양이들입니다 🐈 초록색 눈이 설기, 주황색 눈이 우유에요. 너무 귀엽죠? 더 많은 정보들을 다른 페이지에서 확인해보세요. (숨겨진 고양이 사진들이 있어요 🫢)"
+  },
+  "skills": {
+    "title": "기술 스택",
+    "subtitle": "아이디어를 현실로 만들기 위해 사용하는 기술과 도구들",
+    "sections": {
+      "frontend": "프론트엔드",
+      "collaboration": "개발 및 협업 도구"
+    },
+    "descriptions": {
+      "html5": "웹 접근성과 시맨틱 마크업의 중요성을 인지하고 있으며, 실제 프로젝트에서 시맨틱 태그와 alt 속성 등을 활용해 사용자 경험과 접근성을 고려한 구조로 마크업을 구성한 경험이 있습니다.",
+      "css3": "미디어 쿼리를 활용한 반응형(mobile-first) 디자인과 CSS 애니메이션을 통해 사용자 인터랙션을 자연스럽게 표현할 수 있으며, 별도의 프레임워크 없이도 확장성 있는 스타일링이 가능합니다.",
+      "javascript": "바닐라 JavaScript만으로 포트폴리오 웹사이트를 구축한 경험이 있으며, ES6 문법을 적극적으로 활용하고 DOM 조작, 이벤트 처리, Flexbox 등 웹 개발의 핵심 개념을 깊이 있게 이해하고 있습니다.",
+      "react": "React의 핵심 렌더링 구조와 Fiber Architecture의 도입 배경 및 작동 원리에 대해 이해하고 있으며, 컴포넌트 기반 아키텍처의 진화 과정을 설명할 수 있습니다. Suspense, Error Boundary, Context API 등의 기능을 통해 사용자 경험을 향상시키는 UI 구성 경험이 있으며, useReducer와 useContext를 상황에 따라 적절히 구분해 코드의 가독성과 유지보수성을 높이려는 시도를 지속적으로 하고 있습니다. 최신 버전의 React 문법 변화에도 빠르게 적응하며 실무에 적용하고 있습니다.",
+      "reactNative": "React Native를 활용한 모바일 앱 개발 경험이 있으며, 플랫폼 특성에 따른 조건부 렌더링과 BottomSheet UI 구현에 익숙합니다. WebGL 기반의 three.js를 활용해 3D 렌더링을 모바일 앱에 적용해본 경험이 있으며, 네이티브 환경에서도 최적화된 사용자 경험을 제공하기 위해 FlatList, useCallback 등을 통해 성능 최적화에도 신경 쓰고 있습니다. 플랫폼별 스타일 처리와 StatusBar, SafeAreaView 등의 네이티브 요소도 고려한 UI 설계가 가능합니다.",
+      "typescript": "TypeScript 컴파일러(tsc)의 작동 원리를 이해하고 있으며, 타입 안정성과 확장성을 고려한 interface 기반의 설계에 익숙합니다. union, tuple, enum 등의 문법을 적절히 활용해 복잡한 데이터 구조도 안정적으로 관리할 수 있으며, 실무에서는 타입 에러를 사전에 예방하고 생산성을 높이기 위해 적극적으로 도입해왔습니다.",
+      "nextJS": "Next.js에 대한 지속적인 학습을 이어가고 있으며, 실제 프로젝트에서 SSR과 CSR의 차이를 이해하고 페이지 특성에 따라 적절한 렌더링 방식을 선택해 구현한 경험이 있습니다. App Router 기반의 병렬 라우팅(Parallel Routing)을 활용해 유연한 페이지 구성을 시도해보았고, GraphQL 환경에서는 Relay를 사용해 대규모 데이터를 효율적으로 처리한 경험이 있습니다. 아직 완전히 숙련된 단계는 아니지만, 실전 적용을 통해 점진적으로 역량을 넓혀가고 있습니다.",
+      "zustand": "Zustand의 경량 상태 관리 구조와 hook 기반 스토어 패턴을 이해하고 있으며, 복잡한 boilerplate 없이 간단하게 전역 상태를 구성해 빠른 프로토타이핑과 컴포넌트 간 데이터 공유를 구현할 수 있습니다. TypeScript와 함께 사용하며 store 타입 안전성을 유지한 개발 경험이 있습니다.",
+      "mobx": "MobX의 관찰자(Observer) 패턴 기반 상태 관리를 이해하고 있으며, @observable, @action, @computed 등의 데코레이터를 통해 반응형 UI를 구성해본 경험이 있습니다. 상태 변화에 따른 자동 렌더링 흐름을 설명할 수 있으며, 복잡한 컴포넌트 간 상태 의존성도 간결하게 표현할 수 있습니다.",
+      "redux": "Redux의 예측 가능한 상태 흐름과 명확한 구조를 이해하고 있으며, state → action → reducer → store 의 데이터 플로우를 정확히 설명할 수 있습니다. Redux Toolkit을 활용한 전역 상태 관리와 미들웨어(Redux Thunk)를 통한 비동기 처리 경험이 있습니다.",
+      "styledComponent": "styled-components의 Component-Based Design 관점에서의 장점을 이해하고 있으며, 컴포넌트 단위의 스타일 추상화 및 재사용 가능한 구조를 구성할 수 있습니다. Tailwind CSS와 같은 유틸리티 기반 프레임워크와 비교해 선언적이고 명확한 스타일 흐름이 필요한 상황에서 styled-components를 선택해 사용했으며, 선언 방식에 따른 가독성 이슈 또한 인지하고 있습니다. 최근 공식 유지보수 종료 이슈에 따라, 대안과 마이그레이션 방안에 대해서도 관심을 가지고 있습니다.",
+      "tailwind": "Tailwind CSS를 활용한 스타일링에 익숙하며, tailwind.config.ts를 통해 커스터마이징 및 전역 설정을 구성할 수 있습니다. Tailwind가 기본적으로 Override하는 스타일 속성을 인지하고 있으며, 이를 고려해 h1, button 등의 요소를 기반으로 공용 UI 컴포넌트를 재정의하고 재사용 가능한 구조로 구성한 경험이 있습니다. 실무에서도 전역 스타일 관리와 디자인 시스템 구현에 Tailwind를 적극적으로 활용하고 있습니다.",
+      "reactQuery": "React Query의 캐싱 메커니즘과 쿼리 흐름을 이해하고 있으며, queryKey를 통한 데이터 식별 및 상태 관리가 가능합니다. mutation과 fetchQuery의 차이를 구분해 상황에 맞게 사용할 수 있으며, invalidateQueries를 통해 쿼리 상태를 적절히 갱신하는 경험도 보유하고 있습니다. 로딩, 에러, 성공 상태에 따른 UI 분기를 통해 서버 상태 관리에 구조적으로 접근할 수 있습니다.",
+      "git": "Git CLI를 활용해 브랜치 생성, 커밋, 병합 등의 작업을 능숙하게 수행할 수 있으며, Git과 GitHub의 차이점을 명확히 인지하고 있습니다. 커밋 히스토리 관리를 위해 squash, reword, drop 등의 리베이스 옵션을 적절히 사용해본 경험이 있으며, 복잡한 병합 충돌 상황에서도 커밋 단위로 원인을 파악하고 해결할 수 있습니다. 또한 rebase의 작동 방식과 base 커밋의 개념을 정확히 이해하고 있어 팀 내 깔끔한 히스토리 유지를 위한 Git 전략을 설계할 수 있습니다.",
+      "github": "GitHub Projects를 활용해 이슈 관리와 작업 진행 상황을 시각화할 수 있으며, Fork, Sourcetree 등의 버전 관리 도구도 병행하여 사용한 경험이 있습니다. 코드 리뷰와 Pull Request 프로세스를 통해 코드 품질을 향상시키는 커뮤니케이션 방법에 익숙하며, GitHub 커뮤니티의 생태계와 협업 방식에 대한 이해를 기반으로 원활한 팀 협업을 진행할 수 있습니다.",
+      "githubActions": "GitHub Actions를 통해 CI/CD 자동화 파이프라인을 구축해본 경험이 있으며, YAML 문서를 작성해 프로젝트의 빌드 및 배포를 자동화한 바 있습니다. 자동화 과정에서 발생하는 오류의 로그를 분석하고 문제를 해결한 경험이 있으며, 현재는 반복적인 워크플로우를 줄이기 위해 지속적인 학습과 개선을 이어가고 있습니다.",
+      "vercel": "GitHub 리포지토리를 연동해 자동화 배포 파이프라인을 구성한 경험이 있으며, 커스텀 도메인 연결 및 Redirect 설정도 수행할 수 있습니다. Preview URL을 통해 배포 전 검수 과정을 진행해본 경험이 있고, 환경 변수 관리와 CI/CD 통합 등 실무 기능을 적극 활용해왔습니다.",
+      "figma": "디자이너와의 협업을 통해 컴포넌트 기반 디자인 시스템을 이해하고 구현할 수 있으며, 반응형 웹 디자인의 구조를 분석해 UI에 반영하는 데 익숙합니다. Figma 상에서 어색한 사용자 플로우를 인지하고 개선 제안을 한 경험이 있으며, 플러그인 활용과 프로토타이핑 기능을 포함해 디자이너와의 원활한 커뮤니케이션이 가능합니다.",
+      "notion": "Notion을 실무에서 적극적으로 활용해 Daily Scrum, 회의록, Git 커밋/코드리뷰 컨벤션 등을 문서화한 경험이 있습니다. 데이터베이스를 활용한 프로젝트 관리와 페이지 분할 구조 설계를 통해 팀원 간 협업을 원활하게 이끌었으며, 개인 일정 관리까지도 Notion으로 처리할 만큼 높은 숙련도를 보유하고 있습니다.",
+      "jira": "Jira의 칸반 보드를 활용한 티켓 기반 QA 프로세스를 경험했으며, 클라이언트와의 이슈 관리와 피드백 반영을 빠르게 진행할 수 있었습니다. Epic, Task, Sub-task의 구분을 명확히 이해하고 있으며, 이슈 우선순위 지정과 워크플로우 커스터마이징에도 익숙합니다.",
+      "slack": "Slack을 주요 커뮤니케이션 툴로 사용해 사용자 멘션, 스레드 중심 대화, 파일 공유 및 알림 관리를 능숙하게 할 수 있습니다. 실무에서는 슬랙 자동화 봇(예: Daily GeekNews 공유, CI/CD 알림 연동 등)을 활용해 반복적인 작업을 줄이고 효율적인 팀 커뮤니케이션 환경을 조성한 경험이 있습니다."
+    }
+  },
+  "hiddenCats": {
+    "title": "설기와 우유",
+    "subtitle": "Hidden Cats",
+    "description": "개발하다 지칠 때마다 위로가 되어주는 우리 집 고양이들입니다.",
+    "info": {
+      "period": "기간",
+      "role": "역할",
+      "team": "팀"
+    },
+    "secret": {
+      "title": "개발자의 비밀",
+      "content": "코딩이 막힐 때마다 고양이들을 보면서 힐링하고 있습니다. 설기의 초록 눈과 우유의 주황 눈이 디버깅보다 효과적일 때가 많아요. 🐈‍⬛✨"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "프로젝트 문의나 협업 제안이 있으시면 언제든 연락해 주세요.",
+    "labels": {
+      "email": "mshimdev@gmail.com",
+      "github": "깃허브",
+      "blog": "블로그",
+      "resume": "이력서 보기"
+    },
+    "contactInfo": {
+      "title": "연락처 정보",
+      "email": {
+        "label": "Email",
+        "value": "mshimdev@gmail.com"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "github.com/Earlssu"
+      },
+      "blog": {
+        "label": "Blog",
+        "value": "code-in-law.tistory.com"
+      }
+    },
+    "contactForm": {
+      "title": "메시지 보내기",
+      "name": {
+        "label": "이름",
+        "placeholder": "성함을 입력해주세요"
+      },
+      "email": {
+        "label": "이메일",
+        "placeholder": "이메일 주소를 입력해주세요"
+      },
+      "message": {
+        "label": "메시지",
+        "placeholder": "프로젝트 문의나 협업 제안 내용을 자유롭게 작성해주세요"
+      },
+      "submit": "메시지 보내기"
+    }
+  },
+  "career": {
+    "projects": [
+      {
+        "id": "xcore-system",
+        "title": "엑스코어시스템",
+        "subtitle": "XCoreSystem",
+        "period": "2024.08 ~ 2024.10",
+        "type": "HACCP 인증 업무용 앱",
+        "description": "RN, Expo 기반 HACCP 인증 절차 간소화를 위한 내부 업무용 앱 개발",
+        "role": "프론트엔드 개발자",
+        "team": "블라스트 개발팀",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Styled-Components",
+          "React-Query",
+          "Zustand"
+        ],
+        "achievements": [
+          "2개월 내 40개 이상의 핵심 화면 구현",
+          "기존 수기 방식 대비 데이터 입력 시간 50% 단축",
+          "중첩된 모달 구조를 계층적으로 설계하여 직관적 UX 개선",
+          "Postman으로 60여 개 API 사전 테스트를 통한 안정적 데이터 연동"
+        ],
+        "details": {
+          "problem": "기존 HACCP 인증 절차가 수기 방식으로 진행되어 비효율적이고 오류가 많이 발생하는 문제",
+          "solution": "모바일 앱을 통한 체계적인 데이터 입력 및 관리 시스템 구축",
+          "impact": "업무 효율성 대폭 개선 및 사용자 만족도 향상"
+        }
+      },
+      {
+        "id": "finter",
+        "title": "핀터",
+        "subtitle": "Finter",
+        "period": "2024.06 ~ 2024.08",
+        "type": "증시 커뮤니티 웹",
+        "description": "Next.js 기반 증시 커뮤니티 웹 페이지 개발",
+        "role": "프론트엔드 개발자",
+        "team": "블라스트 개발팀",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Relay",
+          "TypeScript",
+          "React-Query",
+          "Recoil"
+        ],
+        "achievements": [
+          "병렬 라우팅과 Suspense 적용으로 초기 로딩 속도 1.2초 단축",
+          "Git-flow 브랜치 전략 도입으로 월 100건 이상의 머지 충돌 해결",
+          "GraphQL과 Relay 도입으로 서버 요청 최소화 및 데이터 일관성 확보",
+          "팀 전체 코드 관리 안정성 확보"
+        ],
+        "details": {
+          "problem": "빈번한 머지 충돌로 인한 개발 생산성 저하 및 느린 로딩 속도",
+          "solution": "Git-flow 전략 및 최적화된 라우팅 시스템 도입",
+          "impact": "개발팀 생산성 향상 및 사용자 경험 개선"
+        }
+      },
+      {
+        "id": "pikble",
+        "title": "픽블",
+        "subtitle": "Pikble",
+        "period": "2024.02 ~ 2024.05",
+        "type": "3D 모델링 앱",
+        "description": "RN, Expo 기반 AI 기술을 활용한 3D 모델 제공 애플리케이션 개발",
+        "role": "프론트엔드 개발자",
+        "team": "블라스트 개발팀",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "React-Three-Fiber(R3F)",
+          "Three.js",
+          "Code-push"
+        ],
+        "achievements": [
+          "4대 소셜 로그인 기능 구현으로 신규 사용자 가입 장벽 완화",
+          "React-Three-Fiber 기반 3D 모델 뷰어 구현",
+          "10회 앱 심사 과정을 통한 성공적 출시",
+          "'앱 스토어 심사 대응 가이드' 문서화로 향후 프로젝트 기반 마련",
+          "BackHandler, LoadingIndicator 최적화로 사용자 이탈률 감소"
+        ],
+        "details": {
+          "problem": "복잡한 3D 모델을 모바일에서 효과적으로 시각화하는 기술적 도전",
+          "solution": "React-Three-Fiber를 활용한 최적화된 3D 렌더링 시스템 구축",
+          "impact": "혁신적인 3D 모델링 서비스의 성공적 론칭"
+        }
+      },
+      {
+        "id": "candypay",
+        "title": "캔디페이",
+        "subtitle": "CandyPay",
+        "period": "2023.08 ~ 2024.02",
+        "type": "분할결제 금융 앱",
+        "description": "하나의 앱에서 여러 명이 분할 결제가 가능한 금융 애플리케이션 개발",
+        "role": "프론트엔드 개발자",
+        "team": "블라스트 개발팀",
+        "technologies": [
+          "React Native",
+          "TypeScript",
+          "React-Query",
+          "Mobx",
+          "Code-push"
+        ],
+        "achievements": [
+          "QR 스캔, 분할 결제 등 핵심 결제 기능 UI/UX 개발 주도",
+          "사용자 계급별 차등 권한 부여 시스템 구현",
+          "개인 소득 정보 기반 결제 한도 설정 기능 구현",
+          "쿠콘 API 연동으로 최적의 연말정산 카드 소비액 계산 로직 구현",
+          "금융보안원 보안성 심사 통과를 위한 데이터 암호화 및 보안 가이드라인 준수"
+        ],
+        "details": {
+          "problem": "복잡한 분할 결제 시스템과 엄격한 금융 보안 요구사항",
+          "solution": "체계적인 권한 관리와 보안 가이드라인을 준수한 안전한 결제 시스템",
+          "impact": "혁신적인 분할 결제 서비스 출시 및 금융보안원 심사 통과"
+        }
+      },
+      {
+        "id": "portfolio",
+        "title": "포트폴리오 웹사이트",
+        "subtitle": "Portfolio Website",
+        "period": "2025.05 ~ 현재",
+        "type": "개인 프로젝트",
+        "description": "Next.js 14 App Router와 TypeScript를 기반으로 한 개발자 포트폴리오 웹사이트",
+        "role": "풀스택 개발자",
+        "team": "개인 프로젝트",
+        "technologies": [
+          "Next.js 14",
+          "TypeScript",
+          "TailwindCSS",
+          "Zustand",
+          "React i18next"
+        ],
+        "achievements": [
+          "단순한 자기소개를 넘어 성능 최적화, 사용자 경험, 개발 생산성에 대한 기술적 고민과 해결 과정을 담아낸 프로젝트",
+          "SSR/SSG 하이브리드 렌더링으로 SEO 최적화 달성",
+          "JSON-LD 구조화 데이터와 다국어 메타태그 구현",
+          "커스텀 캐러셀, 스크롤 기반 배경 전환, CSS Keyframes 별빛 애니메이션을 바닐라 JavaScript로 직접 구현",
+          "Zustand 기반 전역 상태 관리와 React i18next를 활용한 완전한 다국어 지원",
+          "TypeScript 100% 적용으로 타입 안전성 확보 및 모듈화된 컴포넌트 구조로 코드 재사용성 향상",
+          "Vercel과 GitHub Actions를 통한 자동화된 CI/CD 파이프라인 구축"
+        ],
+        "details": {
+          "problem": "개발자로서의 역량과 프로젝트 경험을 효과적으로 어필할 수 있는 플랫폼 필요",
+          "solution": "최신 웹 기술을 활용한 인터랙티브하고 접근성 높은 포트폴리오 구축",
+          "impact": "개발 역량 입증과 동시에 실제 프로덕션 경험 축적"
+        }
+      },
+      {
+        "id": "watery",
+        "title": "워터리",
+        "subtitle": "Watery",
+        "period": "2025.06 ~ 2025.09",
+        "type": "개인 프로젝트",
+        "description": "RN, Expo 기반 개인 수분 섭취 기록 앱 개발",
+        "role": "프론트엔드 개발자",
+        "team": "가치(Gachi) 크루 1기",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "JSI",
+          "Figma"
+        ],
+        "achievements": [
+          "약 50명을 대상으로 한 설문조사를 통해 핵심 타겟 유저의 pain point 파악 및 앱의 핵심 방향성 설정",
+          "JSI 아키텍처 도입으로 네이티브 성능에 가까운 UI 반응 속도 확보",
+          "Expo 내장 기능 적극 활용으로 초기 개발 속도 30% 이상 단축",
+          "디자이너와 Figma 기반 긴밀한 소통으로 UI/UX 완성도 향상",
+          "매주 스크럼과 WBS를 통한 투명한 진행 상황 공유 및 프로젝트 방향성 협업"
+        ],
+        "details": {
+          "problem": "단조로운 수분 섭취 기록의 지속성 문제 및 사용자 동기 부족",
+          "solution": "설문조사 기반 사용자 니즈 파악 및 JSI 아키텍처를 통한 성능 최적화",
+          "impact": "사용자 중심의 개발 프로세스 확립 및 팀 협업 역량 강화"
+        }
+      },
+      {
+        "id": "portfolio-v1",
+        "title": "포트폴리오 웹사이트: 초기 버전",
+        "subtitle": "First Portfolio Website",
+        "period": "2023.05 ~ 2023.06",
+        "type": "개인 프로젝트",
+        "description": "웹 개발의 근간이 되는 HTML, CSS, JavaScript(ES6+)에 대한 깊은 이해를 증명하기 위해 외부 라이브러리 없이 구현한 첫 개인 포트폴리오",
+        "role": "프론트엔드 개발자",
+        "team": "개인 프로젝트",
+        "technologies": [
+          "HTML5",
+          "CSS3",
+          "JavaScript (ES6+)",
+          "Vercel"
+        ],
+        "achievements": [
+          "프레임워크나 라이브러리 없이 순수 JavaScript(ES6+)만으로 동적 UI 구현",
+          "캐러셀 슬라이더, Form 유효성 검사 등 DOM 조작 및 이벤트 처리 능력 습득",
+          "@keyframes을 활용한 CSS 애니메이션으로 풍부한 시각적 효과 구현",
+          "Vercel을 통한 자동화된 배포 파이프라인 구축으로 효율적인 개발 워크플로우 적용"
+        ],
+        "details": {
+          "problem": "웹 개발 기초 기술에 대한 깊은 이해와 실무 적용 능력 증명 필요",
+          "solution": "외부 라이브러리 없이 순수 웹 기술만으로 포트폴리오 구현",
+          "impact": "웹 개발 기초 역량 확립 및 자동화된 배포 경험 습득"
+        }
+      },
+      {
+        "id": "lacier",
+        "title": "L'acier 남성 화장품 쇼핑몰",
+        "subtitle": "L'acier Men's Cosmetics E-commerce",
+        "period": "2023.01 ~ 2023.02",
+        "type": "팀 프로젝트",
+        "description": "React의 핵심 개념을 실제 프로젝트에 적용하며 컴포넌트 기반 개발 방식과 팀 협업의 기초를 다진 부트캠프 메인 프로젝트",
+        "role": "프론트엔드 개발자",
+        "team": "4인 팀 프로젝트",
+        "technologies": [
+          "React",
+          "JavaScript",
+          "CSS3",
+          "react-daum-postcode"
+        ],
+        "achievements": [
+          "라이브러리 없이 캐러셀 슬라이더 직접 구현으로 CSS transition과 transform 속성 심화 학습",
+          "react-daum-postcode 라이브러리 문제 해결을 통한 외부 라이브러리 분석 및 활용 능력 향상",
+          "재사용 가능한 컴포넌트 분리 및 관리로 React 모듈화와 컴포넌트 기반 아키텍처 이해",
+          "팀 협업을 통한 Git 워크플로우 및 코드 리뷰 프로세스 경험"
+        ],
+        "details": {
+          "problem": "React 기반 실제 프로젝트 경험 부족 및 팀 협업 역량 필요",
+          "solution": "실무와 유사한 환경에서 React 핵심 개념 적용 및 팀 개발 프로세스 경험",
+          "impact": "React 개발 역량 확립 및 팀 협업을 통한 실무 적응력 향상"
+        }
+      }
+    ]
   }
 }

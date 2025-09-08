@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import { TRAIT_KEYS } from '@/app/home/constants/traitData';
-import { TraitSection } from './TraitSection';
+import { TRAIT_KEYS } from '@/app/home/types';
+import { TraitSection } from '@/app/home/components';
 
 interface TraitCardListProps {
   expandedCard: number | null;

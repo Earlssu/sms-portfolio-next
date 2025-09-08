@@ -9,13 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "animate.css": "^4.1.1",
     "i18next": "^24.2.3",
     "next": "14.2.5",
     "next-i18next": "^15.4.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-i18next": "^15.4.1"
+    "react-i18next": "^15.4.1",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@types/node": "^20",

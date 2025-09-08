@@ -1,6 +1,6 @@
 export const NAV_ITEMS = [
-  { key: 'home', url: 'home' },
-  { key: 'career', url: 'career' },
-  { key: 'skills', url: 'skills' },
-  { key: 'contact', url: 'contact' },
+  { key: 'navigation.home', url: 'home' },
+  { key: 'navigation.career', url: 'career' },
+  { key: 'navigation.skills', url: 'skills' },
+  { key: 'navigation.contact', url: 'contact' },
 ];

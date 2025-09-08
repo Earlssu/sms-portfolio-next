@@ -15,7 +15,7 @@ export const EmailIcon: React.FC<EmailIconProps> = ({
       aria-label="Email icon"
       title="Email icon from SVG Repo"
       data-source="https://www.svgrepo.com/"
-      className={`text-tertiary ${className}`}
+      className={`${className}`}
       style={{
         display: 'inline-block',
         verticalAlign: 'middle',

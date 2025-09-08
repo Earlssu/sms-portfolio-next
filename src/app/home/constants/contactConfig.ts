@@ -1,9 +1,15 @@
-import { BlogIcon, EmailIcon, GithubIcon } from '@/shared/components/icons';
+import {
+  BlogIcon,
+  EmailIcon,
+  GithubIcon,
+  NotionIcon,
+} from '@/shared/components/icons';
 
 export interface ContactInfo {
   email: string;
   github: string;
   blog: string;
+  resume: string;
 }
 
 export const CONTACT_CONFIG = {
@@ -21,5 +27,10 @@ export const CONTACT_CONFIG = {
     label: 'Blog',
     icon: BlogIcon,
     type: 'blog' as const,
+  },
+  resume: {
+    label: 'Resume',
+    icon: NotionIcon,
+    type: 'resume' as const,
   },
 } as const;

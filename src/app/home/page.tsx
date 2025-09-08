@@ -2,13 +2,13 @@ import React, { Fragment, Suspense } from 'react';
 import 'animate.css';
 import { detectLanguage } from '@/shared/utils/languageUtils';
 import { createGenerateMetadata } from '@/shared/utils/metadataUtils';
-import { 
+import {
   ClientAnimations,
   I18nStaticContent,
+  LoadingScreen,
   StructuredData,
-  LoadingScreen
 } from '@/app/home/components';
-import { generateHomeMetadata } from './metadata';
+import { generateHomeMetadata } from '@/app/home/metadata';
 
 // 모듈화된 generateMetadata 함수 사용
 export const generateMetadata = createGenerateMetadata(generateHomeMetadata);

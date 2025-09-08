@@ -1,13 +1,7 @@
-import { Metadata } from 'next';
-
-// 유틸리티 함수 import
-import { 
-  SupportedLanguage, 
-  DEFAULT_LANGUAGE, 
-  PERSON_NAME_MAP 
-} from '@/shared/utils/languageUtils';
-import { getTranslationData } from '@/shared/utils/translationUtils';
-import { createPageMetadata } from '@/shared/utils/metadataUtils';
+import {Metadata} from 'next'; // 유틸리티 함수 import
+import {DEFAULT_LANGUAGE,} from '@/shared/utils/languageUtils';
+import {getTranslationData} from '@/shared/utils/translationUtils';
+import {createPageMetadata} from '@/shared/utils/metadataUtils';
 
 /**
  * 홈 페이지 메타데이터 생성 함수
@@ -16,7 +10,7 @@ import { createPageMetadata } from '@/shared/utils/metadataUtils';
 export const generateHomeMetadata = createPageMetadata({
   titleTemplate: {
     ko: '심민섭 - 프론트엔드 개발자 포트폴리오',
-    en: 'MinSeob Shim - Frontend Developer Portfolio'
+    en: 'MinSeob Shim - Frontend Developer Portfolio',
   },
   descriptionTemplate: {
     ko: (() => {
@@ -26,14 +20,14 @@ export const generateHomeMetadata = createPageMetadata({
     en: (() => {
       const t = getTranslationData('en');
       return `${t.hero} ${t.heroDesc02}`;
-    })()
+    })(),
   },
   keywords: {
     ko: [
       '프론트엔드 개발자',
       '심민섭',
       'React',
-      'TypeScript', 
+      'TypeScript',
       'Next.js',
       '웹 개발',
       '포트폴리오',
@@ -50,12 +44,12 @@ export const generateHomeMetadata = createPageMetadata({
       'Portfolio',
       'User Experience',
       'UX',
-    ]
+    ],
   },
   siteName: {
     ko: '심민섭 포트폴리오',
-    en: 'MinSeob Shim Portfolio'
-  }
+    en: 'MinSeob Shim Portfolio',
+  },
 });
 
 // 기본 메타데이터 (하위 호환성)

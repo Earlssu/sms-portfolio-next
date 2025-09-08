@@ -166,11 +166,21 @@ export const formatContent = (
     preserveLineBreaks = true,
   } = options;
 
-  // 이미 bullet point나 줄바꿈이 있는 경우 그대로 반환 (옵션에 따라)
-  if (
-    (preserveBulletPoints && content.includes('•')) ||
-    (preserveLineBreaks && content.includes('\n'))
-  ) {
+  // 이미 bullet point가 있는 경우 그대로 반환 (옵션에 따라)
+  if (preserveBulletPoints && content.includes('•')) {
+    return [content];
+  }
+
+  // 이미 여러 줄바꿈(\n\n)이 있는 경우, 단락별로 분리하여 반환
+  if (preserveLineBreaks && content.includes('\n\n')) {
+    return content
+      .split(/\n\n+/)
+      .map(paragraph => paragraph.trim())
+      .filter(paragraph => paragraph.length > 0);
+  }
+
+  // 단일 줄바꿈만 있는 경우 그대로 반환
+  if (preserveLineBreaks && content.includes('\n')) {
     return [content];
   }
 

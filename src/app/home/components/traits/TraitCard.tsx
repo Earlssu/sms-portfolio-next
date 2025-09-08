@@ -26,22 +26,22 @@ const TraitCard: React.FC<TraitCardProps> = ({
     <div
       className={`
         border border-card shadow-xl ring-2 ring-card bg-card rounded-lg p-6
-        transition-all duration-700 ease-out transform flex flex-col
+        transition-all duration-700 ease-out transform flex flex-col backdrop-blur-sm
         ${
           isExpanded
-            ? 'h-fit w-full max-w-screen-lg shadow-2xl'
-            : 'h-32 w-80 shadow-lg'
+            ? 'max-h-[80vh] w-full max-w-screen-lg shadow-2xl ring-opacity-20'
+            : 'h-32 w-80 shadow-lg ring-opacity-10'
         }
         ${className || ''}
       `}
     >
       <h2
         className={`
-          font-bold transition-all duration-500
+          font-bold transition-all duration-500 drop-shadow-sm
           ${
             isExpanded
-              ? 'text-2xl text-primary mb-4'
-              : 'text-lg text-tertiary mb-2'
+              ? 'text-2xl text-white mb-4'
+              : 'text-lg text-gray-300 mb-2'
           }
         `}
       >
@@ -50,14 +50,14 @@ const TraitCard: React.FC<TraitCardProps> = ({
 
       <div
         className={`
-        transition-all duration-500 ease-in-out overflow-hidden
-        ${isExpanded ? 'opacity-100 max-h-[1000px]' : 'opacity-50 max-h-8'}
+        transition-all duration-500 ease-in-out overflow-hidden flex-1 min-h-0
+        ${isExpanded ? 'opacity-100' : 'opacity-50 max-h-8'}
       `}
       >
         {isExpanded ? (
-          <div>{children}</div>
+          <div className="h-full min-h-0">{children}</div>
         ) : (
-          <p className="text-sm text-gray-500 truncate">
+          <p className="text-sm text-gray-400 truncate opacity-75">
             스크롤하여 자세히 보기...
           </p>
         )}

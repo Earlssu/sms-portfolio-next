@@ -1,45 +1,41 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense } from 'react';
+import { detectLanguage } from '@/shared/utils/languageUtils';
+import { createGenerateMetadata } from '@/shared/utils/metadataUtils';
+import ContactContent from '@/app/contact/ContactContent';
+import { generateContactMetadata } from '@/app/contact/metadata';
+import ContactStructuredData from '@/app/contact/ContactStructuredData';
+import ContactStaticContent from '@/app/contact/ContactStaticContent';
 
-const Contact = () => {
+// 모듈화된 generateMetadata 함수 사용
+export const generateMetadata = createGenerateMetadata(generateContactMetadata);
+
+interface ContactProps {
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+/**
+ * Contact 페이지 - i18n 지원 SSR + SEO 최적화
+ * Home 페이지와 동일한 SEO 구조 적용
+ */
+export default function Contact({ searchParams }: ContactProps) {
+  const lang = detectLanguage(searchParams);
+
   return (
     <Fragment>
-      <div className={'flex gap-4 h-screen items-center'}>
-        <div
-          className={'flex px-2 border-r border-tertiary flex-1 justify-center'}
-        >
-          <a>📧 mshimdev@gmail.com</a>
-        </div>
+      {/* JSON-LD 구조화 데이터 */}
+      <ContactStructuredData lang={lang} />
 
-        <div
-          className={
-            'flex px-2 gap-4 border-r border-tertiary flex-1 justify-center hover:text-lg hover:text-quaternary-hover transition-colors-smooth'
-          }
-        >
-          <a
-            className={''}
-            href={'https://github.com/Earlssu'}
-            target={'_blank'}
-          >
-            Github
-          </a>
-        </div>
+      <div className="relative">
+        {/* SEO를 위한 다국어 정적 콘텐츠 (서버 사이드 렌더링) */}
+        <ContactStaticContent lang={lang} />
 
-        <div
-          className={
-            'flex px-2 gap-4 flex-1 justify-center hover:text-lg hover:text-quaternary-hover transition-colors-smooth'
-          }
+        {/* 클라이언트 인터랙션 */}
+        <Suspense
+          fallback={<div className="min-h-screen bg-gray-900 animate-pulse" />}
         >
-          <a
-            className={''}
-            href={'https://code-in-law.tistory.com/'}
-            target={'_blank'}
-          >
-            Blog
-          </a>
-        </div>
+          <ContactContent />
+        </Suspense>
       </div>
     </Fragment>
   );
-};
-
-export default Contact;
+}
