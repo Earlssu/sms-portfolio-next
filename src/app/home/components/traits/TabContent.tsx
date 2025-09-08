@@ -9,13 +9,11 @@ interface TabContentProps {
     content: string;
     detail?: Array<{ title: string; content: string }>;
   }>;
-  contact?: { email: string; github: string; blog: string; resume: string };
 }
 
 export const TabContent: React.FC<TabContentProps> = ({
   tabIndex,
   sections,
-  contact,
 }) => {
   return (
     <div

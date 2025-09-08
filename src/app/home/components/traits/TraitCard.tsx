@@ -33,7 +33,7 @@ const TraitCard: React.FC<TraitCardProps> = ({
         transition-all duration-700 ease-out transform flex flex-col backdrop-blur-sm
         ${
           isExpanded
-            ? 'max-h-[80vh] w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-screen-lg shadow-2xl ring-opacity-20'
+            ? 'max-h-[80vh] w-full max-w-screen-lg shadow-2xl ring-opacity-20'
             : 'h-24 sm:h-28 md:h-32 w-64 sm:w-72 md:w-80 shadow-lg ring-opacity-10'
         }
         ${className || ''}
