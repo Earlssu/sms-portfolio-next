@@ -35,7 +35,7 @@ const SkillsContent: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen w-full relative"
+      className="min-h-screen w-full relative pb-20 md:pb-0"
       style={{
         background: 'linear-gradient(135deg, #2a2a2a 0%, #353535 25%, #1a1a1a 50%, #282828 75%, #1f1f1f 100%)',
       }}
@@ -61,15 +61,15 @@ const SkillsContent: React.FC = () => {
           </div>
 
           {/* 스킬 그리드 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 mb-8 md:mb-0">
             {/* Frontend 섹션 */}
             <div className="animate__animated animate__fadeInLeft" style={{ animationDelay: '0.3s' }}>
               <div className="bg-white/5 backdrop-blur-lg rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/10">
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 md:mb-8 flex items-center gap-2 sm:gap-3">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6 flex items-center gap-2 sm:gap-3">
                   <span className="text-blue-400">⚡</span>
                   {t('skills.sections.frontend')}
                 </h2>
-                  <div className="space-y-4 sm:space-y-6">
+                  <div className="space-y-3 sm:space-y-4 md:space-y-6">
                     <SkillDescription skill={"html5"} />
                     <SkillDescription skill={"css3"} />
                     <SkillDescription skill={"javascript"} />
@@ -90,11 +90,11 @@ const SkillsContent: React.FC = () => {
             {/* Communication Tools 섹션 */}
             <div className="animate__animated animate__fadeInRight" style={{ animationDelay: '0.5s' }}>
               <div className="bg-white/5 backdrop-blur-lg rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/10">
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 md:mb-8 flex items-center gap-2 sm:gap-3">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6 flex items-center gap-2 sm:gap-3">
                   <span className="text-green-400">🛠️</span>
                   {t('skills.sections.collaboration')}
                 </h2>
-                  <div className="space-y-4 sm:space-y-6">
+                  <div className="space-y-3 sm:space-y-4 md:space-y-6">
                     <SkillDescription skill={"git"} />
                     <SkillDescription skill={"github"} />
                     <SkillDescription skill={"githubActions"} />
