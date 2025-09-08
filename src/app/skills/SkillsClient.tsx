@@ -48,28 +48,28 @@ const SkillsContent: React.FC = () => {
       </div>
 
       {/* 메인 콘텐츠 */}
-      <div className="relative z-10 container mx-auto px-6 py-20">
-        <div className="max-w-6xl mx-auto">
+      <div className="relative z-10 container mx-auto responsive-padding py-10 sm:py-16 md:py-20">
+        <div className="responsive-margin">
           {/* 페이지 제목 */}
-          <div className="text-center mb-16 animate__animated animate__fadeInUp">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate__animated animate__fadeInUp">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4">
               {t('skills.title')}
             </h1>
-            <p className="text-lg text-white/70 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-white/70 max-w-2xl mx-auto px-4">
               {t('skills.subtitle')}
             </p>
           </div>
 
           {/* 스킬 그리드 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {/* Frontend 섹션 */}
             <div className="animate__animated animate__fadeInLeft" style={{ animationDelay: '0.3s' }}>
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+              <div className="bg-white/5 backdrop-blur-lg rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/10">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 md:mb-8 flex items-center gap-2 sm:gap-3">
                   <span className="text-blue-400">⚡</span>
                   {t('skills.sections.frontend')}
                 </h2>
-                  <div className="space-y-6">
+                  <div className="space-y-4 sm:space-y-6">
                     <SkillDescription skill={"html5"} />
                     <SkillDescription skill={"css3"} />
                     <SkillDescription skill={"javascript"} />
@@ -89,12 +89,12 @@ const SkillsContent: React.FC = () => {
 
             {/* Communication Tools 섹션 */}
             <div className="animate__animated animate__fadeInRight" style={{ animationDelay: '0.5s' }}>
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+              <div className="bg-white/5 backdrop-blur-lg rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/10">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 md:mb-8 flex items-center gap-2 sm:gap-3">
                   <span className="text-green-400">🛠️</span>
                   {t('skills.sections.collaboration')}
                 </h2>
-                  <div className="space-y-6">
+                  <div className="space-y-4 sm:space-y-6">
                     <SkillDescription skill={"git"} />
                     <SkillDescription skill={"github"} />
                     <SkillDescription skill={"githubActions"} />

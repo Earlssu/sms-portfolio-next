@@ -6,13 +6,13 @@
   --abs-offset: 0;
   --total: 5;
 
-  /* 카드 기본 크기 */
-  --width: clamp(200px, 25vw, 350px);
-  --height: clamp(280px, 35vw, 500px);
+  /* 카드 기본 크기 - 반응형 */
+  --width: clamp(150px, 22vw, 350px);
+  --height: clamp(210px, 32vw, 500px);
 
-  /* 위치 계산 - 모든 카드를 중앙에 겹쳐서 배치 */
-  --x: calc(var(--offset) * 250px); /* 좌우 간격 */
-  --y: calc(var(--offset) * 125px); /* 세로 간격 (겹쳐보이게) */
+  /* 위치 계산 - 모든 카드를 중앙에 겹쳐서 배치 - 반응형 */
+  --x: calc(var(--offset) * clamp(120px, 15vw, 250px)); /* 좌우 간격 */
+  --y: calc(var(--offset) * clamp(60px, 8vw, 125px)); /* 세로 간격 (겹쳐보이게) */
   --scale: calc(1 - var(--abs-offset) * 0.1); /* 크기 축소 */
   --rotation: calc(var(--offset) * 10deg); /* 살짝 회전 */
 

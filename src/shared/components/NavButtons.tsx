@@ -20,16 +20,43 @@ const NavButtons: React.FC = () => {
   const shouldUseWhiteText = isHomePage || isDarkMode;
 
   return (
-    <div className="fixed right-4 top-14 flex flex-col gap-4 z-50">
-      {NAV_ITEMS.map((item, idx) => (
-        <Button
-          key={`btn_${idx}`}
-          content={t(item.key)}
-          onClick={() => router.push(`/${item.url}`)}
-          isWhiteText={shouldUseWhiteText}
-        />
-      ))}
-    </div>
+    <>
+      {/* 데스크톱 버전 - 세로 배치 */}
+      <div className="hidden md:flex fixed right-4 top-14 flex-col gap-4 z-50">
+        {NAV_ITEMS.map((item, idx) => (
+          <Button
+            key={`btn_desktop_${idx}`}
+            content={t(item.key)}
+            onClick={() => router.push(`/${item.url}`)}
+            isWhiteText={shouldUseWhiteText}
+          />
+        ))}
+      </div>
+
+      {/* 모바일 버전 - 하단 네비게이션 */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-t border-white/10">
+        <div className="flex justify-around items-center py-2 px-4">
+          {NAV_ITEMS.map((item, idx) => (
+            <button
+              key={`btn_mobile_${idx}`}
+              onClick={() => router.push(`/${item.url}`)}
+              className={`
+                flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg
+                transition-all duration-200 active:scale-95
+                ${pathname === `/${item.url}` || (pathname === '/' && item.url === '') 
+                  ? 'bg-white/20 text-white' 
+                  : shouldUseWhiteText ? 'text-white/70 hover:text-white hover:bg-white/10' : 'text-black/70 hover:text-black hover:bg-black/10'
+                }
+              `}
+            >
+              <span className="text-xs font-medium text-center leading-tight">
+                {t(item.key)}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 

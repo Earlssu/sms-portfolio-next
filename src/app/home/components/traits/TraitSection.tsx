@@ -53,8 +53,8 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
   }`;
 
   return (
-    <section className="h-screen flex items-center justify-center px-10 relative pb-80">
-      <div className="max-w-screen-2xl mx-auto w-full h-screen flex items-center justify-center relative">
+    <section className="min-h-screen flex items-center justify-center responsive-padding relative pb-20 sm:pb-40 md:pb-80">
+      <div className="w-full mx-auto responsive-margin min-h-screen flex items-center justify-center relative">
         {/* 모든 섹션에 별빛 테마 배경 적용 */}
         <StarlightBackground
           isExpanded={isExpanded}

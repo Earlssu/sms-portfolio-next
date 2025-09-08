@@ -61,17 +61,17 @@ const CarouselCard = ({
           {title}
 
           {/* 카테고리와 팀 사이즈 정보 */}
-          <div className="flex flex-wrap gap-2 mt-2 mb-2">
+          <div className="flex flex-wrap gap-1 sm:gap-2 mt-1 sm:mt-2 mb-1 sm:mb-2">
             {category && (
               <span
-                className={`inline-block px-2 py-1 rounded-md text-xs font-medium border ${getCategoryStyle(category)}`}
+                className={`inline-block px-1 sm:px-2 py-0.5 sm:py-1 rounded-md text-xs font-medium border ${getCategoryStyle(category)}`}
               >
                 {category === 'Blast' ? '사내 프로젝트' : '사이드 프로젝트'}
               </span>
             )}
           </div>
 
-          <p className={'text-white/80 text-sm mt-2'}>클릭하여 자세히 보기</p>
+          <p className={'text-white/80 text-xs sm:text-sm mt-1 sm:mt-2'}>클릭하여 자세히 보기</p>
         </div>
         <div className="num">{num}</div>
         <img src={imageSrc} alt={title} />

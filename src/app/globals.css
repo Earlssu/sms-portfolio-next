@@ -35,6 +35,54 @@ body {
   overflow-x: hidden;
 }
 
+/* 반응형 기본 설정 */
+@layer base {
+  /* 전역 폰트 크기 반응형 설정 */
+  html {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width: 1920px) {
+    html {
+      font-size: 18px;
+    }
+  }
+}
+
+/* 반응형 유틸리티 클래스 */
+@layer utilities {
+  /* 모바일에서 스케일 조정 */
+  .mobile-scale {
+    @apply transform scale-90 sm:scale-100;
+  }
+  
+  /* 반응형 패딩 */
+  .responsive-padding {
+    @apply px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12;
+  }
+  
+  /* 반응형 마진 */
+  .responsive-margin {
+    @apply mx-auto max-w-screen-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl;
+  }
+  
+  /* 반응형 그리드 */
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+  
+  /* 반응형 플렉스 */
+  .responsive-flex {
+    @apply flex flex-col sm:flex-row;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -249,5 +297,23 @@ body {
 
   .custom-scrollbar::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+/* 모바일에서 바텀 네비게이션을 위한 패딩 추가 */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 60px; /* 모바일 네비게이션 높이만큼 */
+  }
+}
+
+/* 터치 디바이스에서 호버 효과 최적화 */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-125:hover {
+    transform: none;
+  }
+  
+  .hover\:scale-125:active {
+    transform: scale(1.1);
   }
 }

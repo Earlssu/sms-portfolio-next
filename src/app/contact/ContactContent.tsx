@@ -20,18 +20,18 @@ const ContactContentInner = () => {
   }, [setCurrentPage]);
 
   return (
-    <div className="min-h-screen w-full relative pb-80">
+    <div className="min-h-screen w-full relative pb-20 sm:pb-40 md:pb-80">
       {/* 배경 */}
       <ContactBackground />
 
       {/* 메인 콘텐츠 */}
-      <div className="relative z-10 container mx-auto px-6 py-20">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative z-10 container mx-auto responsive-padding py-10 sm:py-16 md:py-20">
+        <div className="responsive-margin">
           {/* 헤더 */}
           <ContactHeader />
 
           {/* 콘텐츠 그리드 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {/* 연락처 정보 */}
             <ContactInfo />
 

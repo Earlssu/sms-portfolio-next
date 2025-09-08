@@ -48,27 +48,27 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({
       />
 
       {/* 상단 고정 영역: 아이콘, 제목, 부제목 */}
-      <div className="relative z-10 flex-shrink-0 text-center px-4 pt-4 pb-2 flex flex-col gap-4">
+      <div className="relative z-10 flex-shrink-0 text-center px-4 pt-4 pb-2 flex flex-col gap-2 sm:gap-4">
         {/* 아이콘 */}
-        <div className="text-5xl md:text-6xl mb-4 animate-pulse">
+        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-2 sm:mb-4 animate-pulse">
           {getSlideIcon(slide.id)}
         </div>
 
         {/* 제목 */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-2 sm:mb-3 leading-tight px-2">
           {slide.title}
         </h1>
 
         {/* 부제목 */}
         {slide.subtitle && (
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-quaternary mb-4 font-light">
+          <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-quaternary mb-2 sm:mb-4 font-light px-2">
             {slide.subtitle}
           </h2>
         )}
       </div>
 
       {/* 스크롤 가능한 콘텐츠 영역 */}
-      <div className="relative z-10 flex-1 overflow-y-auto custom-scrollbar px-4 pb-4 w-3/4">
+      <div className="relative z-10 flex-1 overflow-y-auto custom-scrollbar px-4 pb-4 w-full sm:w-5/6 md:w-3/4">
         <div className="max-w-4xl mx-auto">
           {/* 메인 콘텐츠 */}
           <div className="space-y-6">
