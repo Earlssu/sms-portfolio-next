@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface ContactItemProps {
   type: 'email' | 'github' | 'blog' | 'resume';
@@ -35,6 +38,7 @@ export const ContactItem: React.FC<ContactItemProps> = ({
   };
 
   const linkProps = getLinkProps();
+  const { t } = useTranslation();
 
   return (
     <div className={'flex-1 flex gap-4 justify-center'}>
@@ -42,14 +46,13 @@ export const ContactItem: React.FC<ContactItemProps> = ({
         {...linkProps}
         className={`
           flex gap-2 text-lg transition-colors
-          ${isDarkMode 
-            ? 'text-white hover:text-blue-300' 
-            : 'text-tertiary hover:text-primary'
+          ${
+            isDarkMode
+              ? 'text-white hover:text-blue-300'
+              : 'text-tertiary hover:text-primary'
           }
         `}
-        title={
-          type === 'email' ? `${label}로 이메일 보내기` : `${label} 링크로 이동`
-        }
+        title={type === 'email' ? `email로 이메일 보내기` : `링크로 이동`}
       >
         {icon && (
           <span className={'flex justify-center items-center'}>
@@ -57,7 +60,7 @@ export const ContactItem: React.FC<ContactItemProps> = ({
           </span>
         )}
         <span className={'flex justify-center items-center'}>
-          {type === 'email' ? value : label}
+          {t(`contact.labels.${type}`)}
         </span>
       </a>
     </div>

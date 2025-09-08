@@ -1,9 +1,8 @@
 {
   "hero": "벽에 막히면 벽을 오릅니다.",
   "heroDesc01": "클라이밍으로 단련한 끈기와 집중력으로 코드로 가로막힌 벽을 넘어섭니다.",
-  "heroDesc02": "끈기와 탐색으로 더 나은 사용자 경험을 만드는 개발자 심민섭입니다.",
-  "toHome": "처음으로",
-  "about": "소개",
+  "heroDesc02": "더 나은 사용자 경험을 목표로 향해 매일 노력하는 개발자 심민섭입니다.",
+  "headerResume": "이력서 보기",
   "navigation": {
     "home": "처음으로",
     "career": "주요 프로젝트",
@@ -109,7 +108,7 @@
         }
       ],
       "contact": {
-        "email": "shim5505@gmail.com",
+        "email": "mshimdev@gmail.com",
         "github": "https://github.com/earlssu",
         "blog": "https://code-in-law.tistory.com/",
         "resume": "https://fire-warrior-ca2.notion.site/MinSeob-Shim-6004fbc72ef74bc994cea07bf1e11f7e"
@@ -411,6 +410,12 @@
   "contact": {
     "title": "Contact",
     "subtitle": "프로젝트 문의나 협업 제안이 있으시면 언제든 연락해 주세요.",
+    "labels": {
+      "email": "mshimdev@gmail.com",
+      "github": "깃허브",
+      "blog": "블로그",
+      "resume": "이력서 보기"
+    },
     "contactInfo": {
       "title": "연락처 정보",
       "email": {

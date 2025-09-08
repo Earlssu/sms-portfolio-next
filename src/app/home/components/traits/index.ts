@@ -22,5 +22,5 @@ export { useCarouselData } from './useCarouselData';
 export { useCarouselKeyboard } from './useCarouselKeyboard';
 
 // Contact 관련 타입과 설정
-export type { ContactInfo } from './contactConfig';
-export { CONTACT_CONFIG } from './contactConfig';
+export type { ContactInfo } from '../../constants/contactConfig';
+export { CONTACT_CONFIG } from '../../constants/contactConfig';

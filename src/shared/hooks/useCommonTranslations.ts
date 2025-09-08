@@ -8,10 +8,5 @@ export function useCommonTranslations() {
     heroDesc01: t('heroDesc01'),
     heroDesc02: t('heroDesc02'),
     typeText: t('typeText'),
-    home: t('toHome'),
-    about: t('about'),
-    career: t('career'),
-    skills: t('skills'),
-    contact: t('contact'),
   };
 }

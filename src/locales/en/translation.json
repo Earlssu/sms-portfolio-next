@@ -1,9 +1,8 @@
 {
-  "hero": "When I hit a wall, I climb it.",
+  "hero": "When I hit a wall, I climb over the wall.",
   "heroDesc01": "With the persistence and focus honed through bouldering, I overcome walls blocked by code.",
-  "heroDesc02": "I'm Minseob Shim, a developer who creates better user experiences through persistence and exploration.",
-  "toHome": "Home",
-  "about": "About",
+  "heroDesc02": "I'm Minseob Shim, a developer who aims to create better user experiences.",
+  "headerResume": "Resume(Korean)",
   "navigation": {
     "home": "Home",
     "career": "Career",
@@ -109,7 +108,7 @@
         }
       ],
       "contact": {
-        "email": "shim5505@gmail.com",
+        "email": "mshimdev@gmail.com",
         "github": "https://github.com/earlssu",
         "blog": "https://code-in-law.tistory.com/",
         "resume": "https://fire-warrior-ca2.notion.site/MinSeob-Shim-6004fbc72ef74bc994cea07bf1e11f7e"
@@ -411,6 +410,12 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Feel free to reach out for project inquiries or collaboration proposals.",
+    "labels": {
+      "email": "mshimdev@gmail.com",
+      "github": "GitHub",
+      "blog": "Blog",
+      "resume": "Resume"
+    },
     "contactInfo": {
       "title": "Contact Information",
       "email": {

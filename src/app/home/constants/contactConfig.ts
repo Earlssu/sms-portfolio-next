@@ -29,7 +29,7 @@ export const CONTACT_CONFIG = {
     type: 'blog' as const,
   },
   resume: {
-    label: '이력서 보기',
+    label: 'Resume',
     icon: NotionIcon,
     type: 'resume' as const,
   },
