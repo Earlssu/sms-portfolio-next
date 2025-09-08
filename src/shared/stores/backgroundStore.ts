@@ -21,8 +21,8 @@ export const useBackgroundStore = create<BackgroundState>()((set, get) => ({
     
     const currentPage = get().currentPage;
     
-    // Career, Skills 페이지는 항상 다크모드
-    if (currentPage === 'career' || currentPage === 'skills') {
+    // Career, Skills, Contact 페이지는 항상 다크모드
+    if (currentPage === 'career' || currentPage === 'skills' || currentPage === 'contact') {
       if (!get().isDarkMode) {
         set({ isDarkMode: true });
       }
@@ -40,8 +40,8 @@ export const useBackgroundStore = create<BackgroundState>()((set, get) => ({
   setCurrentPage: (page: string | null) => {
     set({ currentPage: page });
     
-    // Career, Skills 페이지는 항상 다크모드로 강제 설정
-    if (page === 'career' || page === 'skills') {
+    // Career, Skills, Contact 페이지는 항상 다크모드로 강제 설정
+    if (page === 'career' || page === 'skills' || page === 'contact') {
       set({ isDarkMode: true });
     }
     // Home 페이지는 초기 Hero 섹션부터 시작하므로 라이트모드로 초기화

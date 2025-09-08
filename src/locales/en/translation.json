@@ -394,6 +394,41 @@
       "slack": "Fluent in using Slack as a primary team communication tool, including mentions, thread-based conversations, file sharing, and notifications. I've also used Slack bots (e.g., Daily GeekNews, CI/CD alerts) to reduce repetitive tasks and foster efficient communication in a real-world setting."
     }
   },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Feel free to reach out for project inquiries or collaboration proposals.",
+    "contactInfo": {
+      "title": "Contact Information",
+      "email": {
+        "label": "Email",
+        "value": "mshimdev@gmail.com"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "github.com/Earlssu"
+      },
+      "blog": {
+        "label": "Blog",
+        "value": "code-in-law.tistory.com"
+      }
+    },
+    "contactForm": {
+      "title": "Send Message",
+      "name": {
+        "label": "Name",
+        "placeholder": "Please enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Please enter your email address"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Feel free to write about project inquiries or collaboration proposals"
+      },
+      "submit": "Send Message"
+    }
+  },
   "career": {
     "projects": [
       {
