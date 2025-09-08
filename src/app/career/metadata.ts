@@ -7,8 +7,8 @@ import { createPageMetadata } from '@/shared/utils/metadataUtils';
 
 export const generateCareerMetadata = createPageMetadata({
   titleTemplate: {
-    ko: '심민섭 - 주요 프로젝트 | 프론트엔드 개발자',
-    en: 'MinSeob Shim - Major Projects | Frontend Developer'
+    ko: '주요 프로젝트 | 심민섭',
+    en: 'Major Projects | MinSeob Shim'
   },
   descriptionTemplate: {
     ko: '다양한 프론트엔드 프로젝트 경험과 성과를 소개합니다. React, TypeScript를 활용한 실무 프로젝트들을 확인해보세요.',

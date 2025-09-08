@@ -7,8 +7,8 @@ import { createPageMetadata } from '@/shared/utils/metadataUtils';
 
 export const generateContactMetadata = createPageMetadata({
   titleTemplate: {
-    ko: '심민섭 - 연락처 | 프론트엔드 개발자',
-    en: 'MinSeob Shim - Contact | Frontend Developer'
+    ko: 'Contact | 심민섭',
+    en: 'Contact | MinSeob Shim'
   },
   descriptionTemplate: {
     ko: '프로젝트 문의나 협업 제안이 있으시면 언제든 연락해 주세요. 이메일, GitHub, 블로그를 통해 소통할 수 있습니다.',
