@@ -7,8 +7,8 @@ import { createPageMetadata } from '@/shared/utils/metadataUtils';
 
 export const generateSkillsMetadata = createPageMetadata({
   titleTemplate: {
-    ko: '심민섭 - 기술 스택 | 프론트엔드 개발자',
-    en: 'MinSeob Shim - Tech Stack | Frontend Developer'
+    ko: '기술 스택 | 심민섭',
+    en: 'Tech Stack | MinSeob Shim'
   },
   descriptionTemplate: {
     ko: 'React, TypeScript, Next.js 등 다양한 프론트엔드 기술을 활용한 개발 경험과 노하우를 소개합니다.',

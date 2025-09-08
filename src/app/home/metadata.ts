@@ -9,8 +9,8 @@ import {createPageMetadata} from '@/shared/utils/metadataUtils';
  */
 export const generateHomeMetadata = createPageMetadata({
   titleTemplate: {
-    ko: '심민섭 - 프론트엔드 개발자 포트폴리오',
-    en: 'MinSeob Shim - Frontend Developer Portfolio',
+    ko: '심민섭 | 프론트엔드 개발자',
+    en: 'MinSeob Shim | Frontend Developer',
   },
   descriptionTemplate: {
     ko: (() => {

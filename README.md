@@ -172,6 +172,10 @@ bun start
 - [TailwindCSS Documentation](https://tailwindcss.com/docs)
 - [react-i18next Documentation](https://react.i18next.com/)
 
+## 🎨 Attribution
+
+- Favicon: Icon made by [Bharat Icons](https://www.flaticon.com/authors/bharat-icons) from [Flaticon](https://www.flaticon.com/)
+
 ## 🚀 배포
 
 이 프로젝트는 [Vercel Platform](https://vercel.com/)에서 쉽게 배포할 수 있습니다.
