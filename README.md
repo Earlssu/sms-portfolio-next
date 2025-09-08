@@ -1,6 +1,6 @@
 # 🚀 SEO 최적화된 다국어 포트폴리오 웹사이트
 
-> 개발자 개인의 경력, 기술 스택, 프로젝트 경험을 효과적으로 보여주는 프로페셔널 포트폴리오 사이트
+> 프론트엔드 개발자 심민섭의 경력, 기술 스택, 프로젝트 경험을 효과적으로 보여주는 프로페셔널 포트폴리오 사이트
 
 ## 📋 프로젝트 개요
 
@@ -8,12 +8,13 @@
 
 ### ✨ 주요 특징
 
-- 🔍 **SEO 최적화**: SSR + 구조화 데이터 (JSON-LD)
+- 🔍 **완전한 SEO 최적화**: SSR + 구조화 데이터 (JSON-LD) + 정적 콘텐츠
 - 🌍 **다국어 지원**: 한국어/영어 (react-i18next)
-- 📱 **반응형 디자인**: TailwindCSS 기반
-- ⚡ **성능 최적화**: Next.js 14 App Router + TypeScript
-- 🎨 **모던 UI/UX**: 타이핑 애니메이션, 스크롤 효과
-- 📊 **구조화 데이터**: 검색엔진 최적화를 위한 JSON-LD
+- 📱 **반응형 디자인**: TailwindCSS 기반 모던 UI
+- ⚡ **성능 최적화**: Next.js 14 App Router + 코드 분할
+- 🎨 **인터랙티브 UI/UX**: 글래스모피즘, 별빛 효과, 부드러운 애니메이션
+- 📧 **실시간 연락 기능**: EmailJS 통합 연락 폼
+- 🎯 **사용자 경험**: 직관적인 네비게이션과 상세 페이지 연결
 
 ## 🛠️ 기술 스택
 
@@ -23,16 +24,20 @@
 - **UI Library**: React 18
 - **Styling**: TailwindCSS + CSS Modules
 - **Animation**: CSS3 + animate.css
+- **State Management**: Zustand
 
-### 다국어 지원
+### 다국어 & 통신
 - **i18n**: react-i18next + i18next
 - **Languages**: 한국어, 영어
+- **Email Service**: EmailJS
+- **Routing**: Next.js App Router
 
 ### 개발 도구
 - **Package Manager**: Bun
 - **Linting**: ESLint
-- **Formatting**: Prettier
+- **Type Checking**: TypeScript
 - **Build**: Next.js built-in
+- **Deployment**: Vercel
 
 ## 🏛️ 시스템 아키텍처
 
@@ -112,20 +117,33 @@ bun start
 
 ## 🔧 주요 기능
 
-### 1. SEO 최적화
-- **SSR + CSR 하이브리드**: 검색엔진을 위한 서버 렌더링 + 사용자 경험을 위한 클라이언트 렌더링
-- **구조화 데이터**: JSON-LD를 통한 Rich Snippets 지원
+### 1. 완전한 SEO 최적화
+- **SSR + 정적 콘텐츠**: 검색엔진을 위한 서버 렌더링 + 숨겨진 정적 콘텐츠
+- **구조화 데이터 (JSON-LD)**: 모든 페이지에 적용된 Rich Snippets 지원
 - **동적 메타데이터**: 다국어 지원 메타데이터 자동 생성
+- **페이지별 최적화**: Home, Career, Skills, Contact 각각 특화된 SEO
 
-### 2. 다국어 지원
+### 2. 인터랙티브 UI/UX
+- **글래스모피즘 디자인**: 반투명 효과와 백드롭 블러
+- **별빛 배경 효과**: 동적 애니메이션 배경
+- **부드러운 전환**: 페이지 간 자연스러운 애니메이션
+- **모달 인터랙션**: 프로젝트 상세 정보 모달
+
+### 3. 다국어 지원
 - **실시간 언어 변경**: 페이지 새로고침 없이 언어 전환
 - **URL 파라미터**: `?lang=en` 형태로 언어 설정
-- **SEO 친화적**: 언어별 alternate 태그 자동 생성
+- **완전한 번역**: UI 요소부터 콘텐츠까지 모든 텍스트 지원
 
-### 3. 성능 최적화
+### 4. 실시간 연락 기능
+- **EmailJS 통합**: 서버 없이 실시간 이메일 전송
+- **폼 유효성 검사**: 클라이언트 사이드 검증
+- **사용자 피드백**: 전송 상태 실시간 표시
+
+### 5. 성능 최적화
 - **코드 분할**: Next.js의 자동 코드 분할
 - **이미지 최적화**: Next.js Image 컴포넌트
 - **폰트 최적화**: Google Fonts 자동 최적화
+- **Vercel 배포**: 최적화된 Edge Network 활용
 
 ## 📊 아키텍처의 장점
 
