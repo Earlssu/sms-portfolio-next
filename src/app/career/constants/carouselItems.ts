@@ -28,10 +28,28 @@ export const carouselItems: CarouselItem[] = [
     imageSrc: '/CandyPay.png',
   },
   {
+    id: 'portfolio',
+    title: '포트폴리오 웹사이트',
+    num: '05',
+    imageSrc: '/Portfolio.png', // 새로운 이미지 필요
+  },
+  {
     id: 'watery',
     title: '워터리 (Watery)',
-    num: '05',
+    num: '06',
     imageSrc: '/Watery.png', // 새로운 이미지 필요
+  },
+  {
+    id: 'portfolio-v1',
+    title: '포트폴리오 웹사이트 (이전 버전)',
+    num: '07',
+    imageSrc: '/Portfolio-V1.png', // 새로운 이미지 필요
+  },
+  {
+    id: 'lacier',
+    title: "L'acier 남성 화장품 쇼핑몰 (L'acier)",
+    num: '08',
+    imageSrc: '/Lacier.png', // 새로운 이미지 필요
   },
 ];
 

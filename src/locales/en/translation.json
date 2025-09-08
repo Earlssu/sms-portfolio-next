@@ -209,7 +209,33 @@
         "toyProjects": {
           "sections": [
             {
-              "title": "Watery - Personal Hydration Tracking App (2025.06 ~ Present)",
+              "title": "Portfolio Website (2024.12 ~ Present)",
+              "content": "The website you're currently viewing - a developer portfolio built with Next.js 14 App Router and TypeScript.",
+              "detail": [
+                {
+                  "title": "",
+                  "content": "Achieved search engine optimization by implementing SSR/SSG hybrid rendering, JSON-LD structured data, and multilingual meta tags for enhanced SEO performance."
+                },
+                {
+                  "title": "",
+                  "content": "Built custom carousel, scroll-based background transitions, and CSS keyframes starlight animations using vanilla JavaScript to minimize external library dependencies."
+                },
+                {
+                  "title": "",
+                  "content": "Implemented global state management with Zustand and complete bilingual support (Korean/English) using React i18next to provide an international user experience."
+                },
+                {
+                  "title": "",
+                  "content": "Ensured type safety throughout development with 100% TypeScript adoption and improved code reusability and maintainability through modularized component architecture."
+                },
+                {
+                  "title": "",
+                  "content": "Established an automated CI/CD pipeline using Vercel and GitHub Actions, creating a development workflow with immediate deployment upon code changes."
+                }
+              ]
+            },
+            {
+              "title": "Watery - Personal Hydration Tracking App (2025.06 ~ 2025.09)",
               "content": "Developed a personal hydration tracking app based on RN and Expo. Users can record their intake of water, coffee, cola, etc., and the app tracks their hydration levels based on input values, showing whether they've reached their personal daily hydration goals.",
               "detail": [
                 {
@@ -452,29 +478,117 @@
         }
       },
       {
+        "id": "portfolio",
+        "title": "Portfolio Website",
+        "subtitle": "포트폴리오 웹사이트",
+        "period": "2025.05 ~ Present",
+        "type": "Personal Project",
+        "description": "Developer portfolio website built with Next.js 14 App Router and TypeScript",
+        "role": "Full-stack Developer",
+        "team": "Personal Project",
+        "technologies": [
+          "Next.js 14",
+          "TypeScript",
+          "TailwindCSS",
+          "Zustand",
+          "React i18next"
+        ],
+        "achievements": [
+          "Beyond simple self-introduction, captured technical considerations and solutions for performance optimization, user experience, and development productivity",
+          "Achieved SEO optimization through SSR/SSG hybrid rendering",
+          "Implemented JSON-LD structured data and multilingual meta tags",
+          "Built custom carousel, scroll-based background transitions, and CSS keyframes starlight animations using vanilla JavaScript",
+          "Implemented global state management with Zustand and complete bilingual support using React i18next",
+          "Ensured type safety with 100% TypeScript adoption and improved code reusability through modularized component architecture",
+          "Established automated CI/CD pipeline using Vercel and GitHub Actions"
+        ],
+        "details": {
+          "problem": "Need for an effective platform to showcase developer skills and project experience",
+          "solution": "Built an interactive and accessible portfolio using cutting-edge web technologies",
+          "impact": "Demonstrated development capabilities while gaining real production experience"
+        }
+      },
+      {
         "id": "watery",
         "title": "Watery",
         "subtitle": "워터리",
         "period": "2025.06 ~ 2025.09",
         "type": "Personal Project",
         "description": "Developed RN and Expo-based app for recording personal water intake",
-        "role": "Full-stack Developer",
+        "role": "Frontend Developer",
         "team": "Gachi Crew 1st Generation",
         "technologies": [
           "React Native",
           "Expo",
-          "TypeScript"
+          "TypeScript",
+          "JSI",
+          "Figma"
         ],
         "achievements": [
-          "Implemented interactive UI using CSS animations",
-          "Enhanced user experience design capabilities",
-          "Designed intuitive user interface for personal health management app",
-          "Applied gamification elements to encourage continuous usage"
+          "Identified core target user pain points through surveys of approximately 50 people and established app's core direction of 'simple recording' and 'achievement'",
+          "Achieved near-native UI response speed by implementing JSI architecture",
+          "Reduced initial development time by 30%+ through active utilization of Expo's built-in features",
+          "Enhanced UI/UX completeness through close collaboration with designers based on Figma",
+          "Transparently shared project progress and collaboratively shaped project direction through weekly scrum and WBS"
         ],
         "details": {
-          "problem": "Sustainability issues with monotonous water intake recording",
-          "solution": "Encouraged user engagement through gamification and beautiful animations",
-          "impact": "Presented new approach to personal health management"
+          "problem": "Sustainability issues with monotonous water intake recording and lack of user motivation",
+          "solution": "User needs identification through surveys and performance optimization via JSI architecture",
+          "impact": "Established user-centered development process and strengthened team collaboration capabilities"
+        }
+      },
+      {
+        "id": "portfolio-v1",
+        "title": "Portfolio Website V1",
+        "subtitle": "First Portfolio Website",
+        "period": "2023.05 ~ 2023.06",
+        "type": "Personal Project",
+        "description": "First personal portfolio implemented without external libraries to demonstrate deep understanding of HTML, CSS, and JavaScript(ES6+) fundamentals",
+        "role": "Frontend Developer",
+        "team": "Personal Project",
+        "technologies": [
+          "HTML5",
+          "CSS3",
+          "JavaScript (ES6+)",
+          "Vercel"
+        ],
+        "achievements": [
+          "Implemented dynamic UI using only pure JavaScript(ES6+) without frameworks or libraries",
+          "Acquired DOM manipulation and event handling skills through carousel sliders and form validation implementation",
+          "Demonstrated ability to create rich visual effects using CSS animations with @keyframes",
+          "Established efficient development workflow by building automated deployment pipeline through Vercel"
+        ],
+        "details": {
+          "problem": "Need to prove deep understanding and practical application of web development fundamentals",
+          "solution": "Implemented portfolio using only pure web technologies without external libraries",
+          "impact": "Established web development foundation and gained automated deployment experience"
+        }
+      },
+      {
+        "id": "lacier",
+        "title": "L'acier Men's Cosmetics E-commerce",
+        "subtitle": "L'acier 남성 화장품 쇼핑몰",
+        "period": "2023.01 ~ 2023.02",
+        "type": "Team Project",
+        "description": "Bootcamp main project that established foundations of component-based development and team collaboration by applying React core concepts to real project",
+        "role": "Frontend Developer",
+        "team": "4-person Team Project",
+        "technologies": [
+          "React",
+          "JavaScript",
+          "CSS3",
+          "react-daum-postcode"
+        ],
+        "achievements": [
+          "Gained in-depth knowledge of CSS transition and transform properties through direct implementation of carousel slider without libraries",
+          "Enhanced external library analysis and utilization skills by solving react-daum-postcode library option issues",
+          "Understood React modularization and component-based architecture by separating and managing reusable UI components",
+          "Experienced Git workflow and code review processes through team collaboration"
+        ],
+        "details": {
+          "problem": "Lack of React-based real project experience and need for team collaboration skills",
+          "solution": "Applied React core concepts in production-like environment and experienced team development processes",
+          "impact": "Established React development capabilities and improved adaptability to real work through team collaboration"
         }
       }
     ]
