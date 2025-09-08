@@ -20,7 +20,7 @@ const ContactContentInner = () => {
   }, [setCurrentPage]);
 
   return (
-    <div className="min-h-screen w-full relative">
+    <div className="min-h-screen w-full relative pb-80">
       {/* 배경 */}
       <ContactBackground />
 

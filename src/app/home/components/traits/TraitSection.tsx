@@ -17,13 +17,11 @@ import {
 
 interface TraitSectionProps {
   traitKey: TraitKey;
-  index: number;
   isExpanded: boolean;
 }
 
 export const TraitSection: React.FC<TraitSectionProps> = ({
   traitKey,
-  index,
   isExpanded,
 }) => {
   const { t } = useTranslation();
@@ -55,7 +53,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
   }`;
 
   return (
-    <section className="h-screen flex items-center justify-center px-10 relative">
+    <section className="h-screen flex items-center justify-center px-10 relative pb-80">
       <div className="max-w-screen-2xl mx-auto w-full h-screen flex items-center justify-center relative">
         {/* 모든 섹션에 별빛 테마 배경 적용 */}
         <StarlightBackground

@@ -20,7 +20,6 @@ export const TraitCardList: React.FC<TraitCardListProps> = ({
         <TraitSection
           key={traitKey}
           traitKey={traitKey}
-          index={index}
           isExpanded={expandedCard === index}
         />
       ))}

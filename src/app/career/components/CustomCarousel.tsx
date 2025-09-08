@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import CarouselCard from '@/app/career/components/CarouselCard';
 import ProjectDetailModal from '@/app/career/components/ProjectDetailModal';
@@ -37,7 +37,8 @@ const CustomCarousel = () => {
           category: 'Secret Project',
           period: '2024 ~ 현재',
           type: '힐링 프로젝트',
-          description: '개발하다 지칠 때마다 위로가 되어주는 우리 집 고양이들입니다.',
+          description:
+            '개발하다 지칠 때마다 위로가 되어주는 우리 집 고양이들입니다.',
           role: '집사',
           team: '설기 & 우유',
         };
@@ -70,10 +71,14 @@ const CustomCarousel = () => {
   };
 
   return (
-    <>
+    <Fragment>
       <div
-        className="relative w-full h-screen flex items-center justify-center overflow-hidden"
-        style={{ perspective: '1000px' }}
+        className="fixed inset-0 w-full h-screen flex items-center justify-center overflow-visible no-scrollbar"
+        style={{
+          perspective: '1000px',
+          scrollbarWidth: 'none', // Firefox
+          msOverflowStyle: 'none', // IE/Edge
+        }}
       >
         {carouselItems.map((item, index) => (
           <CarouselCard
@@ -106,7 +111,7 @@ const CustomCarousel = () => {
         onClose={closeModal}
         projectData={selectedProject}
       />
-    </>
+    </Fragment>
   );
 };
 

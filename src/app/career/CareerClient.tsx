@@ -19,7 +19,7 @@ const CareerClient = () => {
 
   return (
     <div
-      className="min-h-screen w-full"
+      className="min-h-screen w-full pb-80"
       style={{
         background:
           'linear-gradient(135deg, #2a2a2a 0%, #353535 25%, #1a1a1a 50%, #282828 75%, #1f1f1f 100%)',
