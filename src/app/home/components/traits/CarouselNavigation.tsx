@@ -36,14 +36,14 @@ export const CarouselNavigation: React.FC<CarouselNavigationProps> = ({
       {/* 이전/다음 버튼 */}
       <button
         onClick={onPrevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 transition-all duration-200 flex items-center justify-center text-white backdrop-blur-sm"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full hover:text-white/50 transition-all duration-200 flex items-center justify-center text-white backdrop-blur-sm"
         aria-label="이전 슬라이드"
       >
         ←
       </button>
       <button
         onClick={onNextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 transition-all duration-200 flex items-center justify-center text-white backdrop-blur-sm"
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full hover:text-white/50 transition-all duration-200 flex items-center justify-center text-white backdrop-blur-sm"
         aria-label="다음 슬라이드"
       >
         →
