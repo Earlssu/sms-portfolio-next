@@ -1,21 +1,39 @@
+import React, { Fragment, Suspense } from 'react';
 import { detectLanguage } from "@/shared/utils/languageUtils";
 import { createGenerateMetadata } from "@/shared/utils/metadataUtils";
 import { generateSkillsMetadata } from "./metadata";
 import SkillsClient from "@/app/skills/SkillsClient";
+import SkillsStructuredData from './SkillsStructuredData';
+import SkillsStaticContent from './SkillsStaticContent';
 
 // 모듈화된 generateMetadata 함수 사용
 export const generateMetadata = createGenerateMetadata(generateSkillsMetadata);
 
-// 예시: searchParams를 받아 다국어 지원 (추후 확장용)
 interface SkillsProps {
   searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-const Skills: React.FC<SkillsProps> = ({ searchParams }) => {
-  // 새로운 유틸리티 활용 예시 (현재는 기본값 사용)
+/**
+ * Skills 페이지 - i18n 지원 SSR + SEO 최적화
+ * Home 페이지와 동일한 SEO 구조 적용
+ */
+export default function Skills({ searchParams }: SkillsProps) {
   const lang = detectLanguage(searchParams);
-  
-  return <SkillsClient lang={lang} />;
-};
 
-export default Skills;
+  return (
+    <Fragment>
+      {/* JSON-LD 구조화 데이터 */}
+      <SkillsStructuredData lang={lang} />
+
+      <div className="relative">
+        {/* SEO를 위한 다국어 정적 콘텐츠 (서버 사이드 렌더링) */}
+        <SkillsStaticContent lang={lang} />
+
+        {/* 클라이언트 인터랙션 */}
+        <Suspense fallback={<div className="min-h-screen bg-gray-900 animate-pulse" />}>
+          <SkillsClient lang={lang} />
+        </Suspense>
+      </div>
+    </Fragment>
+  );
+}

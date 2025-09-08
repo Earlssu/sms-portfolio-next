@@ -1,34 +1,39 @@
-'use client';
+import React, { Fragment, Suspense } from 'react';
+import { detectLanguage } from '@/shared/utils/languageUtils';
+import { createGenerateMetadata } from '@/shared/utils/metadataUtils';
+import { generateCareerMetadata } from './metadata';
+import CareerClient from './CareerClient';
+import CareerStructuredData from './components/CareerStructuredData';
+import CareerStaticContent from './components/CareerStaticContent';
 
-import { useEffect } from 'react';
-import CustomCarousel from '@/app/career/components/CustomCarousel';
-import GlobalCursor from '@/shared/components/GlobalCursor';
-import { useBackgroundStore } from '@/shared/stores/backgroundStore';
+// 모듈화된 generateMetadata 함수 사용
+export const generateMetadata = createGenerateMetadata(generateCareerMetadata);
 
-const Career = () => {
-  const { setCurrentPage } = useBackgroundStore();
+interface CareerProps {
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
 
-  useEffect(() => {
-    setCurrentPage('career');
-
-    // 컴포넌트 언마운트 시 정리
-    return () => {
-      setCurrentPage(null);
-    };
-  }, [setCurrentPage]);
+/**
+ * Career 페이지 - i18n 지원 SSR + SEO 최적화
+ * Home 페이지와 동일한 SEO 구조 적용
+ */
+export default function Career({ searchParams }: CareerProps) {
+  const lang = detectLanguage(searchParams);
 
   return (
-    <div
-      className="min-h-screen w-full"
-      style={{
-        background:
-          'linear-gradient(135deg, #2a2a2a 0%, #353535 25%, #1a1a1a 50%, #282828 75%, #1f1f1f 100%)',
-      }}
-    >
-      <CustomCarousel />
-      <GlobalCursor />
-    </div>
-  );
-};
+    <Fragment>
+      {/* JSON-LD 구조화 데이터 */}
+      <CareerStructuredData lang={lang} />
 
-export default Career;
+      <div className="relative">
+        {/* SEO를 위한 다국어 정적 콘텐츠 (서버 사이드 렌더링) */}
+        <CareerStaticContent lang={lang} />
+
+        {/* 클라이언트 인터랙션 */}
+        <Suspense fallback={<div className="min-h-screen bg-gray-900 animate-pulse" />}>
+          <CareerClient />
+        </Suspense>
+      </div>
+    </Fragment>
+  );
+}
