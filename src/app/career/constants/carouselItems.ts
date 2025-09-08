@@ -49,6 +49,12 @@ export const carouselItems: CarouselItem[] = [
     title: '워터리 (Watery)',
     num: '06',
     imageSrc: '/Watery.png',
+    links: [
+      {
+        title: 'GitHub',
+        url: 'https://github.com/MAKE-VALUE-GACHI/4_watery_front',
+      },
+    ],
     teamSize: 'FE 2 / BE 2 / 디자이너 1 / PM 1',
   },
   {
@@ -66,6 +72,12 @@ export const carouselItems: CarouselItem[] = [
     title: "L'acier 남성 화장품 쇼핑몰 (L'acier)",
     num: '08',
     imageSrc: '/Lacier.png',
+    links: [
+      {
+        title: 'GitHub',
+        url: 'https://github.com/codestates-seb/seb41_main_002',
+      },
+    ],
     teamSize: 'FE 3 / BE 3',
   },
 ];
