@@ -55,7 +55,12 @@ const CarouselCard = ({
   };
 
   return (
-    <div className="carousel-item" style={style} onClick={onClick}>
+    <div 
+      className="carousel-item" 
+      style={style} 
+      onClick={onClick}
+      data-active={index === active}
+    >
       <div className="carousel-box">
         <div className="title">
           {title}
