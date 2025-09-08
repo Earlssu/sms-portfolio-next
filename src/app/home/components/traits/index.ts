@@ -6,6 +6,7 @@ export { TabButton } from './TabButton';
 export { TabContent } from './TabContent';
 export { ContactSection } from './ContactSection';
 export { ContactItem } from './ContactItem';
+export { ViewMoreButton } from './ViewMoreButton';
 
 // Carousel 관련 컴포넌트들
 export { AboutMeCarousel } from './AboutMeCarousel';
