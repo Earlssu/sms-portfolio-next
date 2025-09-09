@@ -38,6 +38,10 @@ const config: Config = {
           hover: 'var(--card-hover)',
         },
       },
+      // 보더 색상 추가
+      borderColor: {
+        card: 'var(--card-border)',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

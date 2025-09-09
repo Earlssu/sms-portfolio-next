@@ -54,7 +54,7 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
 
   return (
     <section className="min-h-screen flex items-center justify-center responsive-padding relative pb-20 sm:pb-40 md:pb-0">
-      <div className="max-w-screen-2xl mx-auto w-full min-h-screen flex items-center justify-center relative">
+      <div className="w-screen lg:w-full lg:max-w-screen-2xl mx-auto min-h-screen flex items-center justify-center relative">
         {/* 모든 섹션에 별빛 테마 배경 적용 */}
         <StarlightBackground
           isExpanded={isExpanded}
@@ -62,14 +62,14 @@ export const TraitSection: React.FC<TraitSectionProps> = ({
           bigStarCount={traitKey === 'aboutMe' ? 6 : 3}
           className={
             traitKey === 'aboutMe'
-              ? 'absolute inset-4 rounded-3xl'
-              : 'absolute inset-0 rounded-2xl'
+              ? 'absolute inset-0 lg:inset-4 rounded-3xl'
+              : 'hidden lg:block absolute inset-0 rounded-2xl'
           }
         />
 
         {/* aboutMe인 경우 캐러셀 레이아웃 */}
         {traitKey === 'aboutMe' ? (
-          <div className="w-full h-full relative py-16">
+          <div className="w-full h-full relative py-16 ">
             <div className="absolute top-8 sm:top-12 md:top-16 left-1/2 transform -translate-x-1/2 z-20">
               <h2
                 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center drop-shadow-lg transition-all duration-700 ${
