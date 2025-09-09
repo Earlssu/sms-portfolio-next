@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 interface StarlightBackgroundProps {
   isExpanded: boolean;
@@ -9,13 +9,47 @@ interface StarlightBackgroundProps {
   className?: string;
 }
 
+interface StarProps {
+  left: number;
+  top: number;
+  animationDelay: number;
+  animationDuration: number;
+}
+
 export const StarlightBackground: React.FC<StarlightBackgroundProps> = ({
   isExpanded,
   starCount = 15,
   bigStarCount = 3,
   className = "absolute inset-0 rounded-2xl",
 }) => {
-  if (!isExpanded) return null;
+  const [stars, setStars] = useState<StarProps[]>([]);
+  const [bigStars, setBigStars] = useState<StarProps[]>([]);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    
+    // 작은 별들 생성
+    const newStars = Array.from({ length: starCount }, () => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      animationDelay: Math.random() * 3,
+      animationDuration: 2 + Math.random() * 2,
+    }));
+    
+    // 큰 별들 생성
+    const newBigStars = Array.from({ length: bigStarCount }, () => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      animationDelay: Math.random() * 4,
+      animationDuration: 3 + Math.random() * 2,
+    }));
+    
+    setStars(newStars);
+    setBigStars(newBigStars);
+  }, [starCount, bigStarCount]);
+
+  if (!isExpanded || !isClient) return null;
 
   return (
     <Fragment>
@@ -33,29 +67,29 @@ export const StarlightBackground: React.FC<StarlightBackgroundProps> = ({
       {/* 별빛 파티클 효과 */}
       <div className={`${className} overflow-hidden pointer-events-none`}>
         {/* 작은 별들 */}
-        {[...Array(starCount)].map((_, i) => (
+        {stars.map((star, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-white rounded-full opacity-40 animate-pulse"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
+              left: `${star.left}%`,
+              top: `${star.top}%`,
+              animationDelay: `${star.animationDelay}s`,
+              animationDuration: `${star.animationDuration}s`,
             }}
           />
         ))}
 
         {/* 큰 별들 */}
-        {[...Array(bigStarCount)].map((_, i) => (
+        {bigStars.map((star, i) => (
           <div
             key={`big-${i}`}
             className="absolute w-1.5 h-1.5 bg-blue-200 rounded-full opacity-30 animate-ping"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
+              left: `${star.left}%`,
+              top: `${star.top}%`,
+              animationDelay: `${star.animationDelay}s`,
+              animationDuration: `${star.animationDuration}s`,
             }}
           />
         ))}
