@@ -29,8 +29,10 @@ const TraitCard: React.FC<TraitCardProps> = ({
   return (
     <div
       className={`
-        border border-card shadow-xl ring-2 ring-card bg-card rounded-lg p-4 sm:p-6
+        border shadow-xl ring-2 ring-card rounded-lg p-4 sm:p-6
         transition-all duration-700 ease-out transform flex flex-col backdrop-blur-sm
+        border-quaternary lg:border-card bg-gradient-to-br from-white/5 to-white/2 lg:bg-card py-10 lg:py-4
+        lg:mx-6
         ${
           isExpanded
             ? 'max-h-[80vh] w-full max-w-screen-lg shadow-2xl ring-opacity-20'
@@ -44,7 +46,7 @@ const TraitCard: React.FC<TraitCardProps> = ({
           font-bold transition-all duration-500 drop-shadow-sm
           ${
             isExpanded
-              ? 'text-lg sm:text-xl md:text-2xl text-white mb-2 sm:mb-4'
+              ? 'text-2xl text-white mb-2 sm:mb-4 mx-auto pb-4 lg:mx-0 lg:py-3'
               : 'text-sm sm:text-base md:text-lg text-gray-300 mb-1 sm:mb-2'
           }
         `}

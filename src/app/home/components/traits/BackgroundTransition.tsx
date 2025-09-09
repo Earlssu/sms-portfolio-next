@@ -1,10 +1,43 @@
 'use client';
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { useBackgroundStore } from '@/shared/stores';
+
+interface StarProps {
+  left: number;
+  top: number;
+  animationDelay: number;
+  animationDuration: number;
+}
 
 export const GlobalBackgroundTransition: React.FC = () => {
   const isDarkMode = useBackgroundStore((state) => state.isDarkMode);
+  const [stars, setStars] = useState<StarProps[]>([]);
+  const [bigStars, setBigStars] = useState<StarProps[]>([]);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    
+    // 작은 별들 생성
+    const newStars = Array.from({ length: 50 }, () => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      animationDelay: Math.random() * 3,
+      animationDuration: 2 + Math.random() * 2,
+    }));
+    
+    // 큰 별들 생성
+    const newBigStars = Array.from({ length: 10 }, () => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      animationDelay: Math.random() * 5,
+      animationDuration: 3 + Math.random() * 2,
+    }));
+    
+    setStars(newStars);
+    setBigStars(newBigStars);
+  }, []);
 
   return (
     <Fragment>
@@ -41,7 +74,7 @@ export const GlobalBackgroundTransition: React.FC = () => {
         `}
       >
         {/* 별빛 효과 */}
-        {[...Array(50)].map((_, i) => (
+        {isClient && stars.map((star, i) => (
           <div
             key={i}
             className={`
@@ -49,16 +82,16 @@ export const GlobalBackgroundTransition: React.FC = () => {
                 animate-pulse
               `}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
+              left: `${star.left}%`,
+              top: `${star.top}%`,
+              animationDelay: `${star.animationDelay}s`,
+              animationDuration: `${star.animationDuration}s`,
             }}
           />
         ))}
 
         {/* 더 큰 별들 */}
-        {[...Array(10)].map((_, i) => (
+        {isClient && bigStars.map((star, i) => (
           <div
             key={`big-${i}`}
             className={`
@@ -66,10 +99,10 @@ export const GlobalBackgroundTransition: React.FC = () => {
                 animate-ping
               `}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
+              left: `${star.left}%`,
+              top: `${star.top}%`,
+              animationDelay: `${star.animationDelay}s`,
+              animationDuration: `${star.animationDuration}s`,
             }}
           />
         ))}

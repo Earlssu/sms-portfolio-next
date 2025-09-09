@@ -18,7 +18,7 @@ interface ScrollProgressIndicatorProps {
 export const ScrollProgressIndicator: React.FC<
   ScrollProgressIndicatorProps
 > = ({ scrollProgress, scrollY, expandedCard, isClient }) => (
-  <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-10">
+  <div className="hidden lg:block fixed left-4 top-1/2 transform -translate-y-1/2 z-10">
     {/* 진행률 바 */}
     <div className="w-1 h-64 bg-gray-700 rounded-full overflow-hidden">
       <div
