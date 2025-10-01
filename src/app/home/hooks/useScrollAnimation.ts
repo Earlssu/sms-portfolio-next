@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { SCROLL_CONFIG } from '@/app/home/constants/scrollConfig';
 import { TRAIT_KEYS } from '@/app/home/types';
 import { useBackgroundStore } from '@/shared/stores';
@@ -25,7 +25,7 @@ export const useScrollAnimation = () => {
     });
   };
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
     const viewportHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
@@ -118,7 +118,7 @@ export const useScrollAnimation = () => {
     if (activeCardIndex !== 0 && hasAutoFocused && !isScrollingDown) {
       setHasAutoFocused(false);
     }
-  };
+  }, [lastScrollY, lastActiveCard, hasAutoFocused, setCurrentSection]);
 
   useEffect(() => {
     // 클라이언트 사이드 마운트 확인

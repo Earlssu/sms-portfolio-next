@@ -1,16 +1,19 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface AchievementsProps {
   achievements: string[];
 }
 
 const Achievements: React.FC<AchievementsProps> = ({ achievements }) => {
+  const { t } = useTranslation();
+  
   if (!achievements || achievements.length === 0) return null;
 
   return (
     <div className="mb-6">
       <h3 className="text-lg font-semibold text-white mb-3">
-        🏆 주요 성과
+        🏆 {t('carousel.modal.achievements')}
       </h3>
       <ul className="space-y-3">
         {achievements.map((achievement, index) => (

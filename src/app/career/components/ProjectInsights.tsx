@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { ProjectData } from '@/app/career/types/projectData';
 
 interface ProjectInsightsProps {
@@ -6,22 +7,24 @@ interface ProjectInsightsProps {
 }
 
 const ProjectInsights: React.FC<ProjectInsightsProps> = ({ details }) => {
+  const { t } = useTranslation();
+  
   if (!details) return null;
 
   const insights = [
     {
       key: 'problem',
-      title: '🚨 문제점',
+      title: `🚨 ${t('carousel.modal.problem')}`,
       content: details.problem,
     },
     {
       key: 'solution',
-      title: '💡 해결방안',
+      title: `💡 ${t('carousel.modal.solution')}`,
       content: details.solution,
     },
     {
       key: 'impact',
-      title: '📈 임팩트',
+      title: `📈 ${t('carousel.modal.impact')}`,
       content: details.impact,
     },
   ];
@@ -33,7 +36,7 @@ const ProjectInsights: React.FC<ProjectInsightsProps> = ({ details }) => {
   return (
     <div className="mb-8">
       <h3 className="text-lg font-semibold text-white mb-3">
-        💡 프로젝트 인사이트
+        💡 {t('carousel.modal.projectInsights')}
       </h3>
       <div className="flex flex-col gap-4">
         {validInsights.map((insight) => (

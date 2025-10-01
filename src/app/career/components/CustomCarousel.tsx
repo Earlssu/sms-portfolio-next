@@ -34,17 +34,16 @@ const CustomCarousel = () => {
       if (index === carouselItems.length) {
         const catModalData: ProjectData = {
           id: 'hidden-cats',
-          title: '🐈 숨겨진 고양이들',
-          subtitle: 'Hidden Cats',
+          title: t('carousel.hiddenCats.title'),
+          subtitle: t('carousel.hiddenCats.subtitle'),
           num: '🐾',
           imageSrc: '/carousel-hidden-00.jpg',
-          category: 'Secret Project',
-          period: '2024 ~ 현재',
-          type: '힐링 프로젝트',
-          description:
-            '개발하다 지칠 때마다 위로가 되어주는 우리 집 고양이들입니다.',
-          role: '집사',
-          team: '설기 & 우유',
+          category: t('carousel.hiddenCats.category'),
+          period: t('carousel.hiddenCats.period'),
+          type: t('carousel.hiddenCats.type'),
+          description: t('carousel.hiddenCats.description'),
+          role: t('carousel.hiddenCats.role'),
+          team: t('carousel.hiddenCats.team'),
         };
         setSelectedProject(catModalData);
         setIsModalOpen(true);
@@ -136,7 +135,7 @@ const CustomCarousel = () => {
             index={index}
             active={activeIndex}
             total={carouselItems.length + 1}
-            title={item.title}
+            title={item.titleKey ? t(item.titleKey) : item.title}
             num={item.num}
             imageSrc={item.imageSrc}
             teamSize={item.teamSize}
@@ -148,9 +147,10 @@ const CustomCarousel = () => {
           index={carouselItems.length}
           active={activeIndex}
           total={carouselItems.length + 1}
-          title={'🐈'}
+          title={t('carousel.hiddenCats.title')}
           num={''}
           imageSrc={'/carousel-hidden-00.jpg'}
+          category={t('carousel.hiddenCats.category')}
           onClick={() => handleCardClick(carouselItems.length)}
         />
       </div>
