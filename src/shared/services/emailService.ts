@@ -26,7 +26,11 @@ export const initializeEmailJS = () => {
       'EmailJS configuration is missing. Please check your environment variables.'
     );
   }
-  emailjs.init(EMAILJS_CONFIG.publicKey);
+  
+  // publicKey가 존재함을 확인했으므로 non-null assertion 사용
+  if (EMAILJS_CONFIG.publicKey) {
+    emailjs.init(EMAILJS_CONFIG.publicKey);
+  }
 };
 
 // 이메일 전송 함수
@@ -60,7 +64,15 @@ export const sendContactEmail = async (
       reply_to: formData.email, // 답장 주소
     };
 
-    // 이메일 전송
+    // 이메일 전송 (타입 체크 후 전송)
+    if (!EMAILJS_CONFIG.serviceId || !EMAILJS_CONFIG.templateId) {
+      return {
+        success: false,
+        message: '이메일 서비스 설정에 문제가 있습니다. 관리자에게 문의해주세요.',
+        error: 'EmailJS configuration is incomplete',
+      };
+    }
+    
     const response = await emailjs.send(
       EMAILJS_CONFIG.serviceId,
       EMAILJS_CONFIG.templateId,
