@@ -1,5 +1,6 @@
 import './CarouselCard.css';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 interface CarouselCardProps {
   index: number;
@@ -95,7 +96,16 @@ const CarouselCard = ({
           </p>
         </div>
         <div className="num">{num}</div>
-        <img src={imageSrc} alt={title} />
+        {imageSrc && (
+          <Image 
+            src={imageSrc} 
+            alt={title || ''} 
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={index === 0}
+          />
+        )}
       </div>
     </div>
   );

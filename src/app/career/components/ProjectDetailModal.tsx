@@ -1,6 +1,7 @@
 'use client';
 
 import React, { Fragment, useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { ProjectData } from '@/app/career/types/projectData';
 import 'animate.css';
 import ScrollIndicator from '@/app/career/components/ScrollIndicator';
@@ -94,11 +95,16 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         >
           {/* 배경 이미지 */}
           <div className="relative w-full h-[50vh] overflow-hidden">
-            <img
-              src={projectData.imageSrc}
-              alt={projectData.title}
-              className="w-full h-full object-cover transition-transform duration-1000 ease-out hover:scale-105"
-            />
+            {projectData.imageSrc && (
+              <Image
+                src={projectData.imageSrc}
+                alt={projectData.title || ''}
+                fill
+                className="object-cover transition-transform duration-1000 ease-out hover:scale-105"
+                sizes="100vw"
+                priority
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/80" />
 
             {/* 프로젝트 번호 - 이미지 위에 고정 */}
