@@ -16,9 +16,9 @@ const CarouselCard = ({
   index,
   active,
   total,
-  title = 'Sydney',
-  num = '04',
-  imageSrc = 'https://media.istockphoto.com/id/904390980/it/foto/foto-di-architettura-contemporanea-astratta.jpg?s=612x612&w=0&k=20&c=_P4Wmx5nq5MeDuimpNklKCBlrLovmCyd9lfiMKeJZDs=',
+  title,
+  num,
+  imageSrc,
   onClick,
   teamSize,
   category,
@@ -55,9 +55,9 @@ const CarouselCard = ({
   };
 
   return (
-    <div 
-      className="carousel-item" 
-      style={style} 
+    <div
+      className="carousel-item"
+      style={style}
       onClick={onClick}
       data-active={index === active}
     >
@@ -76,7 +76,9 @@ const CarouselCard = ({
             )}
           </div>
 
-          <p className={'text-white/80 text-xs sm:text-sm mt-1 sm:mt-2'}>클릭하여 자세히 보기</p>
+          <p className={'text-white/80 text-xs sm:text-sm mt-1 sm:mt-2'}>
+            클릭하여 자세히 보기
+          </p>
         </div>
         <div className="num">{num}</div>
         <img src={imageSrc} alt={title} />

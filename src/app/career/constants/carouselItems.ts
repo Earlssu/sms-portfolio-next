@@ -1,5 +1,3 @@
-// Career carousel data based on translation.json career projects
-
 import { CarouselItem } from '@/app/career/types/carouselItem';
 
 export const carouselItems: CarouselItem[] = [
