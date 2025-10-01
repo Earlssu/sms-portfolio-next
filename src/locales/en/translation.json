@@ -449,6 +449,30 @@
       "submit": "Send Message"
     }
   },
+  "carousel": {
+    "titles": {
+      "xcore-system": "XCoreSystem (엑스코어시스템)",
+      "finter": "Finter (핀터)",
+      "pikble": "Pikble (픽블)",
+      "candypay": "CandyPay (캔디페이)",
+      "portfolio": "Portfolio Website",
+      "watery": "Watery (워터리)",
+      "portfolio-v1": "Portfolio Website (Previous Version)",
+      "lacier": "L'acier Men's Cosmetics E-commerce (L'acier)"
+    },
+    "sideProject": "Side Project",
+    "clickToView": "Click to view details",
+    "hiddenCats": {
+      "title": "🐈 Hidden Cats",
+      "subtitle": "숨겨진 고양이들",
+      "category": "Healing Project",
+      "period": "2024 ~ Present",
+      "type": "Healing Project",
+      "description": "Our house cats who provide comfort whenever I get exhausted from coding.",
+      "role": "Butler",
+      "team": "Seolgi & WooYu"
+    }
+  },
   "career": {
     "projects": [
       {

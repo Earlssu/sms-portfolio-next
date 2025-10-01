@@ -1,9 +1,13 @@
 import { CarouselItem } from '@/app/career/types/carouselItem';
 
+/**
+ * Carousel 항목 기본 데이터
+ * title은 다국어 지원을 위해 titleKey를 사용하여 translation에서 가져옵니다.
+ */
 export const carouselItems: CarouselItem[] = [
   {
     id: 'xcore-system',
-    title: '엑스코어시스템 (XCoreSystem)',
+    titleKey: 'carousel.titles.xcore-system',
     num: '01',
     imageSrc: '/XCore.png',
     category: 'Blast',
@@ -11,7 +15,7 @@ export const carouselItems: CarouselItem[] = [
   },
   {
     id: 'finter',
-    title: '핀터 (Finter)',
+    titleKey: 'carousel.titles.finter',
     num: '02',
     imageSrc: '/Finter.png',
     category: 'Blast',
@@ -19,7 +23,7 @@ export const carouselItems: CarouselItem[] = [
   },
   {
     id: 'pikble',
-    title: '픽블 (Pikble)',
+    titleKey: 'carousel.titles.pikble',
     num: '03',
     imageSrc: '/Pikble.png',
     category: 'Blast',
@@ -27,7 +31,7 @@ export const carouselItems: CarouselItem[] = [
   },
   {
     id: 'candypay',
-    title: '캔디페이 (CandyPay)',
+    titleKey: 'carousel.titles.candypay',
     num: '04',
     imageSrc: '/CandyPay.png',
     category: 'Blast',
@@ -35,7 +39,7 @@ export const carouselItems: CarouselItem[] = [
   },
   {
     id: 'portfolio',
-    title: '포트폴리오 웹사이트',
+    titleKey: 'carousel.titles.portfolio',
     num: '05',
     imageSrc: '/Portfolio.png',
     category: 'Side Project',
@@ -49,7 +53,7 @@ export const carouselItems: CarouselItem[] = [
   },
   {
     id: 'watery',
-    title: '워터리 (Watery)',
+    titleKey: 'carousel.titles.watery',
     num: '06',
     imageSrc: '/Watery.png',
     category: 'Side Project',
@@ -63,7 +67,7 @@ export const carouselItems: CarouselItem[] = [
   },
   {
     id: 'portfolio-v1',
-    title: '포트폴리오 웹사이트 (이전 버전)',
+    titleKey: 'carousel.titles.portfolio-v1',
     num: '07',
     imageSrc: '/Portfolio-V1.png',
     category: 'Side Project',
@@ -74,7 +78,7 @@ export const carouselItems: CarouselItem[] = [
   },
   {
     id: 'lacier',
-    title: "L'acier 남성 화장품 쇼핑몰 (L'acier)",
+    titleKey: 'carousel.titles.lacier',
     num: '08',
     imageSrc: '/Lacier.png',
     category: 'Side Project',

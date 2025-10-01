@@ -1,4 +1,5 @@
 import './CarouselCard.css';
+import { useTranslation } from 'react-i18next';
 
 interface CarouselCardProps {
   index: number;
@@ -23,6 +24,7 @@ const CarouselCard = ({
   teamSize,
   category,
 }: CarouselCardProps) => {
+  const { t } = useTranslation();
   // 각 카드의 위치와 스타일을 계산
   const offset = index - active; // 현재 활성 카드로부터의 거리
   const absOffset = Math.abs(offset);
@@ -49,6 +51,11 @@ const CarouselCard = ({
         return 'bg-blue-500/20 border-blue-400/30 text-blue-200';
       case 'Side Project':
         return 'bg-green-500/20 border-green-400/30 text-green-200';
+      case t('carousel.hiddenCats.category'):
+      case 'Secret Project':
+      case '힐링 프로젝트':
+      case 'Healing Project':
+        return 'bg-pink-500/20 border-pink-400/30 text-pink-200';
       default:
         return 'bg-gray-500/20 border-gray-400/30 text-gray-200';
     }
@@ -71,13 +78,20 @@ const CarouselCard = ({
               <span
                 className={`inline-block px-1 sm:px-2 py-0.5 sm:py-1 rounded-md text-xs font-medium border ${getCategoryStyle(category)}`}
               >
-                {category === 'Blast' ? '사내 프로젝트' : '사이드 프로젝트'}
+                {category === 'Blast' 
+                  ? t('navigation.career') 
+                  : category === t('carousel.hiddenCats.category') || 
+                    category === 'Secret Project' || 
+                    category === '힐링 프로젝트' || 
+                    category === 'Healing Project'
+                  ? t('carousel.hiddenCats.category')
+                  : t('carousel.sideProject')}
               </span>
             )}
           </div>
 
           <p className={'text-white/80 text-xs sm:text-sm mt-1 sm:mt-2'}>
-            클릭하여 자세히 보기
+            {t('carousel.clickToView')}
           </p>
         </div>
         <div className="num">{num}</div>

@@ -8,7 +8,8 @@ export interface ProjectDetails {
 // 기본 캐러셀 아이템 타입 (Career 페이지용)
 export interface CarouselItem {
   id: string;
-  title: string;
+  title?: string; // 하위 호환성을 위해 optional로 유지
+  titleKey?: string; // 다국어 지원을 위한 translation key
   subtitle?: string;
   num: string;
   imageSrc: string;

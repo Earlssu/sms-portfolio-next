@@ -449,6 +449,30 @@
       "submit": "메시지 보내기"
     }
   },
+  "carousel": {
+    "titles": {
+      "xcore-system": "엑스코어시스템 (XCoreSystem)",
+      "finter": "핀터 (Finter)",
+      "pikble": "픽블 (Pikble)",
+      "candypay": "캔디페이 (CandyPay)",
+      "portfolio": "포트폴리오 웹사이트",
+      "watery": "워터리 (Watery)",
+      "portfolio-v1": "포트폴리오 웹사이트 (이전 버전)",
+      "lacier": "L'acier 남성 화장품 쇼핑몰 (L'acier)"
+    },
+    "sideProject": "사이드 프로젝트",
+    "clickToView": "클릭하여 자세히 보기",
+    "hiddenCats": {
+      "title": "🐈 숨겨진 고양이들",
+      "subtitle": "Hidden Cats",
+      "category": "힐링 프로젝트",
+      "period": "2024 ~ 현재",
+      "type": "힐링 프로젝트",
+      "description": "개발하다 지칠 때마다 위로가 되어주는 우리 집 고양이들입니다.",
+      "role": "집사",
+      "team": "설기 & 우유"
+    }
+  },
   "career": {
     "projects": [
       {
