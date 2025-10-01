@@ -462,6 +462,18 @@
     },
     "sideProject": "Side Project",
     "clickToView": "Click to view details",
+    "modal": {
+      "role": "Role",
+      "team": "Team",
+      "teamSize": "Team Size",
+      "links": "Related Links",
+      "techStack": "Tech Stack",
+      "achievements": "Key Achievements",
+      "projectInsights": "Project Insights",
+      "problem": "Problem",
+      "solution": "Solution",
+      "impact": "Impact"
+    },
     "hiddenCats": {
       "title": "🐈 Hidden Cats",
       "subtitle": "숨겨진 고양이들",

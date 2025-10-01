@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { ProjectData } from '@/app/career/types/projectData';
 
 interface ModalContentProps {
@@ -6,6 +7,8 @@ interface ModalContentProps {
 }
 
 const ModalContent: React.FC<ModalContentProps> = ({ projectData }) => {
+  const { t } = useTranslation();
+  
   return (
     <div>
       {projectData.period && (
@@ -24,7 +27,7 @@ const ModalContent: React.FC<ModalContentProps> = ({ projectData }) => {
         {projectData.role && (
           <div className={'flex-1'}>
             <h3 className="text-lg font-semibold text-white mb-3">
-              👨‍💻 담당 역할
+              👨‍💻 {t('carousel.modal.role')}
             </h3>
             <p className="text-sm leading-relaxed text-white/80">
               {projectData.role}
@@ -34,7 +37,7 @@ const ModalContent: React.FC<ModalContentProps> = ({ projectData }) => {
 
         {projectData.team && (
           <div className={'flex-1'}>
-            <h3 className="text-lg font-semibold text-white mb-3">👥 팀</h3>
+            <h3 className="text-lg font-semibold text-white mb-3">👥 {t('carousel.modal.team')}</h3>
             <p className="text-sm leading-relaxed text-white/80">
               {projectData.team}
             </p>
@@ -44,7 +47,7 @@ const ModalContent: React.FC<ModalContentProps> = ({ projectData }) => {
         {projectData.teamSize && (
           <div className={'flex-1'}>
             <h3 className="text-lg font-semibold text-white mb-3">
-              📊 팀 구성
+              📊 {t('carousel.modal.teamSize')}
             </h3>
             <p className="inline-flex items-center text-sm leading-relaxed text-white/80">
               {projectData.teamSize}
@@ -60,7 +63,7 @@ const ModalContent: React.FC<ModalContentProps> = ({ projectData }) => {
                 className={'w-full mt-4 mb-2'}
               >
                 <h3 className="text-lg font-semibold text-white mb-3">
-                  🔗 관련 링크
+                  🔗 {t('carousel.modal.links')}
                 </h3>
                 <a
                   href={link.url}

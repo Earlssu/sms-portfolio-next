@@ -462,6 +462,18 @@
     },
     "sideProject": "사이드 프로젝트",
     "clickToView": "클릭하여 자세히 보기",
+    "modal": {
+      "role": "담당 역할",
+      "team": "팀",
+      "teamSize": "팀 구성",
+      "links": "관련 링크",
+      "techStack": "사용 기술",
+      "achievements": "주요 성과",
+      "projectInsights": "프로젝트 인사이트",
+      "problem": "문제점",
+      "solution": "해결방안",
+      "impact": "임팩트"
+    },
     "hiddenCats": {
       "title": "🐈 숨겨진 고양이들",
       "subtitle": "Hidden Cats",

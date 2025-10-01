@@ -1,16 +1,19 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface TechStackProps {
   technologies: string[];
 }
 
 const TechStack: React.FC<TechStackProps> = ({ technologies }) => {
+  const { t } = useTranslation();
+  
   if (!technologies || technologies.length === 0) return null;
 
   return (
     <div className="mb-6">
       <h3 className="text-lg font-semibold text-white mb-3">
-        🛠️ 사용 기술
+        🛠️ {t('carousel.modal.techStack')}
       </h3>
       <div className="flex flex-wrap gap-2">
         {technologies.map((tech, index) => (
