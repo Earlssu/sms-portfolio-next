@@ -1,4 +1,4 @@
-import { CarouselItem } from '@/app/career/types/carouselItem';
+import {CarouselItem} from '@/app/career/types/carouselItem';
 
 /**
  * Carousel 항목 기본 데이터
@@ -35,6 +35,16 @@ export const carouselItems: CarouselItem[] = [
     num: '04',
     imageSrc: '/CandyPay.png',
     category: 'Blast',
+    links: [
+      {
+        title: 'Ios',
+        url: 'https://apps.apple.com/kr/app/%EC%BA%94%EB%94%94%ED%8E%98%EC%9D%B4/id6463577769',
+      },
+      {
+        title: 'Android',
+        url: 'https://play.google.com/store/apps/details?id=kr.co.candypay&hl=ko',
+      },
+    ],
     teamSize: 'FE 2 / BE 1',
   },
   {
